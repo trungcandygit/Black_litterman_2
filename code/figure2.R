@@ -15,7 +15,6 @@ g <- ggplot(e, aes(relm, est)) +
   labs(x = "Months since announcement (Oct 2025 = 0; reference: Sep 2025)",
        y = "Coefficient, log points (95% CI)") +
   theme_bw(base_size = 14)
-ggsave("ars/stage2_write/figures/figure2_itt_event_study.png", g, width = 6.5, height = 4, dpi = 300)
 # Submission files for Finance Research Open: vector PDF (fonts embedded) and 600-dpi PNG at full-page width (7.5 in = 4500 px)
 dir.create("output/figures", showWarnings = FALSE)
 ggsave("output/figures/Figure_2.pdf", g, width = 7.5, height = 4.6, device = cairo_pdf)

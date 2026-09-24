@@ -189,6 +189,14 @@ The authors declare that they have no known competing financial interests or per
 """
 (WORK / "declaration_of_competing_interest.md").write_text(declaration)
 
+# non-anonymized version: title page + manuscript (declarations from the title page, ethics kept)
+ethics = re.search(r"\*\*Ethics\.\*\* (.+)\n", anon).group(1)
+body_named = anon.split("\n", 1)[1]  # drop the title line; the title page carries it
+body_named = re.sub(r"## Declarations\n.*?(?=## Declaration of generative AI)", "", body_named, flags=re.S)
+tp = title_page.replace("## Data availability", "## Ethics\n\n" + ethics + "\n\n## Data availability")
+(WORK / "manuscript_with_author_details.md").write_text(tp + "\n\\newpage\n\n" + body_named)
+
+
 (WORK / "highlights.md").write_text("# Highlights\n\n" + "\n".join(f"- {h}" for h in HIGHLIGHTS) + "\n")
 
 cover = f"""24 September 2026

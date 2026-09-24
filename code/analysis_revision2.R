@@ -1,4 +1,4 @@
-# FTSE2 revision round 2 (Stage 4'): analyses requested in ars/stage3prime_review/99_verification_review_report.md
+# Additional analyses (round 2): matched weights, drift test, clean CAR estimation windows, sector and venue checks.
 # R2-M1 ITT event study; R2-M2/M3 symmetric windows and CAR estimation windows excluding earlier event windows;
 # matched estimates with MatchIt weights; post-announcement drift test; sector-composition check; BSR venue check.
 eval(parse(text = readLines("code/analysis_revision.R")))

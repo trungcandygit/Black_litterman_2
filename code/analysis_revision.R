@@ -1,4 +1,4 @@
-# FTSE2 revision round 1 (Stage 4): analyses requested in ars/stage3_review/02_editorial_decision_and_roadmap.md
+# Additional analyses (round 1): clean control group, ITT, matched sample, robustness, rebalancing and selection tests.
 # RR1 intention-to-treat on the pre-announcement eligible list; predicted constituents
 # RR2 groups rebuilt from all public FTSE lists; named-but-excluded stocks removed from controls
 # RR3/RR4 portfolio (calendar-time) CAR tests under four benchmarks
