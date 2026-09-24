@@ -34,5 +34,6 @@ At the start of every session, before any work:
 
 ## Layout
 
-- `ars/` pipeline artifacts per stage; `code/` R analysis; `output/` CSV results
-  (every manuscript number must trace to a file here); `data/raw/` is gitignored.
+- `submission/`: files to upload (00_CHECKLIST_NopBai.md explains each).
+- `ars/`: final ARS record (see `ars/README.md`); rebuild the package with `ars/build/`.
+- `code/` R analysis; `output/` CSV results (every manuscript number traces to a file here, see `output/TABLE_SOURCE_MAP.md`); `data/raw/` daily prices.

@@ -1,273 +1,302 @@
 {
-  "run_id": "ftse2-20260924-01",
-  "skill_versions": {
-    "academic-pipeline": "3.22.1"
+ "run_id": "ftse2-20260924-01",
+ "skill_versions": {
+  "academic-pipeline": "3.22.1"
+ },
+ "pipeline_state": "in_progress",
+ "current_stage": "6",
+ "entry_point": "1",
+ "working_folder": "BAI FTSE2/FTSE2_new",
+ "materials_at_intake": [
+  "data/raw/*.csv: daily OHLCV, HOSE common stocks, 2024-10-01..2026-09-23 (vnstock/VCI), download in progress",
+  "code/analysis.R: DiD + event study + matching + robustness (fixest, MatchIt)",
+  "output/*: preliminary estimates on partial sample (NOT for citation)",
+  "notes/draft0_sections.md: draft-0 Intro/Lit/Methods text",
+  "../REDTEAM_VA_KE_HOACH_NANG_CAP.md: red-team of prior paper + upgrade plan",
+  "../TLTK/txt/*.txt + prior paper reference list (verified in prior paper)"
+ ],
+ "stages": {
+  "1": {
+   "name": "RESEARCH",
+   "skill": "deep-research",
+   "status": "completed",
+   "mode": "quick",
+   "outputs": [
+    "ars/stage1_research/research_brief.md",
+    "ars/stage1_research/rq_brief_and_methodology_blueprint.md",
+    "ars/stage1_research/bibliography_verified.md",
+    "ars/stage1_research/bib_check.tsv"
+   ],
+   "flags": [
+    "4 recalled DOIs resolved to unrelated papers; corrected and re-verified",
+    "1 issue number corrected (Becker-Blease & Paul 35(3))",
+    "Devil's Advocate: 2 MAJOR design conditions carried to Stage 2"
+   ]
   },
-  "pipeline_state": "in_progress",
-  "current_stage": "6",
-  "entry_point": "1",
-  "working_folder": "BAI FTSE2/FTSE2_new",
-  "materials_at_intake": [
-    "data/raw/*.csv: daily OHLCV, HOSE common stocks, 2024-10-01..2026-09-23 (vnstock/VCI), download in progress",
-    "code/analysis.R: DiD + event study + matching + robustness (fixest, MatchIt)",
-    "output/*: preliminary estimates on partial sample (NOT for citation)",
-    "notes/draft0_sections.md: draft-0 Intro/Lit/Methods text",
-    "../REDTEAM_VA_KE_HOACH_NANG_CAP.md: red-team of prior paper + upgrade plan",
-    "../TLTK/txt/*.txt + prior paper reference list (verified in prior paper)"
+  "2": {
+   "name": "WRITE",
+   "skill": "academic-paper",
+   "status": "completed",
+   "mode": "full",
+   "outputs": [
+    "ars/stage2_write/manuscript_v1.md",
+    "ars/stage2_write/manuscript_v1_preview.docx",
+    "ars/stage2_write/figures/figure1_event_study.png",
+    "ars/stage2_write/phase0_paper_configuration_record.md",
+    "ars/stage2_write/phase2_outline_evidence_map.md",
+    "ars/stage2_write/phase3_argument_blueprint_and_phase4a.md",
+    "ars/stage2_write/phase4b_5_6_scoring_and_evaluation.md",
+    "code/analysis_extensions.R",
+    "output/table8_car_events.csv",
+    "output/table9_volatility_spreads.csv",
+    "output/table10_naming_timing.csv",
+    "ars/stage2_write/draft_round2_new_sections.md",
+    "ars/stage2_write/DECISION_MEMO_framing_round2.md"
+   ],
+   "phase": "stage2_checkpoint",
+   "metrics": {
+    "body_words": 4582,
+    "abstract_words": 163,
+    "references": 23,
+    "tables": 6,
+    "figures": 1
+   },
+   "flags": [
+    "D4 word count block: body well below 7,000 target (author decision)",
+    "Evaluator F4 accept_with_dissent_note: D3 LSEG screens claim + 2018 watch-list source for Stage 2.5",
+    "near-miss n=5",
+    "new analyses added: randomization inference, FTSE size-segment heterogeneity"
+   ],
+   "deliverable": "ars/stage2_write/manuscript_v2.md",
+   "preview": "ars/stage2_write/manuscript_v2_preview.docx",
+   "scoring": "ars/stage2_write/phase4b_5_6_round2_scoring.md",
+   "body_words": 5109,
+   "words_incl_tables": 6773,
+   "references": 25
+  },
+  "2.5": {
+   "status": "completed",
+   "verdict": "PASS_after_1_correction_round",
+   "report": "ars/stage2_5_integrity/integrity_report_stage2_5.md",
+   "issues_found": 11,
+   "issues_fixed": 11,
+   "failure_modes": "all CLEAR",
+   "artifact_sha256": "1adeb80492a7007f9cbac68e2000894baeb79cbc900c1f9a581e9904076d163c"
+  },
+  "3": {
+   "status": "completed",
+   "decision": "major_revision",
+   "fired": [
+    "F2",
+    "F3",
+    "F5"
+   ],
+   "blocking": [
+    "B1 treatment selection",
+    "B2 control contamination",
+    "B3 CAR inference/benchmark"
+   ],
+   "da_critical": "DA-C1 validated",
+   "files": [
+    "ars/stage3_review/00_phase0_config_and_phase1_precommitment.md",
+    "ars/stage3_review/01_phase2_reviewer_reports.md",
+    "ars/stage3_review/02_editorial_decision_and_roadmap.md",
+    "ars/stage3_review/review_panel_provenance.json"
+   ]
+  },
+  "4": {
+   "status": "completed",
+   "deliverable": "ars/stage2_write/manuscript_v3.md",
+   "preview": "ars/stage2_write/manuscript_v3_preview.docx",
+   "response": "ars/stage4_revise/response_to_reviewers_round1.md",
+   "author_adjudication": "ars/stage4_revise/author_adjudication_round1.json",
+   "analysis": "code/analysis_revision.R -> output/revision/",
+   "revision_mode": "full re-emission (not #390 patch chain); Revision-Evidence Bundle absent",
+   "integrity_note": "Stage 2 had quoted matched-sample pre-trend F beside full-sample figure; corrected in v3"
+  },
+  "3'": {
+   "status": "completed",
+   "design": "5 independent subagents, fresh context, blind to peer outputs; Phase1+2A then 2B via follow-up",
+   "checker": "check_re_review_synthesis.py not runnable: no revision-evidence bundle (disclosed)",
+   "decision": "major_revision",
+   "derivation": "B3 (regression MAJOR new issues DA NEW-1/NEW-2) + B4 (RR1 residual must_fix, fail-closed on R1/DA divergence); hand-derived, checker not runnable (no revision-evidence bundle)",
+   "report": "ars/stage3prime_review/99_verification_review_report.md",
+   "provenance": "5 subagents, fresh context, blind to peers, same model family"
+  },
+  "4'": {
+   "status": "completed",
+   "chain": "#390/#670 patch 1.1, apply exit 0, witness PASS, touched 0.317",
+   "draft": "ars/stage4prime/manuscript_v4.md",
+   "clean": "ars/stage4prime/manuscript_v4.clean.md",
+   "sha256": "a4ceddce5c7a0f7f5964a8719753c252adc2577b6f543581501e17d25812a6c5",
+   "response": "ars/stage4prime/response_to_reviewers_round2.md",
+   "e6_review_required": true
+  },
+  "4.5": {
+   "name": "FINAL INTEGRITY",
+   "skill": "integrity_verification_agent",
+   "status": "completed",
+   "outputs": [
+    "ars/stage4_5_integrity/integrity_report_stage4_5.md",
+    "ars/stage4_5_integrity/failure_mode_checklist_stage4_5.md",
+    "ars/stage4_5_integrity/e6_dispositions.md",
+    "ars/stage4_5_integrity/claim_registry_v7.json",
+    "ars/stage4_5_integrity/claim_registry_coverage_v7.json"
+   ],
+   "verdict": "PASS after 3 correction rounds (FAIL -> FAIL -> PASS WITH NOTES -> PASS)",
+   "report": "ars/stage4_5_integrity/integrity_report_stage4_5.md",
+   "accepted_draft": "ars/stage4_5_integrity/correction_round3/manuscript_v7.clean.md",
+   "accepted_draft_sha256": "3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c",
+   "reproduction": "48/48 output CSVs reproduced from data/raw (ars/stage4_5_integrity/repro/REPRO_REPORT.md)",
+   "failure_modes": "all CLEAR",
+   "e6": "8 rows disposed (ars/stage4_5_integrity/e6_dispositions.md)",
+   "tool_notes": "A0 APIs blocked; WebSearch-based verification; tectonic bundle host blocked",
+   "final_rounds": {
+    "rounds": "4-6 (v7->v10), after the first Stage 5 package, at the author's request (proofreading + stop-slop + final ARS)",
+    "verdicts": {
+     "reverify_round4": "FAIL (2 MEDIUM, 7 MINOR)",
+     "reverify_round5": "PASS WITH NOTES (6 MINOR)",
+     "reverify_round6": "PASS (0 issues)"
+    },
+    "final_manuscript": "ars/manuscript_final.md",
+    "final_sha256": "3cb8bd0b7185d5596a94ed16d3459932679f1606e023868f752ec7d6f07ef68b",
+    "reports": [
+     "ars/integrity/reverify_round4.md",
+     "ars/integrity/reverify_round5.md",
+     "ars/integrity/reverify_round6.md",
+     "ars/integrity/e6_dispositions_round6.md"
+    ]
+   }
+  },
+  "5": {
+   "name": "FINALIZE",
+   "skill": "academic-paper",
+   "status": "completed",
+   "outputs": [
+    "submission/ (FRO package, see submission/README_NOP_BAI.md)",
+    "ars/stage5_finalize/manuscript_final.md",
+    "ars/stage5_finalize/provenance_summary.md",
+    "ars/stage5_finalize/format_checks.json"
+   ],
+   "mode": "format-convert",
+   "citation_style": "APA 7 (recorded author decision)",
+   "entry_checkpoint": "MANDATORY; passed on recorded standing author decision; #660 not_checked, #672 ADVISORY_UNAVAILABLE (ars/stage5_finalize/entry_checkpoint/)",
+   "build": "ars/stage5_finalize/build_stage5.py -> convert.py -> package.py",
+   "pdf_engine": "xelatex (tectonic bundle host blocked)",
+   "title_page": "4 authors (Le Hong Minh removed at author request); AI declaration kept as Claude (truthful for this paper)",
+   "final_package": {
+    "folder": "submission/ (00_CHECKLIST ... 08_Highlights)",
+    "source": "ars/manuscript_final.md",
+    "entry_advisories": {
+     "660": "ars/integrity/tortured_phrase_advisory_v10.json (UNMEASURED, no snapshot)",
+     "672": "ars/integrity/cross_document_advisory_672_v10.txt (ADVISORY_UNAVAILABLE:PREREGISTRATION_SIDECAR_ABSENT)"
+    },
+    "build": "ars/build/build_stage5.py -> convert.py -> package.py"
+   }
+  },
+  "6": {
+   "name": "PROCESS SUMMARY",
+   "skill": "orchestrator",
+   "status": "in_progress",
+   "outputs": [
+    "ars/process_record/paper_creation_process_en.md",
+    "ars/process_record/paper_creation_process_en.pdf",
+    "ars/process_record/paper_creation_process_vi.md",
+    "ars/process_record/paper_creation_process_vi.pdf"
+   ],
+   "phase": "record delivered; awaiting terminal acknowledgement (finish/end/done/confirm)",
+   "language": "Vietnamese + English (standing author decision)",
+   "collaboration_depth": "Zone 2 (committed delegation); DI 9, CV 3, CR 2 (advisory)",
+   "collaboration_quality_score": 64,
+   "addendum": "Section 10 (rounds 4-6) added to ars/process_record/paper_creation_process_{en,vi}.{md,pdf}"
+  }
+ },
+ "revision_loops": 0,
+ "round_trips": 19,
+ "collaboration_depth_history": [],
+ "target_venue": {
+  "name": "Finance Research Open (Elsevier, ISSN 3050-7006)",
+  "chosen_from": [
+   "Finance Research Open",
+   "Discover Economics",
+   "Journal of Economy and Technology",
+   "Journal of Finance: Insights and Perspectives"
   ],
-  "stages": {
-    "1": {
-      "name": "RESEARCH",
-      "skill": "deep-research",
-      "status": "completed",
-      "mode": "quick",
-      "outputs": [
-        "ars/stage1_research/research_brief.md",
-        "ars/stage1_research/rq_brief_and_methodology_blueprint.md",
-        "ars/stage1_research/bibliography_verified.md",
-        "ars/stage1_research/bib_check.tsv"
-      ],
-      "flags": [
-        "4 recalled DOIs resolved to unrelated papers; corrected and re-verified",
-        "1 issue number corrected (Becker-Blease & Paul 35(3))",
-        "Devil's Advocate: 2 MAJOR design conditions carried to Stage 2"
-      ]
-    },
-    "2": {
-      "name": "WRITE",
-      "skill": "academic-paper",
-      "status": "completed",
-      "mode": "full",
-      "outputs": [
-        "ars/stage2_write/manuscript_v1.md",
-        "ars/stage2_write/manuscript_v1_preview.docx",
-        "ars/stage2_write/figures/figure1_event_study.png",
-        "ars/stage2_write/phase0_paper_configuration_record.md",
-        "ars/stage2_write/phase2_outline_evidence_map.md",
-        "ars/stage2_write/phase3_argument_blueprint_and_phase4a.md",
-        "ars/stage2_write/phase4b_5_6_scoring_and_evaluation.md",
-        "code/analysis_extensions.R",
-        "output/table8_car_events.csv",
-        "output/table9_volatility_spreads.csv",
-        "output/table10_naming_timing.csv",
-        "ars/stage2_write/draft_round2_new_sections.md",
-        "ars/stage2_write/DECISION_MEMO_framing_round2.md"
-      ],
-      "phase": "stage2_checkpoint",
-      "metrics": {
-        "body_words": 4582,
-        "abstract_words": 163,
-        "references": 23,
-        "tables": 6,
-        "figures": 1
-      },
-      "flags": [
-        "D4 word count block: body well below 7,000 target (author decision)",
-        "Evaluator F4 accept_with_dissent_note: D3 LSEG screens claim + 2018 watch-list source for Stage 2.5",
-        "near-miss n=5",
-        "new analyses added: randomization inference, FTSE size-segment heterogeneity"
-      ],
-      "deliverable": "ars/stage2_write/manuscript_v2.md",
-      "preview": "ars/stage2_write/manuscript_v2_preview.docx",
-      "scoring": "ars/stage2_write/phase4b_5_6_round2_scoring.md",
-      "body_words": 5109,
-      "words_incl_tables": 6773,
-      "references": 25
-    },
-    "2.5": {
-      "status": "completed",
-      "verdict": "PASS_after_1_correction_round",
-      "report": "ars/stage2_5_integrity/integrity_report_stage2_5.md",
-      "issues_found": 11,
-      "issues_fixed": 11,
-      "failure_modes": "all CLEAR",
-      "artifact_sha256": "1adeb80492a7007f9cbac68e2000894baeb79cbc900c1f9a581e9904076d163c"
-    },
-    "3": {
-      "status": "completed",
-      "decision": "major_revision",
-      "fired": [
-        "F2",
-        "F3",
-        "F5"
-      ],
-      "blocking": [
-        "B1 treatment selection",
-        "B2 control contamination",
-        "B3 CAR inference/benchmark"
-      ],
-      "da_critical": "DA-C1 validated",
-      "files": [
-        "ars/stage3_review/00_phase0_config_and_phase1_precommitment.md",
-        "ars/stage3_review/01_phase2_reviewer_reports.md",
-        "ars/stage3_review/02_editorial_decision_and_roadmap.md",
-        "ars/stage3_review/review_panel_provenance.json"
-      ]
-    },
-    "4": {
-      "status": "completed",
-      "deliverable": "ars/stage2_write/manuscript_v3.md",
-      "preview": "ars/stage2_write/manuscript_v3_preview.docx",
-      "response": "ars/stage4_revise/response_to_reviewers_round1.md",
-      "author_adjudication": "ars/stage4_revise/author_adjudication_round1.json",
-      "analysis": "code/analysis_revision.R -> output/revision/",
-      "revision_mode": "full re-emission (not #390 patch chain); Revision-Evidence Bundle absent",
-      "integrity_note": "Stage 2 had quoted matched-sample pre-trend F beside full-sample figure; corrected in v3"
-    },
-    "3'": {
-      "status": "completed",
-      "design": "5 independent subagents, fresh context, blind to peer outputs; Phase1+2A then 2B via follow-up",
-      "checker": "check_re_review_synthesis.py not runnable: no revision-evidence bundle (disclosed)",
-      "decision": "major_revision",
-      "derivation": "B3 (regression MAJOR new issues DA NEW-1/NEW-2) + B4 (RR1 residual must_fix, fail-closed on R1/DA divergence); hand-derived, checker not runnable (no revision-evidence bundle)",
-      "report": "ars/stage3prime_review/99_verification_review_report.md",
-      "provenance": "5 subagents, fresh context, blind to peers, same model family"
-    },
-    "4'": {
-      "status": "completed",
-      "chain": "#390/#670 patch 1.1, apply exit 0, witness PASS, touched 0.317",
-      "draft": "ars/stage4prime/manuscript_v4.md",
-      "clean": "ars/stage4prime/manuscript_v4.clean.md",
-      "sha256": "a4ceddce5c7a0f7f5964a8719753c252adc2577b6f543581501e17d25812a6c5",
-      "response": "ars/stage4prime/response_to_reviewers_round2.md",
-      "e6_review_required": true
-    },
-    "4.5": {
-      "name": "FINAL INTEGRITY",
-      "skill": "integrity_verification_agent",
-      "status": "completed",
-      "outputs": [
-        "ars/stage4_5_integrity/integrity_report_stage4_5.md",
-        "ars/stage4_5_integrity/failure_mode_checklist_stage4_5.md",
-        "ars/stage4_5_integrity/e6_dispositions.md",
-        "ars/stage4_5_integrity/claim_registry_v7.json",
-        "ars/stage4_5_integrity/claim_registry_coverage_v7.json"
-      ],
-      "verdict": "PASS after 3 correction rounds (FAIL -> FAIL -> PASS WITH NOTES -> PASS)",
-      "report": "ars/stage4_5_integrity/integrity_report_stage4_5.md",
-      "accepted_draft": "ars/stage4_5_integrity/correction_round3/manuscript_v7.clean.md",
-      "accepted_draft_sha256": "3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c",
-      "reproduction": "48/48 output CSVs reproduced from data/raw (ars/stage4_5_integrity/repro/REPRO_REPORT.md)",
-      "failure_modes": "all CLEAR",
-      "e6": "8 rows disposed (ars/stage4_5_integrity/e6_dispositions.md)",
-      "tool_notes": "A0 APIs blocked; WebSearch-based verification; tectonic bundle host blocked"
-    },
-    "5": {
-      "name": "FINALIZE",
-      "skill": "academic-paper",
-      "status": "completed",
-      "outputs": [
-        "submission/ (FRO package, see submission/README_NOP_BAI.md)",
-        "ars/stage5_finalize/manuscript_final.md",
-        "ars/stage5_finalize/provenance_summary.md",
-        "ars/stage5_finalize/format_checks.json"
-      ],
-      "mode": "format-convert",
-      "citation_style": "APA 7 (recorded author decision)",
-      "entry_checkpoint": "MANDATORY; passed on recorded standing author decision; #660 not_checked, #672 ADVISORY_UNAVAILABLE (ars/stage5_finalize/entry_checkpoint/)",
-      "build": "ars/stage5_finalize/build_stage5.py -> convert.py -> package.py",
-      "pdf_engine": "xelatex (tectonic bundle host blocked)",
-      "title_page": "4 authors (Le Hong Minh removed at author request); AI declaration kept as Claude (truthful for this paper)"
-    },
-    "6": {
-      "name": "PROCESS SUMMARY",
-      "skill": "orchestrator",
-      "status": "in_progress",
-      "outputs": [
-        "ars/stage6_process/paper_creation_process_en.md",
-        "ars/stage6_process/paper_creation_process_en.pdf",
-        "ars/stage6_process/paper_creation_process_vi.md",
-        "ars/stage6_process/paper_creation_process_vi.pdf",
-        "ars/stage6_process/collaboration_depth_trajectory.md",
-        "ars/stage6_process/collaboration_depth_trajectory_vi.md"
-      ],
-      "phase": "record delivered; awaiting terminal acknowledgement (finish/end/done/confirm)",
-      "language": "Vietnamese + English (standing author decision)",
-      "collaboration_depth": "Zone 2 (committed delegation); DI 9, CV 3, CR 2 (advisory)",
-      "collaboration_quality_score": 64
-    }
+  "decided_by": "user shortlist; orchestrator recommendation, user may override",
+  "apc": "waived for submissions on or before 2026-12-31 (per publisher page, via search snippet)"
+ },
+ "user_decisions": [
+  {
+   "at": "intake",
+   "decision": "run stages sequentially per ARS, start Stage 1"
   },
-  "revision_loops": 0,
-  "round_trips": 19,
-  "collaboration_depth_history": [],
-  "target_venue": {
-    "name": "Finance Research Open (Elsevier, ISSN 3050-7006)",
-    "chosen_from": [
-      "Finance Research Open",
-      "Discover Economics",
-      "Journal of Economy and Technology",
-      "Journal of Finance: Insights and Perspectives"
-    ],
-    "decided_by": "user shortlist; orchestrator recommendation, user may override",
-    "apc": "waived for submissions on or before 2026-12-31 (per publisher page, via search snippet)"
+  {
+   "at": "stage1_checkpoint",
+   "decision": "continue to Stage 2 (full), follow skill sequentially"
   },
-  "user_decisions": [
-    {
-      "at": "intake",
-      "decision": "run stages sequentially per ARS, start Stage 1"
-    },
-    {
-      "at": "stage1_checkpoint",
-      "decision": "continue to Stage 2 (full), follow skill sequentially"
-    },
-    {
-      "at": "stage2_phase0",
-      "decision": "accepted Paper Configuration Record; framing A (eligibility-attention) per recommendation; authors/CRediT deferred to Stage 5",
-      "user_words": "ok tiếp đi"
-    },
-    {
-      "at": "stage2_checkpoint",
-      "decision": "(b) keep 7,000-word target; add substantive analyses",
-      "user_words": "b"
-    },
-    {
-      "at": "stage2_round2",
-      "decision": "user authorised autonomous continuation per skill overnight; treat non-mandatory FULL checkpoints as continue; MANDATORY checkpoints still require explicit input",
-      "user_words": "cứ làm theo skill nha . tôi đi ngủ đây. Mỗi lần bạn làm đều phải load skill ARS lên nha."
-    },
-    {
-      "at": "pending_decision framing_round2",
-      "decision": "A' (constituent-centred; near-miss and naming test reported as selection evidence, as in B)",
-      "user_words": "cái nào dễ đăng nhất mạnh nhất",
-      "basis": "user delegated choice to strongest/most publishable; orchestrator recommendation A-prime"
-    },
-    {
-      "date": "2026-09-24",
-      "note": "v2 written under A-prime; number audit fixed 2 errors (Vingroup count, abn benchmark wording)"
-    },
-    {
-      "date": "2026-09-24",
-      "note": "User: \"theo skill bai tot nhat la duoc\" -> proceed to Stage 2.5"
-    },
-    {
-      "date": "2026-09-24",
-      "note": "User confirmed Stage 2.5 PASS -> Stage 3"
-    },
-    {
-      "date": "2026-09-24",
-      "note": "User: just fix it, no questions; later: review must use independent agents -> Stage 3 prime uses independent subagents"
-    },
-    {
-      "date": "2026-09-24",
-      "stage": "3'",
-      "note": "User confirmed Major Revision: \"cu lam theo skill\" -> Stage 4'"
-    },
-    {
-      "date": "2026-09-24",
-      "stage": "standing",
-      "note": "User: \"tu gio cu lam theo skill. Dung hoi gi nua. De toi yen tam giao cho ban va di ngu\" -> recorded as explicit author decision to proceed at the remaining MANDATORY checkpoints (Stage 4.5 PASS/FAIL-loop, Stage 5 entry: APA 7 retained, DOCX + LaTeX/PDF) and Stage 6 (language: Vietnamese+English); any integrity FAIL still gets fixed, not overridden"
-    },
-    {
-      "date": "2026-09-24",
-      "stage": "4.5",
-      "note": "User (explicit, verbatim intent): do not ask again; load the ARS skill for every task; follow the skill strictly until the whole pipeline is complete; produce the most complete paper; at the end create a folder of submission files for Finance Research Open (full guide for authors supplied, recorded as V17-V28 in ars/venue_criteria_FRO.md). Recorded as author event AUTHOR-EVENT-s45-standing for the Stage 4.5 integrity-correction authorization and as standing consent for remaining MANDATORY checkpoints; integrity FAILs are fixed, never overridden."
-    },
-    {
-      "date": "2026-09-24",
-      "stage": "5",
-      "note": "Author supplied author list/affiliations/ORCID/CRediT/declarations (from another paper's title page) and asked to remove Le Hong Minh; applied to title page and cover letter. The other paper's Gemini AI declaration was not copied: this paper's truthful declaration (Claude) is kept."
-    }
-  ],
-  "data_status": "405/405 HOSE files downloaded, 0 errors",
-  "venue_criteria": "ars/venue_criteria_FRO.md (author-supplied FRO guide, 2026-09-24)"
+  {
+   "at": "stage2_phase0",
+   "decision": "accepted Paper Configuration Record; framing A (eligibility-attention) per recommendation; authors/CRediT deferred to Stage 5",
+   "user_words": "ok tiếp đi"
+  },
+  {
+   "at": "stage2_checkpoint",
+   "decision": "(b) keep 7,000-word target; add substantive analyses",
+   "user_words": "b"
+  },
+  {
+   "at": "stage2_round2",
+   "decision": "user authorised autonomous continuation per skill overnight; treat non-mandatory FULL checkpoints as continue; MANDATORY checkpoints still require explicit input",
+   "user_words": "cứ làm theo skill nha . tôi đi ngủ đây. Mỗi lần bạn làm đều phải load skill ARS lên nha."
+  },
+  {
+   "at": "pending_decision framing_round2",
+   "decision": "A' (constituent-centred; near-miss and naming test reported as selection evidence, as in B)",
+   "user_words": "cái nào dễ đăng nhất mạnh nhất",
+   "basis": "user delegated choice to strongest/most publishable; orchestrator recommendation A-prime"
+  },
+  {
+   "date": "2026-09-24",
+   "note": "v2 written under A-prime; number audit fixed 2 errors (Vingroup count, abn benchmark wording)"
+  },
+  {
+   "date": "2026-09-24",
+   "note": "User: \"theo skill bai tot nhat la duoc\" -> proceed to Stage 2.5"
+  },
+  {
+   "date": "2026-09-24",
+   "note": "User confirmed Stage 2.5 PASS -> Stage 3"
+  },
+  {
+   "date": "2026-09-24",
+   "note": "User: just fix it, no questions; later: review must use independent agents -> Stage 3 prime uses independent subagents"
+  },
+  {
+   "date": "2026-09-24",
+   "stage": "3'",
+   "note": "User confirmed Major Revision: \"cu lam theo skill\" -> Stage 4'"
+  },
+  {
+   "date": "2026-09-24",
+   "stage": "standing",
+   "note": "User: \"tu gio cu lam theo skill. Dung hoi gi nua. De toi yen tam giao cho ban va di ngu\" -> recorded as explicit author decision to proceed at the remaining MANDATORY checkpoints (Stage 4.5 PASS/FAIL-loop, Stage 5 entry: APA 7 retained, DOCX + LaTeX/PDF) and Stage 6 (language: Vietnamese+English); any integrity FAIL still gets fixed, not overridden"
+  },
+  {
+   "date": "2026-09-24",
+   "stage": "4.5",
+   "note": "User (explicit, verbatim intent): do not ask again; load the ARS skill for every task; follow the skill strictly until the whole pipeline is complete; produce the most complete paper; at the end create a folder of submission files for Finance Research Open (full guide for authors supplied, recorded as V17-V28 in ars/venue_criteria_FRO.md). Recorded as author event AUTHOR-EVENT-s45-standing for the Stage 4.5 integrity-correction authorization and as standing consent for remaining MANDATORY checkpoints; integrity FAILs are fixed, never overridden."
+  },
+  {
+   "date": "2026-09-24",
+   "stage": "5",
+   "note": "Author supplied author list/affiliations/ORCID/CRediT/declarations (from another paper's title page) and asked to remove Le Hong Minh; applied to title page and cover letter. The other paper's Gemini AI declaration was not copied: this paper's truthful declaration (Claude) is kept."
+  },
+  {
+   "date": "2026-09-24",
+   "decision": "Final polishing (proofreading + stop-slop + ARS), table notes one sentence, ~20% shorter text, submission folder in numbered layout 00-08, Word only (no LaTeX in package), delete intermediate files, push to main"
+  }
+ ],
+ "data_status": "405/405 HOSE files downloaded, 0 errors",
+ "venue_criteria": "ars/venue_criteria_FRO.md (author-supplied FRO guide, 2026-09-24)",
+ "repository_cleanup": "2026-09-24: intermediate stage artifacts (ars/stage1..stage6 folders, correction rounds 1-6, drafts v1-v9, build work files) removed from the working tree at the author's request; they remain in git history (commit bfdc819 and earlier). Outputs listed in older stage entries refer to that history."
 }

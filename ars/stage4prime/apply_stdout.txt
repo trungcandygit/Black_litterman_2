@@ -1,1 +1,0 @@
-apply ok: 60 op(s); 127/186 blocks preserved byte-identical (ratio 0.6828); report /Users/nguyenvantrung/Downloads/Python for Algorithmic Trading/NCKH/BAI FTSE2/FTSE2_new/ars/stage4prime/manuscript_v4.md.apply-report.json

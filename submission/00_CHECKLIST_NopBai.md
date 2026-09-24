@@ -2,7 +2,7 @@
 
 Bài: **Who gains from a market upgrade? Stock liquidity and prices around Vietnam's FTSE Russell reclassification**
 
-Nguồn: bản thảo cuối v9 (`ars/stage4_5_integrity/correction_round5/manuscript_v9.clean.md`, SHA-256 `d0b8fd66f1eb44cdd1edbf175cf715c53d89fa42edff97946ae93a9942e79f97`), đã qua Stage 4.5 của ARS v3.22.1 và các vòng proofreading, stop-slop. Mọi file dưới đây đã điền đủ thông tin, bạn không cần sửa gì thêm.
+Nguồn: bản thảo cuối (`ars/manuscript_final.md`, SHA-256 `3cb8bd0b7185d5596a94ed16d3459932679f1606e023868f752ec7d6f07ef68b`), đã qua Stage 4.5 của ARS v3.22.1 (PASS, `ars/integrity/reverify_round6.md`) và các vòng proofreading, stop-slop. Mọi file dưới đây đã điền đủ thông tin, bạn không cần sửa gì thêm.
 
 ## 1. Upload lên Editorial Manager
 
@@ -39,14 +39,14 @@ Khi điền form online: nhập 4 tác giả đúng thứ tự như title page (
 
 | File | Bytes | SHA-256 (16) |
 |---|---|---|
-| `01_Title_Page.docx` | 11,548 | `07df3c060c7329df` |
-| `02_Manuscript_Anonymized.docx` | 548,748 | `68ac61a8642c4f82` |
-| `03_Figures/Figure_1.pdf` | 22,370 | `720a1930c5a630c6` |
-| `03_Figures/Figure_1.png` | 387,911 | `75afe32e6dcf6b6b` |
-| `03_Figures/Figure_2.pdf` | 10,560 | `e29245138b0cbebe` |
-| `03_Figures/Figure_2.png` | 204,957 | `adf7193f50b6d859` |
-| `04_Declaration_of_Competing_Interest.docx` | 10,706 | `fcb28be378cad9f4` |
-| `05_Replication_Package.zip` | 3,194,081 | `50b641650a1b7d74` |
-| `06_Cover_Letter.docx` | 11,547 | `33bdbad687a52c6b` |
-| `07_Manuscript_with_Author_Details.docx` | 549,470 | `fdb74047365845e7` |
-| `08_Highlights.docx` | 10,706 | `be4fb1fa4b79c450` |
+| `01_Title_Page.docx` | 11,548 | `ac6e941a8e4fc4d4` |
+| `02_Manuscript_Anonymized.docx` | 550,130 | `c7f80fabb7a37e09` |
+| `03_Figures/Figure_1.pdf` | 22,369 | `35fae45813787fc7` |
+| `03_Figures/Figure_1.png` | 388,280 | `037f315456be9bc6` |
+| `03_Figures/Figure_2.pdf` | 10,560 | `5830be0f3b7f1f8b` |
+| `03_Figures/Figure_2.png` | 205,590 | `e37f1462c8e5df03` |
+| `04_Declaration_of_Competing_Interest.docx` | 10,706 | `0be07b6c86761613` |
+| `05_Replication_Package.zip` | 3,195,237 | `c16a066d66abd35f` |
+| `06_Cover_Letter.docx` | 11,547 | `3ea250a1a389be3e` |
+| `07_Manuscript_with_Author_Details.docx` | 550,849 | `b7c0b8c2d2519595` |
+| `08_Highlights.docx` | 10,706 | `1e1fc2c1846394d8` |

@@ -1,0 +1,4 @@
+#672 cross-document consistency advisory, Stage 5 entry checkpoint, run ftse2-20260924-01
+Accepted draft: ars/stage4_5_integrity/correction_round6/manuscript_v10.clean.md (artifact id ftse2-manuscript-v10, SHA-256 3cb8bd0b7185d5596a94ed16d3459932679f1606e023868f752ec7d6f07ef68b), identical to the #660 input binding.
+Result: ADVISORY_UNAVAILABLE:PREREGISTRATION_SIDECAR_ABSENT
+Reason (bounded): no builder-produced preregistration-artifact/1.0 sidecar was emitted at Stage 1 of this run; the protocol reserves `build-preregistration-artifact` to the Stage-1 dispatcher and forbids manufacturing or substituting a sidecar later. No advisory carrier is written. Per pipeline_orchestrator_agent.md, this does not block or delay the checkpoint and does not change Stage 4.5 or Stage 5 routing. The study was not preregistered (observational event study on public market data).
