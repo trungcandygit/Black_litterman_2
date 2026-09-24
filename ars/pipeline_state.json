@@ -4,7 +4,7 @@
     "academic-pipeline": "3.22.1"
   },
   "pipeline_state": "in_progress",
-  "current_stage": "5",
+  "current_stage": "6",
   "entry_point": "1",
   "working_folder": "BAI FTSE2/FTSE2_new",
   "materials_at_intake": [
@@ -155,8 +155,18 @@
     "5": {
       "name": "FINALIZE",
       "skill": "academic-paper",
-      "status": "pending",
-      "outputs": []
+      "status": "completed",
+      "outputs": [
+        "submission/ (FRO package, see submission/README_NOP_BAI.md)",
+        "ars/stage5_finalize/manuscript_final.md",
+        "ars/stage5_finalize/provenance_summary.md",
+        "ars/stage5_finalize/format_checks.json"
+      ],
+      "mode": "format-convert",
+      "citation_style": "APA 7 (recorded author decision)",
+      "entry_checkpoint": "MANDATORY; passed on recorded standing author decision; #660 not_checked, #672 ADVISORY_UNAVAILABLE (ars/stage5_finalize/entry_checkpoint/)",
+      "build": "ars/stage5_finalize/build_stage5.py -> convert.py -> package.py",
+      "pdf_engine": "xelatex (tectonic bundle host blocked)"
     },
     "6": {
       "name": "PROCESS SUMMARY",

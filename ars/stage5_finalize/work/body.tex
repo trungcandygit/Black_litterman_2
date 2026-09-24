@@ -317,7 +317,8 @@ Never-named HOSE stocks & 328 & 16,915 & 0.195 & 2.19 & 0.61 & 1.37 \\
 
 \emph{Notes}: Amihud is the mean daily ratio of absolute log return to
 traded value (VND billion) within a week. CS is the Corwin and Schultz
-(2012) spread. Source: output/revision/t1\_descriptives.csv.
+(2012) spread. Source: Authors' calculations from daily HOSE trading
+data (VCI, via vnstock).
 
 \hypertarget{liquidity-and-return-measures}{%
 \subsection{3.2 Liquidity and return
@@ -325,10 +326,10 @@ measures}\label{liquidity-and-return-measures}}
 
 Daily traded value equals the closing price times share volume, in VND
 billion. Following Amihud (2002), who divides the absolute daily return
-by dollar volume, we define illiquidity for stock i on day t with the
-log return and traded value in VND as
+by dollar volume, we define illiquidity for stock \(i\) on day \(t\)
+with the log return and traded value in VND as
 
-\[\mathrm{ILLIQ}_{it} = \frac{\lvert R_{it} \rvert}{\mathrm{VAL}_{it}},\]
+\[\mathrm{ILLIQ}_{it} = \frac{|R_{it}|}{\mathrm{VAL}_{it}},\]
 
 where \(R_{it}\) is the log return and \(\mathrm{VAL}_{it}\) the traded
 value. Traded value, rather than share volume, makes the ratio
@@ -346,13 +347,13 @@ where many days have zero volume, and propose an adjustment; our filter
 removes stocks with zero volume on 20\% or more of pre-period days,
 which limits this problem.
 
-For prices, the daily abnormal return of stock i is its log return minus
-a benchmark return. We use four benchmarks: the equal-weighted mean of
-the 328 never-named stocks; the mean of the matched control stocks
-described below, weighted by their matching weights; the equal-weighted
-mean of the 110 never-named stocks in the top tercile of pre-period
-trading value among never-named stocks; and a market model with
-intercept and slope estimated for each stock against the first
+For prices, the daily abnormal return of stock \(i\) is its log return
+minus a benchmark return. We use four benchmarks: the equal-weighted
+mean of the 328 never-named stocks; the mean of the matched control
+stocks described below, weighted by their matching weights; the
+equal-weighted mean of the 110 never-named stocks in the top tercile of
+pre-period trading value among never-named stocks; and a market model
+with intercept and slope estimated for each stock against the first
 benchmark. Because every constituent shares the same event dates,
 abnormal returns are correlated across stocks, and cross-sectional
 t-statistics overstate precision. We therefore test cumulative abnormal
@@ -533,9 +534,8 @@ named-but-excluded stocks removed. Standard errors clustered by stock in
 parentheses. *, **, *** denote significance at 5\%, 1\% and 0.1\%.
 Columns 4 to 6 weight each of the 24 distinct matched controls by its
 matching weight (three controls per constituent, nearest-neighbour
-propensity score, with replacement). Sources:
-output/revision/t2\_baseline\_clean.csv,
-output/revision2/t\_matched\_weighted.csv.
+propensity score, with replacement). Source: Authors' calculations from
+daily HOSE trading data (VCI, via vnstock).
 
 The ITT estimates in Table 3 indicate that the decline is not an
 artefact of FTSE's later choice. The 27 stocks screened on 2024 data
@@ -596,8 +596,8 @@ Predicted constituents: top 27 by pre-period trading value & -0.250***
 \emph{Notes}: The preliminary list is FTSE's November 2025 eligible list
 screened on data as of 31 December 2024 (27 HOSE stocks). Stock and week
 fixed effects; standard errors clustered by stock. The split rows come
-from one regression with separate interactions. Source:
-output/revision/t\_itt.csv.
+from one regression with separate interactions. Source: Authors'
+calculations from daily HOSE trading data (VCI, via vnstock).
 
 Figure 1 shows the timing. The constituents' monthly Amihud coefficients
 move around zero in the pre-announcement year without a downward drift.
@@ -626,7 +626,8 @@ and named-but-excluded stocks}
 per outcome with stock and week fixed effects; the comparison group is
 never-named HOSE stocks. 95\% confidence intervals from stock-clustered
 standard errors. Dashed lines mark the announcement, confirmation and
-constituent-list months. Source: output/revision/t\_event\_study.csv.
+constituent-list months. Source: Authors' calculations from daily HOSE
+trading data (VCI, via vnstock).
 
 \textbf{Figure 2. Monthly event-study coefficients for the
 intention-to-treat group}
@@ -638,7 +639,7 @@ preliminary eligible list (screened on 2024 data) relative to
 never-named, never-included HOSE stocks; coefficients relative to
 September 2025 from a regression with stock and week fixed effects; 95\%
 confidence intervals from stock-clustered standard errors. Source:
-output/revision2/t\_itt\_event\_study.csv.
+Authors' calculations from daily HOSE trading data (VCI, via vnstock).
 
 Trading value tells a similar story with one caveat. Constituents'
 trading value rose by 0.68, 1.03 and 1.19 log points relative to
@@ -850,7 +851,8 @@ controls by their matching weights. Windows are pre-specified and
 identical for every event; a CAR is called reliable when it is
 significant at 5\% under all four benchmarks. The effective-date windows
 beyond +1 are not reported because the data end on 23 September 2026.
-Source: output/revision2/t3\_car\_portfolio\_clean\_est.csv.
+Source: Authors' calculations from daily HOSE trading data (VCI, via
+vnstock).
 
 The announcement and confirmation gains behaved differently afterwards.
 Over days 0 to +20 the announcement CAR lies between -5.5\% and 1.6\%
@@ -950,13 +952,12 @@ Named-but-excluded & 0.000 & 0.153 & 14 \\
 \emph{Notes}: Panel A: stock and date fixed effects; standard errors
 clustered by stock. Panel B: abnormal = daily log trading value minus
 the stock's mean from 60 to 6 calendar days before 21 August 2026.
-Sources: output/revision/t4c\_spike\_test.csv,
-output/revision/t4b\_rebalance\_groups.csv. An event regression that
-uses the last session before 21 August 2026 as the reference gives 0.62
-(t = 3.54) for 18 September, but that reference session was unusually
-active and several earlier sessions then show significant negative
-coefficients; we therefore compare each session with the average of the
-window.
+Source: Authors' calculations from daily HOSE trading data (VCI, via
+vnstock). An event regression that uses the last session before 21
+August 2026 as the reference gives 0.62 (t = 3.54) for 18 September, but
+that reference session was unusually active and several earlier sessions
+then show significant negative coefficients; we therefore compare each
+session with the average of the window.
 
 This surge matches the trading that funds tracking FTSE benchmarks had
 to do: they bought the first tranche of constituents at the closing
@@ -1040,10 +1041,10 @@ Abnormal log trading value, 18 Sep 2026 (mean, SE) & 1.231 (0.110) &
 effects and all segment-by-window interactions; comparison group is
 never-named stocks; standard errors clustered by stock. The last row
 reports abnormal log trading value relative to each stock's mean from 60
-to 6 calendar days before the constituent list. Sources:
-output/revision/t5\_segments.csv,
-output/table7b\_rebalance\_by\_segment.csv. Significance marks are
-omitted for the large and mid segments, which contain three stocks each.
+to 6 calendar days before the constituent list. Source: Authors'
+calculations from daily HOSE trading data (VCI, via vnstock).
+Significance marks are omitted for the large and mid segments, which
+contain three stocks each.
 
 \textbf{Takeaway.} The rebalancing trade was largest for the
 constituents with the largest index weights; the liquidity gain is
@@ -1108,8 +1109,8 @@ Observations & 34,369 & 34,369 & 34,369 \\
 \end{longtable}
 
 \emph{Notes}: Stock and week fixed effects; comparison group is
-never-named stocks; standard errors clustered by stock. Sources:
-output/revision/t6\_volatility.csv, output/revision/t7\_robustness.csv.
+never-named stocks; standard errors clustered by stock. Source: Authors'
+calculations from daily HOSE trading data (VCI, via vnstock).
 
 \textbf{Takeaway.} Rising trading value, which more than offset rising
 volatility, drove the fall in illiquidity.
@@ -1189,12 +1190,8 @@ bootstrap: restricted residuals, Rademacher weights (Cameron et al.,
 2008). The drift row adds a constituent-specific linear trend in weeks
 since the announcement (-0.012 per week, p = 0.002). Banks are VCB, BID,
 VPB, HDB, STB, SHB, SSB and MSB among constituents and EIB in the ITT
-group; securities firms are SSI, VCI, VIX, VND and HCM. Sources:
-output/revision/t7\_robustness.csv,
-output/revision2/t\_matched\_weighted.csv,
-output/revision2/t\_post\_drift.csv, output/revision2/t\_sector.csv,
-output/revision/t\_wild\_bootstrap.csv,
-output/revision/t6\_randomization\_inference.csv.
+group; securities firms are SSI, VCI, VIX, VND and HCM. Source: Authors'
+calculations from daily HOSE trading data (VCI, via vnstock).
 
 \textbf{Pre-announcement months.} The pre-period deviations in Figure 1
 are positive, so they work against the estimated declines rather than
@@ -1367,13 +1364,12 @@ SAB & Nov 2025 & -0.17 & 0.02 & -0.11 \\
 \emph{Notes}: Panels A and B: one regression each with stock and week
 fixed effects on all 366 stocks; standard errors clustered by stock.
 Panel C: descriptive. List membership follows Viet Nam News (2025) and
-The Investor (2026a, 2026b). Sources:
-output/revision/t8\_named\_excluded.csv,
-output/revision/t8c\_named\_by\_stock.csv. The two-stock row reports
-point estimates only, because clustered inference is not informative
-with two stocks. Because named-but-excluded stocks enter with their own
-window interactions, the constituent coefficients in panel A equal those
-in Table 2 to three decimals.
+The Investor (2026a, 2026b). Source: Authors' calculations from daily
+HOSE trading data (VCI, via vnstock). The two-stock row reports point
+estimates only, because clustered inference is not informative with two
+stocks. Because named-but-excluded stocks enter with their own window
+interactions, the constituent coefficients in panel A equal those in
+Table 2 to three decimals.
 
 This evidence limits how the constituent results can be read. FTSE's
 screens rest on investability, and at least one stock became eligible
@@ -1521,9 +1517,9 @@ distinct control stocks. Pre-period log trading value is the mean daily
 log(1 + traded value, VND billion). SMD is the standardized mean
 difference. Log price and volatility remain imbalanced above 0.10, which
 is why we pair the matched estimates with the size-by-week and trend
-specifications. Source: output/revision/tA1\_balance.csv. Table 2,
-columns 4 to 6, and the matched benchmark in Table 4 use the matching
-weights.
+specifications. Source: Authors' calculations from daily HOSE trading
+data (VCI, via vnstock). Table 2, columns 4 to 6, and the matched
+benchmark in Table 4 use the matching weights.
 
 \textbf{Table A.2. Stocks by FTSE list}
 
@@ -1643,8 +1639,9 @@ inclusion of China A-shares in the MSCI Emerging Markets Index.
 https://doi.org/10.1016/j.ribaf.2023.101989
 
 FTSE Russell. (n.d.). \emph{FTSE Global Equity Index Series ground
-rules}. Retrieved 24 September 2026, from
+rules}.
 https://www.lseg.com/content/dam/ftse-russell/en\_us/documents/ground-rules/ftse-global-equity-index-series-ground-rules.pdf
+Accessed 24 September 2026.
 
 FTSE Russell. (2018, September 26). \emph{FTSE classification of
 markets: September 2018}.

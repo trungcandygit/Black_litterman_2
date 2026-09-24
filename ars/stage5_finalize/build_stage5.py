@@ -35,13 +35,15 @@ def once(text, old, new):
 # ---------------------------------------------------------------- (a) notation
 md = src
 md = once(md, "ILLIQ_it = |R_it| / VAL_it,",
-          r"$$\mathrm{ILLIQ}_{it} = \frac{\lvert R_{it} \rvert}{\mathrm{VAL}_{it}},$$")
+          r"$$\mathrm{ILLIQ}_{it} = \frac{|R_{it}|}{\mathrm{VAL}_{it}},$$")
 md = once(md, "where R_it is the log return and VAL_it the traded value.",
           r"where $R_{it}$ is the log return and $\mathrm{VAL}_{it}$ the traded value.")
 md = once(md, "y_iw = α_i + λ_w + Σ_k β_k (Constituent_i × P_kw) + ε_iw,",
           r"$$y_{iw} = \alpha_i + \lambda_w + \sum_{k=1}^{3} \beta_k \left(\mathrm{Constituent}_i \times P_{kw}\right) + \varepsilon_{iw},$$")
 md = once(md, "where y_iw is a liquidity measure for stock i in week w, α_i and λ_w are stock and week fixed effects, and P_1, P_2 and P_3 indicate",
           r"where $y_{iw}$ is a liquidity measure for stock $i$ in week $w$, $\alpha_i$ and $\lambda_w$ are stock and week fixed effects, and $P_{1w}$, $P_{2w}$ and $P_{3w}$ indicate")
+md = once(md, "we define illiquidity for stock i on day t with", r"we define illiquidity for stock $i$ on day $t$ with")
+md = once(md, "the daily abnormal return of stock i is its log return", r"the daily abnormal return of stock $i$ is its log return")
 md = once(md, "The coefficients β_k identify", r"The coefficients $\beta_k$ identify")
 md = once(md, "The ITT specification replaces Constituent_i with",
           r"The ITT specification replaces $\mathrm{Constituent}_i$ with") if "replaces Constituent_i" in md else md
