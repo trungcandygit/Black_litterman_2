@@ -1,0 +1,128 @@
+{
+ "schema_version": "integrity-correction-authorization-input/1.0",
+ "revision_patch_sha256": "abe890f379cbb52033dc8c1f9241ed775387b59d9b993a7b641a99f00b204ee4",
+ "author_events": [
+  {
+   "event_id": "AUTHOR-EVENT-r5-final",
+   "source": "explicit_session_user_message",
+   "actor_role": "author",
+   "input_sha256": "86c1e8255007b56cfbd4857b0b82df7efc6e449f1dd2f9fc1078053ce79c5513"
+  }
+ ],
+ "author_decisions": [
+  {
+   "correction_id": "IL-MINOR-1",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0068",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-2",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0136",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-3",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0067",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0071",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0189",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-4",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0101",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0108",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0115",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-5",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0131",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0148",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0213",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-6",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  }
+ ]
+}

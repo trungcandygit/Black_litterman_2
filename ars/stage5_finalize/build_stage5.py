@@ -113,7 +113,7 @@ checks = {
 
 # ---------------------------------------------------------------- highlights
 HIGHLIGHTS = [
-    "Vietnam's FTSE upgrade cut illiquidity of likely index stocks by 24% to 56%",
+    "Illiquidity of likely index stocks fell 24% to 56% after FTSE's upgrade steps",
     "Liquidity and prices moved at FTSE's disclosures, before the first index tranche",
     "Prices rose at the announcement and confirmation, not at the list or effective date",
     "Rebalancing-day trading surged for included stocks only, with no price effect",
