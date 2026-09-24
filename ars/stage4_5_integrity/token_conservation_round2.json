@@ -1,0 +1,1971 @@
+{
+  "conserved": false,
+  "op_reports": [
+    {
+      "op_index": 0,
+      "op": "replace_block",
+      "block_id": "B0003",
+      "roadmap_item_ids": [
+        "REV-R2-01",
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "24%": 1,
+            "32%": 1,
+            "3.9%": 1,
+            "2.7%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 1,
+      "op": "replace_block",
+      "block_id": "B0007",
+      "roadmap_item_ids": [
+        "REV-R2-01",
+        "REV-R2-05"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "27": 1,
+            "2024": 1,
+            "10%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 2,
+      "op": "replace_block",
+      "block_id": "B0012",
+      "roadmap_item_ids": [
+        "REV-R2-03"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "5%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 3,
+      "op": "replace_block",
+      "block_id": "B0013",
+      "roadmap_item_ids": [
+        "REV-R2-14",
+        "REV-R2-01",
+        "REV-R2-05"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "0.27": 1,
+            "0.55": 1,
+            "0.81": 1,
+            "6": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 4,
+      "op": "replace_block",
+      "block_id": "B0018",
+      "roadmap_item_ids": [
+        "REV-R2-16",
+        "REV-R2-09"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 1,
+            "49%": 2,
+            "4.9%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "(FTSE Russell, 2026)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 5,
+      "op": "replace_block",
+      "block_id": "B0025",
+      "roadmap_item_ids": [
+        "REV-R2-11"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2023": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "Dong et al. (2023)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 6,
+      "op": "replace_block",
+      "block_id": "B0035",
+      "roadmap_item_ids": [
+        "REV-R2-16",
+        "REV-R2-06"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2025": 2,
+            "2024": 1,
+            "6": 1,
+            "17": 1,
+            "5.2": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "(VietnamPlus, 2024)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 7,
+      "op": "replace_block",
+      "block_id": "B0044",
+      "roadmap_item_ids": [
+        "REV-R2-03",
+        "REV-R2-04",
+        "REV-R2-15"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "-130": 1,
+            "-11": 1
+          },
+          "added": {
+            "110": 1,
+            "-1": 3,
+            "20": 2,
+            "22": 1,
+            "31": 1,
+            "1": 1,
+            "5": 1,
+            "0": 1,
+            "5%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 8,
+      "op": "replace_block",
+      "block_id": "B0050",
+      "roadmap_item_ids": [
+        "REV-R2-16",
+        "REV-R2-12",
+        "REV-R2-15"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "366": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 9,
+      "op": "replace_block",
+      "block_id": "B0057",
+      "roadmap_item_ids": [
+        "REV-R2-02"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "27": 1
+          },
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 10,
+      "op": "replace_block",
+      "block_id": "B0060",
+      "roadmap_item_ids": [
+        "REV-R2-08",
+        "REV-R2-12"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "-0.39": 1,
+            "32%": 1,
+            "0.001": 2,
+            "-0.75": 1,
+            "-0.94": 1,
+            "53%": 1,
+            "61%": 1,
+            "0.50": 1,
+            "0.08": 1,
+            "0.24": 2,
+            "0.025": 1,
+            "0.49": 1,
+            "0.036": 1
+          },
+          "added": {
+            "-0.23": 1,
+            "-0.47": 1,
+            "-0.69": 1,
+            "21%": 1,
+            "38%": 1,
+            "50%": 1,
+            "-0.012": 1,
+            "0.002": 1,
+            "0.21": 1,
+            "0.10": 2,
+            "0.035": 1,
+            "0.40": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 11,
+      "op": "replace_block",
+      "block_id": "B0062",
+      "roadmap_item_ids": [
+        "REV-R2-12"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "-0.386": 1,
+            "0.117": 1,
+            "0.638": 1,
+            "0.136": 1,
+            "0.0014": 1,
+            "-0.751": 1,
+            "0.152": 1,
+            "1.036": 1,
+            "0.182": 1,
+            "-0.938": 1,
+            "0.204": 1,
+            "1.308": 1,
+            "0.221": 1,
+            "0.0020": 1
+          },
+          "added": {
+            "-0.233": 1,
+            "0.159": 1,
+            "0.387": 1,
+            "0.166": 1,
+            "0.0011": 1,
+            "-0.471": 1,
+            "0.167": 1,
+            "0.642": 1,
+            "0.177": 1,
+            "0.0013": 1,
+            "-0.691": 1,
+            "0.232": 1,
+            "0.845": 1,
+            "0.245": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 12,
+      "op": "replace_block",
+      "block_id": "B0063",
+      "roadmap_item_ids": [
+        "REV-R2-12"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "4": 1,
+            "6": 1,
+            "24": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 13,
+      "op": "replace_block",
+      "block_id": "B0068",
+      "roadmap_item_ids": [
+        "REV-R2-01"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2025": 1,
+            "0.001": 1,
+            "2026": 1,
+            "2": 1,
+            "0.26": 1,
+            "0.22": 1,
+            "7.59": 1,
+            "-0.22": 1,
+            "-0.78": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 14,
+      "op": "insert_after",
+      "block_id": "B0071",
+      "roadmap_item_ids": [
+        "REV-R2-01"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2": 1,
+            "27": 1,
+            "2024": 1,
+            "2025": 1,
+            "95%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "(screened on 2024 data)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 15,
+      "op": "replace_block",
+      "block_id": "B0076",
+      "roadmap_item_ids": [
+        "REV-R2-03"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "6.6%": 1,
+            "2.16": 1,
+            "3.04": 1,
+            "2.54": 1,
+            "2.9%": 1,
+            "3.6%": 1,
+            "2.30": 1,
+            "2.51": 1,
+            "1.1%": 1,
+            "0.97": 1,
+            "1.82": 1,
+            "-0.9%": 1,
+            "0.6%": 1
+          },
+          "added": {
+            "3.2": 1,
+            "-1": 1,
+            "5": 1,
+            "3.9%": 1,
+            "2.19": 1,
+            "2.7%": 1,
+            "2.22": 1,
+            "2.93": 1,
+            "1.5%": 1,
+            "2.0%": 1,
+            "-0.5%": 1,
+            "1.0%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 16,
+      "op": "replace_block",
+      "block_id": "B0079",
+      "roadmap_item_ids": [
+        "REV-R2-03",
+        "REV-R2-04"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "1.3%": 2,
+            "0.93": 1,
+            "1.54": 1,
+            "2.6%": 1,
+            "4.4%": 1,
+            "2.16": 1,
+            "-0.1%": 1,
+            "-0.03": 1,
+            "2.54": 1,
+            "2.9%": 1,
+            "2.35": 1,
+            "2.51": 1,
+            "1.74": 1,
+            "1.9%": 1,
+            "1.02": 1,
+            "1.61": 1,
+            "3.4%": 1,
+            "1.42": 1,
+            "2.11": 1,
+            "7.1%": 1,
+            "2.20": 1,
+            "2.79": 1,
+            "8.1%": 1,
+            "1.95": 1,
+            "1.82": 1,
+            "1.1%": 1,
+            "0.97": 1,
+            "1.41": 1,
+            "1.99": 1,
+            "1.47": 1,
+            "2.02": 1,
+            "2.5%": 1,
+            "1.30": 1,
+            "1.18": 1,
+            "4.2%": 1,
+            "1.37": 1,
+            "0.6%": 1,
+            "0.53": 1,
+            "-0.9%": 1,
+            "-0.78": 1
+          },
+          "added": {
+            "3.3%": 1,
+            "1.43": 1,
+            "3.9%": 1,
+            "2.19": 1,
+            "1.6%": 1,
+            "2.93": 1,
+            "2.7%": 1,
+            "2.22": 1,
+            "2.73": 2,
+            "3.8%": 1,
+            "2.00": 1,
+            "2.2%": 1,
+            "1.21": 3,
+            "1.75": 1,
+            "1.72": 1,
+            "2.44": 1,
+            "6.2%": 1,
+            "1.94": 1,
+            "3.03": 1,
+            "8.4%": 1,
+            "1.86": 1,
+            "1.5%": 2,
+            "1.31": 1,
+            "1.50": 1,
+            "1.25": 1,
+            "2.04": 1,
+            "2.0%": 1,
+            "1.12": 1,
+            "2.17": 1,
+            "3.1%": 1,
+            "1.64": 1,
+            "3.7%": 1,
+            "1.65": 1,
+            "0.9%": 1,
+            "0.88": 1,
+            "-0.5%": 1,
+            "-0.51": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 17,
+      "op": "replace_block",
+      "block_id": "B0080",
+      "roadmap_item_ids": [
+        "REV-R2-03"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "27": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 18,
+      "op": "replace_block",
+      "block_id": "B0081",
+      "roadmap_item_ids": [
+        "REV-R2-03",
+        "REV-R2-04"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "27": 2,
+            "14": 1,
+            "1.86": 1,
+            "0.25": 1,
+            "-0.40": 1,
+            "-0.48": 1,
+            "1.57": 1,
+            "2.38": 1,
+            "0.49": 1,
+            "1.98": 1,
+            "1.59": 1,
+            "0.22": 1,
+            "0.34": 1,
+            "0.68": 1
+          },
+          "added": {
+            "7": 4,
+            "2025": 2,
+            "-1": 7,
+            "1": 4,
+            "1.3%": 2,
+            "2.3%": 5,
+            "2.05": 1,
+            "5": 3,
+            "3.5%": 1,
+            "5.9%": 1,
+            "6.4%": 1,
+            "3.75": 1,
+            "0": 3,
+            "20": 3,
+            "2.9%": 1,
+            "0.90": 1,
+            "-0.1%": 1,
+            "-3.6%": 1,
+            "-1.20": 1,
+            "2026": 6,
+            "2.17": 1,
+            "0.99": 1,
+            "2.10": 1,
+            "2.4%": 1,
+            "2.02": 1,
+            "3.2%": 1,
+            "1.45": 1,
+            "0.7%": 2,
+            "0.35": 2,
+            "1.25": 1,
+            "0.94": 2,
+            "2.74": 1,
+            "6.3%": 1,
+            "2.01": 1,
+            "21": 4,
+            "2.08": 1,
+            "1.6%": 1,
+            "1.37": 1,
+            "2.13": 1,
+            "1.7%": 1,
+            "1.64": 1,
+            "1.62": 1,
+            "0.42": 1,
+            "1.43": 1,
+            "0.3%": 2,
+            "0.11": 2,
+            "0.80": 1,
+            "1.4%": 2,
+            "0.50": 2,
+            "1.5%": 1,
+            "1.52": 1,
+            "0.2%": 4,
+            "0.27": 1,
+            "-0.09": 1,
+            "1.1%": 2,
+            "0.87": 2,
+            "3.14": 1,
+            "8.7%": 1,
+            "2.04": 1,
+            "4.5%": 1,
+            "1.39": 1,
+            "0.26": 1,
+            "-1.4%": 1,
+            "-0.75": 1,
+            "-0.41": 1,
+            "-0.4%": 1,
+            "-0.29": 1,
+            "-2.2%": 1,
+            "-0.77": 1,
+            "-0.49": 1,
+            "-0.8%": 1,
+            "-0.36": 1,
+            "0.21": 1,
+            "-2.8%": 1,
+            "-0.57": 1,
+            "0.05": 1,
+            "0.9%": 1,
+            "0.51": 1,
+            "-1.6%": 1,
+            "-0.63": 1,
+            "0.23": 1,
+            "0.07": 1,
+            "0.65": 1,
+            "1.00": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 19,
+      "op": "replace_block",
+      "block_id": "B0082",
+      "roadmap_item_ids": [
+        "REV-R2-03",
+        "REV-R2-04"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "-1": 1,
+            "20": 1,
+            "120": 1,
+            "98": 1,
+            "89": 1,
+            "5%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 20,
+      "op": "replace_block",
+      "block_id": "B0083",
+      "roadmap_item_ids": [
+        "REV-R2-03"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "0": 1,
+            "20": 1,
+            "-0.1%": 1,
+            "7.1%": 1,
+            "1.95": 1,
+            "2.79": 1
+          },
+          "added": {
+            "1.6%": 1,
+            "6.2%": 1,
+            "1.94": 1,
+            "3.03": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 21,
+      "op": "replace_block",
+      "block_id": "B0084",
+      "roadmap_item_ids": [
+        "REV-R2-03",
+        "REV-R2-14",
+        "REV-R2-01"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "3.97": 1,
+            "6.2%": 1,
+            "2.97": 1,
+            "0.25": 1
+          },
+          "added": {
+            "3.5%": 1,
+            "1.91": 1,
+            "1.3%": 1,
+            "3.1%": 1,
+            "2.3%": 1,
+            "6.3%": 1,
+            "-1.4%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 22,
+      "op": "replace_block",
+      "block_id": "B0085",
+      "roadmap_item_ids": [
+        "REV-R2-03"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 23,
+      "op": "replace_block",
+      "block_id": "B0093",
+      "roadmap_item_ids": [
+        "REV-R2-17"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "21": 1,
+            "2026": 1,
+            "0.62": 1,
+            "3.54": 1,
+            "18": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 24,
+      "op": "replace_block",
+      "block_id": "B0094",
+      "roadmap_item_ids": [
+        "REV-R2-05",
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "-0.9%": 1,
+            "0.6%": 1
+          },
+          "added": {
+            "-0.5%": 1,
+            "1.0%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 25,
+      "op": "replace_block",
+      "block_id": "B0095",
+      "roadmap_item_ids": [
+        "REV-R2-05",
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 26,
+      "op": "replace_block",
+      "block_id": "B0098",
+      "roadmap_item_ids": [
+        "REV-R2-07"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 27,
+      "op": "replace_block",
+      "block_id": "B0100",
+      "roadmap_item_ids": [
+        "REV-R2-07"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 28,
+      "op": "replace_block",
+      "block_id": "B0101",
+      "roadmap_item_ids": [
+        "REV-R2-07"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 29,
+      "op": "replace_block",
+      "block_id": "B0102",
+      "roadmap_item_ids": [
+        "REV-R2-05",
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 30,
+      "op": "replace_block",
+      "block_id": "B0114",
+      "roadmap_item_ids": [
+        "REV-R2-12",
+        "REV-R2-10"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "0.124": 1,
+            "-0.303": 1,
+            "-0.619": 1,
+            "0.226": 1,
+            "-0.781": 1,
+            "0.292": 1
+          },
+          "added": {
+            "34,369": 1,
+            "-0.204": 1,
+            "0.138": 1,
+            "-0.425": 1,
+            "0.199": 1,
+            "-0.637": 1,
+            "0.262": 1,
+            "-0.231": 1,
+            "0.110": 1,
+            "-0.446": 1,
+            "0.171": 1,
+            "-0.541": 1,
+            "0.235": 1,
+            "11": 1,
+            "-0.439": 1,
+            "0.163": 2,
+            "-1.042": 1,
+            "0.210": 1,
+            "-1.398": 1,
+            "0.315": 1,
+            "33,082": 1,
+            "19": 1,
+            "-0.225": 1,
+            "0.095": 1,
+            "-0.515": 1,
+            "-0.831": 1,
+            "0.223": 1,
+            "33,874": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 31,
+      "op": "replace_block",
+      "block_id": "B0115",
+      "roadmap_item_ids": [
+        "REV-R2-12",
+        "REV-R2-10"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "-0.012": 1,
+            "0.002": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 32,
+      "op": "replace_block",
+      "block_id": "B0116",
+      "roadmap_item_ids": [
+        "REV-R2-12"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "-0.30": 1,
+            "-0.62": 1,
+            "-0.78": 1
+          },
+          "added": {
+            "-0.20": 1,
+            "-0.42": 1,
+            "-0.64": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 33,
+      "op": "replace_block",
+      "block_id": "B0118",
+      "roadmap_item_ids": [
+        "REV-R2-15"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 34,
+      "op": "replace_block",
+      "block_id": "B0119",
+      "roadmap_item_ids": [
+        "REV-R2-12",
+        "REV-R2-10"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "13": 1,
+            "24": 1,
+            "8": 2,
+            "27": 1,
+            "11": 1,
+            "0.44": 1,
+            "1.04": 1,
+            "1.40": 1,
+            "19": 1,
+            "0.23": 1,
+            "0.52": 1,
+            "0.83": 1,
+            "2026": 1,
+            "85": 1,
+            "-0.21": 1,
+            "-1.13": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "LSEG (2026)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 35,
+      "op": "replace_block",
+      "block_id": "B0122",
+      "roadmap_item_ids": [
+        "REV-R2-06"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "-0.23": 1,
+            "-0.46": 1,
+            "-0.73": 1,
+            "5%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 36,
+      "op": "replace_block",
+      "block_id": "B0123",
+      "roadmap_item_ids": [
+        "REV-R2-06"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "1.15": 1,
+            "0.024": 1,
+            "1.67": 1
+          },
+          "added": {
+            "31": 1,
+            "2025": 1,
+            "1.59": 1,
+            "-0.39": 1,
+            "-1.68": 1,
+            "2024": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "(VietnamPlus, 2024)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 37,
+      "op": "replace_block",
+      "block_id": "B0128",
+      "roadmap_item_ids": [
+        "REV-R2-07",
+        "REV-R2-06"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {
+            "-1.146": 1,
+            "0.504": 1,
+            "-1.666": 1,
+            "0.058": 1,
+            "-2.508": 1,
+            "0.409": 1
+          },
+          "added": {
+            "-1.15": 1,
+            "-1.67": 1,
+            "-2.51": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 38,
+      "op": "replace_block",
+      "block_id": "B0131",
+      "roadmap_item_ids": [
+        "REV-R2-14",
+        "REV-R2-07",
+        "REV-R2-06"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 39,
+      "op": "replace_block",
+      "block_id": "B0132",
+      "roadmap_item_ids": [
+        "REV-R2-02"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 40,
+      "op": "replace_block",
+      "block_id": "B0133",
+      "roadmap_item_ids": [
+        "REV-R2-02"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 41,
+      "op": "replace_block",
+      "block_id": "B0135",
+      "roadmap_item_ids": [
+        "REV-R2-01",
+        "REV-R2-05"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "3.9%": 1,
+            "2.7%": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 42,
+      "op": "replace_block",
+      "block_id": "B0136",
+      "roadmap_item_ids": [
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 43,
+      "op": "replace_block",
+      "block_id": "B0137",
+      "roadmap_item_ids": [
+        "REV-R2-14",
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 44,
+      "op": "replace_block",
+      "block_id": "B0138",
+      "roadmap_item_ids": [
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 45,
+      "op": "replace_block",
+      "block_id": "B0139",
+      "roadmap_item_ids": [
+        "REV-R2-02"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 46,
+      "op": "replace_block",
+      "block_id": "B0140",
+      "roadmap_item_ids": [
+        "REV-R2-13"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 47,
+      "op": "replace_block",
+      "block_id": "B0141",
+      "roadmap_item_ids": [
+        "REV-R2-10"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 48,
+      "op": "replace_block",
+      "block_id": "B0143",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 49,
+      "op": "replace_block",
+      "block_id": "B0145",
+      "roadmap_item_ids": [
+        "REV-R2-12"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2": 1,
+            "4": 2,
+            "6": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 50,
+      "op": "replace_block",
+      "block_id": "B0146",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 51,
+      "op": "replace_block",
+      "block_id": "B0155",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": true
+      }
+    },
+    {
+      "op_index": 52,
+      "op": "replace_block",
+      "block_id": "B0168",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "24": 1,
+            "2026": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 53,
+      "op": "replace_block",
+      "block_id": "B0169",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 1,
+            "24": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 54,
+      "op": "replace_block",
+      "block_id": "B0176",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "24": 1,
+            "2026": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 55,
+      "op": "replace_block",
+      "block_id": "B0177",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 1,
+            "24": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 56,
+      "op": "replace_block",
+      "block_id": "B0183",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 1,
+            "24": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 57,
+      "op": "replace_block",
+      "block_id": "B0184",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 1,
+            "24": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 58,
+      "op": "replace_block",
+      "block_id": "B0185",
+      "roadmap_item_ids": [
+        "REV-R2-16",
+        "REV-R2-06"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 2,
+            "24": 2,
+            "2024": 1,
+            "30": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {
+            "(2024, December 30)": 1
+          }
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    },
+    {
+      "op_index": 59,
+      "op": "replace_block",
+      "block_id": "B0186",
+      "roadmap_item_ids": [
+        "REV-R2-16"
+      ],
+      "delta": {
+        "numbers_delta": {
+          "removed": {},
+          "added": {
+            "2026": 1,
+            "24": 1
+          }
+        },
+        "citations_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "protected_terms_delta": {
+          "removed": {},
+          "added": {}
+        },
+        "conserved": false
+      }
+    }
+  ],
+  "advisory_rows": [
+    "ADV-REV-1: op 0 replace_block B0003 (roadmap: REV-R2-01, REV-R2-13) — numbers added [2.7%, 24%, 3.9%, 32%]",
+    "ADV-REV-2: op 1 replace_block B0007 (roadmap: REV-R2-01, REV-R2-05) — numbers added [10%, 2024, 27]",
+    "ADV-REV-3: op 2 replace_block B0012 (roadmap: REV-R2-03) — numbers added [5%]",
+    "ADV-REV-4: op 3 replace_block B0013 (roadmap: REV-R2-14, REV-R2-01, REV-R2-05) — numbers added [0.27, 0.55, 0.81, 6]",
+    "ADV-REV-5: op 4 replace_block B0018 (roadmap: REV-R2-16, REV-R2-09) — numbers added [2026, 4.9%, 49%]; citations added [(FTSE Russell, 2026)]",
+    "ADV-REV-6: op 5 replace_block B0025 (roadmap: REV-R2-11) — numbers added [2023]; citations added [Dong et al. (2023)]",
+    "ADV-REV-7: op 6 replace_block B0035 (roadmap: REV-R2-16, REV-R2-06) — numbers added [17, 2024, 2025, 5.2, 6]; citations added [(VietnamPlus, 2024)]",
+    "ADV-REV-8: op 7 replace_block B0044 (roadmap: REV-R2-03, REV-R2-04, REV-R2-15) — numbers removed [-11, -130]; numbers added [-1, 0, 1, 110, 20, 22, 31, 5, 5%]",
+    "ADV-REV-9: op 8 replace_block B0050 (roadmap: REV-R2-16, REV-R2-12, REV-R2-15) — numbers added [366]",
+    "ADV-REV-10: op 9 replace_block B0057 (roadmap: REV-R2-02) — numbers removed [27]",
+    "ADV-REV-11: op 10 replace_block B0060 (roadmap: REV-R2-08, REV-R2-12) — numbers removed [-0.39, -0.75, -0.94, 0.001, 0.025, 0.036, 0.08, 0.24, 0.49, 0.50, 32%, 53%, 61%]; numbers added [-0.012, -0.23, -0.47, -0.69, 0.002, 0.035, 0.10, 0.21, 0.40, 21%, 38%, 50%]",
+    "ADV-REV-12: op 11 replace_block B0062 (roadmap: REV-R2-12) — numbers removed [-0.386, -0.751, -0.938, 0.0014, 0.0020, 0.117, 0.136, 0.152, 0.182, 0.204, 0.221, 0.638, 1.036, 1.308]; numbers added [-0.233, -0.471, -0.691, 0.0011, 0.0013, 0.159, 0.166, 0.167, 0.177, 0.232, 0.245, 0.387, 0.642, 0.845]",
+    "ADV-REV-13: op 12 replace_block B0063 (roadmap: REV-R2-12) — numbers added [24, 4, 6]",
+    "ADV-REV-14: op 13 replace_block B0068 (roadmap: REV-R2-01) — numbers added [-0.22, -0.78, 0.001, 0.22, 0.26, 2, 2025, 2026, 7.59]",
+    "ADV-REV-15: op 14 insert_after B0071 (roadmap: REV-R2-01) — numbers added [2, 2024, 2025, 27, 95%]; citations added [(screened on 2024 data)]",
+    "ADV-REV-16: op 15 replace_block B0076 (roadmap: REV-R2-03) — numbers removed [-0.9%, 0.6%, 0.97, 1.1%, 1.82, 2.16, 2.30, 2.51, 2.54, 2.9%, 3.04, 3.6%, 6.6%]; numbers added [-0.5%, -1, 1.0%, 1.5%, 2.0%, 2.19, 2.22, 2.7%, 2.93, 3.2, 3.9%, 5]",
+    "ADV-REV-17: op 16 replace_block B0079 (roadmap: REV-R2-03, REV-R2-04) — numbers removed [-0.03, -0.1%, -0.78, -0.9%, 0.53, 0.6%, 0.93, 0.97, 1.02, 1.1%, 1.18, 1.3%, 1.30, 1.37, 1.41, 1.42, 1.47, 1.54, 1.61, 1.74, 1.82, 1.9%, 1.95, 1.99, 2.02, 2.11, 2.16, 2.20, 2.35, 2.5%, 2.51, 2.54, 2.6%, 2.79, 2.9%, 3.4%, 4.2%, 4.4%, 7.1%, 8.1%]; numbers added [-0.5%, -0.51, 0.88, 0.9%, 1.12, 1.21, 1.25, 1.31, 1.43, 1.5%, 1.50, 1.6%, 1.64, 1.65, 1.72, 1.75, 1.86, 1.94, 2.0%, 2.00, 2.04, 2.17, 2.19, 2.2%, 2.22, 2.44, 2.7%, 2.73, 2.93, 3.03, 3.1%, 3.3%, 3.7%, 3.8%, 3.9%, 6.2%, 8.4%]",
+    "ADV-REV-18: op 17 replace_block B0080 (roadmap: REV-R2-03) — numbers added [27]",
+    "ADV-REV-19: op 18 replace_block B0081 (roadmap: REV-R2-03, REV-R2-04) — numbers removed [-0.40, -0.48, 0.22, 0.25, 0.34, 0.49, 0.68, 1.57, 1.59, 1.86, 1.98, 14, 2.38, 27]; numbers added [-0.09, -0.1%, -0.29, -0.36, -0.4%, -0.41, -0.49, -0.57, -0.63, -0.75, -0.77, -0.8%, -1, -1.20, -1.4%, -1.6%, -2.2%, -2.8%, -3.6%, 0, 0.05, 0.07, 0.11, 0.2%, 0.21, 0.23, 0.26, 0.27, 0.3%, 0.35, 0.42, 0.50, 0.51, 0.65, 0.7%, 0.80, 0.87, 0.9%, 0.90, 0.94, 0.99, 1, 1.00, 1.1%, 1.25, 1.3%, 1.37, 1.39, 1.4%, 1.43, 1.45, 1.5%, 1.52, 1.6%, 1.62, 1.64, 1.7%, 2.01, 2.02, 2.04, 2.05, 2.08, 2.10, 2.13, 2.17, 2.3%, 2.4%, 2.74, 2.9%, 20, 2025, 2026, 21, 3.14, 3.2%, 3.5%, 3.75, 4.5%, 5, 5.9%, 6.3%, 6.4%, 7, 8.7%]",
+    "ADV-REV-20: op 19 replace_block B0082 (roadmap: REV-R2-03, REV-R2-04) — numbers added [-1, 120, 20, 5%, 89, 98]",
+    "ADV-REV-21: op 20 replace_block B0083 (roadmap: REV-R2-03) — numbers removed [-0.1%, 0, 1.95, 2.79, 20, 7.1%]; numbers added [1.6%, 1.94, 3.03, 6.2%]",
+    "ADV-REV-22: op 21 replace_block B0084 (roadmap: REV-R2-03, REV-R2-14, REV-R2-01) — numbers removed [0.25, 2.97, 3.97, 6.2%]; numbers added [-1.4%, 1.3%, 1.91, 2.3%, 3.1%, 3.5%, 6.3%]",
+    "ADV-REV-23: op 23 replace_block B0093 (roadmap: REV-R2-17) — numbers added [0.62, 18, 2026, 21, 3.54]",
+    "ADV-REV-24: op 24 replace_block B0094 (roadmap: REV-R2-05, REV-R2-13) — numbers removed [-0.9%, 0.6%]; numbers added [-0.5%, 1.0%]",
+    "ADV-REV-25: op 30 replace_block B0114 (roadmap: REV-R2-12, REV-R2-10) — numbers removed [-0.303, -0.619, -0.781, 0.124, 0.226, 0.292]; numbers added [-0.204, -0.225, -0.231, -0.425, -0.439, -0.446, -0.515, -0.541, -0.637, -0.831, -1.042, -1.398, 0.095, 0.110, 0.138, 0.163, 0.171, 0.199, 0.210, 0.223, 0.235, 0.262, 0.315, 11, 19, 33,082, 33,874, 34,369]",
+    "ADV-REV-26: op 31 replace_block B0115 (roadmap: REV-R2-12, REV-R2-10) — numbers added [-0.012, 0.002]",
+    "ADV-REV-27: op 32 replace_block B0116 (roadmap: REV-R2-12) — numbers removed [-0.30, -0.62, -0.78]; numbers added [-0.20, -0.42, -0.64]",
+    "ADV-REV-28: op 34 replace_block B0119 (roadmap: REV-R2-12, REV-R2-10) — numbers added [-0.21, -1.13, 0.23, 0.44, 0.52, 0.83, 1.04, 1.40, 11, 13, 19, 2026, 24, 27, 8, 85]; citations added [LSEG (2026)]",
+    "ADV-REV-29: op 35 replace_block B0122 (roadmap: REV-R2-06) — numbers added [-0.23, -0.46, -0.73, 5%]",
+    "ADV-REV-30: op 36 replace_block B0123 (roadmap: REV-R2-06) — numbers removed [0.024, 1.15, 1.67]; numbers added [-0.39, -1.68, 1.59, 2024, 2025, 31]; citations added [(VietnamPlus, 2024)]",
+    "ADV-REV-31: op 37 replace_block B0128 (roadmap: REV-R2-07, REV-R2-06) — numbers removed [-1.146, -1.666, -2.508, 0.058, 0.409, 0.504]; numbers added [-1.15, -1.67, -2.51]",
+    "ADV-REV-32: op 38 replace_block B0131 (roadmap: REV-R2-14, REV-R2-07, REV-R2-06) — numbers added [2]",
+    "ADV-REV-33: op 41 replace_block B0135 (roadmap: REV-R2-01, REV-R2-05) — numbers added [2.7%, 3.9%]",
+    "ADV-REV-34: op 49 replace_block B0145 (roadmap: REV-R2-12) — numbers added [2, 4, 6]",
+    "ADV-REV-35: op 52 replace_block B0168 (roadmap: REV-R2-16) — numbers added [2026, 24]",
+    "ADV-REV-36: op 53 replace_block B0169 (roadmap: REV-R2-16) — numbers added [2026, 24]",
+    "ADV-REV-37: op 54 replace_block B0176 (roadmap: REV-R2-16) — numbers added [2026, 24]",
+    "ADV-REV-38: op 55 replace_block B0177 (roadmap: REV-R2-16) — numbers added [2026, 24]",
+    "ADV-REV-39: op 56 replace_block B0183 (roadmap: REV-R2-16) — numbers added [2026, 24]",
+    "ADV-REV-40: op 57 replace_block B0184 (roadmap: REV-R2-16) — numbers added [2026, 24]",
+    "ADV-REV-41: op 58 replace_block B0185 (roadmap: REV-R2-16, REV-R2-06) — numbers added [2024, 2026, 24, 30]; citations added [(2024, December 30)]",
+    "ADV-REV-42: op 59 replace_block B0186 (roadmap: REV-R2-16) — numbers added [2026, 24]"
+  ]
+}
