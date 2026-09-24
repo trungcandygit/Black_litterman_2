@@ -1,0 +1,9 @@
+📦 Vnstock 4.0.8 is available
+Current: 4.0.4 (Python 3.13)
+Update: pip install vnstock --upgrade
+Release: https://vnstocks.com/docs/tai-lieu/lich-su-phien-ban
+📦 Vnai 2.6.1 is available
+Current: 2.5.0 (Python 3.13)
+Update: pip install vnai --upgrade
+Release: https://pypi.org/project/vnai/#history
+DONE

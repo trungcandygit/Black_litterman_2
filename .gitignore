@@ -1,0 +1,8 @@
+project_context.md
+notes/
+data/raw/
+*.aux
+*.log
+*.out
+*.bbl
+*.blg

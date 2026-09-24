@@ -1,0 +1,744 @@
+symbol,exchange,type,sid,organ_short_name,organ_name,product_grp_id,icb_code2
+YEG,HSX,STOCK,3563.0,Tập đoàn Yeah1,Công ty Cổ phần Tập đoàn Yeah1,STO,5500
+YBM,HSX,STOCK,3562.0,Khoáng sản CN Yên Bái,Công ty Cổ phần Khoáng sản Công nghiệp Yên Bái,STO,1700
+VVS,HSX,STOCK,3540.0,Đầu tư Phát triển Máy Việt Nam,Công ty Cổ phần Đầu tư Phát triển Máy Việt Nam,STO,3300
+VTP,HSX,STOCK,3531.0,Bưu chính Viettel,Tổng Công ty Cổ phần Bưu chính Viettel,STO,2700
+VTO,HSX,STOCK,3530.0,VITACO,Công ty Cổ phần Vận tải Xăng dầu VITACO,STO,2700
+VTB,HSX,STOCK,3519.0,Viettronics Tân Bình,Công ty Cổ phần Viettronics Tân Bình,STO,2700
+VSI,HSX,STOCK,3513.0,Đầu tư và Xây dựng Cấp thoát nước,Công ty Cổ phần Đầu tư và Xây dựng Cấp thoát nước,STO,2300
+VSH,HSX,STOCK,3512.0,Thủy điện Vĩnh Sơn - Sông Hinh,Công ty Cổ phần Thủy điện Vĩnh Sơn - Sông Hinh,STO,7500
+VSC,HSX,STOCK,3508.0,VICONSHIP,Công ty Cổ phần Container Việt Nam,STO,2700
+VRE,HSX,STOCK,3504.0,Vincom Retail,Công ty Cổ phần Vincom Retail,STO,8600
+VRC,HSX,STOCK,3503.0,Bất động sản và Đầu tư VRC,Công ty Cổ phần Bất động sản và Đầu tư VRC,STO,8600
+VPX,HSX,STOCK,3501.0,Chứng khoán VPBank,Công ty Cổ phần Chứng khoán VPBank,STO,8700
+VPS,HSX,STOCK,3499.0,Thuốc sát trùng Việt Nam,Công ty Cổ phần Thuốc sát trùng Việt Nam,STO,1300
+VPL,HSX,STOCK,3497.0,Vinpearl,Công ty Cổ phần Vinpearl,STO,5700
+VPI,HSX,STOCK,3495.0,Đầu tư Văn Phú - Invest,Công ty Cổ phần Phát triển Bất động sản Văn Phú,STO,8600
+VPH,HSX,STOCK,3494.0,Vạn Phát Hưng,Công ty Cổ phần Vạn Phát Hưng,STO,8600
+VPG,HSX,STOCK,3493.0,Đầu tư TMại XNK Việt Phát,Công ty Cổ phần Đầu tư Thương mại Xuất nhập khẩu Việt Phát,STO,1700
+VPD,HSX,STOCK,3492.0,Phát triển Điện lực Việt Nam,Công ty Cổ phần Phát triển Điện lực Việt Nam,STO,7500
+VPB,HSX,STOCK,3490.0,VPBank,Ngân hàng Thương mại Cổ phần Việt Nam Thịnh Vượng,STO,8300
+VOS,HSX,STOCK,3488.0,Vận tải Biển Việt Nam,Công ty Cổ phần Vận tải Biển Việt Nam,STO,2700
+VNS,HSX,STOCK,3481.0,Ánh Dương Việt Nam,Công ty Cổ phần Ánh Dương Việt Nam,STO,5700
+VNM,HSX,STOCK,3478.0,VINAMILK,Công ty Cổ phần Sữa Việt Nam,STO,3500
+VNL,HSX,STOCK,3477.0,Vinalink Logistics,Công ty Cổ phần Logistics Vinalink,STO,2700
+VNG,HSX,STOCK,3473.0,DL Thành Thành Công,Công ty Cổ phần Du Lịch Thành Thành Công,STO,5700
+VND,HSX,STOCK,3465.0,Chứng khoán VNDIRECT,Công ty Cổ phần Chứng khoán VNDIRECT,STO,8700
+VMD,HSX,STOCK,3436.0,Y Dược phẩm Vimedimex,Công ty Cổ phần Y Dược phẩm Vimedimex,STO,4500
+VJC,HSX,STOCK,3422.0,Vietjet Air,Công ty Cổ phần Hàng không Vietjet,STO,5700
+VIX,HSX,STOCK,3421.0,Chứng khoán VIX,Công ty Cổ phần Chứng khoán VIX,STO,8700
+VIP,HSX,STOCK,3416.0,Vận tải Xăng dầu VIPCO,Công ty Cổ phần Vận tải Xăng dầu VIPCO,STO,2700
+VID,HSX,STOCK,3409.0,Viễn Đông,Công ty Cổ phần Đầu tư Phát triển Thương mại Viễn Đông,STO,1700
+VIC,HSX,STOCK,3400.0,VinGroup,Tập đoàn Vingroup - Công ty CP,STO,8600
+VIB,HSX,STOCK,3399.0,VIBBank,Ngân hàng Thương mại Cổ phần Quốc tế Việt Nam,STO,8300
+VHM,HSX,STOCK,3396.0,Vinhomes,Công ty Cổ phần Vinhomes,STO,8600
+VHC,HSX,STOCK,3389.0,Thủy sản Vĩnh Hoàn,Công ty Cổ phần Vĩnh Hoàn,STO,3500
+VGC,HSX,STOCK,3380.0,Tổng Công ty Viglacera,Tổng Công ty Viglacera - Công ty Cổ phần,STO,2300
+VFG,HSX,STOCK,3377.0,Khử trùng Việt Nam,Công ty Cổ phần Khử trùng Việt Nam,STO,1300
+VDS,HSX,STOCK,3363.0,Chứng khoán Rồng Việt,Công ty Cổ phần Chứng khoán Rồng Việt,STO,8700
+VDP,HSX,STOCK,3362.0,Dược phẩm VIDIPHA,Công ty Cổ phần Dược phẩm Trung ương VIDIPHA,STO,4500
+VCK,HSX,STOCK,3348.0,Chứng Khoán VPS,Công ty Cổ phần Chứng Khoán VPS,STO,8700
+VCI,HSX,STOCK,3347.0,Chứng khoán Vietcap,Công ty Cổ phần Chứng khoán Vietcap,STO,8700
+VCG,HSX,STOCK,3346.0,VINACONEX,Tổng Công ty Cổ phần Xuất nhập khẩu và Xây dựng Việt Nam,STO,2300
+VCF,HSX,STOCK,3345.0,VinaCafé Biên Hòa,Công ty Cổ phần VinaCafé Biên Hòa,STO,3500
+VCB,HSX,STOCK,3342.0,Vietcombank,Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam,STO,8300
+VCA,HSX,STOCK,3341.0,Thép VICASA,Công ty Cổ phần Thép VICASA,STO,1700
+VBB,HSX,STOCK,3326.0,VietBank,Ngân hàng Thương mại Cổ phần Việt Nam Thương Tín,STO,8300
+VAB,HSX,STOCK,3314.0,Ngân hàng Việt Á,Ngân hàng Thương mại Cổ phần Việt Á,STO,8300
+UIC,HSX,STOCK,3298.0,Phát triển Nhà và Đô thị IDICO,Công ty Cổ phần Đầu tư Phát triển Nhà và Đô thị IDICO,STO,7500
+TYA,HSX,STOCK,3292.0,Dây và Cáp điện Taya,Công ty Cổ phần Dây và Cáp điện Taya Việt Nam,STO,2700
+TVT,HSX,STOCK,3288.0,May Việt Thắng,Tổng Công ty Việt Thắng - CTCP,STO,3700
+TVS,HSX,STOCK,3287.0,Chứng khoán Thiên Việt,Công ty Cổ phần Chứng khoán Thiên Việt,STO,8700
+TVB,HSX,STOCK,3279.0,Chứng khoán T-Cap,Công ty Cổ phần Chứng khoán T-Cap,STO,8700
+TV2,HSX,STOCK,3274.0,Tư vấn XD Điện 2,Công ty Cổ phần Tư vấn Xây dựng Điện 2,STO,2700
+TTF,HSX,STOCK,3263.0,Gỗ Trường Thành,Công ty Cổ phần Tập đoàn Kỹ nghệ Gỗ Trường Thành,STO,1700
+TTE,HSX,STOCK,3262.0,ĐT Năng lượng Trường Thịnh,Công ty Cổ phần Đầu tư Năng lượng Trường Thịnh,STO,7500
+TTA,HSX,STOCK,3258.0,XD và PT Trường Thành,Công ty Cổ phần Đầu tư Xây dựng và Phát triển Trường Thành,STO,7500
+TSC,HSX,STOCK,3252.0,Kỹ thuật NN Cần Thơ,Công ty Cổ phần Vật tư Kỹ thuật Nông nghiệp Cần Thơ,STO,1300
+TSA,HSX,STOCK,3250.0,Đầu Tư Và Xây Lắp Trường Sơn,Công ty Cổ Phần Đầu Tư Và Xây Lắp Trường Sơn,STO,2300
+TRC,HSX,STOCK,3244.0,Cao su Tây Ninh,Công ty Cổ phần Cao su Tây Ninh,STO,1300
+TRA,HSX,STOCK,3243.0,Traphaco,Công ty Cổ phần Traphaco,STO,4500
+TPC,HSX,STOCK,3236.0,Nhựa Tân Đại Hưng,Công ty Cổ phần Nhựa Tân Đại Hưng,STO,1300
+TPB,HSX,STOCK,3235.0,TPBank,Ngân hàng Thương mại Cổ phần Tiên Phong,STO,8300
+TNT,HSX,STOCK,3228.0,Tập đoàn TNT,Công ty Cổ phần Tập đoàn TNT,STO,2300
+TNI,HSX,STOCK,3224.0,Tập đoàn Thành Nam,Công ty Cổ phần Tập đoàn Thành Nam,STO,1700
+TNH,HSX,STOCK,3223.0,Tập đoàn Bệnh viện TNH,Công ty Cổ phần Tập đoàn Bệnh viện TNH,STO,4500
+TNC,HSX,STOCK,3218.0,Cao su Thống Nhất,Công ty Cổ phần Cao su Thống Nhất,STO,1300
+TN1,HSX,STOCK,3214.0,Rox Key Holdings,Công ty Cổ phần Rox Key Holdings,STO,8600
+TMT,HSX,STOCK,3211.0,Ô tô TMT,Công ty Cổ phần Ô tô TMT,STO,3300
+TMS,HSX,STOCK,3209.0,Transimex,Công ty Cổ phần Transimex,STO,2700
+TMP,HSX,STOCK,3208.0,Thủy điện Thác Mơ,Công ty Cổ phần Thủy điện Thác Mơ,STO,7500
+TLH,HSX,STOCK,3201.0,Thép Tiến Lên,Công ty Cổ phần Tập đoàn Thép Tiến Lên,STO,1700
+TLG,HSX,STOCK,3200.0,Tập đoàn Thiên Long,Công ty Cổ phần Tập đoàn Thiên Long,STO,3700
+TLD,HSX,STOCK,3199.0,ĐT XD và PT Đô thị Thăng Long,Công ty Cổ phần Đầu tư Xây dựng và Phát triển Đô thị Thăng Long,STO,2300
+TIX,HSX,STOCK,3192.0,TANIMEX,Công ty Cổ phần Sản xuất Kinh doanh Xuất nhập khẩu Dịch vụ và Đầu tư Tân Bình,STO,8600
+TIP,HSX,STOCK,3190.0,PT KCN Tín Nghĩa,Công ty Cổ phần Phát triển Khu công nghiệp Tín Nghĩa,STO,8600
+THG,HSX,STOCK,3177.0,XD Tiền Giang,Công ty Cổ phần Đầu tư và Xây dựng Tiền Giang,STO,2300
+TEG,HSX,STOCK,3168.0,Trường Thành Energy Group,Công ty Cổ phần Trường Thành Energy Group,STO,8600
+TDW,HSX,STOCK,3165.0,Cấp nước Thủ Đức,Công ty Cổ phần Cấp nước Thủ Đức,STO,7500
+TDP,HSX,STOCK,3161.0,Công ty Thuận Đức,Công ty Cổ phần Thuận Đức,STO,2700
+TDM,HSX,STOCK,3159.0,Nước Thủ Dầu Một,Công ty Cổ phần Nước Thủ Dầu Một,STO,7500
+TDH,HSX,STOCK,3157.0,Thủ Đức House,Công ty Cổ phần Phát triển Nhà Thủ Đức,STO,8600
+TDG,HSX,STOCK,3156.0,Đầu tư TDG Global,Công ty Cổ phần Đầu tư TDG Global,STO,7500
+TDC,HSX,STOCK,3154.0,Becamex TDC,Công ty Cổ phần Kinh doanh và Phát triển Bình Dương,STO,8600
+TCX,HSX,STOCK,3147.0,Chứng khoán TCBS,Công ty Cổ phần Chứng khoán Kỹ Thương,STO,8700
+TCT,HSX,STOCK,3145.0,Cáp treo Tây Ninh,Công ty Cổ phần Cáp treo Núi Bà Tây Ninh,STO,5700
+TCR,HSX,STOCK,3144.0,Gốm sứ TAICERA,Công ty Cổ phần Công nghiệp Gốm sứ TAICERA,STO,2300
+TCO,HSX,STOCK,3143.0,Janus Group,Công ty Cổ phần Janus Group,STO,3500
+TCM,HSX,STOCK,3142.0,Dệt may Thành Công,Công ty Cổ phần Dệt may - Đầu tư - Thương mại Thành Công,STO,3700
+TCL,HSX,STOCK,3141.0,Tan Cang Logistics,Công ty Cổ phần Đại lý Giao nhận Vận tải Xếp dỡ Tân Cảng,STO,2700
+TCI,HSX,STOCK,3138.0,Chứng khoán Thành Công,Công ty Cổ phần Chứng khoán Thành Công,STO,8700
+TCH,HSX,STOCK,3137.0,ĐT DV Tài chính Hoàng Huy,Công ty Cổ phần Đầu tư Dịch vụ Tài chính Hoàng Huy,STO,8600
+TCB,HSX,STOCK,3135.0,Techcombank,Ngân hàng Thương mại Cổ phần Kỹ thương Việt Nam,STO,8300
+TBC,HSX,STOCK,3127.0,Thủy điện Thác Bà,Công ty Cổ phần Thủy điện Thác Bà,STO,7500
+TAL,HSX,STOCK,3121.0,Đầu Tư Bất Động Sản Taseco,Công Ty Cổ Phần Đầu Tư Bất Động Sản Taseco,STO,8600
+SZL,HSX,STOCK,3113.0,Sonadezi Long Thành,Công ty Cổ phần Sonadezi Long Thành,STO,8600
+SZC,HSX,STOCK,3110.0,Sonadezi Châu Đức,Công ty Cổ phần Sonadezi Châu Đức,STO,8600
+SVT,HSX,STOCK,3107.0,Công nghệ SG Viễn Đông,Công ty Cổ phần Công nghệ Sài Gòn Viễn Đông,STO,5300
+SVD,HSX,STOCK,3101.0,Đầu tư & Thương mại Vũ Đăng,Công ty Cổ phần Đầu tư & Thương mại Vũ Đăng,STO,3700
+SVC,HSX,STOCK,3100.0,SAVICO,Công ty Cổ phần Dịch vụ tổng hợp Sài Gòn,STO,3300
+STK,HSX,STOCK,3094.0,Sợi Thế Kỷ,Công ty Cổ phần Sợi Thế Kỷ,STO,3700
+STG,HSX,STOCK,3092.0,Kho Vận Miền Nam,Công ty Cổ phần Kho Vận Miền Nam,STO,2700
+STB,HSX,STOCK,3089.0,NH Sài Gòn Tài Lộc (SACOMBANK),Ngân hàng Thương mại Cổ phần Sài Gòn Tài Lộc,STO,8300
+ST8,HSX,STOCK,3088.0,Tập đoàn ST8,Công ty Cổ phần Tập đoàn ST8,STO,9500
+SSI,HSX,STOCK,3084.0,Chứng khoán SSI,Công ty Cổ phần Chứng khoán SSI,STO,8700
+SSC,HSX,STOCK,3080.0,Giống cây trồng Miền Nam,Công ty Cổ phần Giống cây trồng Miền Nam,STO,3500
+SSB,HSX,STOCK,3079.0,SeABank,Ngân hàng Thương mại Cổ phần Đông Nam Á,STO,8300
+SRF,HSX,STOCK,3077.0,SEAREFICO,Công ty Cổ phần Searefico,STO,2700
+SRC,HSX,STOCK,3076.0,Cao su Sao Vàng,Công ty Cổ phần Cao su Sao Vàng,STO,3300
+SPM,HSX,STOCK,3070.0,S.P.M CORP,Công ty Cổ phần S.P.M,STO,4500
+SMC,HSX,STOCK,3057.0,Đầu tư Thương mại SMC,Công ty Cổ phần Đầu tư Thương mại SMC,STO,1700
+SMB,HSX,STOCK,3056.0,Bia Sài Gòn - Miền Trung,Công ty Cổ phần Bia Sài Gòn - Miền Trung,STO,3500
+SMA,HSX,STOCK,3055.0,Thiết bị Phụ tùng Sài Gòn,Công ty Cổ phần Thiết bị Phụ tùng Sài Gòn,STO,7500
+SKG,HSX,STOCK,3049.0,Tàu Cao tốc Superdong,Công ty Cổ phần Tàu Cao tốc Superdong - Kiên Giang,STO,5700
+SJS,HSX,STOCK,3048.0,SJ Group,Công ty Cổ phần SJ Group,STO,8600
+SJD,HSX,STOCK,3043.0,Thủy điện Cần Đơn,Công ty Cổ phần Thủy điện Cần Đơn,STO,7500
+SIP,HSX,STOCK,3039.0,Đầu tư Sài Gòn VRG,Công ty Cổ phần Đầu tư Sài Gòn VRG,STO,8600
+SHP,HSX,STOCK,3032.0,Thủy điện Miền Nam,Công ty Cổ phần Thủy điện Miền Nam,STO,7500
+SHI,HSX,STOCK,3030.0,Quốc tế Sơn Hà,Công ty Cổ phần Quốc tế Sơn Hà,STO,1700
+SHB,HSX,STOCK,3024.0,SHB,Ngân hàng Thương mại Cổ phần Sài Gòn – Hà Nội,STO,8300
+SHA,HSX,STOCK,3023.0,Sơn Hà Sài Gòn,Công ty Cổ phần Sơn Hà Sài Gòn,STO,1700
+SGT,HSX,STOCK,3022.0,Sài Gòn Telecom,Công ty Cổ phần Công nghệ Viễn thông Sài Gòn,STO,9500
+SGR,HSX,STOCK,3020.0,Địa ốc Sài Gòn,Công ty Cổ phần Tổng Công ty Cổ phần Địa ốc Sài Gòn,STO,8600
+SGN,HSX,STOCK,3017.0,Phục vụ mặt đất Sài Gòn,Công ty Cổ phần Phục vụ mặt đất Sài Gòn,STO,2700
+SFI,HSX,STOCK,3010.0,Vận tải SAFI,Công ty Cổ phần Đại lý Vận tải SAFI,STO,2700
+SFG,HSX,STOCK,3009.0,Phân bón Miền Nam,Công ty Cổ phần Phân bón Miền Nam,STO,1300
+SFC,HSX,STOCK,3008.0,Nhiên liệu Sài Gòn,Công ty Cổ phần Nhiên liệu Sài Gòn,STO,7500
+SCS,HSX,STOCK,2977.0,DV Hàng hóa Sài Gòn,Công ty Cổ phần Dịch vụ Hàng hóa Sài Gòn,STO,5700
+SCR,HSX,STOCK,2976.0,TTC Land,Công ty Cổ phần Địa Ốc Sài Gòn Thương Tín,STO,8600
+SC5,HSX,STOCK,2967.0,Xây dựng Số 5,Công ty Cổ phần Xây dựng số 5,STO,2300
+SBV,HSX,STOCK,2966.0,Siam Brothers Việt Nam,Công ty Cổ phần Siam Brothers Việt Nam,STO,5300
+SBT,HSX,STOCK,2962.0,Mía đường Thành Thành Công - Biên Hòa,Công ty Cổ phần Thành Thành Công - Biên Hòa,STO,3500
+SBG,HSX,STOCK,2956.0,Tập Đoàn Cơ Khí Công Nghệ Cao Siba,Công ty Cổ Phần Tập Đoàn Cơ Khí Công Nghệ Cao Siba,STO,2700
+SBA,HSX,STOCK,2953.0,Sông Ba JSC,Công ty Cổ phần Sông Ba,STO,7500
+SAV,HSX,STOCK,2951.0,Savimex,Công ty Cổ phần Hợp tác Kinh tế và Xuất nhập khẩu Savimex,STO,1700
+SAM,HSX,STOCK,2948.0,SAM Holdings,Công ty Cổ phần SAM Holdings,STO,9500
+SAB,HSX,STOCK,2944.0,SABECO,Tổng Công ty Cổ phần Bia - Rượu - Nước Giải khát Sài Gòn,STO,3500
+S4A,HSX,STOCK,2938.0,Thủy điện Sê San 4A,Công ty Cổ phần Thủy điện Sê San 4A,STO,7500
+RYG,HSX,STOCK,2935.0,Sản xuất và Đầu tư Hoàng Gia,Công ty Cổ phần Sản xuất và Đầu tư Hoàng Gia,STO,2300
+REE,HSX,STOCK,2929.0,Cơ Điện Lạnh REE,Công ty Cổ phần Cơ điện Lạnh,STO,7500
+RAL,HSX,STOCK,2922.0,Bóng đèn Phích nước Rạng Đông,Công ty Cổ phần Bóng đèn Phích nước Rạng Đông,STO,3700
+QNP,HSX,STOCK,2912.0,Cảng Quy Nhơn,Công ty Cổ phần Cảng Quy Nhơn,STO,2700
+QCG,HSX,STOCK,2906.0,Quốc Cường Gia Lai,Công ty Cổ phần Quốc Cường Gia Lai,STO,8600
+PVT,HSX,STOCK,2889.0,Vận tải Dầu khí PVTrans,Tổng Công ty Cổ phần Vận tải Dầu khí,STO,2700
+PVP,HSX,STOCK,2886.0,Vận tải Dầu khí Thái Bình Dương,Công ty Cổ phần Vận tải Dầu khí Thái Bình Dương,STO,2700
+PVD,HSX,STOCK,2878.0,Khoan Dầu khí PVDrilling,Tổng Công ty Cổ phần Khoan và Dịch vụ khoan Dầu khí,STO,0500
+PTL,HSX,STOCK,2865.0,Victory Group,Công ty Cổ phần Victory Group,STO,8600
+PTC,HSX,STOCK,2859.0,Đầu tư ICAPITAL,Công ty Cổ phần Đầu tư ICAPITAL,STO,2300
+PTB,HSX,STOCK,2858.0,Công ty Cổ phần Phú Tài,Công ty Cổ phần Phú Tài,STO,1700
+PPC,HSX,STOCK,2834.0,Nhiệt điện Phả Lại,Công ty Cổ phần Nhiệt điện Phả Lại,STO,7500
+POW,HSX,STOCK,2833.0,Điện lực Dầu khí Việt Nam,Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP,STO,7500
+PNJ,HSX,STOCK,2825.0,Vàng Phú Nhuận,Công ty Cổ phần Vàng bạc Đá quý Phú Nhuận,STO,3700
+PNC,HSX,STOCK,2822.0,Văn hóa Phương Nam,Công ty Cổ phần Văn hóa Phương Nam,STO,5500
+PMG,HSX,STOCK,2816.0,ĐT và SX Petro Miền Trung,Công ty Cổ phần Đầu tư và Sản xuất Petro Miền Trung,STO,7500
+PLX,HSX,STOCK,2813.0,Petrolimex,Tập đoàn Xăng dầu Việt Nam,STO,0500
+PLP,HSX,STOCK,2812.0,SX và CN Nhựa Pha Lê,Công ty Cổ phần Sản xuất và Công nghệ Nhựa Pha Lê,STO,1300
+PJT,HSX,STOCK,2807.0,Vận tải thủy PETROLIMEX,Công ty Cổ phần Vận tải Xăng dầu đường thủy Petrolimex,STO,2700
+PIT,HSX,STOCK,2803.0,XNK PETROLIMEX,Công ty Cổ phần Xuất nhập khẩu Petrolimex,STO,5300
+PHR,HSX,STOCK,2797.0,Cao su Phước Hòa,Công ty Cổ phần Cao su Phước Hòa,STO,1300
+PHC,HSX,STOCK,2793.0,Xây dựng Phục Hưng Holdings,Công ty Cổ phần Xây dựng Phục Hưng Holdings,STO,2300
+PGV,HSX,STOCK,2792.0,Tổng Công ty Phát điện 3,Tổng Công ty Phát điện 3 - Công ty Cổ phần,STO,7500
+PGI,HSX,STOCK,2788.0,Bảo hiểm PJICO,Tổng Công ty Cổ phần Bảo hiểm Petrolimex,STO,8500
+PGD,HSX,STOCK,2787.0,PV GAS D,Công ty Cổ phần Phân phối khí thấp áp dầu khí Việt Nam,STO,7500
+PGC,HSX,STOCK,2786.0,Gas Petrolimex,Tổng Công ty Gas Petrolimex - Công ty Cổ phần,STO,7500
+PET,HSX,STOCK,2783.0,Dịch vụ Tổng hợp Dầu khí,Tổng Công ty Cổ phần Dịch vụ Tổng hợp Dầu khí,STO,5300
+PDV,HSX,STOCK,2778.0,Vận tải Phương Đông Việt,Công ty Cổ phần Vận tải và Tiếp vận Phương Đông Việt,STO,2700
+PDR,HSX,STOCK,2777.0,BĐS Phát Đạt,Công ty Cổ phần Phát triển Bất động sản Phát Đạt,STO,8600
+PDN,HSX,STOCK,2776.0,Cảng Đồng Nai,Công ty Cổ phần Cảng Đồng Nai,STO,2700
+PC1,HSX,STOCK,2764.0,Tập đoàn PC1,Công ty Cổ phần Tập đoàn PC1,STO,2300
+PAN,HSX,STOCK,2757.0,Tập đoàn PAN,Công ty Cổ phần Tập đoàn PAN,STO,3500
+PAC,HSX,STOCK,2755.0,Pin Ắc quy Miền Nam,Công ty Cổ phần Pin Ắc quy Miền Nam,STO,2700
+ORS,HSX,STOCK,2754.0,Chứng khoán Tiên Phong,Công ty Cổ phần Chứng khoán Tiên Phong,STO,8700
+OPC,HSX,STOCK,2753.0,Dược phẩm OPC,Công ty Cổ phần Dược Phẩm OPC,STO,4500
+OGC,HSX,STOCK,2749.0,Tập đoàn Đại Dương,Công ty Cổ phần Tập đoàn Đại Dương,STO,8700
+OCB,HSX,STOCK,2746.0,Ngân hàng Phương Đông,Ngân hàng Thương mại Cổ phần Phương Đông,STO,8300
+NVT,HSX,STOCK,2743.0,Ninh Vân Bay,Công ty Cổ phần Bất động sản Du lịch Ninh Vân Bay,STO,8600
+NVL,HSX,STOCK,2740.0,Novaland,Công ty Cổ phần Tập đoàn Đầu tư Địa ốc No Va,STO,8600
+NTL,HSX,STOCK,2734.0,Đô thị Từ Liêm,Công ty Cổ phần Phát triển Đô thị Từ Liêm,STO,8600
+NTC,HSX,STOCK,2731.0,KCN Nam Tân Uyên,Công ty Cổ phần Khu Công nghiệp Nam Tân Uyên,STO,8600
+NT2,HSX,STOCK,2729.0,Điện lực Nhơn Trạch 2,Công ty Cổ phần Điện lực Dầu khí Nhơn Trạch 2,STO,7500
+NSC,HSX,STOCK,2723.0,Tập đoàn Giống cây trồng Việt Nam,Công ty Cổ phần Tập đoàn Giống cây trồng Việt Nam,STO,3500
+NO1,HSX,STOCK,2708.0,Tập đoàn 911,Công ty Cổ phần Tập đoàn 911,STO,2700
+NNC,HSX,STOCK,2705.0,Đá Núi Nhỏ,Công ty Cổ phần Đá Núi Nhỏ,STO,2300
+NLG,HSX,STOCK,2703.0,BĐS Nam Long,Công ty Cổ phần Đầu tư Nam Long,STO,8600
+NKG,HSX,STOCK,2702.0,Thép Nam Kim,Công ty Cổ phần Thép Nam Kim,STO,1700
+NHT,HSX,STOCK,2699.0,Sản xuất và Thương mại Nam Hoa,Công ty Cổ phần Sản xuất và Thương mại Nam Hoa,STO,3700
+NHH,HSX,STOCK,2697.0,Nhựa Hà Nội,Công ty Cổ phần Nhựa Hà Nội,STO,1300
+NHA,HSX,STOCK,2694.0,PT Nhà và Đô thị Nam HN,Tổng Công ty Đầu tư Phát triển Nhà và Đô thị Nam Hà Nội,STO,2300
+NCT,HSX,STOCK,2680.0,DV Hàng hóa Nội Bài,Công ty Cổ phần Dịch vụ Hàng hóa Nội Bài,STO,2700
+NBB,HSX,STOCK,2672.0,577 CORP,Công ty Cổ phần Đầu tư Năm Bảy Bảy,STO,8600
+NAV,HSX,STOCK,2670.0,Tấm lợp và gỗ Nam Việt,Công ty Cổ phần Nam Việt,STO,2300
+NAF,HSX,STOCK,2665.0,Nafoods Group,Công ty Cổ phần Nafoods Group,STO,3500
+NAB,HSX,STOCK,2661.0,Ngân hàng Nam Á,Ngân hàng Thương mại Cổ phần Nam Á,STO,8300
+MZG,HSX,STOCK,2660.0,Miza Corp,Công ty Cổ Phần Miza,STO,1700
+MWG,HSX,STOCK,2659.0,Thế giới di động,Công ty Cổ phần Đầu tư Thế Giới Di Động,STO,5300
+MSN,HSX,STOCK,2625.0,Tập đoàn Masan,Công ty Cổ phần Tập đoàn Masan,STO,3500
+MSH,HSX,STOCK,2624.0,May Sông Hồng,Công ty Cổ phần May Sông Hồng,STO,3700
+MSB,HSX,STOCK,2623.0,MSB Bank,Ngân hàng Thương mại Cổ phần Hàng Hải Việt Nam,STO,8300
+MIG,HSX,STOCK,2606.0,Bảo hiểm Quân đội,Tổng Công ty Cổ phần Bảo hiểm Quân đội,STO,8500
+MHC,HSX,STOCK,2602.0,CTCP MHC,Công ty Cổ phần MHC,STO,2700
+MDG,HSX,STOCK,2590.0,Xây dựng Miền Đông,Công ty Cổ phần Miền Đông,STO,2300
+MCP,HSX,STOCK,2586.0,In và Bao bì Mỹ Châu,Công ty Cổ phần In và Bao bì Mỹ Châu,STO,2700
+MCM,HSX,STOCK,2584.0,Giống bò sữa Mộc Châu,Công ty Cổ phần Giống bò sữa Mộc Châu,STO,3500
+MCH,HSX,STOCK,2582.0,Hàng Tiêu Dùng MaSan,Công ty Cổ phần Hàng Tiêu Dùng MaSan,STO,3500
+MBB,HSX,STOCK,2569.0,MBBank,Ngân hàng Thương mại Cổ phần Quân đội,STO,8300
+LSS,HSX,STOCK,2559.0,Mía đường Lam Sơn,Công ty Cổ phần Mía đường Lam Sơn,STO,3500
+LPS,HSX,STOCK,2555.0,Chứng khoán LPS,Công ty Cổ phần Chứng khoán LPS,STO,8700
+LPB,HSX,STOCK,2537.0,LPBank,Ngân hàng Thương mại Cổ phần Lộc Phát Việt Nam,STO,8300
+LM8,HSX,STOCK,2531.0,LILAMA 18,Công ty Cổ phần Lilama 18,STO,2300
+LIX,HSX,STOCK,2526.0,Bột Giặt LIX,Công ty Cổ phần Bột Giặt LIX,STO,3700
+LHG,HSX,STOCK,2523.0,KCN Long Hậu,Công ty Cổ phần Long Hậu,STO,8600
+LGL,HSX,STOCK,2520.0,Long Giang Land,Công ty Cổ phần Đầu tư và Phát triển Đô thị Long Giang,STO,8600
+LGC,HSX,STOCK,2519.0,Đầu tư Cầu đường CII,Công ty Cổ phần Đầu tư Cầu đường CII,STO,2300
+LDG,HSX,STOCK,2514.0,Đầu tư LDG,Công ty Cổ phần Đầu tư LDG,STO,8600
+LCG,HSX,STOCK,2510.0,LIZEN,Công ty Cổ phần Lizen,STO,2300
+LBM,HSX,STOCK,2507.0,Khoáng sản Lâm Đồng,Công ty Cổ phần Khoáng sản và Vật liệu xây dựng Lâm Đồng,STO,2300
+LAF,HSX,STOCK,2501.0,Chế biến Hàng XK Long An,Công ty Cổ phần Chế biến Hàng Xuất khẩu Long An,STO,3500
+L10,HSX,STOCK,2489.0,LILAMA 10,Công ty Cổ phần Lilama 10,STO,2700
+KSB,HSX,STOCK,2474.0,Khoáng sản Bình Dương,Công ty Cổ phần Khoáng sản và Xây dựng Bình Dương,STO,2300
+KOS,HSX,STOCK,2472.0,Công ty KOSY,Công ty Cổ phần KOSY,STO,8600
+KMR,HSX,STOCK,2470.0,MIRAE,Công ty Cổ phần Mirae,STO,3700
+KLB,HSX,STOCK,2462.0,KienlongBank,Ngân hàng Thương mại Cổ phần Kiên Long,STO,8300
+KHP,HSX,STOCK,2456.0,Điện lực Khánh Hòa,Công ty Cổ phần Điện lực Khánh Hòa,STO,7500
+KHG,HSX,STOCK,2454.0,Tập đoàn Khải Hoàn Land,Công ty Cổ phần Tập đoàn Khải Hoàn Land,STO,8600
+KDH,HSX,STOCK,2448.0,Nhà Khang Điền,Công ty Cổ phần Đầu tư và Kinh doanh nhà Khang Điền,STO,8600
+KDC,HSX,STOCK,2447.0,Tập đoàn KIDO,Công ty Cổ phần Tập đoàn KIDO,STO,3500
+KBC,HSX,STOCK,2443.0,TCT Đô thị Kinh Bắc,Tổng Công ty Phát triển Đô thị Kinh Bắc - CTCP,STO,8600
+JVC,HSX,STOCK,2440.0,ĐT&PT Y tế Việt Nhật,Công ty Cổ phần Đầu tư và Phát triển Y tế Việt Nhật,STO,4500
+ITD,HSX,STOCK,2435.0,Công nghệ ITD,Công ty Cổ phần Công nghệ ITD,STO,9500
+ITC,HSX,STOCK,2434.0,Đầu tư kinh doanh Nhà,Công ty Cổ phần Đầu tư - Kinh doanh nhà,STO,8600
+IMP,HSX,STOCK,2423.0,Dược phẩm Imexpharm,Công ty Cổ phần Dược phẩm Imexpharm,STO,4500
+ILB,HSX,STOCK,2419.0,ICD Tân Cảng Long Bình,Công ty Cổ phần ICD Tân Cảng - Long Bình,STO,2700
+IJC,HSX,STOCK,2417.0,Becamex IJC,Công ty Cổ phần Phát triển Hạ tầng Kỹ thuật,STO,8600
+IDI,HSX,STOCK,2411.0,Đầu tư và PT Đa Quốc Gia I.D.I,Công ty Cổ phần Đầu tư và Phát triển Đa Quốc Gia I.D.I,STO,3500
+ICT,HSX,STOCK,2409.0,Viễn thông - Tin học Bưu điện,Công ty Cổ phần Viễn thông - Tin học Bưu điện,STO,9500
+HVN,HSX,STOCK,2397.0,Vietnam Airlines,Tổng Công ty Hàng không Việt Nam - CTCP,STO,5700
+HVH,HSX,STOCK,2396.0,Đầu tư và Công nghệ HVC,Công ty Cổ phần Đầu tư và Công nghệ HVC,STO,2300
+HUB,HSX,STOCK,2391.0,Xây lắp Huế,Công ty Cổ phần Xây lắp Thừa Thiên Huế,STO,2300
+HU1,HSX,STOCK,2387.0,Xây dựng HUD1,Công ty Cổ phần Đầu tư và Xây dựng HUD1,STO,2300
+HTV,HSX,STOCK,2385.0,Logistics Vicem,Công ty Cổ phần Logistics Vicem,STO,2700
+HTN,HSX,STOCK,2381.0,Hưng Thịnh Incons,Công ty Cổ phần Hưng Thịnh Incons,STO,8600
+HTL,HSX,STOCK,2379.0,Ô tô Trường Long,Công ty Cổ phần Kỹ thuật và Ô tô Trường Long,STO,3300
+HTI,HSX,STOCK,2378.0,PT Hạ tầng IDICO,Công ty Cổ phần Đầu tư Phát triển Hạ tầng IDICO,STO,2300
+HTG,HSX,STOCK,2376.0,Dệt may Hòa Thọ,Tổng Công ty Cổ phần Dệt may Hòa Thọ,STO,3700
+HT1,HSX,STOCK,2373.0,VICEM Hà Tiên,Công ty Cổ phần Xi măng VICEM Hà Tiên,STO,2300
+HSL,HSX,STOCK,2369.0,Thực phẩm Hồng Hà,Công ty Cổ phần Đầu tư Phát triển Thực phẩm Hồng Hà,STO,3500
+HSG,HSX,STOCK,2367.0,Tập đoàn Hoa Sen,Công ty Cổ phần Tập đoàn Hoa Sen,STO,1700
+HRC,HSX,STOCK,2364.0,Cao su Hòa Bình,Công ty Cổ phần Cao su Hòa Bình,STO,1300
+HQC,HSX,STOCK,2362.0,Địa ốc Hoàng Quân,Công ty Cổ phần Tư vấn - Thương mại - Dịch vụ Địa ốc Hoàng Quân,STO,8600
+HPX,HSX,STOCK,2361.0,Đầu tư Hải Phát,Công ty Cổ phần Đầu tư Hải Phát,STO,8600
+HPG,HSX,STOCK,2353.0,Hòa Phát,Công ty Cổ phần Tập đoàn Hòa Phát,STO,1700
+HPA,HSX,STOCK,2350.0,Phát triển Nông nghiệp Hoà Phát,Công ty Cổ phần Phát triển Nông nghiệp Hoà Phát,STO,3500
+HNA,HSX,STOCK,2338.0,Thủy điện Hủa Na,Công ty Cổ phần Thủy điện Hủa Na,STO,7500
+HMC,HSX,STOCK,2332.0,Kim khí TP.HCM,Công ty Cổ phần Kim khí Thành phố Hồ Chí Minh - VNSTEEL,STO,1700
+HII,HSX,STOCK,2314.0,An Tiến Industries,Công ty Cổ phần An Tiến Industries,STO,1300
+HID,HSX,STOCK,2312.0,Halcom Vietnam,Công ty Cổ phần Halcom Vietnam,STO,2300
+HHV,HSX,STOCK,2311.0,Đầu tư Hạ tầng Giao thông Đèo Cả,Công ty Cổ phần Đầu tư Hạ tầng Giao thông Đèo Cả,STO,2300
+HHS,HSX,STOCK,2310.0,Đầu tư DV Hoàng Huy,Công ty Cổ phần Đầu tư Dịch vụ Hoàng Huy,STO,3300
+HHP,HSX,STOCK,2308.0,HHP Global,Công ty Cổ phần HHP Global,STO,1700
+HDG,HSX,STOCK,2285.0,Tập đoàn Hà Đô,Công ty Cổ phần Tập đoàn Hà Đô,STO,7500
+HDC,HSX,STOCK,2283.0,Phát triển Nhà Bà Rịa Vũng Tàu,Công ty Cổ phần Phát triển Nhà Bà Rịa Vũng Tàu,STO,8600
+HDB,HSX,STOCK,2273.0,HDBank,Ngân hàng Thương mại Cổ phần Phát Triển Thành phố Hồ Chí Minh,STO,8300
+HCM,HSX,STOCK,2266.0,Chứng khoán HSC,Công ty Cổ phần Chứng khoán Thành phố Hồ Chí Minh,STO,8700
+HCD,HSX,STOCK,2264.0,SX và Thương mại HCD,Công ty Cổ phần Đầu tư Sản xuất và Thương mại HCD,STO,1300
+HAX,HSX,STOCK,2255.0,Ô tô Hàng Xanh,Công ty Cổ phần Dịch vụ Ô tô Hàng Xanh,STO,3300
+HAS,HSX,STOCK,2252.0,Hacisco,Công ty Cổ phần Hacisco,STO,2300
+HAR,HSX,STOCK,2251.0,BĐS An Dương Thảo Điền,Công ty Cổ phần Đầu tư Thương mại Bất động sản An Dương Thảo Điền,STO,8600
+HAP,HSX,STOCK,2250.0,Tập đoàn Hapaco,Công ty Cổ phần Tập Đoàn Hapaco,STO,1700
+HAH,HSX,STOCK,2246.0,Vận tải và Xếp dỡ Hải An,Công ty Cổ phần Vận tải và Xếp dỡ Hải An,STO,2700
+HAG,HSX,STOCK,2245.0,Hoàng Anh Gia Lai,Công ty Cổ phần Hoàng Anh Gia Lai,STO,3500
+GVR,HSX,STOCK,2239.0,Tập đoàn CN Cao su VN,Tập đoàn Công nghiệp Cao su Việt Nam - Công ty Cổ phần,STO,1300
+GTA,HSX,STOCK,2233.0,Gỗ Thuận An,Công ty Cổ phần Chế biến Gỗ Thuận An,STO,1700
+GSP,HSX,STOCK,2232.0,Vận tải Sản phẩm Khí Quốc tế,Công ty Cổ phần Vận tải Sản phẩm Khí Quốc tế,STO,2700
+GMH,HSX,STOCK,2227.0,Minh Hưng Quảng Trị,Công ty Cổ phần Minh Hưng Quảng Trị,STO,2300
+GMD,HSX,STOCK,2226.0,Tập đoàn Gemadept,Công ty Cổ phần Tập đoàn Gemadept,STO,2700
+GIL,HSX,STOCK,2217.0,XNK Bình Thạnh,Công ty Cổ phần Sản xuất Kinh doanh Xuất nhập khẩu Bình Thạnh,STO,3700
+GHC,HSX,STOCK,2215.0,Thủy điện Gia Lai,Công ty Cổ phần Thủy điện Gia Lai,STO,7500
+GEX,HSX,STOCK,2212.0,Tập đoàn Gelex,Công ty Cổ phần Tập đoàn Gelex,STO,2700
+GEL,HSX,STOCK,2210.0,Hạ tầng GELEX,Công ty Cổ phần Hạ tầng GELEX,STO,2300
+GEG,HSX,STOCK,2208.0,Điện Gia Lai,Công ty Cổ phần Điện Gia Lai,STO,7500
+GEE,HSX,STOCK,2207.0,Điện lực Gelex,Công ty Cổ phần Điện lực Gelex,STO,2700
+GDT,HSX,STOCK,2204.0,Gỗ Đức Thành,Công ty Cổ phần Chế biến Gỗ Đức Thành,STO,3700
+GAS,HSX,STOCK,2169.0,PV Gas,Tổng Công ty Khí Việt Nam - Công ty Cổ phần,STO,7500
+FUEVN50G,HSX,ETF,2165.0,Quỹ ETF VinaCapital VN50 Growth,Quỹ ETF VinaCapital VN50 Growth,STO,8700
+FUEVN100,HSX,ETF,2164.0,Quỹ ETF VINACAPITAL VN100,Quỹ ETF VINACAPITAL VN100,STO,8700
+FUEVFVND,HSX,ETF,2163.0,Quỹ ETF DCVFMVN DIAMOND,Quỹ ETF DCVFMVN DIAMOND,STO,8700
+FUETPVND,HSX,ETF,2162.0,ETF VFCVN DIAMOND,Quỹ ETF VFCVN DIAMOND,STO,8700
+FUETCC50,HSX,ETF,2161.0,Quỹ ETF TECHCOM CAPITAL VNX50,Quỹ ETF TECHCOM CAPITAL VNX50,STO,8700
+FUESSVFL,HSX,ETF,2160.0,Quỹ ETF SSIAM VNFIN LEAD,Quỹ ETF SSIAM VNFIN LEAD,STO,8700
+FUESSV50,HSX,ETF,2159.0,Quỹ ETF SSIAM VNX50,Quỹ ETF SSIAM VNX50,STO,8700
+FUESSV30,HSX,ETF,2158.0,Quỹ ETF SSIAM VN30,Quỹ ETF SSIAM VN30,STO,8700
+FUEPHVNS,HSX,ETF,2157.0,Quỹ ETF PHFM VNSHINE,Quỹ ETF PHFM VNSHINE,STO,8700
+FUEMITEC,HSX,ETF,2156.0,VINACAPITAL VNMITECH,Quỹ ETF VINACAPITAL VNMITECH,STO,8700
+FUEMAVND,HSX,ETF,2155.0,Quỹ ETF MAFM VNDIAMOND,Quỹ ETF MAFM VNDIAMOND,STO,8700
+FUEMAV30,HSX,ETF,2154.0,Quỹ ETF MAFM VN30,Quỹ ETF MAFM VN30,STO,8700
+FUEKIVND,HSX,ETF,2153.0,Quỹ ETF KIM GROWTH VN DIAMOND,Quỹ ETF KIM GROWTH VN DIAMOND,STO,8700
+FUEKIVFS,HSX,ETF,2152.0,KIM GROWTH VNFINSELECT ETF,Quỹ ETF KIM GROWTH VNFINSELECT,STO,8700
+FUEKIV30,HSX,ETF,2151.0,KIM GROWTH VN30 ETF,Quỹ ETF KIM GROWTH VN30,STO,8700
+FUEIP100,HSX,ETF,2150.0,Quỹ ETF IPA PARTNER VN100,Quỹ ETF IPA PARTNER VN100,STO,8700
+FUEFCV50,HSX,ETF,2149.0,Quỹ ETF FPT CAPITAL VNX50,Quỹ ETF FPT CAPITAL VNX50,STO,8700
+FUEDCMID,HSX,ETF,2148.0,Quỹ ETF DCVFMVNMIDCAP,Quỹ ETF DCVFMVNMIDCAP,STO,8700
+FUEBFVND,HSX,ETF,2147.0,Quỹ ETF BVFVN DIAMOND,Quỹ ETF BVFVN DIAMOND,STO,8700
+FUEABVND,HSX,ETF,2146.0,Quỹ ETF ABFVN DIAMOND,Quỹ ETF ABFVN DIAMOND,STO,8700
+FUCVREIT,HSX,UNIT_TRUST,2145.0,Quỹ Đầu tư BĐS Techcom Việt Nam,Quỹ Đầu tư Bất động sản Techcom Việt Nam,STO,8700
+FUCTVGF5,HSX,UNIT_TRUST,2144.0,Quỹ Đầu tư Tăng trưởng Thiên Việt 5,Quỹ Đầu tư Tăng trưởng Thiên Việt 5,STO,8700
+FUCTVGF4,HSX,UNIT_TRUST,2143.0,Quỹ Đầu tư Tăng trưởng Thiên Việt 4,Quỹ Đầu tư Tăng trưởng Thiên Việt 4,STO,8700
+FTS,HSX,STOCK,2141.0,Chứng khoán FPT,Công ty Cổ phần Chứng khoán FPT,STO,8700
+FRT,HSX,STOCK,2136.0,Bán lẻ FPT,Công ty Cổ phần Bán lẻ Kỹ thuật số FPT,STO,5300
+FPT,HSX,STOCK,2133.0,FPT Corp,Công ty Cổ phần FPT,STO,9500
+FMC,HSX,STOCK,2130.0,Thực phẩm Sao Ta,Công ty Cổ phần Thực phẩm Sao Ta,STO,3500
+FIT,HSX,STOCK,2128.0,Tập đoàn F.I.T,Công ty Cổ phần Tập đoàn F.I.T,STO,4500
+FIR,HSX,STOCK,2127.0,Địa ốc First Real,Công ty Cổ phần Địa ốc First Real,STO,8600
+FDC,HSX,STOCK,2120.0,FIDECO,Công ty Cổ phần Ngoại thương và Phát triển Đầu tư Thành phố Hồ Chí Minh,STO,8600
+FCN,HSX,STOCK,2118.0,FECON CORP,Công ty Cổ phần Tập đoàn FECON,STO,2300
+FCM,HSX,STOCK,2117.0,Bê tông Phan Vũ Hà Nam,Công ty Cổ phần Bê tông Phan Vũ Hà Nam,STO,2300
+EVG,HSX,STOCK,2109.0,Tập đoàn Everland,Công ty Cổ phần Tập đoàn Everland,STO,2300
+EVF,HSX,STOCK,2108.0,Tài chính Tổng hợp Điện lực,Công ty Tài chính Tổng hợp Cổ phần Điện Lực,STO,8700
+EVE,HSX,STOCK,2107.0,Everpia,Công ty Cổ phần Everpia,STO,3700
+ELC,HSX,STOCK,2100.0,ELCOM,Công ty Cổ phần Công nghệ - Viễn thông ELCOM,STO,9500
+EIB,HSX,STOCK,2096.0,Eximbank,Ngân hàng Thương mại Cổ phần Xuất nhập khẩu Việt Nam,STO,8300
+E1VFVN30,HSX,ETF,2088.0,Quỹ ETF DCVFMVN30,Quỹ ETF DCVFMVN30,STO,8700
+DXV,HSX,STOCK,2085.0,Vật liệu Xây dựng Đà Nẵng,Công ty Cổ phần VICEM Vật liệu Xây dựng Đà Nẵng,STO,2300
+DXS,HSX,STOCK,2084.0,Dịch vụ BĐS Đất Xanh,Công ty Cổ phần Dịch vụ Bất động sản Đất Xanh,STO,8600
+DXG,HSX,STOCK,2081.0,Bluemarq Group,Công ty Cổ phần Bluemarq Group,STO,8600
+DVP,HSX,STOCK,2076.0,ĐT và PT Cảng Đình Vũ,Công ty Cổ phần Đầu tư và Phát triển Cảng Đình Vũ,STO,2700
+DTT,HSX,STOCK,2069.0,Kỹ nghệ Đô Thành,Công ty Cổ phần Kỹ nghệ Đô Thành,STO,1300
+DTL,HSX,STOCK,2067.0,Đại Thiên Lộc,Công ty Cổ phần Đại Thiên Lộc,STO,1700
+DTA,HSX,STOCK,2058.0,BĐS Đệ Tam,Công ty Cổ phần Đệ Tam,STO,8600
+DSN,HSX,STOCK,2053.0,Công viên nước Đầm Sen,Công ty Cổ phần Công viên nước Đầm Sen,STO,5700
+DSE,HSX,STOCK,2048.0,Chứng Khoán DNSE,Công ty Cổ phần Chứng khoán DNSE,STO,8700
+DSC,HSX,STOCK,2046.0,Chứng khoán DSC,Công ty Cổ phần Chứng khoán DSC,STO,8700
+DRL,HSX,STOCK,2044.0,Thủy điện - Điện lực 3,Công ty Cổ phần Thủy điện - Điện lực 3,STO,7500
+DRH,HSX,STOCK,2042.0,DRH Holdings,Công ty Cổ phần DRH Holdings,STO,8600
+DRC,HSX,STOCK,2040.0,Cao su Đà Nẵng,Công ty Cổ phần Cao su Đà Nẵng,STO,3300
+DQC,HSX,STOCK,2039.0,Tập đoàn Điện Quang,Công ty Cổ phần Tập đoàn Điện Quang,STO,3700
+DPR,HSX,STOCK,2037.0,Cao su Đồng Phú,Công ty Cổ phần Cao su Đồng Phú,STO,1300
+DPM,HSX,STOCK,2035.0,Tổng Công ty Phân bón và Hóa chất Dầu khí,Tổng Công ty Phân bón và Hóa chất Dầu khí - Công ty Cổ phần,STO,1300
+DPG,HSX,STOCK,2033.0,Tập đoàn Đạt Phương,Công ty Cổ phần Tập đoàn Đạt Phương,STO,2300
+DMX,HSX,STOCK,2014.0,Đầu tư Điện Máy Xanh,Công ty Cổ phần Đầu tư Điện Máy Xanh,STO,5300
+DMC,HSX,STOCK,2011.0,Dược phẩm DOMESCO,Công ty Cổ phần Xuất nhập khẩu Y tế DOMESCO,STO,4500
+DLG,HSX,STOCK,2006.0,Đức Long Gia Lai,Công ty Cổ phần Tập đoàn Đức Long Gia Lai,STO,2300
+DIG,HSX,STOCK,1999.0,DIC Corp,Tổng Công ty Cổ phần Đầu tư Phát triển Xây dựng,STO,8600
+DHM,HSX,STOCK,1993.0,Đầu tư và Thương mại DHM,Công ty Cổ phần Đầu tư và Thương mại DHM,STO,1700
+DHG,HSX,STOCK,1992.0,Dược Hậu Giang,Công ty Cổ phần Dược Hậu Giang,STO,4500
+DHC,HSX,STOCK,1990.0,Đông Hải Bến Tre,Công ty Cổ phần Đông Hải Bến Tre,STO,1700
+DHA,HSX,STOCK,1988.0,Hóa An,Công ty Cổ phần Hóa An,STO,2300
+DGW,HSX,STOCK,1987.0,Thế Giới Số,Công ty Cổ phần Thế Giới Số,STO,5300
+DGC,HSX,STOCK,1985.0,Hóa chất Đức Giang,Công ty Cổ phần Tập đoàn Hóa chất Đức Giang,STO,1300
+DCM,HSX,STOCK,1972.0,Đạm Cà Mau,Công ty Cổ phần - Tổng Công ty Phân bón Dầu Khí Cà Mau,STO,1300
+DCL,HSX,STOCK,1971.0,Dược phẩm Cửu Long,Công ty Cổ phần Dược phẩm Cửu Long,STO,4500
+DC4,HSX,STOCK,1967.0,Dicera Holdings,Công ty Cổ phần Dicera Holdings,STO,2300
+DBT,HSX,STOCK,1963.0,Dược phẩm Bến Tre,Công ty Cổ phần Dược phẩm Bến Tre,STO,4500
+DBD,HSX,STOCK,1960.0,Dược - TB Y tế Bình Định,Công ty Cổ phần Dược - Trang thiết bị y tế Bình Định (BIDIPHAR),STO,4500
+DBC,HSX,STOCK,1959.0,Tập đoàn DABACO,Công ty Cổ phần Tập đoàn Dabaco Việt Nam,STO,3500
+DAT,HSX,STOCK,1958.0,ĐT Du lịch và PT Thủy sản,Công ty Cổ phần Đầu tư Du lịch và Phát triển Thủy sản,STO,3500
+DAH,HSX,STOCK,1954.0,Tập đoàn Khách sạn Đông Á,Công ty Cổ phần Tập đoàn Khách sạn Đông Á,STO,5700
+D2D,HSX,STOCK,1949.0,Phát triển Đô thị số 2,Công ty Cổ phần Phát triển Đô thị Công nghiệp số 2,STO,8600
+CVT,HSX,STOCK,1941.0,CMC JSC,Công ty Cổ phần CMC,STO,2300
+CVRE2610,HSX,CW,3605.0,Chứng quyền VRE/ACBS/8M/115 Thời hạn 8 tháng,Chứng quyền VRE/ACBS/8M/115 Thời hạn 8 tháng,STO,
+CVRE2609,HSX,CW,3597.0,Chứng quyền VRE/LPBS/Call/EU/Cash/6M/46,Chứng quyền VRE/LPBS/Call/EU/Cash/6M/46,STO,
+CVRE2608,HSX,CW,3596.0,Chứng quyền VRE/LPBS/Call/EU/Cash/9M/45,Chứng quyền VRE/LPBS/Call/EU/Cash/9M/45,STO,
+CVRE2607,HSX,CW,1940.0,Chứng quyền VRE/12M/KAFI/C/EU/CASH/2602,Chứng quyền VRE/12M/KAFI/C/EU/CASH/2602,STO,
+CVRE2606,HSX,CW,1939.0,Chứng quyền VRE/12M/KAFI/C/EU/CASH/2601,Chứng quyền VRE/12M/KAFI/C/EU/CASH/2601,STO,
+CVRE2605,HSX,CW,1938.0,Chứng quyền.VRE.KIS.6M.48,Chứng quyền.VRE.KIS.6M.48,STO,
+CVRE2604,HSX,CW,1937.0,Chứng quyền.VRE.KIS.7M.47,Chứng quyền.VRE.KIS.7M.47,STO,
+CVRE2603,HSX,CW,1936.0,Chứng quyền VRE/ACBS/Call/EU/Cash/10M/100,Chứng quyền VRE/ACBS/Call/EU/Cash/10M/100,STO,
+CVRE2526,HSX,CW,1932.0,Chứng quyền VRE/15M/KAFI/C/EU/CASH/2502,Chứng quyền VRE/15M/KAFI/C/EU/CASH/2502,STO,
+CVRE2525,HSX,CW,1931.0,Chứng quyền VRE/12M/KAFI/C/EU/CASH/2501,Chứng quyền VRE/12M/KAFI/C/EU/CASH/2501,STO,
+CVPB2625,HSX,CW,3595.0,Chứng quyền VPB/LPBS/Call/EU/Cash/6M/32,Chứng quyền VPB/LPBS/Call/EU/Cash/6M/32,STO,
+CVPB2624,HSX,CW,3594.0,Chứng quyền VPB/LPBS/Call/EU/Cash/9M/31,Chứng quyền VPB/LPBS/Call/EU/Cash/9M/31,STO,
+CVPB2623,HSX,CW,1848.0,Chứng quyền VPB/12M/KAFI/C/EU/CASH/2602,Chứng quyền VPB/12M/KAFI/C/EU/CASH/2602,STO,
+CVPB2622,HSX,CW,1847.0,Chứng quyền VPB/12M/KAFI/C/EU/CASH/2601,Chứng quyền VPB/12M/KAFI/C/EU/CASH/2601,STO,
+CVPB2621,HSX,CW,1846.0,Chứng quyền VPB.9M.SSV.C.EU.Cash.26.02,Chứng quyền VPB.9M.SSV.C.EU.Cash.26.02,STO,
+CVPB2620,HSX,CW,1845.0,Chứng quyền VPB.6M.SSV.C.EU.Cash.26.02,Chứng quyền VPB.6M.SSV.C.EU.Cash.26.02,STO,
+CVPB2619,HSX,CW,1844.0,Chứng quyền VPB/MBS/6M/26-01,Chứng quyền VPB/MBS/6M/26-01,STO,
+CVPB2618,HSX,CW,1843.0,Chứng quyền.VPB.VNDS.M.CA.T.10T.2026.1,Chứng quyền.VPB.VNDS.M.CA.T.10T.2026.1,STO,
+CVPB2617,HSX,CW,1842.0,Chứng quyền VPB-HSC-9M-2002,Chứng quyền VPB-HSC-9M-2002,STO,
+CVPB2616,HSX,CW,1841.0,Chứng quyền VPB-HSC-6M-2001,Chứng quyền VPB-HSC-6M-2001,STO,
+CVPB2615,HSX,CW,1840.0,Chứng quyền VPB/ACBS/8M/107 Thời hạn 8 tháng,Chứng quyền VPB/ACBS/8M/107 Thời hạn 8 tháng,STO,
+CVPB2614,HSX,CW,1839.0,Chứng quyền.VPB.KIS.7M.26,Chứng quyền.VPB.KIS.7M.26,STO,
+CVPB2613,HSX,CW,1838.0,Chứng quyền.VPB.KIS.6M.25,Chứng quyền.VPB.KIS.6M.25,STO,
+CVPB2612,HSX,CW,1837.0,Chứng quyền.VPB.KIS.4M.24,Chứng quyền.VPB.KIS.4M.24,STO,
+CVPB2611,HSX,CW,1836.0,Chứng quyền VPB/MSVN/10M/0126,Chứng quyền VPB/MSVN/10M/0126,STO,
+CVPB2610,HSX,CW,1835.0,Chứng quyền VPB.6M.SSV.C.EU.Cash.26.01,Chứng quyền VPB.6M.SSV.C.EU.Cash.26.01,STO,
+CVPB2609,HSX,CW,1834.0,Chứng quyền VPB.02.PHS.C.EU.Cash.11M,Chứng quyền VPB.02.PHS.C.EU.Cash.11M,STO,
+CVPB2608,HSX,CW,1833.0,Chứng quyền VPB/ACBS/Call/EU/Cash/10M/99,Chứng quyền VPB/ACBS/Call/EU/Cash/10M/99,STO,
+CVPB2606,HSX,CW,1831.0,Chứng quyền VPB/9M/SSI/C/EU/Cash-21,Chứng quyền VPB/9M/SSI/C/EU/Cash-21,STO,
+CVPB2603,HSX,CW,1828.0,Chứng quyền VPB/TCBS/C/EU/12M/CASH/02,Chứng quyền VPB/TCBS/C/EU/12M/CASH/02,STO,
+CVPB2532,HSX,CW,1824.0,Chứng quyền VPB/15M/KAFI/C/EU/CASH/2502,Chứng quyền VPB/15M/KAFI/C/EU/CASH/2502,STO,
+CVPB2531,HSX,CW,1823.0,Chứng quyền VPB/12M/KAFI/C/EU/CASH/2501,Chứng quyền VPB/12M/KAFI/C/EU/CASH/2501,STO,
+CVPB2528,HSX,CW,1820.0,Chứng quyền.VPB.VND.M.CA.T.2025.2,Chứng quyền.VPB.VND.M.CA.T.2025.2,STO,
+CVNM2619,HSX,CW,3604.0,Chứng quyền VNM/ACBS/8M/114 Thời hạn 8 tháng,Chứng quyền VNM/ACBS/8M/114 Thời hạn 8 tháng,STO,
+CVNM2618,HSX,CW,3593.0,Chứng quyền VNM/LPBS/Call/EU/Cash/9M/44,Chứng quyền VNM/LPBS/Call/EU/Cash/9M/44,STO,
+CVNM2617,HSX,CW,3592.0,Chứng quyền VNM/LPBS/Call/EU/Cash/6M/03,Chứng quyền VNM/LPBS/Call/EU/Cash/6M/03,STO,
+CVNM2616,HSX,CW,1742.0,Chứng quyền VNM.6M.SSV.C.EU.Cash.26.02,Chứng quyền VNM.6M.SSV.C.EU.Cash.26.02,STO,
+CVNM2615,HSX,CW,1741.0,Chứng quyền.VNM.VNDS.M.CA.T.10T.2026.1,Chứng quyền.VNM.VNDS.M.CA.T.10T.2026.1,STO,
+CVNM2614,HSX,CW,1740.0,Chứng quyền VNM-HSC-9M-2002,Chứng quyền VNM-HSC-9M-2002,STO,
+CVNM2613,HSX,CW,1739.0,Chứng quyền VNM-HSC-6M-2001,Chứng quyền VNM-HSC-6M-2001,STO,
+CVNM2609,HSX,CW,1735.0,Chứng quyền.VNM.KIS.6M.39,Chứng quyền.VNM.KIS.6M.39,STO,
+CVNM2608,HSX,CW,1734.0,Chứng quyền.VNM.KIS.4M.40,Chứng quyền.VNM.KIS.4M.40,STO,
+CVNM2607,HSX,CW,1733.0,Chứng quyền VNM.6M.SSV.C.EU.Cash.26.01,Chứng quyền VNM.6M.SSV.C.EU.Cash.26.01,STO,
+CVNM2606,HSX,CW,1732.0,Chứng quyền VNM.02.PHS.C.EU.Cash.11M,Chứng quyền VNM.02.PHS.C.EU.Cash.11M,STO,
+CVNM2605,HSX,CW,1731.0,Chứng quyền VNM/ACBS/Call/EU/Cash/10M/98,Chứng quyền VNM/ACBS/Call/EU/Cash/10M/98,STO,
+CVNM2603,HSX,CW,1729.0,Chứng quyền VNM-HSC-MET13,Chứng quyền VNM-HSC-MET13,STO,
+CVNM2601,HSX,CW,1727.0,Chứng quyền VNM/LPBS/Call/EU/Cash/12M-24,Chứng quyền VNM/LPBS/Call/EU/Cash/12M-24,STO,
+CVNM2523,HSX,CW,1725.0,Chứng quyền.VNM.VND.M.CA.T.2025.2,Chứng quyền.VNM.VND.M.CA.T.2025.2,STO,
+CVJC2606,HSX,CW,1661.0,Chứng quyền VJC/12M/KAFI/C/EU/CASH/2602,Chứng quyền VJC/12M/KAFI/C/EU/CASH/2602,STO,
+CVJC2605,HSX,CW,1660.0,Chứng quyền VJC/12M/KAFI/C/EU/CASH/2601,Chứng quyền VJC/12M/KAFI/C/EU/CASH/2601,STO,
+CVJC2604,HSX,CW,1659.0,Chứng quyền.VJC.KIS.6M.26,Chứng quyền.VJC.KIS.6M.26,STO,
+CVJC2603,HSX,CW,1658.0,Chứng quyền.VJC.KIS.7M.27,Chứng quyền.VJC.KIS.7M.27,STO,
+CVJC2602,HSX,CW,1657.0,Chứng quyền.VJC.KIS.5M.25,Chứng quyền.VJC.KIS.5M.25,STO,
+CVIC2611,HSX,CW,3591.0,Chứng quyền VIC/LPBS/Call/EU/Cash/6M/43,Chứng quyền VIC/LPBS/Call/EU/Cash/6M/43,STO,
+CVIC2610,HSX,CW,3590.0,Chứng quyền VIC/LPBS/Call/EU/Cash/9M/42,Chứng quyền VIC/LPBS/Call/EU/Cash/9M/42,STO,
+CVIC2609,HSX,CW,1640.0,Chứng quyền VIC/12M/KAFI/C/EU/CASH/2602,Chứng quyền VIC/12M/KAFI/C/EU/CASH/2602,STO,
+CVIC2608,HSX,CW,1639.0,Chứng quyền VIC/12M/KAFI/C/EU/CASH/2601,Chứng quyền VIC/12M/KAFI/C/EU/CASH/2601,STO,
+CVIC2607,HSX,CW,1638.0,Chứng quyền VIC/MBS/9M/26-01,Chứng quyền VIC/MBS/9M/26-01,STO,
+CVIC2606,HSX,CW,1637.0,Chứng quyền.VIC.KIS.5M.44,Chứng quyền.VIC.KIS.5M.44,STO,
+CVIC2605,HSX,CW,1636.0,Chứng quyền.VIC.KIS.4M.43,Chứng quyền.VIC.KIS.4M.43,STO,
+CVIC2604,HSX,CW,1635.0,Chứng quyền.VIC.KIS.8M.47,Chứng quyền.VIC.KIS.8M.47,STO,
+CVIC2603,HSX,CW,1634.0,Chứng quyền.VIC.KIS.7M.46,Chứng quyền.VIC.KIS.7M.46,STO,
+CVIC2602,HSX,CW,1633.0,Chứng quyền.VIC.KIS.6M.45,Chứng quyền.VIC.KIS.6M.45,STO,
+CVIC2516,HSX,CW,1630.0,Chứng quyền VIC/15M/KAFI/C/EU/CASH/2502,Chứng quyền VIC/15M/KAFI/C/EU/CASH/2502,STO,
+CVIC2515,HSX,CW,1629.0,Chứng quyền VIC/12M/KAFI/C/EU/CASH/2501,Chứng quyền VIC/12M/KAFI/C/EU/CASH/2501,STO,
+CVIB2611,HSX,CW,3603.0,Chứng quyền VIB/ACBS/8M/113 Thời hạn 8 tháng,Chứng quyền VIB/ACBS/8M/113 Thời hạn 8 tháng,STO,
+CVIB2610,HSX,CW,3589.0,Chứng quyền VIB/LPBS/Call/EU/Cash/6M/47,Chứng quyền VIB/LPBS/Call/EU/Cash/6M/47,STO,
+CVIB2609,HSX,CW,3588.0,Chứng quyền VIB/LPBS/Call/EU/Cash/9M/30,Chứng quyền VIB/LPBS/Call/EU/Cash/9M/30,STO,
+CVIB2608,HSX,CW,1584.0,Chứng quyền VIB/12M/KAFI/C/EU/CASH/2602,Chứng quyền VIB/12M/KAFI/C/EU/CASH/2602,STO,
+CVIB2607,HSX,CW,1583.0,Chứng quyền VIB/12M/KAFI/C/EU/CASH/2601,Chứng quyền VIB/12M/KAFI/C/EU/CASH/2601,STO,
+CVIB2606,HSX,CW,1582.0,Chứng quyền VIB/MBS/6M/26-01,Chứng quyền VIB/MBS/6M/26-01,STO,
+CVIB2605,HSX,CW,1581.0,Chứng quyền VIB.01.PHS.C.EU.Cash.10M,Chứng quyền VIB.01.PHS.C.EU.Cash.10M,STO,
+CVIB2604,HSX,CW,1580.0,Chứng quyền VIB/ACBS/Call/EU/Cash/10M/97,Chứng quyền VIB/ACBS/Call/EU/Cash/10M/97,STO,
+CVIB2601,HSX,CW,1577.0,Chứng quyền VIB/LPBS/Call/EU/Cash/12M/10,Chứng quyền VIB/LPBS/Call/EU/Cash/12M/10,STO,
+CVIB2513,HSX,CW,1575.0,Chứng quyền.VIB.VND.M.CA.T.2025.2,Chứng quyền.VIB.VND.M.CA.T.2025.2,STO,
+CVHM2620,HSX,CW,3602.0,Chứng quyền VHM/ACBS/8M/112 Thời hạn 8 tháng,Chứng quyền VHM/ACBS/8M/112 Thời hạn 8 tháng,STO,
+CVHM2619,HSX,CW,3587.0,Chứng quyền VHM/LPBS/Call/EU/Cash/6M/41,Chứng quyền VHM/LPBS/Call/EU/Cash/6M/41,STO,
+CVHM2618,HSX,CW,3586.0,Chứng quyền VHM/LPBS/Call/EU/Cash/9M/40,Chứng quyền VHM/LPBS/Call/EU/Cash/9M/40,STO,
+CVHM2617,HSX,CW,1546.0,Chứng quyền VHM/12M/KAFI/C/EU/CASH/2602,Chứng quyền VHM/12M/KAFI/C/EU/CASH/2602,STO,
+CVHM2616,HSX,CW,1545.0,Chứng quyền VHM/12M/KAFI/C/EU/CASH/2601,Chứng quyền VHM/12M/KAFI/C/EU/CASH/2601,STO,
+CVHM2615,HSX,CW,1544.0,Chứng quyền VHM/MBS/9M/26-01,Chứng quyền VHM/MBS/9M/26-01,STO,
+CVHM2614,HSX,CW,1543.0,Chứng quyền.VHM.KIS.7M.44,Chứng quyền.VHM.KIS.7M.44,STO,
+CVHM2613,HSX,CW,1542.0,Chứng quyền.VHM.KIS.6M.43,Chứng quyền.VHM.KIS.6M.43,STO,
+CVHM2612,HSX,CW,1541.0,Chứng quyền.VHM.KIS.4M.42,Chứng quyền.VHM.KIS.4M.42,STO,
+CVHM2611,HSX,CW,1540.0,Chứng quyền VHM/MSVN/10M/0226,Chứng quyền VHM/MSVN/10M/0226,STO,
+CVHM2610,HSX,CW,1539.0,Chứng quyền VHM/MSVN/7M/0126,Chứng quyền VHM/MSVN/7M/0126,STO,
+CVHM2609,HSX,CW,1538.0,Chứng quyền VHM/ACBS/Call/EU/Cash/10M/96,Chứng quyền VHM/ACBS/Call/EU/Cash/10M/96,STO,
+CVHM2607,HSX,CW,1536.0,Chứng quyền VHM/9M/SSI/C/EU/Cash-21,Chứng quyền VHM/9M/SSI/C/EU/Cash-21,STO,
+CVHM2604,HSX,CW,1533.0,Chứng quyền VHM/LPBS/Call/EU/Cash/12M/22,Chứng quyền VHM/LPBS/Call/EU/Cash/12M/22,STO,
+CVHM2603,HSX,CW,1532.0,Chứng quyền VHM/TCBS/C/EU/12M/CASH/02,Chứng quyền VHM/TCBS/C/EU/12M/CASH/02,STO,
+CVHM2524,HSX,CW,1528.0,Chứng quyền VHM/15M/KAFI/C/EU/CASH/2502,Chứng quyền VHM/15M/KAFI/C/EU/CASH/2502,STO,
+CVHM2523,HSX,CW,1527.0,Chứng quyền VHM/12M/KAFI/C/EU/CASH/2501,Chứng quyền VHM/12M/KAFI/C/EU/CASH/2501,STO,
+CTS,HSX,STOCK,1447.0,Chứng khoán Vietinbank,Công ty Cổ phần Chứng khoán Vietinbank,STO,8700
+CTR,HSX,STOCK,1446.0,Công trình Viettel,Tổng Công ty Cổ phần Công trình Viettel,STO,2300
+CTPB2612,HSX,CW,1445.0,Chứng quyền TPB/12M/KAFI/C/EU/CASH/2602,Chứng quyền TPB/12M/KAFI/C/EU/CASH/2602,STO,
+CTPB2611,HSX,CW,1444.0,Chứng quyền TPB/12M/KAFI/C/EU/CASH/2601,Chứng quyền TPB/12M/KAFI/C/EU/CASH/2601,STO,
+CTPB2610,HSX,CW,1443.0,Chứng quyền TPB.6M.SSV.C.EU.Cash.26.02,Chứng quyền TPB.6M.SSV.C.EU.Cash.26.02,STO,
+CTPB2609,HSX,CW,1442.0,Chứng quyền TPB/MBS/6M/26-01,Chứng quyền TPB/MBS/6M/26-01,STO,
+CTPB2608,HSX,CW,1441.0,Chứng quyền.TPB.KIS.6M.15,Chứng quyền.TPB.KIS.6M.15,STO,
+CTPB2607,HSX,CW,1440.0,Chứng quyền.TPB.KIS.7M.16,Chứng quyền.TPB.KIS.7M.16,STO,
+CTPB2606,HSX,CW,1439.0,Chứng quyền TPB.01.PHS.C.EU.Cash.12M,Chứng quyền TPB.01.PHS.C.EU.Cash.12M,STO,
+CTPB2605,HSX,CW,1438.0,Chứng quyền TPB/ACBS/Call/EU/Cash/10M/95,Chứng quyền TPB/ACBS/Call/EU/Cash/10M/95,STO,
+CTI,HSX,STOCK,1403.0,Cường Thuận IDICO,Công ty Cổ phần Đầu tư Phát triển Cường Thuận IDICO,STO,2300
+CTG,HSX,STOCK,1391.0,VietinBank,Ngân hàng Thương mại Cổ phần Công thương Việt Nam,STO,8300
+CTF,HSX,STOCK,1390.0,City Auto,Công ty Cổ phần City Auto,STO,3300
+CTD,HSX,STOCK,1387.0,Xây dựng Coteccons,Công ty Cổ phần Xây dựng Coteccons,STO,2300
+CTCB2619,HSX,CW,3585.0,Chứng quyền TCB/LPBS/Call/EU/Cash/6M/27,Chứng quyền TCB/LPBS/Call/EU/Cash/6M/27,STO,
+CTCB2618,HSX,CW,3584.0,Chứng quyền TCB/LPBS/Call/EU/Cash/9M/26,Chứng quyền TCB/LPBS/Call/EU/Cash/9M/26,STO,
+CTCB2617,HSX,CW,1386.0,Chứng quyền TCB/12M/KAFI/C/EU/CASH/2602,Chứng quyền TCB/12M/KAFI/C/EU/CASH/2602,STO,
+CTCB2616,HSX,CW,1385.0,Chứng quyền TCB/12M/KAFI/C/EU/CASH/2601,Chứng quyền TCB/12M/KAFI/C/EU/CASH/2601,STO,
+CTCB2615,HSX,CW,1384.0,Chứng quyền TCB/MBS/6M/26-01,Chứng quyền TCB/MBS/6M/26-01,STO,
+CTCB2614,HSX,CW,1383.0,Chứng quyền.TCB.VNDS.M.CA.T.10T.2026.1,Chứng quyền.TCB.VNDS.M.CA.T.10T.2026.1,STO,
+CTCB2613,HSX,CW,1382.0,Chứng quyền TCB-HSC-9M-2002,Chứng quyền TCB-HSC-9M-2002,STO,
+CTCB2612,HSX,CW,1381.0,Chứng quyền TCB-HSC-6M-2001,Chứng quyền TCB-HSC-6M-2001,STO,
+CTCB2611,HSX,CW,1380.0,Chứng quyền TCB/ACBS/8M/106 Thời hạn 8 tháng,Chứng quyền TCB/ACBS/8M/106 Thời hạn 8 tháng,STO,
+CTCB2607,HSX,CW,1376.0,Chứng quyền TCB.02.PHS.C.EU.Cash.11M,Chứng quyền TCB.02.PHS.C.EU.Cash.11M,STO,
+CTCB2606,HSX,CW,1375.0,Chứng quyền TCB-HSC-MET16,Chứng quyền TCB-HSC-MET16,STO,
+CTCB2605,HSX,CW,1374.0,Chứng quyền TCB/9M/SSI/C/EU/Cash-21,Chứng quyền TCB/9M/SSI/C/EU/Cash-21,STO,
+CTCB2603,HSX,CW,1372.0,Chứng quyền TCB/VPBANKS/C/EU/9M/CASH/25-02,Chứng quyền TCB/VPBANKS/C/EU/9M/CASH/25-02,STO,
+CTCB2601,HSX,CW,1370.0,Chứng quyền TCB/ACBS/Call/EU/Cash/10M/91,Chứng quyền TCB/ACBS/Call/EU/Cash/10M/91,STO,
+CTCB2523,HSX,CW,1368.0,Chứng quyền TCB/15M/KAFI/C/EU/CASH/2502,Chứng quyền TCB/15M/KAFI/C/EU/CASH/2502,STO,
+CTCB2522,HSX,CW,1367.0,Chứng quyền TCB/12M/KAFI/C/EU/CASH/2501,Chứng quyền TCB/12M/KAFI/C/EU/CASH/2501,STO,
+CTCB2521,HSX,CW,1366.0,Chứng quyền.TCB.VND.M.CA.T.2025.3,Chứng quyền.TCB.VND.M.CA.T.2025.3,STO,
+CSV,HSX,STOCK,1304.0,Hóa chất Cơ bản miền Nam,Công ty Cổ phần Hóa chất Cơ bản miền Nam,STO,1300
+CSTB2629,HSX,CW,3583.0,Chứng quyền STB/LPBS/Call/EU/Cash/6M/23,Chứng quyền STB/LPBS/Call/EU/Cash/6M/23,STO,
+CSTB2628,HSX,CW,3582.0,Chứng quyền STB/LPBS/Call/EU/Cash/9M/21,Chứng quyền STB/LPBS/Call/EU/Cash/9M/21,STO,
+CSTB2627,HSX,CW,1303.0,Chứng quyền STB/12M/KAFI/C/EU/CASH/2602,Chứng quyền STB/12M/KAFI/C/EU/CASH/2602,STO,
+CSTB2626,HSX,CW,1302.0,Chứng quyền STB/12M/KAFI/C/EU/CASH/2601,Chứng quyền STB/12M/KAFI/C/EU/CASH/2601,STO,
+CSTB2625,HSX,CW,1301.0,Chứng quyền STB.6M.SSV.C.EU.Cash.26.02,Chứng quyền STB.6M.SSV.C.EU.Cash.26.02,STO,
+CSTB2624,HSX,CW,1300.0,Chứng quyền STB/MBS/6M/26-01,Chứng quyền STB/MBS/6M/26-01,STO,
+CSTB2623,HSX,CW,1299.0,Chứng quyền.STB.VNDS.M.CA.T.12T.2026.1,Chứng quyền.STB.VNDS.M.CA.T.12T.2026.1,STO,
+CSTB2622,HSX,CW,1298.0,Chứng quyền.STB.VNDS.M.CA.T.6T.2026.1,Chứng quyền.STB.VNDS.M.CA.T.6T.2026.1,STO,
+CSTB2621,HSX,CW,1297.0,Chứng quyền STB-HSC-9M-2002,Chứng quyền STB-HSC-9M-2002,STO,
+CSTB2620,HSX,CW,1296.0,Chứng quyền STB-HSC-6M-2001,Chứng quyền STB-HSC-6M-2001,STO,
+CSTB2619,HSX,CW,1295.0,Chứng quyền STB/ACBS/8M/105 Thời hạn 8 tháng,Chứng quyền STB/ACBS/8M/105 Thời hạn 8 tháng,STO,
+CSTB2615,HSX,CW,1291.0,Chứng quyền.STB.KIS.7M.55,Chứng quyền.STB.KIS.7M.55,STO,
+CSTB2614,HSX,CW,1290.0,Chứng quyền.STB.KIS.5M.53,Chứng quyền.STB.KIS.5M.53,STO,
+CSTB2613,HSX,CW,1289.0,Chứng quyền.STB.KIS.4M.52,Chứng quyền.STB.KIS.4M.52,STO,
+CSTB2612,HSX,CW,1288.0,Chứng quyền.STB.KIS.6M.54,Chứng quyền.STB.KIS.6M.54,STO,
+CSTB2611,HSX,CW,1287.0,Chứng quyền STB/MSVN/7M/0126,Chứng quyền STB/MSVN/7M/0126,STO,
+CSTB2610,HSX,CW,1286.0,Chứng quyền STB/MSVN/10M/0226,Chứng quyền STB/MSVN/10M/0226,STO,
+CSTB2609,HSX,CW,1285.0,Chứng quyền STB.6M.SSV.C.EU.Cash.26.01,Chứng quyền STB.6M.SSV.C.EU.Cash.26.01,STO,
+CSTB2608,HSX,CW,1284.0,Chứng quyền STB.05.PHS.C.EU.Cash.11M,Chứng quyền STB.05.PHS.C.EU.Cash.11M,STO,
+CSTB2606,HSX,CW,1282.0,Chứng quyền STB-HSC-MET16,Chứng quyền STB-HSC-MET16,STO,
+CSTB2604,HSX,CW,1280.0,Chứng quyền STB/ACBS/Call/EU/Cash/10M/90,Chứng quyền STB/ACBS/Call/EU/Cash/10M/90,STO,
+CSTB2603,HSX,CW,1279.0,Chứng quyền STB/TCBS/C/EU/12M/CASH/02,Chứng quyền STB/TCBS/C/EU/12M/CASH/02,STO,
+CSTB2537,HSX,CW,1275.0,Chứng quyền STB/15M/KAFI/C/EU/CASH/2502,Chứng quyền STB/15M/KAFI/C/EU/CASH/2502,STO,
+CSTB2536,HSX,CW,1274.0,Chứng quyền STB/12M/KAFI/C/EU/CASH/2501,Chứng quyền STB/12M/KAFI/C/EU/CASH/2501,STO,
+CSTB2533,HSX,CW,1271.0,Chứng quyền.STB.VND.M.CA.T.2025.3,Chứng quyền.STB.VND.M.CA.T.2025.3,STO,
+CSSB2607,HSX,CW,1162.0,Chứng quyền.SSB.KIS.5M.14,Chứng quyền.SSB.KIS.5M.14,STO,
+CSSB2606,HSX,CW,1161.0,Chứng quyền.SSB.KIS.4M.13,Chứng quyền.SSB.KIS.4M.13,STO,
+CSSB2605,HSX,CW,1160.0,Chứng quyền.SSB.KIS.6M.15,Chứng quyền.SSB.KIS.6M.15,STO,
+CSSB2604,HSX,CW,1159.0,Chứng quyền.SSB.KIS.7M.16,Chứng quyền.SSB.KIS.7M.16,STO,
+CSSB2603,HSX,CW,1158.0,Chứng quyền SSB.02.PHS.C.EU.Cash.12M,Chứng quyền SSB.02.PHS.C.EU.Cash.12M,STO,
+CSM,HSX,STOCK,1145.0,Cao su Miền Nam,Công ty Cổ phần Công nghiệp Cao su Miền Nam,STO,3300
+CSHB2620,HSX,CW,3601.0,Chứng quyền SHB/ACBS/8M/110 Thời hạn 8 tháng,Chứng quyền SHB/ACBS/8M/110 Thời hạn 8 tháng,STO,
+CSHB2619,HSX,CW,3581.0,Chứng quyền SHB/LPBS/Call/EU/Cash/6M/20,Chứng quyền SHB/LPBS/Call/EU/Cash/6M/20,STO,
+CSHB2618,HSX,CW,3580.0,Chứng quyền SHB/LPBS/Call/EU/Cash/9M/17,Chứng quyền SHB/LPBS/Call/EU/Cash/9M/17,STO,
+CSHB2617,HSX,CW,1143.0,Chứng quyền SHB.9M.SSV.C.EU.Cash.26.02,Chứng quyền SHB.9M.SSV.C.EU.Cash.26.02,STO,
+CSHB2616,HSX,CW,1142.0,Chứng quyền SHB.6M.SSV.C.EU.Cash.26.02,Chứng quyền SHB.6M.SSV.C.EU.Cash.26.02,STO,
+CSHB2615,HSX,CW,1141.0,Chứng quyền SHB/MBS/6M/26-01,Chứng quyền SHB/MBS/6M/26-01,STO,
+CSHB2614,HSX,CW,1140.0,Chứng quyền.SHB.VNDS.M.CA.T.10T.2026.1,Chứng quyền.SHB.VNDS.M.CA.T.10T.2026.1,STO,
+CSHB2613,HSX,CW,1139.0,Chứng quyền.SHB.VNDS.M.CA.T.6T.2026.1,Chứng quyền.SHB.VNDS.M.CA.T.6T.2026.1,STO,
+CSHB2612,HSX,CW,1138.0,Chứng quyền.SHB.KIS.7M.25,Chứng quyền.SHB.KIS.7M.25,STO,
+CSHB2611,HSX,CW,1137.0,Chứng quyền.SHB.KIS.4M.22,Chứng quyền.SHB.KIS.4M.22,STO,
+CSHB2610,HSX,CW,1136.0,Chứng quyền.SHB.KIS.5M.23,Chứng quyền.SHB.KIS.5M.23,STO,
+CSHB2609,HSX,CW,1135.0,Chứng quyền.SHB.KIS.6M.24,Chứng quyền.SHB.KIS.6M.24,STO,
+CSHB2608,HSX,CW,1134.0,Chứng quyền SHB.6M.SSV.C.EU.Cash.26.01,Chứng quyền SHB.6M.SSV.C.EU.Cash.26.01,STO,
+CSHB2607,HSX,CW,1133.0,Chứng quyền SHB.9M.SSV.C.EU.Cash.26.01,Chứng quyền SHB.9M.SSV.C.EU.Cash.26.01,STO,
+CSHB2606,HSX,CW,1132.0,Chứng quyền SHB.01.PHS.C.EU.Cash.10M,Chứng quyền SHB.01.PHS.C.EU.Cash.10M,STO,
+CRV,HSX,STOCK,1101.0,Tập đoàn Bất động sản CRV,Công ty Cổ phần Tập đoàn Bất động sản CRV,STO,8600
+CRE,HSX,STOCK,1100.0,Bất động sản Thế Kỷ,Công ty Cổ phần Bất động sản Thế Kỷ,STO,8600
+CRC,HSX,STOCK,1099.0,Create Capital Việt Nam,Công ty Cổ phần Create Capital Việt Nam,STO,2300
+COM,HSX,STOCK,1048.0,Vật tư - Xăng dầu,Công ty Cổ phần Vật tư - Xăng dầu,STO,5300
+CNG,HSX,STOCK,1029.0,CNG Việt Nam,Công ty Cổ phần CNG Việt Nam,STO,7500
+CMX,HSX,STOCK,1025.0,CAMIMEX Group,Công ty Cổ phần CAMIMEX Group,STO,3500
+CMWG2625,HSX,CW,3579.0,Chứng quyền MWG/LPBS/Call/EU/Cash/9M/39,Chứng quyền MWG/LPBS/Call/EU/Cash/9M/39,STO,
+CMWG2624,HSX,CW,3578.0,Chứng quyền MWG/LPBS/Call/EU/Cash/6M/01,Chứng quyền MWG/LPBS/Call/EU/Cash/6M/01,STO,
+CMWG2623,HSX,CW,1024.0,Chứng quyền MWG/12M/KAFI/C/EU/CASH/2602,Chứng quyền MWG/12M/KAFI/C/EU/CASH/2602,STO,
+CMWG2622,HSX,CW,1023.0,Chứng quyền MWG/12M/KAFI/C/EU/CASH/2601,Chứng quyền MWG/12M/KAFI/C/EU/CASH/2601,STO,
+CMWG2621,HSX,CW,1022.0,Chứng quyền MWG/MBS/9M/26-01,Chứng quyền MWG/MBS/9M/26-01,STO,
+CMWG2620,HSX,CW,1021.0,Chứng quyền.MWG.VNDS.M.CA.T.12T.2026.1,Chứng quyền.MWG.VNDS.M.CA.T.12T.2026.1,STO,
+CMWG2619,HSX,CW,1020.0,Chứng quyền.MWG.VNDS.M.CA.T.6T.2026.1,Chứng quyền.MWG.VNDS.M.CA.T.6T.2026.1,STO,
+CMWG2618,HSX,CW,1019.0,Chứng quyền MWG-HSC-9M-2002,Chứng quyền MWG-HSC-9M-2002,STO,
+CMWG2617,HSX,CW,1018.0,Chứng quyền MWG-HSC-6M-2001,Chứng quyền MWG-HSC-6M-2001,STO,
+CMWG2616,HSX,CW,1017.0,Chứng quyền MWG/ACBS/8M/104 Thời hạn 8 tháng,Chứng quyền MWG/ACBS/8M/104 Thời hạn 8 tháng,STO,
+CMWG2612,HSX,CW,1013.0,Chứng quyền MWG/MSVN/10M/0126,Chứng quyền MWG/MSVN/10M/0126,STO,
+CMWG2611,HSX,CW,1012.0,Chứng quyền MWG.01.PHS.C.EU.Cash.10M,Chứng quyền MWG.01.PHS.C.EU.Cash.10M,STO,
+CMWG2610,HSX,CW,1011.0,Chứng quyền MWG-HSC-MET21,Chứng quyền MWG-HSC-MET21,STO,
+CMWG2609,HSX,CW,1010.0,Chứng quyền MWG/9M/SSI/C/EU/Cash-21,Chứng quyền MWG/9M/SSI/C/EU/Cash-21,STO,
+CMWG2604,HSX,CW,1005.0,Chứng quyền MWG/ACBS/Call/EU/Cash/10M/89,Chứng quyền MWG/ACBS/Call/EU/Cash/10M/89,STO,
+CMWG2603,HSX,CW,1004.0,Chứng quyền MWG/TCBS/C/EU/12M/CASH/02,Chứng quyền MWG/TCBS/C/EU/12M/CASH/02,STO,
+CMWG2527,HSX,CW,1000.0,Chứng quyền MWG/15M/KAFI/C/EU/CASH/2502,Chứng quyền MWG/15M/KAFI/C/EU/CASH/2502,STO,
+CMWG2526,HSX,CW,999.0,Chứng quyền MWG/12M/KAFI/C/EU/CASH/2501,Chứng quyền MWG/12M/KAFI/C/EU/CASH/2501,STO,
+CMWG2525,HSX,CW,998.0,Chứng quyền.MWG.VND.M.CA.T.2025.3,Chứng quyền.MWG.VND.M.CA.T.2025.3,STO,
+CMV,HSX,STOCK,926.0,Thương nghiệp Cà Mau,Công ty Cổ phần Thương nghiệp Cà Mau,STO,5300
+CMSN2626,HSX,CW,3600.0,Chứng quyền MSN/ACBS/8M/109 Thời hạn 8 tháng,Chứng quyền MSN/ACBS/8M/109 Thời hạn 8 tháng,STO,
+CMSN2625,HSX,CW,3577.0,Chứng quyền MSN/LPBS/Call/EU/Cash/6M/38,Chứng quyền MSN/LPBS/Call/EU/Cash/6M/38,STO,
+CMSN2624,HSX,CW,3576.0,Chứng quyền MSN/LPBS/Call/EU/Cash/9M/37,Chứng quyền MSN/LPBS/Call/EU/Cash/9M/37,STO,
+CMSN2623,HSX,CW,924.0,Chứng quyền MSN/12M/KAFI/C/EU/CASH/2602,Chứng quyền MSN/12M/KAFI/C/EU/CASH/2602,STO,
+CMSN2622,HSX,CW,923.0,Chứng quyền MSN/12M/KAFI/C/EU/CASH/2601,Chứng quyền MSN/12M/KAFI/C/EU/CASH/2601,STO,
+CMSN2621,HSX,CW,922.0,Chứng quyền MSN.6M.SSV.C.EU.Cash.26.02,Chứng quyền MSN.6M.SSV.C.EU.Cash.26.02,STO,
+CMSN2620,HSX,CW,921.0,Chứng quyền.MSN.VNDS.M.CA.T.10T.2026.1,Chứng quyền.MSN.VNDS.M.CA.T.10T.2026.1,STO,
+CMSN2619,HSX,CW,920.0,Chứng quyền MSN-HSC-9M-2001,Chứng quyền MSN-HSC-9M-2001,STO,
+CMSN2615,HSX,CW,916.0,Chứng quyền.MSN.KIS.7M.45,Chứng quyền.MSN.KIS.7M.45,STO,
+CMSN2614,HSX,CW,915.0,Chứng quyền.MSN.KIS.6M.44,Chứng quyền.MSN.KIS.6M.44,STO,
+CMSN2613,HSX,CW,914.0,Chứng quyền.MSN.KIS.4M.43,Chứng quyền.MSN.KIS.4M.43,STO,
+CMSN2612,HSX,CW,913.0,Chứng quyền MSN/MSVN/7M/0126,Chứng quyền MSN/MSVN/7M/0126,STO,
+CMSN2611,HSX,CW,912.0,Chứng quyền MSN/MSVN/10M/0226,Chứng quyền MSN/MSVN/10M/0226,STO,
+CMSN2610,HSX,CW,911.0,Chứng quyền MSN.6M.SSV.C.EU.Cash.26.01,Chứng quyền MSN.6M.SSV.C.EU.Cash.26.01,STO,
+CMSN2609,HSX,CW,910.0,Chứng quyền MSN/ACBS/Call/EU/Cash/10M/94,Chứng quyền MSN/ACBS/Call/EU/Cash/10M/94,STO,
+CMSN2605,HSX,CW,906.0,Chứng quyền MSN/9M/SSI/C/EU/Cash-21,Chứng quyền MSN/9M/SSI/C/EU/Cash-21,STO,
+CMSN2601,HSX,CW,902.0,Chứng quyền MSN/LPBS/Call/EU/Cash/12M/18,Chứng quyền MSN/LPBS/Call/EU/Cash/12M/18,STO,
+CMSN2522,HSX,CW,900.0,Chứng quyền.MSN.VND.M.CA.T.2025.2,Chứng quyền.MSN.VND.M.CA.T.2025.2,STO,
+CMG,HSX,STOCK,828.0,Tập đoàn Công nghệ CMC,Công ty Cổ phần Tập đoàn Công nghệ CMC,STO,9500
+CMBB2622,HSX,CW,3575.0,Chứng quyền MBB/LPBS/Call/EU/Cash/6M/15,Chứng quyền MBB/LPBS/Call/EU/Cash/6M/15,STO,
+CMBB2621,HSX,CW,3574.0,Chứng quyền MBB/LPBS/Call/EU/Cash/9M/13,Chứng quyền MBB/LPBS/Call/EU/Cash/9M/13,STO,
+CMBB2620,HSX,CW,824.0,Chứng quyền MBB/12M/KAFI/C/EU/CASH/2602,Chứng quyền MBB/12M/KAFI/C/EU/CASH/2602,STO,
+CMBB2619,HSX,CW,823.0,Chứng quyền MBB/12M/KAFI/C/EU/CASH/2601,Chứng quyền MBB/12M/KAFI/C/EU/CASH/2601,STO,
+CMBB2618,HSX,CW,822.0,Chứng quyền.MBB.VNDS.M.CA.T.12T.2026.1,Chứng quyền.MBB.VNDS.M.CA.T.12T.2026.1,STO,
+CMBB2617,HSX,CW,821.0,Chứng quyền.MBB.VNDS.M.CA.T.6T.2026.1,Chứng quyền.MBB.VNDS.M.CA.T.6T.2026.1,STO,
+CMBB2616,HSX,CW,820.0,Chứng quyền MBB-HSC-9M-2002,Chứng quyền MBB-HSC-9M-2002,STO,
+CMBB2615,HSX,CW,819.0,Chứng quyền MBB-HSC-6M-2001,Chứng quyền MBB-HSC-6M-2001,STO,
+CMBB2614,HSX,CW,818.0,Chứng quyền MBB/ACBS/8M/103 Thời hạn 8 tháng,Chứng quyền MBB/ACBS/8M/103 Thời hạn 8 tháng,STO,
+CMBB2610,HSX,CW,814.0,Chứng quyền MBB.01.PHS.C.EU.Cash.10M,Chứng quyền MBB.01.PHS.C.EU.Cash.10M,STO,
+CMBB2609,HSX,CW,813.0,Chứng quyền MBB-HSC-MET20,Chứng quyền MBB-HSC-MET20,STO,
+CMBB2607,HSX,CW,811.0,Chứng quyền MBB/9M/SSI/C/EU/Cash-21,Chứng quyền MBB/9M/SSI/C/EU/Cash-21,STO,
+CMBB2606,HSX,CW,810.0,Chứng quyền MBB/VPBANKS/C/EU/9M/CASH/25-02,Chứng quyền MBB/VPBANKS/C/EU/9M/CASH/25-02,STO,
+CMBB2605,HSX,CW,809.0,Chứng quyền MBB/LPBS/Call/EU/Cash/12M/04,Chứng quyền MBB/LPBS/Call/EU/Cash/12M/04,STO,
+CMBB2604,HSX,CW,808.0,Chứng quyền MBB/ACBS/Call/EU/Cash/10M/88,Chứng quyền MBB/ACBS/Call/EU/Cash/10M/88,STO,
+CMBB2603,HSX,CW,807.0,Chứng quyền MBB/TCBS/C/EU/12M/CASH/02,Chứng quyền MBB/TCBS/C/EU/12M/CASH/02,STO,
+CMBB2523,HSX,CW,803.0,Chứng quyền MBB/15M/KAFI/C/EU/CASH/2502,Chứng quyền MBB/15M/KAFI/C/EU/CASH/2502,STO,
+CMBB2522,HSX,CW,802.0,Chứng quyền MBB/12M/KAFI/C/EU/CASH/2501,Chứng quyền MBB/12M/KAFI/C/EU/CASH/2501,STO,
+CMBB2521,HSX,CW,801.0,Chứng quyền.MBB.VND.M.CA.T.2025.3,Chứng quyền.MBB.VND.M.CA.T.2025.3,STO,
+CLW,HSX,STOCK,736.0,Cấp nước Chợ Lớn,Công ty Cổ phần Cấp nước Chợ Lớn,STO,7500
+CLPB2610,HSX,CW,735.0,Chứng quyền LPB/12M/KAFI/C/EU/CASH/2602,Chứng quyền LPB/12M/KAFI/C/EU/CASH/2602,STO,
+CLPB2609,HSX,CW,734.0,Chứng quyền LPB/12M/KAFI/C/EU/CASH/2601,Chứng quyền LPB/12M/KAFI/C/EU/CASH/2601,STO,
+CLPB2608,HSX,CW,733.0,Chứng quyền LPB.6M.SSV.C.EU.Cash.26.02,Chứng quyền LPB.6M.SSV.C.EU.Cash.26.02,STO,
+CLPB2607,HSX,CW,732.0,Chứng quyền LPB/MBS/6M/26-01,Chứng quyền LPB/MBS/6M/26-01,STO,
+CLPB2606,HSX,CW,731.0,Chứng quyền.LPB.KIS.7M.08,Chứng quyền.LPB.KIS.7M.08,STO,
+CLPB2605,HSX,CW,730.0,Chứng quyền.LPB.KIS.6M.07,Chứng quyền.LPB.KIS.6M.07,STO,
+CLPB2604,HSX,CW,729.0,Chứng quyền LPB/MSVN/10M/0226,Chứng quyền LPB/MSVN/10M/0226,STO,
+CLPB2603,HSX,CW,728.0,Chứng quyền LPB/MSVN/7M/0126,Chứng quyền LPB/MSVN/7M/0126,STO,
+CLL,HSX,STOCK,714.0,Cảng Cát Lái,Công ty Cổ phần Cảng Cát Lái,STO,2700
+CLC,HSX,STOCK,710.0,Thuốc lá Cát Lợi,Công ty Cổ phần Cát Lợi,STO,3700
+CKG,HSX,STOCK,708.0,Tập đoàn CIC,Công ty Cổ phần Tập đoàn CIC,STO,8600
+CII,HSX,STOCK,681.0,Hạ tầng Kỹ thuật TP.HCM,Công ty Cổ phần Đầu tư Hạ tầng Kỹ thuật Thành phố Hồ Chí Minh,STO,2300
+CIG,HSX,STOCK,680.0,Xây dựng COMA 18,Công ty Cổ phần COMA 18,STO,2300
+CHPG2634,HSX,CW,3572.0,Chứng quyền HPG/LPBS/Call/EU/Cash/6M/36,Chứng quyền HPG/LPBS/Call/EU/Cash/6M/36,STO,
+CHPG2633,HSX,CW,3571.0,Chứng quyền HPG/LPBS/Call/EU/Cash/9M/35,Chứng quyền HPG/LPBS/Call/EU/Cash/9M/35,STO,
+CHPG2632,HSX,CW,675.0,Chứng quyền HPG.9M.SSV.C.EU.Cash.26.02,Chứng quyền HPG.9M.SSV.C.EU.Cash.26.02,STO,
+CHPG2631,HSX,CW,674.0,Chứng quyền HPG.6M.SSV.C.EU.Cash.26.02,Chứng quyền HPG.6M.SSV.C.EU.Cash.26.02,STO,
+CHPG2630,HSX,CW,673.0,Chứng quyền HPG.01.10M.KBSV.C.EU.Cash,Chứng quyền HPG.01.10M.KBSV.C.EU.Cash,STO,
+CHPG2629,HSX,CW,672.0,Chứng quyền HPG/MBS/9M/26-01,Chứng quyền HPG/MBS/9M/26-01,STO,
+CHPG2628,HSX,CW,671.0,Chứng quyền.HPG.VNDS.M.CA.T.12T.2026.1,Chứng quyền.HPG.VNDS.M.CA.T.12T.2026.1,STO,
+CHPG2627,HSX,CW,670.0,Chứng quyền HPG-HSC-9M-2002,Chứng quyền HPG-HSC-9M-2002,STO,
+CHPG2626,HSX,CW,669.0,Chứng quyền HPG-HSC-6M-2001,Chứng quyền HPG-HSC-6M-2001,STO,
+CHPG2625,HSX,CW,668.0,Chứng quyền HPG/ACBS/8M/102 Thời hạn 8 tháng,Chứng quyền HPG/ACBS/8M/102 Thời hạn 8 tháng,STO,
+CHPG2621,HSX,CW,664.0,Chứng quyền.HPG.KIS.5M.56,Chứng quyền.HPG.KIS.5M.56,STO,
+CHPG2620,HSX,CW,663.0,Chứng quyền.HPG.KIS.4M.55,Chứng quyền.HPG.KIS.4M.55,STO,
+CHPG2619,HSX,CW,662.0,Chứng quyền.HPG.KIS.6M.57,Chứng quyền.HPG.KIS.6M.57,STO,
+CHPG2618,HSX,CW,661.0,Chứng quyền.HPG.KIS.7M.58,Chứng quyền.HPG.KIS.7M.58,STO,
+CHPG2617,HSX,CW,660.0,Chứng quyền HPG/MSVN/10M/0226,Chứng quyền HPG/MSVN/10M/0226,STO,
+CHPG2616,HSX,CW,659.0,Chứng quyền HPG/MSVN/7M/0126,Chứng quyền HPG/MSVN/7M/0126,STO,
+CHPG2615,HSX,CW,658.0,Chứng quyền HPG.9M.SSV.C.EU.Cash.26.01,Chứng quyền HPG.9M.SSV.C.EU.Cash.26.01,STO,
+CHPG2614,HSX,CW,657.0,Chứng quyền HPG.6M.SSV.C.EU.Cash.26.01,Chứng quyền HPG.6M.SSV.C.EU.Cash.26.01,STO,
+CHPG2613,HSX,CW,656.0,Chứng quyền HPG.07.PHS.C.EU.Cash.10M,Chứng quyền HPG.07.PHS.C.EU.Cash.10M,STO,
+CHPG2610,HSX,CW,653.0,Chứng quyền HPG.12M.SSV.C.EU.Cash.25.02,Chứng quyền HPG.12M.SSV.C.EU.Cash.25.02,STO,
+CHPG2609,HSX,CW,652.0,Chứng quyền HPG-HSC-MET18,Chứng quyền HPG-HSC-MET18,STO,
+CHPG2607,HSX,CW,650.0,Chứng quyền HPG/9M/SSI/C/EU/Cash-21,Chứng quyền HPG/9M/SSI/C/EU/Cash-21,STO,
+CHPG2606,HSX,CW,649.0,Chứng quyền HPG/VPBANKS/C/EU/12M/CASH/25-02,Chứng quyền HPG/VPBANKS/C/EU/12M/CASH/25-02,STO,
+CHPG2605,HSX,CW,648.0,Chứng quyền HPG/LPBS/Call/EU/Cash/12M/16,Chứng quyền HPG/LPBS/Call/EU/Cash/12M/16,STO,
+CHPG2604,HSX,CW,647.0,Chứng quyền HPG/ACBS/Call/EU/Cash/10M/87,Chứng quyền HPG/ACBS/Call/EU/Cash/10M/87,STO,
+CHPG2603,HSX,CW,646.0,Chứng quyền HPG/TCBS/C/EU/12M/CASH/02,Chứng quyền HPG/TCBS/C/EU/12M/CASH/02,STO,
+CHPG2541,HSX,CW,642.0,Chứng quyền HPG/15M/KAFI/C/EU/CASH/2502,Chứng quyền HPG/15M/KAFI/C/EU/CASH/2502,STO,
+CHPG2540,HSX,CW,641.0,Chứng quyền HPG/12M/KAFI/C/EU/CASH/2501,Chứng quyền HPG/12M/KAFI/C/EU/CASH/2501,STO,
+CHPG2539,HSX,CW,640.0,Chứng quyền.HPG.VND.M.CA.T.2025.3,Chứng quyền.HPG.VND.M.CA.T.2025.3,STO,
+CHP,HSX,STOCK,516.0,Thủy điện Miền Trung,Công ty Cổ phần Thủy điện Miền Trung,STO,7500
+CHDB2615,HSX,CW,3570.0,Chứng quyền HDB/LPBS/Call/EU/Cash/6M/12,Chứng quyền HDB/LPBS/Call/EU/Cash/6M/12,STO,
+CHDB2614,HSX,CW,3569.0,Chứng quyền HDB/LPBS/Call/EU/Cash/9M/09,Chứng quyền HDB/LPBS/Call/EU/Cash/9M/09,STO,
+CHDB2613,HSX,CW,515.0,Chứng quyền HDB/12M/KAFI/C/EU/CASH/2602,Chứng quyền HDB/12M/KAFI/C/EU/CASH/2602,STO,
+CHDB2612,HSX,CW,514.0,Chứng quyền HDB/12M/KAFI/C/EU/CASH/2601,Chứng quyền HDB/12M/KAFI/C/EU/CASH/2601,STO,
+CHDB2611,HSX,CW,513.0,Chứng quyền HDB.6M.SSV.C.EU.Cash.26.02,Chứng quyền HDB.6M.SSV.C.EU.Cash.26.02,STO,
+CHDB2610,HSX,CW,512.0,Chứng quyền HDB/MBS/6M/26-01,Chứng quyền HDB/MBS/6M/26-01,STO,
+CHDB2609,HSX,CW,511.0,Chứng quyền.HDB.VNDS.M.CA.T.12T.2026.1,Chứng quyền.HDB.VNDS.M.CA.T.12T.2026.1,STO,
+CHDB2608,HSX,CW,510.0,Chứng quyền.HDB.VNDS.M.CA.T.6T.2026.1,Chứng quyền.HDB.VNDS.M.CA.T.6T.2026.1,STO,
+CHDB2607,HSX,CW,509.0,Chứng quyền.HDB.KIS.7M.29,Chứng quyền.HDB.KIS.7M.29,STO,
+CHDB2606,HSX,CW,508.0,Chứng quyền.HDB.KIS.5M.28,Chứng quyền.HDB.KIS.5M.28,STO,
+CHDB2605,HSX,CW,507.0,Chứng quyền HDB.9M.SSV.C.EU.Cash.26.01,Chứng quyền HDB.9M.SSV.C.EU.Cash.26.01,STO,
+CHDB2604,HSX,CW,506.0,Chứng quyền HDB.6M.SSV.C.EU.Cash.26.01,Chứng quyền HDB.6M.SSV.C.EU.Cash.26.01,STO,
+CHDB2603,HSX,CW,505.0,Chứng quyền HDB.02.PHS.C.EU.Cash.12M,Chứng quyền HDB.02.PHS.C.EU.Cash.12M,STO,
+CHDB2602,HSX,CW,504.0,Chứng quyền HDB/VPBANKS/C/EU/9M/CASH/25-02,Chứng quyền HDB/VPBANKS/C/EU/9M/CASH/25-02,STO,
+CHDB2509,HSX,CW,501.0,Chứng quyền.HDB.VND.M.CA.T.2025.3,Chứng quyền.HDB.VND.M.CA.T.2025.3,STO,
+CFPT2631,HSX,CW,3599.0,Chứng quyền FPT/ACBS/8M/101 Thời hạn 8 tháng,Chứng quyền FPT/ACBS/8M/101 Thời hạn 8 tháng,STO,
+CFPT2630,HSX,CW,3568.0,Chứng quyền FPT/LPBS/Call/EU/Cash/6M/34,Chứng quyền FPT/LPBS/Call/EU/Cash/6M/34,STO,
+CFPT2629,HSX,CW,3567.0,Chứng quyền FPT/LPBS/Call/EU/Cash/9M/33,Chứng quyền FPT/LPBS/Call/EU/Cash/9M/33,STO,
+CFPT2628,HSX,CW,469.0,Chứng quyền FPT/12M/KAFI/C/EU/CASH/2602,Chứng quyền FPT/12M/KAFI/C/EU/CASH/2602,STO,
+CFPT2627,HSX,CW,468.0,Chứng quyền FPT/12M/KAFI/C/EU/CASH/2601,Chứng quyền FPT/12M/KAFI/C/EU/CASH/2601,STO,
+CFPT2626,HSX,CW,467.0,Chứng quyền FPT.9M.SSV.C.EU.Cash.26.02,Chứng quyền FPT.9M.SSV.C.EU.Cash.26.02,STO,
+CFPT2625,HSX,CW,466.0,Chứng quyền FPT.6M.SSV.C.EU.Cash.26.02,Chứng quyền FPT.6M.SSV.C.EU.Cash.26.02,STO,
+CFPT2624,HSX,CW,465.0,Chứng quyền.FPT.VNDS.M.CA.T.12T.2026.1,Chứng quyền.FPT.VNDS.M.CA.T.12T.2026.1,STO,
+CFPT2623,HSX,CW,464.0,Chứng quyền.FPT.VNDS.M.CA.T.6T.2026.1,Chứng quyền.FPT.VNDS.M.CA.T.6T.2026.1,STO,
+CFPT2622,HSX,CW,463.0,Chứng quyền FPT-HSC-9M-2002,Chứng quyền FPT-HSC-9M-2002,STO,
+CFPT2621,HSX,CW,462.0,Chứng quyền FPT-HSC-6M-2001,Chứng quyền FPT-HSC-6M-2001,STO,
+CFPT2617,HSX,CW,458.0,Chứng quyền.FPT.KIS.7M.09,Chứng quyền.FPT.KIS.7M.09,STO,
+CFPT2616,HSX,CW,457.0,Chứng quyền.FPT.KIS.5M.08,Chứng quyền.FPT.KIS.5M.08,STO,
+CFPT2615,HSX,CW,456.0,Chứng quyền FPT/MSVN/10M/0126,Chứng quyền FPT/MSVN/10M/0126,STO,
+CFPT2614,HSX,CW,455.0,Chứng quyền FPT.9M.SSV.C.EU.Cash.26.01,Chứng quyền FPT.9M.SSV.C.EU.Cash.26.01,STO,
+CFPT2613,HSX,CW,454.0,Chứng quyền FPT.6M.SSV.C.EU.Cash.26.01,Chứng quyền FPT.6M.SSV.C.EU.Cash.26.01,STO,
+CFPT2612,HSX,CW,453.0,Chứng quyền FPT.06.PHS.C.EU.Cash.10M,Chứng quyền FPT.06.PHS.C.EU.Cash.10M,STO,
+CFPT2611,HSX,CW,452.0,Chứng quyền FPT.01.PHS.C.EU.Cash.11M,Chứng quyền FPT.01.PHS.C.EU.Cash.11M,STO,
+CFPT2610,HSX,CW,451.0,Chứng quyền FPT/ACBS/Call/EU/Cash/10M/93,Chứng quyền FPT/ACBS/Call/EU/Cash/10M/93,STO,
+CFPT2609,HSX,CW,450.0,Chứng quyền FPT-HSC-MET19,Chứng quyền FPT-HSC-MET19,STO,
+CFPT2608,HSX,CW,449.0,Chứng quyền FPT/9M/SSI/C/EU/Cash-21,Chứng quyền FPT/9M/SSI/C/EU/Cash-21,STO,
+CFPT2606,HSX,CW,447.0,Chứng quyền FPT/VPBANKS/C/EU/9M/CASH/25-02,Chứng quyền FPT/VPBANKS/C/EU/9M/CASH/25-02,STO,
+CFPT2604,HSX,CW,445.0,Chứng quyền FPT/LPBS/Call/EU/Cash/12M/14,Chứng quyền FPT/LPBS/Call/EU/Cash/12M/14,STO,
+CFPT2603,HSX,CW,444.0,Chứng quyền FPT/TCBS/C/EU/12M/CASH/02,Chứng quyền FPT/TCBS/C/EU/12M/CASH/02,STO,
+CFPT2533,HSX,CW,440.0,Chứng quyền FPT/15M/KAFI/C/EU/CASH/2502,Chứng quyền FPT/15M/KAFI/C/EU/CASH/2502,STO,
+CFPT2532,HSX,CW,439.0,Chứng quyền FPT/12M/KAFI/C/EU/CASH/2501,Chứng quyền FPT/12M/KAFI/C/EU/CASH/2501,STO,
+CFPT2529,HSX,CW,436.0,Chứng quyền.FPT.VND.M.CA.T.2025.3,Chứng quyền.FPT.VND.M.CA.T.2025.3,STO,
+CDC,HSX,STOCK,350.0,Chương Dương Corp,Công ty Cổ phần Chương Dương,STO,2300
+CCL,HSX,STOCK,343.0,ĐT & PT Đô thị Dầu khí Cửu Long,Công ty Cổ phần Đầu tư và Phát triển Đô thị Dầu khí Cửu Long,STO,8600
+CCI,HSX,STOCK,342.0,CIDICO,Công ty Cổ phần Đầu tư Phát triển Công nghiệp Thương mại Củ Chi,STO,7500
+CCC,HSX,STOCK,341.0,Xây Dựng CDC,Công ty Cổ Phần Xây Dựng CDC,STO,2300
+CACB2620,HSX,CW,3566.0,Chứng quyền ACB/LPBS/Call/EU/Cash/9M/08,Chứng quyền ACB/LPBS/Call/EU/Cash/9M/08,STO,
+CACB2619,HSX,CW,3565.0,Chứng quyền ACB/LPBS/Call/EU/Cash/6M/06,Chứng quyền ACB/LPBS/Call/EU/Cash/6M/06,STO,
+CACB2618,HSX,CW,328.0,Chứng quyền ACB.9M.SSV.C.EU.Cash.26.02,Chứng quyền ACB.9M.SSV.C.EU.Cash.26.02,STO,
+CACB2617,HSX,CW,327.0,Chứng quyền ACB.6M.SSV.C.EU.Cash.26.02,Chứng quyền ACB.6M.SSV.C.EU.Cash.26.02,STO,
+CACB2616,HSX,CW,326.0,Chứng quyền ACB/MBS/6M/26-01,Chứng quyền ACB/MBS/6M/26-01,STO,
+CACB2615,HSX,CW,325.0,Chứng quyền.ACB.VNDS.M.CA.T.10T.2026.1,Chứng quyền.ACB.VNDS.M.CA.T.10T.2026.1,STO,
+CACB2614,HSX,CW,324.0,Chứng quyền ACB-HSC-6M-2001,Chứng quyền ACB-HSC-6M-2001,STO,
+CACB2610,HSX,CW,320.0,Chứng quyền.ACB.KIS.7M.02,Chứng quyền.ACB.KIS.7M.02,STO,
+CACB2609,HSX,CW,319.0,Chứng quyền.ACB.KIS.5M.01,Chứng quyền.ACB.KIS.5M.01,STO,
+CACB2608,HSX,CW,318.0,Chứng quyền ACB.6M.SSV.C.EU.Cash.26.01,Chứng quyền ACB.6M.SSV.C.EU.Cash.26.01,STO,
+CACB2607,HSX,CW,317.0,Chứng quyền ACB.9M.SSV.C.EU.Cash.26.01,Chứng quyền ACB.9M.SSV.C.EU.Cash.26.01,STO,
+CACB2606,HSX,CW,316.0,Chứng quyền ACB-HSC-MET04,Chứng quyền ACB-HSC-MET04,STO,
+CACB2604,HSX,CW,314.0,Chứng quyền ACB/LPBS/Call/EU/Cash/12M/02,Chứng quyền ACB/LPBS/Call/EU/Cash/12M/02,STO,
+CACB2603,HSX,CW,313.0,Chứng quyền ACB/TCBS/C/EU/12M/CASH/02,Chứng quyền ACB/TCBS/C/EU/12M/CASH/02,STO,
+CACB2517,HSX,CW,309.0,Chứng quyền ACB/15M/KAFI/C/EU/CASH/2502,Chứng quyền ACB/15M/KAFI/C/EU/CASH/2502,STO,
+CACB2516,HSX,CW,308.0,Chứng quyền ACB/12M/KAFI/C/EU/CASH/2501,Chứng quyền ACB/12M/KAFI/C/EU/CASH/2501,STO,
+CACB2515,HSX,CW,307.0,Chứng quyền.ACB.VND.M.CA.T.2025.3,Chứng quyền.ACB.VND.M.CA.T.2025.3,STO,
+C47,HSX,STOCK,266.0,Xây dựng 47,Công ty Cổ phần Xây dựng 47,STO,2300
+C32,HSX,STOCK,265.0,Đầu tư và Xây dựng 3-2,Công ty Cổ phần Đầu tư và Xây dựng 3-2,STO,2300
+BWE,HSX,STOCK,259.0,Nước - Môi trường Bình Dương,Công ty Cổ phần - Tổng công ty Nước - Môi trường Bình Dương,STO,7500
+BVH,HSX,STOCK,254.0,Tập đoàn Bảo Việt,Tập đoàn Bảo Việt,STO,8500
+BVB,HSX,STOCK,247.0,Ngân hàng Bản Việt - BVBank,Ngân hàng Thương mại Cổ phần Bản Việt,STO,8300
+BTT,HSX,STOCK,243.0,TM - DV Bến Thành,Công ty Cổ phần Thương mại - Dịch vụ Bến Thành,STO,5300
+BTP,HSX,STOCK,241.0,Nhiệt điện Bà Rịa,Công ty Cổ phần Nhiệt điện Bà Rịa,STO,7500
+BSR,HSX,STOCK,232.0,Lọc Hoá dầu Việt Nam,Công ty Cổ phần - Tổng Công ty Lọc Hoá dầu Việt Nam,STO,0500
+BSI,HSX,STOCK,228.0,Chứng khoán BIDV,Công ty Cổ phần Chứng khoán BIDV,STO,8700
+BRC,HSX,STOCK,220.0,Cao su Bến Thành,Công ty Cổ phần Cao su Bến Thành,STO,1300
+BMP,HSX,STOCK,211.0,Nhựa Bình Minh,Công ty Cổ phần Nhựa Bình Minh,STO,2300
+BMI,HSX,STOCK,207.0,Bảo hiểm Bảo Minh,Tổng Công ty Cổ phần Bảo Minh,STO,8500
+BMC,HSX,STOCK,203.0,Khoáng sản Bình Định,Công ty Cổ phần Khoáng sản Bình Định,STO,1700
+BKG,HSX,STOCK,196.0,Đầu tư BKG Việt Nam,Công ty Cổ phần Đầu tư BKG Việt Nam,STO,3700
+BID,HSX,STOCK,177.0,BIDV,Ngân hàng Thương mại Cổ phần Đầu tư và Phát triển Việt Nam,STO,8300
+BIC,HSX,STOCK,176.0,Bảo hiểm BIDV,Tổng Công ty Cổ phần Bảo hiểm Ngân hàng Đầu tư và Phát triển Việt Nam,STO,8500
+BHN,HSX,STOCK,173.0,HABECO,Tổng Công ty Cổ phần Bia - Rượu - Nước giải khát Hà Nội,STO,3500
+BFC,HSX,STOCK,164.0,Phân bón Bình Điền,Công ty Cổ phần Phân bón Bình Điền,STO,1300
+BCM,HSX,STOCK,153.0,Becamex Group,Tập đoàn Đầu tư và Phát triển Công nghiệp Becamex - CTCP,STO,8600
+BCE,HSX,STOCK,149.0,XD và GT Bình Dương,Công ty Cổ phần Xây dựng và Giao thông Bình Dương,STO,2300
+BAF,HSX,STOCK,135.0,Nông nghiệp BAF Việt Nam,Công ty Cổ phần Nông nghiệp BAF Việt Nam,STO,3500
+AST,HSX,STOCK,107.0,Dịch vụ Hàng không Taseco,Công ty Cổ phần Dịch vụ Hàng không Taseco,STO,5300
+ASP,HSX,STOCK,106.0,Dầu khí An Pha,Công ty Cổ phần Tập đoàn Dầu khí An Pha,STO,7500
+ASM,HSX,STOCK,105.0,Tập đoàn Sao Mai,Công ty Cổ phần Tập đoàn Sao Mai,STO,3500
+ASG,HSX,STOCK,104.0,Tập đoàn ASG,Công ty Cổ phần Tập đoàn ASG,STO,2700
+APH,HSX,STOCK,95.0,Tập đoàn An Phát Holdings,Công ty Cổ phần Tập đoàn An Phát Holdings,STO,2700
+APG,HSX,STOCK,94.0,Chứng khoán APG,Công ty Cổ phần Chứng khoán APG,STO,8700
+ANV,HSX,STOCK,91.0,Thủy sản Nam Việt,Công ty Cổ phần Nam Việt,STO,3500
+ANT,HSX,STOCK,90.0,Rau quả thực phẩm An Giang,Công ty Cổ phần Rau quả Thực phẩm An Giang,STO,3500
+AGR,HSX,STOCK,76.0,Agriseco,Công ty Cổ phần Chứng khoán AGRIBANK,STO,8700
+AGG,HSX,STOCK,73.0,Bất động sản An Gia,Công ty Cổ phần Đầu tư và Phát triển Bất động sản An Gia,STO,8600
+AFX,HSX,STOCK,69.0,XNK Nông sản Thực phẩm An Giang,Công ty Cổ phần Xuất Nhập khẩu Nông sản Thực phẩm An Giang,STO,5300
+ADS,HSX,STOCK,68.0,Dệt sợi DAMSAN,Công ty Cổ phần DAMSAN,STO,3700
+ADP,HSX,STOCK,67.0,Sơn Á Đông,Công ty Cổ phần Sơn Á Đông,STO,2300
+ADG,HSX,STOCK,66.0,Clever Group,Công ty Cổ phần Clever Group,STO,5500
+ACL,HSX,STOCK,61.0,Thủy sản CL An Giang,Công ty Cổ phần Xuất nhập khẩu Thủy sản Cửu Long An Giang,STO,3500
+ACG,HSX,STOCK,60.0,Gỗ An Cường,Công ty Cổ phần Gỗ An Cường,STO,1700
+ACC,HSX,STOCK,58.0,Đầu tư và XD Bình Dương ACC,Công ty Cổ phần Đầu tư và Xây dựng Bình Dương ACC,STO,2300
+ACB,HSX,STOCK,57.0,ACB,Ngân hàng Thương mại Cổ phần Á Châu,STO,8300
+ABT,HSX,STOCK,55.0,Thủy sản Bến Tre,Công ty Cổ phần Xuất nhập khẩu Thủy sản Bến Tre,STO,3500
+ABS,HSX,STOCK,54.0,DV Nông nghiệp Bình Thuận,Công ty Cổ phần Dịch vụ Nông nghiệp Bình Thuận,STO,1300
+ABR,HSX,STOCK,53.0,Đầu tư Nhãn Hiệu Việt,Công ty Cổ phần Đầu tư Nhãn Hiệu Việt,STO,2700
+AAT,HSX,STOCK,48.0,Tập đoàn Tiên Sơn Thanh Hóa,Công ty Cổ phần Tập đoàn Tiên Sơn Thanh Hóa,STO,3700
+AAN,HSX,STOCK,46.0,Lương thực A An,Công ty Cổ phần Lương thực A An,STO,3500
+AAM,HSX,STOCK,45.0,Thủy sản Mekong,Công ty Cổ Phần Thủy Sản MeKong,STO,3500
+AAA,HSX,STOCK,43.0,An Phát Bioplastics,Công ty Cổ phần Nhựa An Phát Xanh,STO,1300

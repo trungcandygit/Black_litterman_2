@@ -1,0 +1,322 @@
+Groups:
+              grp     N
+           <char> <int>
+1:        control   328
+2:    constituent    24
+3: named_excluded    14
+Matched controls: 24  RI pool: 85 
+Predicted-constituent overlap with actual: 16 
+Pretrend Wald:
+   outcome                  group         F            p
+    <char>                 <char>     <num>        <num>
+1: lamihud                treated  6.657692 4.480137e-12
+2: lamihud                  named  5.338156 4.154965e-09
+3:    lval                treated 10.454794 5.519149e-21
+4:    lval                  named  8.294124 7.286747e-16
+5: lamihud                    itt  7.593288 3.144413e-14
+6: lamihud treated_matched_sample  1.720774 5.614307e-02
+7:    lval treated_matched_sample  2.326334 5.795677e-03
+
+Baseline clean:
+               spec       term           est           se            p     n
+             <char>     <char>         <num>        <num>        <num> <int>
+ 1:   clean_lamihud treated:P1 -0.3915258566 0.0981146604 8.029659e-05 34369
+ 2:   clean_lamihud treated:P2 -0.8884419981 0.1239265605 4.492506e-12 34369
+ 3:   clean_lamihud treated:P3 -1.1287033368 0.1781208575 7.202220e-10 34369
+ 4:      clean_lval treated:P1  0.6784183447 0.1081647983 1.047765e-09 34369
+ 5:      clean_lval treated:P2  1.0297537165 0.1253495649 4.123004e-15 34369
+ 6:      clean_lval treated:P3  1.1892191275 0.1683689336 8.790130e-12 34369
+ 7:        clean_cs treated:P1  0.0009472237 0.0003200946 3.293808e-03 34369
+ 8:        clean_cs treated:P2  0.0009814708 0.0003467095 4.910371e-03 34369
+ 9:        clean_cs treated:P3  0.0013389172 0.0005156439 9.811168e-03 34369
+10: matched_lamihud treated:P1 -0.3864677604 0.1166564274 1.782353e-03  4751
+11: matched_lamihud treated:P2 -0.7509095555 0.1516560876 9.912833e-06  4751
+12: matched_lamihud treated:P3 -0.9381931235 0.2036056544 3.123960e-05  4751
+13:    matched_lval treated:P1  0.6382541715 0.1364534229 2.480715e-05  4751
+14:    matched_lval treated:P2  1.0361728016 0.1824462842 8.201468e-07  4751
+15:    matched_lval treated:P3  1.3080016496 0.2208222850 3.515403e-07  4751
+16:      matched_cs treated:P1  0.0013994537 0.0004076638 1.255933e-03  4751
+17:      matched_cs treated:P2  0.0014431909 0.0004214420 1.287536e-03  4751
+18:      matched_cs treated:P3  0.0020219131 0.0006380688 2.691266e-03  4751
+
+ITT:
+                 spec       term        est         se            p     n
+               <char>     <char>      <num>      <num>        <num> <int>
+ 1:   itt_all_lamihud     itt:P1 -0.2684150 0.08303781 1.339084e-03 35752
+ 2:   itt_all_lamihud     itt:P2 -0.5536686 0.12889172 2.236542e-05 35752
+ 3:   itt_all_lamihud     itt:P3 -0.8108681 0.16713647 1.817862e-06 35752
+ 4:      itt_all_lval     itt:P1  0.5885932 0.10585381 5.207091e-08 35752
+ 5:      itt_all_lval     itt:P2  0.7005950 0.14240884 1.314438e-06 35752
+ 6:      itt_all_lval     itt:P3  0.7238440 0.19407440 2.221644e-04 35752
+ 7:  itt_pure_lamihud     itt:P1 -0.2856340 0.08324069 6.714103e-04 34666
+ 8:  itt_pure_lamihud     itt:P2 -0.5930440 0.12880702 5.783189e-06 34666
+ 9:  itt_pure_lamihud     itt:P3 -0.8600193 0.16704345 4.365805e-07 34666
+10:     itt_pure_lval     itt:P1  0.6123989 0.10598282 1.655410e-08 34666
+11:     itt_pure_lval     itt:P2  0.7433540 0.14225925 2.975475e-07 34666
+12:     itt_pure_lval     itt:P3  0.7755364 0.19402233 7.804073e-05 34666
+13:      pred_lamihud    pred:P1 -0.2499583 0.07330086 7.221694e-04 35752
+14:      pred_lamihud    pred:P2 -0.5946264 0.08886137 8.326114e-11 35752
+15:      pred_lamihud    pred:P3 -0.7408226 0.11967964 1.618149e-09 35752
+16:         pred_lval    pred:P1  0.4440120 0.07805971 2.636842e-08 35752
+17:         pred_lval    pred:P2  0.6217298 0.10581123 9.485417e-09 35752
+18:         pred_lval    pred:P3  0.6069351 0.14355101 2.983484e-05 35752
+19: itt_split_lamihud  itt_in:P1 -0.4277594 0.10144375 3.151532e-05 34666
+20: itt_split_lamihud  itt_in:P2 -0.8716314 0.14647222 6.417502e-09 34666
+21: itt_split_lamihud  itt_in:P3 -1.1231590 0.19238610 1.195163e-08 34666
+22: itt_split_lamihud P1:itt_out -0.1079772 0.10154050 2.883298e-01 34666
+23: itt_split_lamihud P2:itt_out -0.2448099 0.15887206 1.242285e-01 34666
+24: itt_split_lamihud P3:itt_out -0.5266558 0.23619564 2.639114e-02 34666
+                 spec       term        est         se            p     n
+
+Named-excluded:
+                     spec       term         est         se            p     n
+                   <char>     <char>       <num>      <num>        <num> <int>
+ 1:           two_lamihud treated:P1 -0.39154448 0.09810420 7.951061e-05 35752
+ 2:           two_lamihud treated:P2 -0.88843752 0.12391747 4.206207e-12 35752
+ 3:           two_lamihud treated:P3 -1.12873500 0.17810602 6.890296e-10 35752
+ 4:           two_lamihud   P1:named -0.29286146 0.15448043 5.877833e-02 35752
+ 5:           two_lamihud   P2:named -0.55426243 0.25473998 3.021142e-02 35752
+ 6:           two_lamihud   P3:named -0.86508307 0.30387918 4.665731e-03 35752
+ 7:              two_lval treated:P1  0.67841723 0.10815526 1.004841e-09 35752
+ 8:              two_lval treated:P2  1.02976285 0.12534072 3.707104e-15 35752
+ 9:              two_lval treated:P3  1.18924321 0.16835692 8.248921e-12 35752
+10:              two_lval   P1:named  0.58936643 0.18628479 1.687913e-03 35752
+11:              two_lval   P2:named  0.68281439 0.26923251 1.162402e-02 35752
+12:              two_lval   P3:named  0.65289986 0.34531466 5.945099e-02 35752
+13: naming_timing_lamihud treated:W1 -0.33916078 0.10997184 2.197440e-03 35752
+14: naming_timing_lamihud treated:W2 -0.43972588 0.10012366 1.474554e-05 35752
+15: naming_timing_lamihud treated:W3 -0.93199077 0.12893485 2.883659e-12 35752
+16: naming_timing_lamihud   W1:early -0.02418457 0.09225154 7.933468e-01 35752
+17: naming_timing_lamihud   W2:early -0.18526964 0.12670334 1.445382e-01 35752
+18: naming_timing_lamihud   W3:early -0.29511629 0.16798334 7.978716e-02 35752
+19: naming_timing_lamihud    W1:late -1.14569055 0.50424639 2.366261e-02 35752
+20: naming_timing_lamihud    W2:late -1.66573679 0.05826842 3.550028e-95 35752
+21: naming_timing_lamihud    W3:late -2.50780107 0.40923873 2.307829e-09 35752
+                     spec       term         est         se            p     n
+
+Robustness:
+               spec           term           est          se            p     n
+             <char>         <char>         <num>       <num>        <num> <int>
+ 1:    size_week_fe     treated:P1 -0.4238306481 0.107657706 9.957570e-05 34369
+ 2:    size_week_fe     treated:P2 -0.7861572532 0.139046615 3.252749e-08 34369
+ 3:    size_week_fe     treated:P3 -0.9780535879 0.206899526 3.300991e-06 34369
+ 4:          twoway     treated:P1 -0.3915258566 0.105053760 3.243474e-04 34369
+ 5:          twoway     treated:P2 -0.8884419981 0.130035906 7.115677e-10 34369
+ 6:          twoway     treated:P3 -1.1287033368 0.206962034 3.698493e-07 34369
+ 7:        drop_vin     treated:P1 -0.3894038839 0.099908576 1.165439e-04 34072
+ 8:        drop_vin     treated:P2 -0.8627202519 0.113885762 3.265066e-13 34072
+ 9:        drop_vin     treated:P3 -1.0070094584 0.167617963 4.741467e-09 34072
+10:           trend     treated:P1 -0.3823689995 0.097779753 1.105660e-04 34369
+11:           trend     treated:P2 -0.8739513016 0.156083661 4.349218e-08 34369
+12:           trend     treated:P3 -1.1114748494 0.225187618 1.236054e-06 34369
+13:           trend treated:tindex -0.0002308595 0.002760987 9.334103e-01 34369
+14:   matched_trend     treated:P1 -0.3028142398 0.124167618 1.857007e-02  4751
+15:   matched_trend     treated:P2 -0.6185254414 0.225671221 8.638270e-03  4751
+16:   matched_trend     treated:P3 -0.7807949098 0.291545650 1.016766e-02  4751
+17:   matched_trend treated:tindex -0.0021089171 0.003575213 5.581020e-01  4751
+18:      lval_trend     treated:P1  0.2754673166 0.117314151 1.942308e-02 34369
+19:      lval_trend     treated:P2  0.3920850306 0.171386180 2.274757e-02 34369
+20:      lval_trend     treated:P3  0.4310728999 0.238405979 7.143950e-02 34369
+21:      lval_trend treated:tindex  0.0101590634 0.002898636 5.161888e-04 34369
+22: drop_julaug2025     treated:P1 -0.3535889611 0.104563681 8.019585e-04 31212
+23: drop_julaug2025     treated:P2 -0.8503116688 0.129792275 2.032936e-10 31212
+24: drop_julaug2025     treated:P3 -1.0912134247 0.182526144 5.544593e-09 31212
+25:     vol_control    log(absret)  0.5346003785 0.021107793 3.169355e-81 34369
+26:     vol_control     treated:P1 -0.5736293820 0.102081813 3.910399e-08 34369
+27:     vol_control     treated:P2 -1.0032493373 0.122438938 4.780256e-15 34369
+28:     vol_control     treated:P3 -1.2030533242 0.164240612 1.652117e-12 34369
+29:         placebo   treated:fake  0.0366649262 0.104042445 7.247471e-01 18163
+               spec           term           est          se            p     n
+
+Level shifts:
+       spec                contrast       diff         se            p
+     <char>                  <char>      <num>      <num>        <num>
+1: baseline treated:P2 - treated:P1 -0.4969161 0.07524535 4.003590e-11
+2: baseline treated:P3 - treated:P2 -0.2402613 0.10706149 2.482317e-02
+3:    trend treated:P2 - treated:P1 -0.4915823 0.09494508 2.248265e-07
+4:    trend treated:P3 - treated:P2 -0.2375235 0.11303857 3.561806e-02
+
+RI:
+   period   observed p_one_sided pseudo_mean pseudo_p05  pool  reps
+   <char>      <num>       <num>       <num>      <num> <int> <num>
+1:     P1 -0.3915259           0  0.01575646 -0.1091566    85   500
+2:     P2 -0.8884420           0 -0.14251981 -0.3140272    85   500
+3:     P3 -1.1287033           0 -0.20943504 -0.4843965    85   500
+
+Wild bootstrap:
+    sample       term        est    t_crve      p_wild clusters draws
+    <char>     <char>      <num>     <num>       <num>    <int> <num>
+1:   clean treated:P1 -0.3915259 -3.996253 0.000000000      352   999
+2:   clean treated:P2 -0.8884420 -7.179449 0.000000000      352   999
+3:   clean treated:P3 -1.1287033 -6.345875 0.000000000      352   999
+4: matched treated:P1 -0.3864678 -3.347959 0.003003003       48   999
+5: matched treated:P2 -0.7509096 -5.003839 0.000000000       48   999
+6: matched treated:P3 -0.9381931 -4.656697 0.000000000       48   999
+
+CAR portfolio:
+             group            event window    benchmark           car
+            <char>           <char> <char>       <char>         <num>
+ 1:    constituent     Announcement [-1,1]           ew  0.0334895722
+ 2:    constituent     Announcement [-1,5]           ew  0.0780508067
+ 3:    constituent     Announcement [0,20]           ew -0.0236680595
+ 4:    constituent     Confirmation [-1,1]           ew  0.0453259260
+ 5:    constituent     Confirmation [-1,5]           ew  0.0472996555
+ 6:    constituent     Confirmation [0,20]           ew  0.0996895890
+ 7:    constituent Constituent list [-1,1]           ew  0.0265363832
+ 8:    constituent Constituent list [-1,5]           ew  0.0443313939
+ 9:    constituent Constituent list [0,20]           ew  0.0455417446
+10:    constituent   Effective date [-1,1]           ew -0.0013942298
+11:    constituent     Announcement [-1,1]      matched  0.0125662917
+12:    constituent     Announcement [-1,5]      matched  0.0444290013
+13:    constituent     Announcement [0,20]      matched -0.0009376304
+14:    constituent     Confirmation [-1,1]      matched  0.0288484918
+15:    constituent     Confirmation [-1,5]      matched  0.0190246540
+16:    constituent     Confirmation [0,20]      matched  0.0714998672
+17:    constituent Constituent list [-1,1]      matched  0.0111174592
+18:    constituent Constituent list [-1,5]      matched  0.0258129385
+19:    constituent Constituent list [0,20]      matched  0.0415865930
+20:    constituent   Effective date [-1,1]      matched  0.0057629100
+21:    constituent     Announcement [-1,1]      topsize  0.0231331301
+22:    constituent     Announcement [-1,5]      topsize  0.0629459651
+23:    constituent     Announcement [0,20]      topsize -0.0139614471
+24:    constituent     Confirmation [-1,1]      topsize  0.0360001248
+25:    constituent     Confirmation [-1,5]      topsize  0.0353729478
+26:    constituent     Confirmation [0,20]      topsize  0.1058518647
+27:    constituent Constituent list [-1,1]      topsize  0.0178233868
+28:    constituent Constituent list [-1,5]      topsize  0.0391833799
+29:    constituent Constituent list [0,20]      topsize  0.0516354841
+30:    constituent   Effective date [-1,1]      topsize  0.0003214961
+31:    constituent     Announcement [-1,1] market_model  0.0262091627
+32:    constituent     Announcement [-1,5] market_model  0.0657250920
+33:    constituent     Announcement [0,20] market_model -0.0549594582
+34:    constituent     Confirmation [-1,1] market_model  0.0362835441
+35:    constituent     Confirmation [-1,5] market_model  0.0342390480
+36:    constituent     Confirmation [0,20] market_model  0.0812330765
+37:    constituent Constituent list [-1,1] market_model  0.0126904821
+38:    constituent Constituent list [-1,5] market_model  0.0252766816
+39:    constituent Constituent list [0,20] market_model  0.0170752234
+40:    constituent   Effective date [-1,1] market_model -0.0086933520
+41:   itt_nov_list     Announcement [-1,1]           ew  0.0298645196
+42:   itt_nov_list     Announcement [-1,5]           ew  0.0745849400
+43:   itt_nov_list     Announcement [0,20]           ew -0.0104838736
+44:   itt_nov_list     Confirmation [-1,1]           ew  0.0313112741
+45:   itt_nov_list     Confirmation [-1,5]           ew  0.0317979261
+46:   itt_nov_list     Confirmation [0,20]           ew  0.0697455504
+47:   itt_nov_list Constituent list [-1,1]           ew  0.0270778639
+48:   itt_nov_list Constituent list [-1,5]           ew  0.0321128923
+49:   itt_nov_list Constituent list [0,20]           ew  0.0122010486
+50:   itt_nov_list   Effective date [-1,1]           ew  0.0043180318
+51:   itt_nov_list     Announcement [-1,1]      topsize  0.0195080775
+52:   itt_nov_list     Announcement [-1,5]      topsize  0.0594800985
+53:   itt_nov_list     Announcement [0,20]      topsize -0.0007772612
+54:   itt_nov_list     Confirmation [-1,1]      topsize  0.0219854728
+55:   itt_nov_list     Confirmation [-1,5]      topsize  0.0198712184
+56:   itt_nov_list     Confirmation [0,20]      topsize  0.0759078261
+57:   itt_nov_list Constituent list [-1,1]      topsize  0.0183648675
+58:   itt_nov_list Constituent list [-1,5]      topsize  0.0269648784
+59:   itt_nov_list Constituent list [0,20]      topsize  0.0182947881
+60:   itt_nov_list   Effective date [-1,1]      topsize  0.0060337577
+61: named_excluded     Announcement [-1,1]           ew  0.0153597723
+62: named_excluded     Announcement [-1,5]           ew  0.0624832583
+63: named_excluded     Announcement [0,20]           ew  0.0480548838
+64: named_excluded     Confirmation [-1,1]           ew  0.0044485367
+65: named_excluded     Confirmation [-1,5]           ew  0.0029533141
+66: named_excluded     Confirmation [0,20]           ew  0.0096192071
+67: named_excluded Constituent list [-1,1]           ew  0.0200826706
+68: named_excluded Constituent list [-1,5]           ew  0.0087981398
+69: named_excluded Constituent list [0,20]           ew  0.0120598050
+70: named_excluded   Effective date [-1,1]           ew  0.0030650713
+71: named_excluded     Announcement [-1,1]      topsize  0.0050033302
+72: named_excluded     Announcement [-1,5]      topsize  0.0473784167
+73: named_excluded     Announcement [0,20]      topsize  0.0577614962
+74: named_excluded     Confirmation [-1,1]      topsize -0.0048772646
+75: named_excluded     Confirmation [-1,5]      topsize -0.0089733936
+76: named_excluded     Confirmation [0,20]      topsize  0.0157814828
+77: named_excluded Constituent list [-1,1]      topsize  0.0113696742
+78: named_excluded Constituent list [-1,5]      topsize  0.0036501258
+79: named_excluded Constituent list [0,20]      topsize  0.0181535445
+80: named_excluded   Effective date [-1,1]      topsize  0.0047807972
+             group            event window    benchmark           car
+    t_portfolio     t_cross     n
+          <num>       <num> <int>
+ 1:  2.26545144  6.48105330    24
+ 2:  3.45648091  5.17609136    24
+ 3: -0.60514408 -0.79915318    24
+ 4:  2.54252683  7.49928488    24
+ 5:  1.73695451  4.81056538    24
+ 6:  2.11358464  3.67572703    24
+ 7:  1.82127281  5.23219226    24
+ 8:  1.99184834  5.14907574    24
+ 9:  1.18139171  2.86886753    24
+10: -0.10505158 -0.20089603    24
+11:  0.93229397  2.43188554    24
+12:  2.15786315  2.94639580    24
+13: -0.02629229 -0.03165913    24
+14:  2.35178343  4.77305325    24
+15:  1.01531917  1.93488389    24
+16:  2.20308081  2.63632338    24
+17:  0.96607678  2.19203511    24
+18:  1.46843644  2.99816369    24
+19:  1.36587332  2.61971576    24
+20:  0.53246221  0.83038372    24
+21:  1.54199277  4.47682784    24
+22:  2.74680255  4.17438435    24
+23: -0.35174615 -0.47140894    24
+24:  2.50793031  5.95630834    24
+25:  1.61322268  3.59757119    24
+26:  2.78715391  3.90294076    24
+27:  1.40635866  3.51424629    24
+28:  2.02404126  4.55113574    24
+29:  1.53994459  3.25273801    24
+30:  0.02753929  0.04632471    24
+31:  1.85105238  5.43400383    24
+32:  3.03884376  4.87444914    24
+33: -1.46709752 -1.61326935    24
+34:  2.30009016  6.11631106    24
+35:  1.42091614  3.51746192    24
+36:  1.94634149  3.06833470    24
+37:  0.99608633  3.32871837    24
+38:  1.29882465  3.07291031    24
+39:  0.50656623  1.01710108    24
+40: -0.78064376 -1.24053725    24
+41:  2.43023579  5.52648330    27
+42:  3.97333910  5.16699436    27
+43: -0.32245242 -0.46641309    27
+44:  1.86275664  4.86665815    27
+45:  1.23841380  3.83050544    27
+46:  1.56827734  2.74165059    27
+47:  2.04847290  4.80776430    27
+48:  1.59040178  3.68802206    27
+49:  0.34887027  1.21522384    27
+50:  0.34105136  1.02850434    27
+51:  1.86566885  3.61000498    27
+52:  3.72394598  4.12058162    27
+53: -0.02809558 -0.03457928    27
+54:  1.82568602  3.41716470    27
+55:  1.08025525  2.39376650    27
+56:  2.38247205  2.98388549    27
+57:  1.98334744  3.26074297    27
+58:  1.90643092  3.09679569    27
+59:  0.74677430  1.82215999    27
+60:  0.67895890  1.43717004    27
+61:  1.11399528  2.54933127    14
+62:  2.96670148  2.91794810    14
+63:  1.31730726  1.46364414    14
+64:  0.25080664  0.75619066    14
+65:  0.10900417  0.44365327    14
+66:  0.20498029  0.64986469    14
+67:  1.31849871  2.71709781    14
+68:  0.37814704  0.85355120    14
+69:  0.29926058  0.71408368    14
+70:  0.20618978  0.68935941    14
+71:  0.49964701  0.83042548    14
+72:  3.09739270  2.21255685    14
+73:  2.18018594  1.75928582    14
+74: -0.39983158 -0.82906857    14
+75: -0.48158074 -1.34800270    14
+76:  0.48898954  1.06618231    14
+77:  1.06902875  1.53826737    14
+78:  0.22467814  0.35411682    14
+79:  0.64513972  1.07490543    14
+80:  0.46313050  1.07524008    14
+    t_portfolio     t_cross     n

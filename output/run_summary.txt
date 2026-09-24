@@ -1,0 +1,147 @@
+Stocks kept: 366  treated: 24  near-miss: 5  matched controls: 28 
+Treated dropped by filters: TCX, VPL, VCK 
+Weeks: 99  first: 2024-09-30  last: 2026-09-21 
+Stock-weeks: 35752 
+
+Matching balance (matched sample):
+         Means Treated Means Control Std. Mean Diff. Var. Ratio
+distance         0.475         0.459           0.065      1.093
+lval_pre         5.170         5.107           0.072      1.156
+log(px)          3.228         3.110           0.156      1.737
+vol_pre          0.021         0.020           0.271      1.090
+
+Baseline DiD (All HOSE):
+                            lamihud               lval                cs
+Dependent Var.:             lamihud               lval                cs
+                                                                        
+treated x P1    -0.3905*** (0.0977) 0.6708*** (0.1078) 0.0009** (0.0003)
+treated x P2    -0.8838*** (0.1234)  1.025*** (0.1248) 0.0010** (0.0003)
+treated x P3     -1.120*** (0.1775)  1.189*** (0.1678)  0.0013* (0.0005)
+Fixed-Effects:  ------------------- ------------------ -----------------
+symbol                          Yes                Yes               Yes
+week                            Yes                Yes               Yes
+_______________ ___________________ __________________ _________________
+S.E.: Clustered          by: symbol         by: symbol        by: symbol
+Observations                 35,259             35,259            35,259
+R2                          0.90387            0.91560           0.25497
+Within R2                   0.00946            0.01646           0.00074
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Baseline DiD (Matched):
+                            lamihud               lval               cs
+Dependent Var.:             lamihud               lval               cs
+                                                                       
+treated x P1     -0.3877** (0.1340)  0.5437** (0.1621)  0.0005 (0.0004)
+treated x P2    -0.7118*** (0.1786) 0.8934*** (0.1932) 0.0010* (0.0004)
+treated x P3    -0.9788*** (0.2331)  1.157*** (0.2348) 0.0011. (0.0006)
+Fixed-Effects:  ------------------- ------------------ ----------------
+symbol                          Yes                Yes              Yes
+week                            Yes                Yes              Yes
+_______________ ___________________ __________________ ________________
+S.E.: Clustered          by: symbol         by: symbol       by: symbol
+Observations                  5,146              5,146            5,146
+R2                          0.81571            0.82043          0.24147
+Within R2                   0.06851            0.10669          0.00292
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Pre-trend Wald tests:
+$lamihud
+      stat          p 
+1.83760847 0.03724437 
+
+$lval
+        stat            p 
+2.8630072020 0.0006109494 
+
+$cs
+     stat         p 
+1.4152949 0.1506672 
+
+
+Robustness:
+                        size_week_fe      twoway_cluster            drop_vin
+Dependent Var.:              lamihud             lamihud             lamihud
+                                                                            
+treated x P1     -0.4046*** (0.0990) -0.3905*** (0.1045) -0.3884*** (0.0995)
+treated x P2     -0.7514*** (0.1262) -0.8838*** (0.1295) -0.8581*** (0.1133)
+treated x P3     -0.9131*** (0.1864)  -1.120*** (0.2061) -0.9980*** (0.1670)
+treated x fake                                                              
+near x P1                                                                   
+near x P2                                                                   
+near x P3                                                                   
+treated x tindex                                                            
+Fixed-Effects:   ------------------- ------------------- -------------------
+symbol                           Yes                 Yes                 Yes
+week-szq                         Yes                  No                  No
+week                              No                 Yes                 Yes
+________________ ___________________ ___________________ ___________________
+S.E.: Clustered           by: symbol   by: symbol & week          by: symbol
+Observations                  35,259              35,259              34,962
+R2                           0.90575             0.90387             0.90268
+Within R2                    0.00617             0.00946             0.00763
+
+                 placebo_apr2025           nearmiss       treated_trend
+Dependent Var.:          lamihud            lamihud             lamihud
+                                                                       
+treated x P1                                        -0.3689*** (0.0977)
+treated x P2                                        -0.8502*** (0.1550)
+treated x P3                                         -1.080*** (0.2230)
+treated x fake   0.0260 (0.1039)                                       
+near x P1                        -0.7526** (0.2836)                    
+near x P2                         -1.245** (0.4804)                    
+near x P3                        -1.804*** (0.4925)                    
+treated x tindex                                       -0.0006 (0.0029)
+Fixed-Effects:   --------------- ------------------ -------------------
+symbol                       Yes                Yes                 Yes
+week-szq                      No                 No                  No
+week                         Yes                Yes                 Yes
+________________ _______________ __________________ ___________________
+S.E.: Clustered       by: symbol         by: symbol          by: symbol
+Observations              18,631             33,377              35,259
+R2                       0.91819            0.88897             0.90387
+Within R2                1.43e-5            0.00485             0.00946
+
+                 treated_trend_lval     matched_trend
+Dependent Var.:                lval           lamihud
+                                                     
+treated x P1       0.2591* (0.1176) -0.2073. (0.1222)
+treated x P2       0.3829* (0.1709) -0.4307* (0.1870)
+treated x P3       0.4301. (0.2368) -0.6462* (0.2596)
+treated x fake                                       
+near x P1                                            
+near x P2                                            
+near x P3                                            
+treated x tindex 0.0107*** (0.0030)  -0.0047 (0.0035)
+Fixed-Effects:   ------------------ -----------------
+symbol                          Yes               Yes
+week-szq                         No                No
+week                            Yes               Yes
+________________ __________________ _________________
+S.E.: Clustered          by: symbol        by: symbol
+Observations                 35,259             5,146
+R2                          0.91571           0.81612
+Within R2                   0.01775           0.07062
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Rebalancing days:
+          date treated          abn         se     n
+        <IDat>   <int>        <num>      <num> <int>
+ 1: 2026-09-14       0  0.002370021 0.10598456    28
+ 2: 2026-09-15       0 -0.195067272 0.12654784    28
+ 3: 2026-09-16       0 -0.374440969 0.10925666    28
+ 4: 2026-09-17       0 -0.096449371 0.10307303    28
+ 5: 2026-09-18       0 -0.199251500 0.12094488    28
+ 6: 2026-09-21       0 -0.254089566 0.11893637    28
+ 7: 2026-09-22       0 -0.301303343 0.14023866    28
+ 8: 2026-09-23       0 -0.221609889 0.13411406    28
+ 9: 2026-09-14       1  0.173510842 0.08646186    24
+10: 2026-09-15       1 -0.071364134 0.12014355    24
+11: 2026-09-16       1 -0.187403924 0.14014628    24
+12: 2026-09-17       1  0.181583428 0.11866105    24
+13: 2026-09-18       1  0.759938320 0.12426122    24
+14: 2026-09-21       1  0.126517316 0.11684340    24
+15: 2026-09-22       1 -0.278863357 0.14394209    24
+16: 2026-09-23       1 -0.201369789 0.12894215    24
