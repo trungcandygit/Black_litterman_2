@@ -1,0 +1,2148 @@
+{
+  "candidate_unregistered_count": 2,
+  "candidates": [
+    {
+      "candidate_id": "CAND-B1572-1609-3e844cf435a1",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 1609,
+      "line": 14,
+      "matched_claim_ids": [
+        "C007"
+      ],
+      "sentence_index": 1,
+      "start_byte": 1572,
+      "text": "**JEL classification**: G12; G14; G15",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 1599,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C007"
+          ],
+          "start_byte": 1596,
+          "text": "G12",
+          "trigger_id": "TRIG-B1596-1599-2264bac05c0a"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 1604,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C007"
+          ],
+          "start_byte": 1601,
+          "text": "G14",
+          "trigger_id": "TRIG-B1601-1604-989777cf0b40"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 1609,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C007"
+          ],
+          "start_byte": 1606,
+          "text": "G15",
+          "trigger_id": "TRIG-B1606-1609-fcefb23ed5cd"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B1746-2113-a97c4c46e276",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 2113,
+      "line": 20,
+      "matched_claim_ids": [
+        "C009"
+      ],
+      "sentence_index": 2,
+      "start_byte": 1746,
+      "text": "When FTSE Russell reclassified Vietnam from frontier to secondary emerging status, the Amihud (2002) illiquidity of the 27 stocks FTSE had screened as eligible on 2024 data fell relative to never-named stocks on the Ho Chi Minh City Stock Exchange (HOSE) by 43% after FTSE confirmed the upgrade in April 2026 and by 56% after it named the constituents in August 2026.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 1846,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C009"
+          ],
+          "start_byte": 1833,
+          "text": "Amihud (2002)",
+          "trigger_id": "TRIG-B1833-1846-628b8108a9c1"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B2359-2523-cd88e6a74a96",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 2523,
+      "line": 23,
+      "matched_claim_ids": [
+        "C012"
+      ],
+      "sentence_index": 1,
+      "start_byte": 2359,
+      "text": "Market classification decides which benchmarks a country's stocks can enter, and benchmark weights steer international portfolio allocations (Raddatz et al., 2017).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 2522,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C012"
+          ],
+          "start_byte": 2500,
+          "text": "(Raddatz et al., 2017)",
+          "trigger_id": "TRIG-B2500-2522-eb2728531f1a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B2689-2888-4818daf90078",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 2888,
+      "line": 23,
+      "matched_claim_ids": [
+        "C013"
+      ],
+      "sentence_index": 3,
+      "start_byte": 2689,
+      "text": "Whether the promised liquidity reaches individual stocks, which stocks it reaches, and when, bears on issuers' cost of capital, because liquidity is priced in emerging markets (Bekaert et al., 2007).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 2887,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C013"
+          ],
+          "start_byte": 2865,
+          "text": "(Bekaert et al., 2007)",
+          "trigger_id": "TRIG-B2865-2887-138a7904082a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B2962-3173-93ceb18e6793",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 3173,
+      "line": 26,
+      "matched_claim_ids": [
+        "C014"
+      ],
+      "sentence_index": 2,
+      "start_byte": 2962,
+      "text": "In developed markets, additions to the S&P 500 raise trading activity and narrow spreads for years (Hegde & McDermott, 2003), and added firms with larger liquidity gains invest more (Becker-Blease & Paul, 2006).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 3086,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C014"
+          ],
+          "start_byte": 3061,
+          "text": "(Hegde & McDermott, 2003)",
+          "trigger_id": "TRIG-B3061-3086-8a16318b0b3c"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 3172,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C014"
+          ],
+          "start_byte": 3144,
+          "text": "(Becker-Blease & Paul, 2006)",
+          "trigger_id": "TRIG-B3144-3172-5356c6d9f80d"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B3174-3376-35f45e687d2d",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 3376,
+      "line": 26,
+      "matched_claim_ids": [
+        "C015"
+      ],
+      "sentence_index": 3,
+      "start_byte": 3174,
+      "text": "In frontier markets, index additions raise prices persistently, and the evidence points to institutional demand rather than trading pressure or liquidity changes as the cause (Biktimirov & Afego, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 3375,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C015"
+          ],
+          "start_byte": 3349,
+          "text": "(Biktimirov & Afego, 2026)",
+          "trigger_id": "TRIG-B3349-3375-1ddca9cdd79a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B4578-4732-2df213feb14f",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 4732,
+      "line": 32,
+      "matched_claim_ids": [
+        "C018"
+      ],
+      "sentence_index": 1,
+      "start_byte": 4578,
+      "text": "The last point matters because FTSE selected the final constituents on data as of 30 June 2026 (FTSE Russell, 2026), in the middle of the period we study.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 4693,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C018"
+          ],
+          "start_byte": 4673,
+          "text": "(FTSE Russell, 2026)",
+          "trigger_id": "TRIG-B4673-4693-98c02e407377"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B5267-5468-d38fbb6f4e10",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 5468,
+      "line": 35,
+      "matched_claim_ids": [
+        "C021"
+      ],
+      "sentence_index": 2,
+      "start_byte": 5267,
+      "text": "The main liquidity measure is the Amihud ratio computed on traded value in Vietnamese dong; we also report trading value, the Corwin and Schultz (2012) high-low spread, volatility and abnormal returns.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 5418,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C021"
+          ],
+          "start_byte": 5393,
+          "text": "Corwin and Schultz (2012)",
+          "trigger_id": "TRIG-B5393-5418-9be451302440"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B5469-5757-51dca2ce573f",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 5757,
+      "line": 35,
+      "matched_claim_ids": [
+        "C022"
+      ],
+      "sentence_index": 3,
+      "start_byte": 5469,
+      "text": "For prices, we pre-specify the same three windows for every disclosure, test cumulative abnormal returns at the portfolio level, which accounts for the common event dates (Brown & Warner, 1985), and call an effect reliable only if it is significant at 5% under all four benchmarks we use.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 5662,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C022"
+          ],
+          "start_byte": 5640,
+          "text": "(Brown & Warner, 1985)",
+          "trigger_id": "TRIG-B5640-5662-f66e7ab69ad0"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7471-7585-64b8b642212e",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7585,
+      "line": 50,
+      "matched_claim_ids": [
+        "C030"
+      ],
+      "sentence_index": 1,
+      "start_byte": 7471,
+      "text": "FTSE Russell added Vietnam to its watch list for possible reclassification in September 2018 (FTSE Russell, 2018).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7584,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C030"
+          ],
+          "start_byte": 7564,
+          "text": "(FTSE Russell, 2018)",
+          "trigger_id": "TRIG-B7564-7584-1d8feb649273"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7586-7776-37ed1e2b77a8",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7776,
+      "line": 50,
+      "matched_claim_ids": [
+        "C031"
+      ],
+      "sentence_index": 2,
+      "start_byte": 7586,
+      "text": "On 7 October 2025 it announced that Vietnam would move from frontier to secondary emerging status with effect from 21 September 2026, subject to an interim review in March 2026 (LSEG, 2025).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7775,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C031"
+          ],
+          "start_byte": 7763,
+          "text": "(LSEG, 2025)",
+          "trigger_id": "TRIG-B7763-7775-9bb951cd4e59"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7777-7907-80f8fa572182",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7907,
+      "line": 50,
+      "matched_claim_ids": [
+        "C032"
+      ],
+      "sentence_index": 3,
+      "start_byte": 7777,
+      "text": "On 7 April 2026 it confirmed that Vietnam met all criteria for secondary emerging status and kept the effective date (LSEG, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7906,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C032"
+          ],
+          "start_byte": 7894,
+          "text": "(LSEG, 2026)",
+          "trigger_id": "TRIG-B7894-7906-08f5e4d894a6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7908-8100-a7edc6596654",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 8100,
+      "line": 50,
+      "matched_claim_ids": [
+        "C033"
+      ],
+      "sentence_index": 4,
+      "start_byte": 7908,
+      "text": "Inclusion is phased in four tranches that add 10%, 20%, 35% and 35% of the applicable index weight on 21 September 2026, 22 March 2027, 21 June 2027 and 20 September 2027 (FTSE Russell, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 8099,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C033"
+          ],
+          "start_byte": 8079,
+          "text": "(FTSE Russell, 2026)",
+          "trigger_id": "TRIG-B8079-8099-98c02e407377"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B8282-8424-8cb32fb978f5",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 8424,
+      "line": 53,
+      "matched_claim_ids": [
+        "C034"
+      ],
+      "sentence_index": 2,
+      "start_byte": 8282,
+      "text": "A preliminary list of 28 names, screened on data as of 31 December 2024, appeared in November 2025 (Viet Nam News, 2025; The Investor, 2026a).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 8423,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C034"
+          ],
+          "start_byte": 8381,
+          "text": "(Viet Nam News, 2025; The Investor, 2026a)",
+          "trigger_id": "TRIG-B8381-8423-624552798213"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B8425-8597-0ab343767eca",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 8597,
+      "line": 53,
+      "matched_claim_ids": [
+        "C035"
+      ],
+      "sentence_index": 3,
+      "start_byte": 8425,
+      "text": "A list of 32 names, screened on data as of 31 December 2025, followed in April 2026; it dropped Petrolimex (PLX) and added BID, FPT, NVL, GEE and BSR (The Investor, 2026b).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 8596,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C035"
+          ],
+          "start_byte": 8575,
+          "text": "(The Investor, 2026b)",
+          "trigger_id": "TRIG-B8575-8596-629346580e06"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B8598-8812-c3c4b66ec74b",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 8812,
+      "line": 53,
+      "matched_claim_ids": [
+        "C036"
+      ],
+      "sentence_index": 4,
+      "start_byte": 8598,
+      "text": "On Friday 21 August 2026 FTSE published the September semi-annual review with 27 constituents, selected on data as of 30 June 2026 and effective after the close of 18 September 2026 (FTSE Russell, 2026; VIR, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 8811,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C036"
+          ],
+          "start_byte": 8780,
+          "text": "(FTSE Russell, 2026; VIR, 2026)",
+          "trigger_id": "TRIG-B8780-8811-00450da94bf0"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B8813-9029-50410f80a16f",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9029,
+      "line": 53,
+      "matched_claim_ids": [
+        "C037"
+      ],
+      "sentence_index": 5,
+      "start_byte": 8813,
+      "text": "FTSE screened Vietnamese securities as non-constituents on its liquidity, minimum-size and foreign-headroom screens, using each security's investability weight (free float) in the liquidity test (FTSE Russell, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9028,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C037"
+          ],
+          "start_byte": 9008,
+          "text": "(FTSE Russell, 2026)",
+          "trigger_id": "TRIG-B9008-9028-98c02e407377"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9030-9257-49bbf69bc372",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9257,
+      "line": 53,
+      "matched_claim_ids": [
+        "C038"
+      ],
+      "sentence_index": 6,
+      "start_byte": 9030,
+      "text": "The same investability weight scales a security's weight in the index: FTSE's own illustration phases in a security with a 49% investability weight at 4.9% after the first tranche and at 49% after the last (FTSE Russell, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9256,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C038"
+          ],
+          "start_byte": 9236,
+          "text": "(FTSE Russell, 2026)",
+          "trigger_id": "TRIG-B9236-9256-98c02e407377"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B10098-10323-8d8bc8b37333",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 10323,
+      "line": 62,
+      "matched_claim_ids": [
+        "C041"
+      ],
+      "sentence_index": 2,
+      "start_byte": 10098,
+      "text": "The price-pressure channel works through the trades of index funds: additions force passive funds to buy on the effective date, which produces temporary volume and price effects that reverse afterwards (Harris & Gurel, 1986).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 10322,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C041"
+          ],
+          "start_byte": 10300,
+          "text": "(Harris & Gurel, 1986)",
+          "trigger_id": "TRIG-B10300-10322-b3d3dc53b126"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B10412-10532-f27523ae5b6d",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 10532,
+      "line": 62,
+      "matched_claim_ids": [
+        "C042"
+      ],
+      "sentence_index": 4,
+      "start_byte": 10412,
+      "text": "Shleifer (1986) interprets permanent price effects as evidence that demand curves for stocks slope down, and Chen et al.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 10427,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C042"
+          ],
+          "start_byte": 10412,
+          "text": "Shleifer (1986)",
+          "trigger_id": "TRIG-B10412-10427-491d7ec6906c"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B10630-10808-2653c455792c",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 10808,
+      "line": 62,
+      "matched_claim_ids": [
+        "C044"
+      ],
+      "sentence_index": 6,
+      "start_byte": 10630,
+      "text": "Hegde and McDermott (2003) show that S&P 500 additions narrow spreads and raise trading activity persistently, which they attribute to more information and more trading interest.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 10656,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C044"
+          ],
+          "start_byte": 10630,
+          "text": "Hegde and McDermott (2003)",
+          "trigger_id": "TRIG-B10630-10656-5641d9fb77bd"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B10871-11081-9d1121f310f2",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 11081,
+      "line": 65,
+      "matched_claim_ids": [
+        "C045"
+      ],
+      "sentence_index": 2,
+      "start_byte": 10871,
+      "text": "Becker-Blease and Paul (2006) find that firms added to the S&P 500 with larger liquidity improvements increase capital investment, and Gregoriou and Nguyen (2010) find the mirror pattern for FTSE 100 deletions.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 10900,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C045"
+          ],
+          "start_byte": 10871,
+          "text": "Becker-Blease and Paul (2006)",
+          "trigger_id": "TRIG-B10871-10900-1f1ec9162c52"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 11033,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C045"
+          ],
+          "start_byte": 11006,
+          "text": "Gregoriou and Nguyen (2010)",
+          "trigger_id": "TRIG-B11006-11033-36dcc6b9a3d1"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B11082-11240-d8e93820e2a7",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 11240,
+      "line": 65,
+      "matched_claim_ids": [
+        "C046"
+      ],
+      "sentence_index": 3,
+      "start_byte": 11082,
+      "text": "Liquidity co-moves across stocks (Chordia et al., 2000), so any study of these effects must separate stock-specific changes from market-wide liquidity shocks.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 11137,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C046"
+          ],
+          "start_byte": 11115,
+          "text": "(Chordia et al., 2000)",
+          "trigger_id": "TRIG-B11115-11137-0d52b1741d6d"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B11364-11608-3d26ec66d52a",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 11608,
+      "line": 71,
+      "matched_claim_ids": [
+        "C047"
+      ],
+      "sentence_index": 2,
+      "start_byte": 11364,
+      "text": "Mutual funds allocate across countries with reference to benchmark weights, so a change in classification changes capital flows (Raddatz et al., 2017), and an MSCI index change even moved currency values through this channel (Hau et al., 2010).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 11514,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C047"
+          ],
+          "start_byte": 11492,
+          "text": "(Raddatz et al., 2017)",
+          "trigger_id": "TRIG-B11492-11514-eb2728531f1a"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 11607,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C047"
+          ],
+          "start_byte": 11589,
+          "text": "(Hau et al., 2010)",
+          "trigger_id": "TRIG-B11589-11607-3862d4fa87b1"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B11609-11864-8fde96d0ebe8",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 11864,
+      "line": 71,
+      "matched_claim_ids": [
+        "C048"
+      ],
+      "sentence_index": 3,
+      "start_byte": 11609,
+      "text": "When MSCI included China A-shares in its Emerging Markets Index, the included stocks earned abnormal returns around the announcement, and market quality changed over the longer run through liquidity, turnover and price synchronization (Dong et al., 2023).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 11863,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C048"
+          ],
+          "start_byte": 11844,
+          "text": "(Dong et al., 2023)",
+          "trigger_id": "TRIG-B11844-11863-5dd6b8dfb13f"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B11906-11996-7892324efe80",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 11996,
+      "line": 71,
+      "matched_claim_ids": [
+        "C049"
+      ],
+      "sentence_index": 5,
+      "start_byte": 11906,
+      "text": "Biktimirov and Afego (2026) study changes to the FTSE Frontier 50 Index from 2008 to 2025.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 11933,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C049"
+          ],
+          "start_byte": 11906,
+          "text": "Biktimirov and Afego (2026)",
+          "trigger_id": "TRIG-B11906-11933-e96bbf69ad8d"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B15727-15954-31967e34e36d",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 15954,
+      "line": 106,
+      "matched_claim_ids": [
+        "C068"
+      ],
+      "sentence_index": 1,
+      "start_byte": 15727,
+      "text": "BSR, one of the named-but-excluded stocks, traded on the UPCoM market until 6 January 2025 and on HOSE from 17 January 2025 (VietnamPlus, 2024), so its pre-period series spans two venues; Section 5.2 reports results without it.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 15870,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C068"
+          ],
+          "start_byte": 15851,
+          "text": "(VietnamPlus, 2024)",
+          "trigger_id": "TRIG-B15851-15870-3e6db21588d8"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B17034-17077-bbf9dee56744",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 17077,
+      "line": 122,
+      "matched_claim_ids": [
+        "C073"
+      ],
+      "sentence_index": 2,
+      "start_byte": 17034,
+      "text": "CS is the Corwin and Schultz (2012) spread.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 17069,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C073"
+          ],
+          "start_byte": 17044,
+          "text": "Corwin and Schultz (2012)",
+          "trigger_id": "TRIG-B17044-17069-9be451302440"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B17245-17292-4023a2561c67",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 17292,
+      "line": 128,
+      "matched_claim_ids": [
+        "C075"
+      ],
+      "sentence_index": 2,
+      "start_byte": 17245,
+      "text": "The Amihud (2002) ratio for stock i on day t is",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 17262,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C075"
+          ],
+          "start_byte": 17249,
+          "text": "Amihud (2002)",
+          "trigger_id": "TRIG-B17249-17262-628b8108a9c1"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B17493-17609-a25371551e1a",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 17609,
+      "line": 134,
+      "matched_claim_ids": [
+        "C076"
+      ],
+      "sentence_index": 3,
+      "start_byte": 17493,
+      "text": "We compute the Corwin and Schultz (2012) spread from two-day high and low prices and set negative estimates to zero.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 17533,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C076"
+          ],
+          "start_byte": 17508,
+          "text": "Corwin and Schultz (2012)",
+          "trigger_id": "TRIG-B17508-17533-9be451302440"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B18052-18301-67f458fa3d6a",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 18301,
+      "line": 134,
+      "matched_claim_ids": [
+        "C078"
+      ],
+      "sentence_index": 6,
+      "start_byte": 18052,
+      "text": "Kang and Zhang (2014) show that the Amihud ratio loses accuracy in emerging markets where many days have zero volume, and propose an adjustment; our filter removes stocks with zero volume on 20% or more of pre-period days, which limits this problem.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 18073,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C078"
+          ],
+          "start_byte": 18052,
+          "text": "Kang and Zhang (2014)",
+          "trigger_id": "TRIG-B18052-18073-185cea174c9c"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B18949-19232-736ee6bc4abd",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 19232,
+      "line": 137,
+      "matched_claim_ids": [
+        "C081"
+      ],
+      "sentence_index": 4,
+      "start_byte": 18949,
+      "text": "We therefore test cumulative abnormal returns (CARs) on the equal-weighted portfolio of the group, dividing the portfolio CAR by the standard deviation of daily portfolio abnormal returns in an estimation window, scaled by the square root of the window length (Brown & Warner, 1985).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 19231,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C081"
+          ],
+          "start_byte": 19209,
+          "text": "(Brown & Warner, 1985)",
+          "trigger_id": "TRIG-B19209-19231-f66e7ab69ad0"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B21156-21478-bc19c1940f98",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 21478,
+      "line": 155,
+      "matched_claim_ids": [
+        "C088"
+      ],
+      "sentence_index": 2,
+      "start_byte": 21156,
+      "text": "We re-estimate on a matched sample that pairs each constituent with three never-named stocks by nearest-neighbour propensity score, with replacement, on pre-period traded value, price and return volatility (Ho et al., 2007); because matching is with replacement, each control enters the estimates with its matching weight.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 21379,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C088"
+          ],
+          "start_byte": 21362,
+          "text": "(Ho et al., 2007)",
+          "trigger_id": "TRIG-B21362-21379-16d5bbea1434"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B21596-21795-257f32e40e73",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 21795,
+      "line": 155,
+      "matched_claim_ids": [
+        "C090"
+      ],
+      "sentence_index": 4,
+      "start_byte": 21596,
+      "text": "We also replace week fixed effects with size-tercile-by-week fixed effects, add a constituent-specific linear trend, and estimate a monthly event study relative to September 2025 (Roth et al., 2023).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 21794,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C090"
+          ],
+          "start_byte": 21775,
+          "text": "(Roth et al., 2023)",
+          "trigger_id": "TRIG-B21775-21794-97fcc94b9b13"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B21796-22081-13c35c241af1",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 22081,
+      "line": 155,
+      "matched_claim_ids": [
+        "C091"
+      ],
+      "sentence_index": 5,
+      "start_byte": 21796,
+      "text": "For inference with 24 treated stocks, we report a wild cluster bootstrap (Cameron et al., 2008) and randomization inference that draws 500 pseudo-treated groups of 24 stocks from the 85 never-named stocks whose pre-period trading value lies in the top tercile of all 366 sample stocks.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 21891,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C091"
+          ],
+          "start_byte": 21869,
+          "text": "(Cameron et al., 2008)",
+          "trigger_id": "TRIG-B21869-21891-b658c259168a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B22082-22316-a123b03b34fa",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 22316,
+      "line": 155,
+      "matched_claim_ids": [
+        "C092"
+      ],
+      "sentence_index": 6,
+      "start_byte": 22082,
+      "text": "Because FTSE treated all constituents at the same dates, the specification has no staggered adoption, and the two-way fixed effects estimator does not suffer the negative-weighting problem that motivates Callaway and Sant'Anna (2021).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 22315,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C092"
+          ],
+          "start_byte": 22286,
+          "text": "Callaway and Sant'Anna (2021)",
+          "trigger_id": "TRIG-B22286-22315-c49c3100d3f2"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B23179-23330-8a2e3ea32673",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 23330,
+      "line": 170,
+      "matched_claim_ids": [
+        "C096"
+      ],
+      "sentence_index": 2,
+      "start_byte": 23179,
+      "text": "Vietnam sat on the FTSE watch list for seven years (FTSE Russell, 2018), so investors could have bought likely constituents in advance of the decision.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 23250,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C096"
+          ],
+          "start_byte": 23230,
+          "text": "(FTSE Russell, 2018)",
+          "trigger_id": "TRIG-B23230-23250-1d8feb649273"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B24848-25129-159767dfe6f5",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 25129,
+      "line": 185,
+      "matched_claim_ids": [
+        "C105"
+      ],
+      "sentence_index": 5,
+      "start_byte": 24848,
+      "text": "The confirmation brought a discrete step: allowing constituents a linear drift after the announcement (-0.012 log points per week, p = 0.002), the confirmation-window coefficient still exceeds the announcement-window coefficient by 0.21 log points (standard error 0.10, p = 0.035).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 24988,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C105"
+          ],
+          "start_byte": 24979,
+          "text": "p = 0.002",
+          "trigger_id": "TRIG-B24979-24988-fb4fdb8b933d"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 25127,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C105"
+          ],
+          "start_byte": 25118,
+          "text": "p = 0.035",
+          "trigger_id": "TRIG-B25118-25127-ba0410429775"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B25130-25220-6644dc9512c0",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 25220,
+      "line": 185,
+      "matched_claim_ids": [
+        "C106"
+      ],
+      "sentence_index": 6,
+      "start_byte": 25130,
+      "text": "The constituent list did not: its additional step is 0.10 (standard error 0.11, p = 0.40).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 25218,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C106"
+          ],
+          "start_byte": 25210,
+          "text": "p = 0.40",
+          "trigger_id": "TRIG-B25210-25218-a19bd5fd504e"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B29158-29384-77ee1965cbd6",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 29384,
+      "line": 222,
+      "matched_claim_ids": [
+        "C122"
+      ],
+      "sentence_index": 4,
+      "start_byte": 29158,
+      "text": "Because these deviations are precisely estimated, the joint test that all pre-period coefficients are zero rejects in the full sample (F = 6.66, p < 0.001); in the matched sample it does not reject at 5% (F = 1.72, p = 0.056).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 29312,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C122"
+          ],
+          "start_byte": 29303,
+          "text": "p < 0.001",
+          "trigger_id": "TRIG-B29303-29312-e313b6174d73"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 29382,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C122"
+          ],
+          "start_byte": 29373,
+          "text": "p = 0.056",
+          "trigger_id": "TRIG-B29373-29382-5c1abcf70cd7"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B29620-29890-d9a7c4ff0f57",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 29890,
+      "line": 223,
+      "matched_claim_ids": [
+        "C125"
+      ],
+      "sentence_index": 1,
+      "start_byte": 29620,
+      "text": "The ITT group shows the same shape (Figure 2): coefficients of 0.26 and 0.22 three and two months before the announcement, which make its joint pre-trend test reject as well (F = 7.59, p < 0.001), followed by a decline from -0.22 in October 2025 to -0.78 in August 2026.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 29814,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C125"
+          ],
+          "start_byte": 29805,
+          "text": "p < 0.001",
+          "trigger_id": "TRIG-B29805-29814-e313b6174d73"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B31357-31532-b4dc2f14c46c",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 31532,
+      "line": 247,
+      "matched_claim_ids": [
+        "C134"
+      ],
+      "sentence_index": 2,
+      "start_byte": 31357,
+      "text": "None of 500 pseudo-groups of 24 stocks drawn from the 85 largest never-named stocks produced a coefficient as negative as the observed one in any window (one-sided p < 0.002).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 31530,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C134"
+          ],
+          "start_byte": 31521,
+          "text": "p < 0.002",
+          "trigger_id": "TRIG-B31521-31530-ebda410b547e"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B36503-36683-5ed0f7a3e483",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 36683,
+      "line": 313,
+      "matched_claim_ids": [
+        "C146"
+      ],
+      "sentence_index": 2,
+      "start_byte": 36503,
+      "text": "Portfolio t = CAR divided by the standard deviation of daily portfolio abnormal returns in the estimation window, times the square root of the window length (Brown & Warner, 1985).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 36682,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C146"
+          ],
+          "start_byte": 36660,
+          "text": "(Brown & Warner, 1985)",
+          "trigger_id": "TRIG-B36660-36682-f66e7ab69ad0"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B37741-37861-bfb4e73400a5",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 37861,
+      "line": 316,
+      "matched_claim_ids": [
+        "C153"
+      ],
+      "sentence_index": 4,
+      "start_byte": 37741,
+      "text": "The fading after the first, conditional announcement is consistent with temporary price pressure (Harris & Gurel, 1986).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 37860,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C153"
+          ],
+          "start_byte": 37838,
+          "text": "(Harris & Gurel, 1986)",
+          "trigger_id": "TRIG-B37838-37860-b3d3dc53b126"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B37862-38042-d8a665aa0f7d",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 38042,
+      "line": 316,
+      "matched_claim_ids": [
+        "C154"
+      ],
+      "sentence_index": 5,
+      "start_byte": 37862,
+      "text": "The persistent gain after the confirmation, once the upgrade was certain and dated, is consistent with a lasting shift in demand for the stocks (Shleifer, 1986; Chen et al., 2004).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 38041,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C154"
+          ],
+          "start_byte": 38006,
+          "text": "(Shleifer, 1986; Chen et al., 2004)",
+          "trigger_id": "TRIG-B38006-38041-8d38ac827b52"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B39661-39740-d607d4c612a9",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 39740,
+      "line": 328,
+      "matched_claim_ids": [
+        "C161"
+      ],
+      "sentence_index": 2,
+      "start_byte": 39661,
+      "text": "On the effective date the excess fell to 0.20 (p = 0.057) and 0.34 (p = 0.007).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 39717,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C161"
+          ],
+          "start_byte": 39708,
+          "text": "p = 0.057",
+          "trigger_id": "TRIG-B39708-39717-f907ce10c072"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 39738,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C161"
+          ],
+          "start_byte": 39729,
+          "text": "p = 0.007",
+          "trigger_id": "TRIG-B39729-39738-f76525c70618"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B41467-41728-766e2ac23acd",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 41728,
+      "line": 358,
+      "matched_claim_ids": [
+        "C170"
+      ],
+      "sentence_index": 1,
+      "start_byte": 41467,
+      "text": "This surge matches the trading that funds tracking FTSE benchmarks had to do: they bought the first tranche of constituents at the closing price of 18 September, and nothing obliged them to trade the stocks FTSE had named and passed over (Harris & Gurel, 1986).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 41727,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C170"
+          ],
+          "start_byte": 41705,
+          "text": "(Harris & Gurel, 1986)",
+          "trigger_id": "TRIG-B41705-41727-b3d3dc53b126"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B42654-42893-dc3542d3dd06",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 42893,
+      "line": 367,
+      "matched_claim_ids": [
+        "C175"
+      ],
+      "sentence_index": 1,
+      "start_byte": 42654,
+      "text": "FTSE assigned the constituents to size segments on 21 August 2026: three large-capitalization stocks (VCB, VIC, VHM), three mid-capitalization stocks (BID, VPB, HPG) and 18 small-capitalization stocks among those in our sample (VIR, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 42892,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C175"
+          ],
+          "start_byte": 42881,
+          "text": "(VIR, 2026)",
+          "trigger_id": "TRIG-B42881-42892-37707e2303e6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B43073-43194-e252ef16d0e3",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 43194,
+      "line": 367,
+      "matched_claim_ids": [
+        "C177"
+      ],
+      "sentence_index": 3,
+      "start_byte": 43073,
+      "text": "Foreign allocations follow benchmark weights (Raddatz et al., 2017), which points the same way for the persistent effect.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 43140,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C177"
+          ],
+          "start_byte": 43118,
+          "text": "(Raddatz et al., 2017)",
+          "trigger_id": "TRIG-B43118-43140-eb2728531f1a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B46081-46296-bafd2724578c",
+      "candidate_kinds": [
+        "citation_bearing_sentence",
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 46296,
+      "line": 398,
+      "matched_claim_ids": [
+        "C190"
+      ],
+      "sentence_index": 2,
+      "start_byte": 46081,
+      "text": "The Corwin and Schultz (2012) spread did not narrow: it rose by 0.09 to 0.13 percentage points for constituents (Table 2, column 3), and by 0.14 to 0.20 points in the matched sample, from a pre-period mean of 0.57%.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 46110,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C190"
+          ],
+          "start_byte": 46085,
+          "text": "Corwin and Schultz (2012)",
+          "trigger_id": "TRIG-B46085-46110-9be451302440"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 46168,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C190"
+          ],
+          "start_byte": 46153,
+          "text": "0.13 percentage",
+          "trigger_id": "TRIG-B46153-46168-af796030d4e1"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 46240,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C190"
+          ],
+          "start_byte": 46229,
+          "text": "0.20 points",
+          "trigger_id": "TRIG-B46229-46240-93457ba67274"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B46297-46397-0f4245e8c971",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 46397,
+      "line": 398,
+      "matched_claim_ids": [
+        "C191"
+      ],
+      "sentence_index": 3,
+      "start_byte": 46297,
+      "text": "With the volatility control, the increase shrinks to 0.06, 0.08 and 0.12 points (Table 7, column 2).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 46376,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C191"
+          ],
+          "start_byte": 46365,
+          "text": "0.12 points",
+          "trigger_id": "TRIG-B46365-46376-754122bb78be"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B49878-49966-74cf08c8e4a7",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 49966,
+      "line": 450,
+      "matched_claim_ids": [
+        "C198"
+      ],
+      "sentence_index": 4,
+      "start_byte": 49878,
+      "text": "Wild cluster bootstrap: restricted residuals, Rademacher weights (Cameron et al., 2008).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 49965,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C198"
+          ],
+          "start_byte": 49943,
+          "text": "(Cameron et al., 2008)",
+          "trigger_id": "TRIG-B49943-49965-b658c259168a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B49967-50083-8b0ba171213c",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 50083,
+      "line": 450,
+      "matched_claim_ids": [
+        "C199"
+      ],
+      "sentence_index": 5,
+      "start_byte": 49967,
+      "text": "The drift row adds a constituent-specific linear trend in weeks since the announcement (-0.012 per week, p = 0.002).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 50081,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C199"
+          ],
+          "start_byte": 50072,
+          "text": "p = 0.002",
+          "trigger_id": "TRIG-B50072-50081-fb4fdb8b933d"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B51632-51922-d36e0f4dfb96",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 51922,
+      "line": 459,
+      "matched_claim_ids": [
+        "C207"
+      ],
+      "sentence_index": 1,
+      "start_byte": 51632,
+      "text": "**Trading value.** Trading value behaves differently from the Amihud ratio: a constituent-specific linear trend fitted over the full sample is strong (0.010 log points per week, p < 0.001), and trend-adjusted effects fall to 0.28, 0.39 and 0.43 log points, the last significant only at 10%.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 51819,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C207"
+          ],
+          "start_byte": 51810,
+          "text": "p < 0.001",
+          "trigger_id": "TRIG-B51810-51819-e313b6174d73"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B52679-52849-62de4f602969",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 52849,
+      "line": 465,
+      "matched_claim_ids": [
+        "C213"
+      ],
+      "sentence_index": 3,
+      "start_byte": 52679,
+      "text": "LSEG (2026) credits the removal of pre-funding requirements for foreign investors for Vietnam's upgrade, and that reform applies to every stock foreign investors can buy.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 52690,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C213"
+          ],
+          "start_byte": 52679,
+          "text": "LSEG (2026)",
+          "trigger_id": "TRIG-B52679-52690-3dbe0af393ec"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B54314-54600-dd60fb7a44f3",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 54600,
+      "line": 478,
+      "matched_claim_ids": [
+        "C221"
+      ],
+      "sentence_index": 3,
+      "start_byte": 54314,
+      "text": "BSR, the other April addition, improved mostly after the cut-off (-0.39 by 31 December, -1.68 by April), and it moved from UPCoM to HOSE only in January 2025, after the data date of the November list (VietnamPlus, 2024), which gives a reason other than liquidity for its later addition.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 54533,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C221"
+          ],
+          "start_byte": 54514,
+          "text": "(VietnamPlus, 2024)",
+          "trigger_id": "TRIG-B54514-54533-3e6db21588d8"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B56784-56861-7c6ebc6f3baf",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 56861,
+      "line": 525,
+      "matched_claim_ids": [
+        "C228"
+      ],
+      "sentence_index": 3,
+      "start_byte": 56784,
+      "text": "List membership follows Viet Nam News (2025) and The Investor (2026a, 2026b).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 56828,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C228"
+          ],
+          "start_byte": 56817,
+          "text": "News (2025)",
+          "trigger_id": "TRIG-B56817-56828-18189a46e0b5"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B59263-59509-7669821c08a5",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 59509,
+      "line": 541,
+      "matched_claim_ids": [
+        "C239"
+      ],
+      "sentence_index": 3,
+      "start_byte": 59263,
+      "text": "This reading fits developed-market studies that find lasting liquidity gains after inclusion (Hegde & McDermott, 2003) and frontier-market evidence that index effects reflect investor demand rather than liquidity alone (Biktimirov & Afego, 2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 59381,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C239"
+          ],
+          "start_byte": 59356,
+          "text": "(Hegde & McDermott, 2003)",
+          "trigger_id": "TRIG-B59356-59381-8a16318b0b3c"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 59508,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C239"
+          ],
+          "start_byte": 59482,
+          "text": "(Biktimirov & Afego, 2026)",
+          "trigger_id": "TRIG-B59482-59508-1ddca9cdd79a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B60227-60467-27771735c0b2",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 60467,
+      "line": 547,
+      "matched_claim_ids": [
+        "C241"
+      ],
+      "sentence_index": 2,
+      "start_byte": 60227,
+      "text": "The liquidity gain was largest for the three large-capitalization stocks that dominate the index, which suggests that investors weighted their attention by expected index weight, as benchmark-driven allocations would (Raddatz et al., 2017).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 60466,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C241"
+          ],
+          "start_byte": 60444,
+          "text": "(Raddatz et al., 2017)",
+          "trigger_id": "TRIG-B60444-60466-eb2728531f1a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B64766-64860-c3fa31f49f35",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 64860,
+      "line": 588,
+      "matched_claim_ids": [
+        "C256"
+      ],
+      "sentence_index": 1,
+      "start_byte": 64766,
+      "text": "*Sources*: Viet Nam News (2025); The Investor (2026a, 2026b); FTSE Russell (2026); VIR (2026).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 64797,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C256"
+          ],
+          "start_byte": 64786,
+          "text": "News (2025)",
+          "trigger_id": "TRIG-B64786-64797-18189a46e0b5"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 64847,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C256"
+          ],
+          "start_byte": 64833,
+          "text": "Russell (2026)",
+          "trigger_id": "TRIG-B64833-64847-2b6dbf764235"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 64859,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C256"
+          ],
+          "start_byte": 64849,
+          "text": "VIR (2026)",
+          "trigger_id": "TRIG-B64849-64859-792a5e95e9e6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B72169-72305-ef262dca6a6c",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 72305,
+      "line": 693,
+      "matched_claim_ids": [],
+      "sentence_index": 4,
+      "start_byte": 72169,
+      "text": "https://theinvestor.vn/ftse-russell-eyes-28-vietnam-stocks-ahead-of-market-status-upgrade-review-d18516.html Accessed 24 September 2026.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 72272,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 72266,
+          "text": "d18516",
+          "trigger_id": "TRIG-B72266-72272-8ebb23639b43"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B72428-72575-2d1885b88ec4",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 72575,
+      "line": 696,
+      "matched_claim_ids": [],
+      "sentence_index": 4,
+      "start_byte": 72428,
+      "text": "https://theinvestor.vn/ftse-russell-names-32-vietnamese-stocks-eligible-for-emerging-market-index-inclusion-d18800.html Accessed 24 September 2026.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 72542,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 72536,
+          "text": "d18800",
+          "trigger_id": "TRIG-B72536-72542-dc8931b5c9fb"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    }
+  ],
+  "draft_raw_sha256": "5f30bffd1eaf6090b953ac1008cc14cc815e7114dcac20459f87e66f812f794b",
+  "mechanical_candidate_scope": [
+    "citation_bearing_sentence",
+    "quantitative_sentence"
+  ],
+  "registered_claims_outside_candidate_classes": [
+    "C001",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C006",
+    "C008",
+    "C010",
+    "C011",
+    "C016",
+    "C017",
+    "C019",
+    "C020",
+    "C023",
+    "C024",
+    "C025",
+    "C026",
+    "C027",
+    "C028",
+    "C029",
+    "C039",
+    "C040",
+    "C043",
+    "C050",
+    "C051",
+    "C052",
+    "C053",
+    "C054",
+    "C055",
+    "C056",
+    "C057",
+    "C058",
+    "C059",
+    "C060",
+    "C061",
+    "C062",
+    "C063",
+    "C064",
+    "C065",
+    "C066",
+    "C067",
+    "C069",
+    "C070",
+    "C071",
+    "C072",
+    "C074",
+    "C077",
+    "C079",
+    "C080",
+    "C082",
+    "C083",
+    "C084",
+    "C085",
+    "C086",
+    "C087",
+    "C089",
+    "C093",
+    "C094",
+    "C095",
+    "C097",
+    "C098",
+    "C099",
+    "C100",
+    "C101",
+    "C102",
+    "C103",
+    "C104",
+    "C107",
+    "C108",
+    "C109",
+    "C110",
+    "C111",
+    "C112",
+    "C113",
+    "C114",
+    "C115",
+    "C116",
+    "C117",
+    "C118",
+    "C119",
+    "C120",
+    "C121",
+    "C123",
+    "C124",
+    "C126",
+    "C127",
+    "C128",
+    "C129",
+    "C130",
+    "C131",
+    "C132",
+    "C133",
+    "C135",
+    "C136",
+    "C137",
+    "C138",
+    "C139",
+    "C140",
+    "C141",
+    "C142",
+    "C143",
+    "C144",
+    "C145",
+    "C147",
+    "C148",
+    "C149",
+    "C150",
+    "C151",
+    "C152",
+    "C155",
+    "C156",
+    "C157",
+    "C158",
+    "C159",
+    "C160",
+    "C162",
+    "C163",
+    "C164",
+    "C165",
+    "C166",
+    "C167",
+    "C168",
+    "C169",
+    "C171",
+    "C172",
+    "C173",
+    "C174",
+    "C176",
+    "C178",
+    "C179",
+    "C180",
+    "C181",
+    "C182",
+    "C183",
+    "C184",
+    "C185",
+    "C186",
+    "C187",
+    "C188",
+    "C189",
+    "C192",
+    "C193",
+    "C194",
+    "C195",
+    "C196",
+    "C197",
+    "C200",
+    "C201",
+    "C202",
+    "C203",
+    "C204",
+    "C205",
+    "C206",
+    "C208",
+    "C209",
+    "C210",
+    "C211",
+    "C212",
+    "C214",
+    "C215",
+    "C216",
+    "C217",
+    "C218",
+    "C219",
+    "C220",
+    "C222",
+    "C223",
+    "C224",
+    "C225",
+    "C226",
+    "C227",
+    "C229",
+    "C230",
+    "C231",
+    "C232",
+    "C233",
+    "C234",
+    "C235",
+    "C236",
+    "C237",
+    "C238",
+    "C240",
+    "C242",
+    "C243",
+    "C244",
+    "C245",
+    "C246",
+    "C247",
+    "C248",
+    "C249",
+    "C250",
+    "C251",
+    "C252",
+    "C253",
+    "C254",
+    "C255",
+    "C257"
+  ],
+  "registry_claim_count": 257,
+  "registry_raw_sha256": "48b88a318ae4021efc44c42d711df7ededafff385c5613b1b84e3587733638f2",
+  "registry_schema_version": "claim-registry/1.0",
+  "schema_version": "claim-registry-coverage/1.0",
+  "semantic_extraction_coverage": "not_machine_detectable"
+}
