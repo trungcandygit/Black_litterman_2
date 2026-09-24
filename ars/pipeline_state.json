@@ -220,6 +220,11 @@
       "date": "2026-09-24",
       "stage": "standing",
       "note": "User: \"tu gio cu lam theo skill. Dung hoi gi nua. De toi yen tam giao cho ban va di ngu\" -> recorded as explicit author decision to proceed at the remaining MANDATORY checkpoints (Stage 4.5 PASS/FAIL-loop, Stage 5 entry: APA 7 retained, DOCX + LaTeX/PDF) and Stage 6 (language: Vietnamese+English); any integrity FAIL still gets fixed, not overridden"
+    },
+    {
+      "date": "2026-09-24",
+      "stage": "4.5",
+      "note": "User (explicit, verbatim intent): do not ask again; load the ARS skill for every task; follow the skill strictly until the whole pipeline is complete; produce the most complete paper; at the end create a folder of submission files for Finance Research Open (full guide for authors supplied, recorded as V17-V28 in ars/venue_criteria_FRO.md). Recorded as author event AUTHOR-EVENT-s45-standing for the Stage 4.5 integrity-correction authorization and as standing consent for remaining MANDATORY checkpoints; integrity FAILs are fixed, never overridden."
     }
   ],
   "data_status": "405/405 HOSE files downloaded, 0 errors",
