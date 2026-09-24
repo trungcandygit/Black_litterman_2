@@ -1,6 +1,6 @@
 {
- "source_draft_sha256": "3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c",
- "abstract_words": 210,
+ "source_draft_sha256": "270939e4a5a9e00d1ed104eecd3c5021e334e7cdf7fb65919c6b24332d4b5c59",
+ "abstract_words": 213,
  "abstract_le_250": true,
  "abstract_has_no_references": true,
  "keywords": [
@@ -13,7 +13,7 @@
  ],
  "keywords_1_to_7": true,
  "keywords_no_and_of": true,
- "body_words_prose_and_tables": 9829,
+ "body_words_prose_and_tables": 7931,
  "highlights": [
   [
    "Vietnam's FTSE upgrade cut illiquidity of likely index stocks by 24% to 56%",
@@ -28,7 +28,7 @@
    83
   ],
   [
-   "Rebalancing-day trading surged for included stocks only, with no price change",
+   "Rebalancing-day trading surged for included stocks only, with no price effect",
    77
   ],
   [

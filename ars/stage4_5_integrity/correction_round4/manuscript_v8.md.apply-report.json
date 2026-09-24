@@ -1,0 +1,1535 @@
+{
+  "report_format_version": "1.3",
+  "mode": "patch",
+  "base_path": "manuscript_v7.md",
+  "output_path": "manuscript_v8.md",
+  "base_draft_hash": "926a8739d8d7",
+  "output_draft_hash": "4d36bbde9133",
+  "patch_digest": "dde39f4be8869057015360cc9fee1f25995020c498bc62034af496cc382b3b55",
+  "revision_round": 6,
+  "authorization_context": "integrity_correction",
+  "authorization_witness": {
+    "status": "pass",
+    "authorization_kind": "explicit_author_exact_integrity_patch",
+    "issue_list_sha256": "7eab79206fca25cfe62aa7082883663b48371fe806a3ea385e835f5bafbe465a",
+    "integrity_authorization_sha256": "a68980ca182a0d27d883738234f41327231d9ddcf043bd7e3b4e9d9bbcd17989",
+    "revision_patch_sha256": "dde39f4be8869057015360cc9fee1f25995020c498bc62034af496cc382b3b55",
+    "unregistered_claim_drift_review_required": true
+  },
+  "ops_applied": [
+    {
+      "op_index": 0,
+      "op": "replace_block",
+      "block_id": "B0003",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 1,
+      "op": "replace_block",
+      "block_id": "B0007",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-6"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 2,
+      "op": "replace_block",
+      "block_id": "B0008",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 3,
+      "op": "replace_block",
+      "block_id": "B0009",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 4,
+      "op": "replace_block",
+      "block_id": "B0010",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 5,
+      "op": "delete_block",
+      "block_id": "B0011",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 6,
+      "op": "replace_block",
+      "block_id": "B0012",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 7,
+      "op": "replace_block",
+      "block_id": "B0013",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 8,
+      "op": "replace_block",
+      "block_id": "B0014",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 9,
+      "op": "replace_block",
+      "block_id": "B0017",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 10,
+      "op": "replace_block",
+      "block_id": "B0018",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 11,
+      "op": "delete_block",
+      "block_id": "B0019",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 12,
+      "op": "replace_block",
+      "block_id": "B0021",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 13,
+      "op": "replace_block",
+      "block_id": "B0022",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 14,
+      "op": "replace_block",
+      "block_id": "B0024",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 15,
+      "op": "replace_block",
+      "block_id": "B0025",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 16,
+      "op": "replace_block",
+      "block_id": "B0027",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 17,
+      "op": "replace_block",
+      "block_id": "B0028",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 18,
+      "op": "replace_block",
+      "block_id": "B0029",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 19,
+      "op": "replace_block",
+      "block_id": "B0030",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 20,
+      "op": "replace_block",
+      "block_id": "B0031",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 21,
+      "op": "replace_block",
+      "block_id": "B0034",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 22,
+      "op": "replace_block",
+      "block_id": "B0035",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 23,
+      "op": "replace_block",
+      "block_id": "B0036",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 24,
+      "op": "replace_block",
+      "block_id": "B0037",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 25,
+      "op": "replace_block",
+      "block_id": "B0038",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 26,
+      "op": "replace_block",
+      "block_id": "B0039",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 27,
+      "op": "replace_block",
+      "block_id": "B0041",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 28,
+      "op": "replace_block",
+      "block_id": "B0042",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 29,
+      "op": "replace_block",
+      "block_id": "B0043",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": [
+        "B0197",
+        "B0198",
+        "B0199",
+        "B0200",
+        "B0201"
+      ]
+    },
+    {
+      "op_index": 30,
+      "op": "replace_block",
+      "block_id": "B0044",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": [
+        "B0202",
+        "B0203",
+        "B0204",
+        "B0205"
+      ]
+    },
+    {
+      "op_index": 31,
+      "op": "replace_block",
+      "block_id": "B0047",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 32,
+      "op": "replace_block",
+      "block_id": "B0048",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-4",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 33,
+      "op": "replace_block",
+      "block_id": "B0049",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": [
+        "B0206",
+        "B0207"
+      ]
+    },
+    {
+      "op_index": 34,
+      "op": "replace_block",
+      "block_id": "B0050",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 35,
+      "op": "replace_block",
+      "block_id": "B0051",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": [
+        "B0208",
+        "B0209"
+      ]
+    },
+    {
+      "op_index": 36,
+      "op": "replace_block",
+      "block_id": "B0054",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 37,
+      "op": "delete_block",
+      "block_id": "B0055",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 38,
+      "op": "delete_block",
+      "block_id": "B0056",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 39,
+      "op": "delete_block",
+      "block_id": "B0057",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 40,
+      "op": "replace_block",
+      "block_id": "B0060",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 41,
+      "op": "replace_block",
+      "block_id": "B0061",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 42,
+      "op": "replace_block",
+      "block_id": "B0062",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 43,
+      "op": "replace_block",
+      "block_id": "B0063",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 44,
+      "op": "replace_block",
+      "block_id": "B0064",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 45,
+      "op": "replace_block",
+      "block_id": "B0065",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 46,
+      "op": "replace_block",
+      "block_id": "B0066",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 47,
+      "op": "replace_block",
+      "block_id": "B0067",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 48,
+      "op": "replace_block",
+      "block_id": "B0068",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 49,
+      "op": "replace_block",
+      "block_id": "B0071",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 50,
+      "op": "replace_block",
+      "block_id": "B0189",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 51,
+      "op": "replace_block",
+      "block_id": "B0072",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 52,
+      "op": "replace_block",
+      "block_id": "B0073",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 53,
+      "op": "delete_block",
+      "block_id": "B0074",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 54,
+      "op": "replace_block",
+      "block_id": "B0076",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 55,
+      "op": "replace_block",
+      "block_id": "B0077",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 56,
+      "op": "replace_block",
+      "block_id": "B0078",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 57,
+      "op": "replace_block",
+      "block_id": "B0079",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 58,
+      "op": "replace_block",
+      "block_id": "B0080",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 59,
+      "op": "replace_block",
+      "block_id": "B0081",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 60,
+      "op": "delete_block",
+      "block_id": "B0190",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 61,
+      "op": "delete_block",
+      "block_id": "B0191",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 62,
+      "op": "replace_block",
+      "block_id": "B0082",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 63,
+      "op": "replace_block",
+      "block_id": "B0083",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 64,
+      "op": "replace_block",
+      "block_id": "B0084",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 65,
+      "op": "delete_block",
+      "block_id": "B0085",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 66,
+      "op": "replace_block",
+      "block_id": "B0087",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 67,
+      "op": "replace_block",
+      "block_id": "B0088",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 68,
+      "op": "delete_block",
+      "block_id": "B0089",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 69,
+      "op": "replace_block",
+      "block_id": "B0090",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 70,
+      "op": "delete_block",
+      "block_id": "B0091",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 71,
+      "op": "delete_block",
+      "block_id": "B0092",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 72,
+      "op": "replace_block",
+      "block_id": "B0093",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 73,
+      "op": "replace_block",
+      "block_id": "B0094",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 74,
+      "op": "delete_block",
+      "block_id": "B0095",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 75,
+      "op": "replace_block",
+      "block_id": "B0096",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 76,
+      "op": "replace_block",
+      "block_id": "B0097",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 77,
+      "op": "replace_block",
+      "block_id": "B0098",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 78,
+      "op": "replace_block",
+      "block_id": "B0100",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 79,
+      "op": "replace_block",
+      "block_id": "B0101",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 80,
+      "op": "delete_block",
+      "block_id": "B0102",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 81,
+      "op": "replace_block",
+      "block_id": "B0104",
+      "roadmap_item_ids": [
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 82,
+      "op": "replace_block",
+      "block_id": "B0105",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 83,
+      "op": "replace_block",
+      "block_id": "B0106",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 84,
+      "op": "replace_block",
+      "block_id": "B0107",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 85,
+      "op": "replace_block",
+      "block_id": "B0108",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3",
+        "IL-MINOR-5"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 86,
+      "op": "delete_block",
+      "block_id": "B0109",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 87,
+      "op": "replace_block",
+      "block_id": "B0112",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-6"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 88,
+      "op": "replace_block",
+      "block_id": "B0114",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 89,
+      "op": "replace_block",
+      "block_id": "B0115",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 90,
+      "op": "replace_block",
+      "block_id": "B0116",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-6"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 91,
+      "op": "replace_block",
+      "block_id": "B0117",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 92,
+      "op": "replace_block",
+      "block_id": "B0118",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 93,
+      "op": "replace_block",
+      "block_id": "B0119",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 94,
+      "op": "replace_block",
+      "block_id": "B0192",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 95,
+      "op": "replace_block",
+      "block_id": "B0120",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 96,
+      "op": "replace_block",
+      "block_id": "B0122",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 97,
+      "op": "replace_block",
+      "block_id": "B0123",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 98,
+      "op": "replace_block",
+      "block_id": "B0125",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 99,
+      "op": "replace_block",
+      "block_id": "B0126",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 100,
+      "op": "replace_block",
+      "block_id": "B0127",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 101,
+      "op": "replace_block",
+      "block_id": "B0128",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 102,
+      "op": "delete_block",
+      "block_id": "B0129",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 103,
+      "op": "delete_block",
+      "block_id": "B0130",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 104,
+      "op": "replace_block",
+      "block_id": "B0131",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 105,
+      "op": "replace_block",
+      "block_id": "B0132",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 106,
+      "op": "delete_block",
+      "block_id": "B0133",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 107,
+      "op": "replace_block",
+      "block_id": "B0135",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-6"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 108,
+      "op": "replace_block",
+      "block_id": "B0136",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3",
+        "IL-MINOR-4",
+        "IL-MINOR-6"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 109,
+      "op": "delete_block",
+      "block_id": "B0137",
+      "roadmap_item_ids": [
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 110,
+      "op": "replace_block",
+      "block_id": "B0138",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 111,
+      "op": "replace_block",
+      "block_id": "B0139",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 112,
+      "op": "replace_block",
+      "block_id": "B0140",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 113,
+      "op": "replace_block",
+      "block_id": "B0141",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-2",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 114,
+      "op": "insert_after",
+      "block_id": "B0142",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": [
+        "B0210"
+      ]
+    },
+    {
+      "op_index": 115,
+      "op": "replace_block",
+      "block_id": "B0144",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 116,
+      "op": "replace_block",
+      "block_id": "B0145",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 117,
+      "op": "replace_block",
+      "block_id": "B0147",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 118,
+      "op": "insert_after",
+      "block_id": "B0148",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": [
+        "B0211",
+        "B0212",
+        "B0213"
+      ]
+    },
+    {
+      "op_index": 119,
+      "op": "replace_block",
+      "block_id": "B0150",
+      "roadmap_item_ids": [
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    },
+    {
+      "op_index": 120,
+      "op": "replace_block",
+      "block_id": "B0155",
+      "roadmap_item_ids": [
+        "IL-MINOR-1",
+        "IL-MINOR-3"
+      ],
+      "claim_strength_changes": [],
+      "collateral_authorization_ids": [],
+      "new_block_ids": []
+    }
+  ],
+  "fresh_block_ids": [
+    "B0197",
+    "B0198",
+    "B0199",
+    "B0200",
+    "B0201",
+    "B0202",
+    "B0203",
+    "B0204",
+    "B0205",
+    "B0206",
+    "B0207",
+    "B0208",
+    "B0209",
+    "B0210",
+    "B0211",
+    "B0212",
+    "B0213"
+  ],
+  "pure_move_pairs": [],
+  "structural_flags": {
+    "heading_op_indexes": [
+      75
+    ],
+    "section_count_delta": 0,
+    "touched_ratio": 0.6103,
+    "touched_ratio_threshold": 0.6,
+    "touched_ratio_exceeded": true,
+    "any": true,
+    "acknowledged": true
+  },
+  "counters": {
+    "blocks_total": 195,
+    "blocks_touched": 119,
+    "blocks_preserved_byte_identical": 76,
+    "preserved_ratio": 0.3897
+  }
+}

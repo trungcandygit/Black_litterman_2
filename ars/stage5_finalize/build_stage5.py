@@ -32,26 +32,38 @@ def once(text, old, new):
     return text.replace(old, new)
 
 
+def once_if(text, old, new):
+    """Plain-text formula conversion for drafts up to v7; from v8 the draft carries TeX math itself."""
+    return once(text, old, new) if old in text else text
+
+
 # ---------------------------------------------------------------- (a) notation
 md = src
-md = once(md, "ILLIQ_it = |R_it| / VAL_it,",
+md = once_if(md, "ILLIQ_it = |R_it| / VAL_it,",
           r"$$\mathrm{ILLIQ}_{it} = \frac{|R_{it}|}{\mathrm{VAL}_{it}},$$")
-md = once(md, "where R_it is the log return and VAL_it the traded value.",
+md = once_if(md, "where R_it is the log return and VAL_it the traded value.",
           r"where $R_{it}$ is the log return and $\mathrm{VAL}_{it}$ the traded value.")
-md = once(md, "y_iw = α_i + λ_w + Σ_k β_k (Constituent_i × P_kw) + ε_iw,",
+md = once_if(md, "y_iw = α_i + λ_w + Σ_k β_k (Constituent_i × P_kw) + ε_iw,",
           r"$$y_{iw} = \alpha_i + \lambda_w + \sum_{k=1}^{3} \beta_k \left(\mathrm{Constituent}_i \times P_{kw}\right) + \varepsilon_{iw},$$")
-md = once(md, "where y_iw is a liquidity measure for stock i in week w, α_i and λ_w are stock and week fixed effects, and P_1, P_2 and P_3 indicate",
+md = once_if(md, "where y_iw is a liquidity measure for stock i in week w, α_i and λ_w are stock and week fixed effects, and P_1, P_2 and P_3 indicate",
           r"where $y_{iw}$ is a liquidity measure for stock $i$ in week $w$, $\alpha_i$ and $\lambda_w$ are stock and week fixed effects, and $P_{1w}$, $P_{2w}$ and $P_{3w}$ indicate")
-md = once(md, "we define illiquidity for stock i on day t with", r"we define illiquidity for stock $i$ on day $t$ with")
-md = once(md, "the daily abnormal return of stock i is its log return", r"the daily abnormal return of stock $i$ is its log return")
-md = once(md, "The coefficients β_k identify", r"The coefficients $\beta_k$ identify")
-md = once(md, "The ITT specification replaces Constituent_i with",
+md = once_if(md, "we define illiquidity for stock i on day t with", r"we define illiquidity for stock $i$ on day $t$ with")
+md = once_if(md, "the daily abnormal return of stock i is its log return", r"the daily abnormal return of stock $i$ is its log return")
+md = once_if(md, "The coefficients β_k identify", r"The coefficients $\beta_k$ identify")
+md = once_if(md, "The ITT specification replaces Constituent_i with",
           r"The ITT specification replaces $\mathrm{Constituent}_i$ with") if "replaces Constituent_i" in md else md
-md = once(md, "Portfolio t = CAR / (σ × √L), where σ is the standard deviation of daily portfolio abnormal returns in the estimation window and L the number",
+md = once_if(md, "Portfolio t = CAR / (σ × √L), where σ is the standard deviation of daily portfolio abnormal returns in the estimation window and L the number",
           r"Portfolio $t = \mathrm{CAR} / (\sigma \sqrt{L})$, where $\sigma$ is the standard deviation of daily portfolio abnormal returns in the estimation window and $L$ the number")
-leftover = re.findall(r"(?<![$\\{])\b[A-Za-z]+_[a-z]{1,2}\b(?![}$])", re.sub(r"\$[^$]*\$", "", md.split("## References")[0]))
+leftover = re.findall(r"(?<![$\\{])\b[A-Za-z]+_[a-z]{1,2}\b(?![}$])", re.sub(r"\$[^$]*\$", "", re.sub(r"\$\$.*?\$\$", "", md.split("## References")[0], flags=re.S)))
 leftover = [x for x in leftover if not x.startswith(("output", "code", "named", "c_"))]
 assert not leftover, leftover
+
+# true minus signs for negative numbers outside math (proofreading finding M4); the source keeps ASCII
+# hyphens so numbers stay byte-comparable with the output CSVs and the token-conservation check
+def _minus(seg):
+    return re.sub(r"(?<=[\s(\[|,;:])-(?=\d)", "\u2212", seg)
+parts = re.split(r"(\$\$.*?\$\$|\$[^$\n]*\$)", md, flags=re.S)
+md = "".join(p if p.startswith("$") else _minus(p) for p in parts)
 
 # significance-mark legend: escape so Markdown does not read the asterisks as emphasis
 md = md.replace("*, **, *** denote", r"\*, \*\*, \*\*\* denote")
@@ -103,7 +115,7 @@ HIGHLIGHTS = [
     "Vietnam's FTSE upgrade cut illiquidity of likely index stocks by 24% to 56%",
     "Liquidity and prices moved at FTSE's disclosures, before the first index tranche",
     "Prices rose at the announcement and confirmation, not at the list or effective date",
-    "Rebalancing-day trading surged for included stocks only, with no price change",
+    "Rebalancing-day trading surged for included stocks only, with no price effect",
     "Intention-to-treat on a pre-announcement list separates effects from selection",
 ]
 checks["highlights"] = [(h, len(h)) for h in HIGHLIGHTS]
@@ -177,7 +189,7 @@ We submit the enclosed manuscript for consideration as a research article in Fin
 
 FTSE Russell reclassified Vietnam from frontier to secondary emerging status in four dated steps between October 2025 and September 2026. Using daily data on 366 stocks listed on the Ho Chi Minh City Stock Exchange, the paper traces stock-level liquidity and prices at each step and separates the effect of the upgrade from FTSE's selection of constituents with an intention-to-treat design built on a list screened before the announcement.
 
-Relative to never-named stocks, the illiquidity of the pre-announcement eligible group fell by 24% to 56%, and constituents earned abnormal returns in the announcement week and at the confirmation that are significant under four benchmarks and a portfolio test; the first index tranche produced a trading surge for included stocks only and no price change. The response to Vietnam's upgrade came with FTSE's disclosures rather than with index trading.
+Relative to never-named stocks, the illiquidity of the pre-announcement eligible group fell by 24% to 56%, and constituents earned abnormal returns in the announcement week and at the confirmation that are significant under four benchmarks and a portfolio test; the first index tranche produced a trading surge for included stocks only and no reliable price effect. The response to Vietnam's upgrade came with FTSE's disclosures rather than with index trading.
 
 The paper fits the journal's scope in emerging markets finance, financial markets and market efficiency, and it reports its null and unfavourable results (no price effect at the constituent list or the effective date; rising high-low spreads) alongside the main findings.
 

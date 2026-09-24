@@ -11,7 +11,7 @@ We submit the enclosed manuscript for consideration as a research article in Fin
 
 FTSE Russell reclassified Vietnam from frontier to secondary emerging status in four dated steps between October 2025 and September 2026. Using daily data on 366 stocks listed on the Ho Chi Minh City Stock Exchange, the paper traces stock-level liquidity and prices at each step and separates the effect of the upgrade from FTSE's selection of constituents with an intention-to-treat design built on a list screened before the announcement.
 
-Relative to never-named stocks, the illiquidity of the pre-announcement eligible group fell by 24% to 56%, and constituents earned abnormal returns in the announcement week and at the confirmation that are significant under four benchmarks and a portfolio test; the first index tranche produced a trading surge for included stocks only and no price change. The response to Vietnam's upgrade came with FTSE's disclosures rather than with index trading.
+Relative to never-named stocks, the illiquidity of the pre-announcement eligible group fell by 24% to 56%, and constituents earned abnormal returns in the announcement week and at the confirmation that are significant under four benchmarks and a portfolio test; the first index tranche produced a trading surge for included stocks only and no reliable price effect. The response to Vietnam's upgrade came with FTSE's disclosures rather than with index trading.
 
 The paper fits the journal's scope in emerging markets finance, financial markets and market efficiency, and it reports its null and unfavourable results (no price effect at the constituent list or the effective date; rising high-low spreads) alongside the main findings.
 

@@ -1,0 +1,15 @@
+{
+  "result": "refused_structural",
+  "structural_flags": {
+    "heading_op_indexes": [
+      75
+    ],
+    "section_count_delta": 0,
+    "touched_ratio": 0.6103,
+    "touched_ratio_threshold": 0.6,
+    "touched_ratio_exceeded": true,
+    "any": true,
+    "acknowledged": false
+  },
+  "hint": "re-run with --acknowledge-structural only after the escalation checkpoint (spec \u00a73.6)"
+}
