@@ -166,13 +166,25 @@
       "citation_style": "APA 7 (recorded author decision)",
       "entry_checkpoint": "MANDATORY; passed on recorded standing author decision; #660 not_checked, #672 ADVISORY_UNAVAILABLE (ars/stage5_finalize/entry_checkpoint/)",
       "build": "ars/stage5_finalize/build_stage5.py -> convert.py -> package.py",
-      "pdf_engine": "xelatex (tectonic bundle host blocked)"
+      "pdf_engine": "xelatex (tectonic bundle host blocked)",
+      "title_page": "4 authors (Le Hong Minh removed at author request); AI declaration kept as Claude (truthful for this paper)"
     },
     "6": {
       "name": "PROCESS SUMMARY",
       "skill": "orchestrator",
-      "status": "pending",
-      "outputs": []
+      "status": "in_progress",
+      "outputs": [
+        "ars/stage6_process/paper_creation_process_en.md",
+        "ars/stage6_process/paper_creation_process_en.pdf",
+        "ars/stage6_process/paper_creation_process_vi.md",
+        "ars/stage6_process/paper_creation_process_vi.pdf",
+        "ars/stage6_process/collaboration_depth_trajectory.md",
+        "ars/stage6_process/collaboration_depth_trajectory_vi.md"
+      ],
+      "phase": "record delivered; awaiting terminal acknowledgement (finish/end/done/confirm)",
+      "language": "Vietnamese + English (standing author decision)",
+      "collaboration_depth": "Zone 2 (committed delegation); DI 9, CV 3, CR 2 (advisory)",
+      "collaboration_quality_score": 64
     }
   },
   "revision_loops": 0,
@@ -249,6 +261,11 @@
       "date": "2026-09-24",
       "stage": "4.5",
       "note": "User (explicit, verbatim intent): do not ask again; load the ARS skill for every task; follow the skill strictly until the whole pipeline is complete; produce the most complete paper; at the end create a folder of submission files for Finance Research Open (full guide for authors supplied, recorded as V17-V28 in ars/venue_criteria_FRO.md). Recorded as author event AUTHOR-EVENT-s45-standing for the Stage 4.5 integrity-correction authorization and as standing consent for remaining MANDATORY checkpoints; integrity FAILs are fixed, never overridden."
+    },
+    {
+      "date": "2026-09-24",
+      "stage": "5",
+      "note": "Author supplied author list/affiliations/ORCID/CRediT/declarations (from another paper's title page) and asked to remove Le Hong Minh; applied to title page and cover letter. The other paper's Gemini AI declaration was not copied: this paper's truthful declaration (Claude) is kept."
     }
   ],
   "data_status": "405/405 HOSE files downloaded, 0 errors",

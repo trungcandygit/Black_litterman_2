@@ -62,17 +62,19 @@ README = f"""# Gói nộp bài cho Finance Research Open (Elsevier)
 Bài: **Who gains from a market upgrade? Stock liquidity and prices around Vietnam's FTSE Russell reclassification**
 Được dựng tự động bằng ARS v3.22.1 (Stage 5, format-convert) từ bản thảo đã qua Stage 4.5 FINAL INTEGRITY (PASS): `ars/stage4_5_integrity/correction_round3/manuscript_v7.clean.md`, SHA-256 `3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c`.
 
-## 1. Việc BẠN phải làm trước khi bấm Submit (chỉ tác giả làm được)
+## 1. Việc BẠN còn phải làm trước khi bấm Submit
 
-1. Mở `title_page.docx` và điền: họ tên đầy đủ của từng tác giả (đúng thứ tự sẽ khai trên hệ thống), đơn vị công tác kèm địa chỉ bưu chính đầy đủ và quốc gia (ký hiệu chữ nhỏ a, b ở dạng superscript), tác giả liên hệ (địa chỉ và email), Acknowledgements (không có thì ghi "None").
-2. **CRediT** trong `title_page.docx`: phân vai thật cho từng người trong 14 vai. Phần đang điền là ví dụ, phải sửa lại.
-3. **Competing interests**: vào công cụ khai báo của Elsevier (declarations tool), chọn "I have nothing to declare" nếu đúng, tải file Word nó sinh ra và upload ở bước "Attach files". Câu tương ứng trong `title_page.docx` phải khớp.
-4. **Funding**: bài đang ghi không có tài trợ. Nếu có tài trợ thì sửa theo mẫu của tạp chí, ở **cả** `title_page.docx` **và** mục Funding trong `manuscript_anonymized.docx`/`.tex`.
-5. **Data availability**: nên đưa `Supplementary_Replication_Package.zip` lên Mendeley Data hoặc Zenodo để lấy DOI (tạp chí khuyến khích, Option A). Điền DOI/URL vào `title_page.docx`. **Không** đưa link repo cá nhân (ví dụ GitHub có tên bạn) vào bản thảo ẩn danh.
-6. Tên file khi upload: giữ nguyên chữ "highlights" trong `highlights.docx` (bắt buộc); hình đặt tên `Figure_1`, `Figure_2` (đã đặt sẵn).
-7. Chạy kiểm tra đạo văn chuyên nghiệp (iThenticate hoặc Turnitin) nếu có điều kiện. Phase D của ARS chỉ là kiểm tra heuristic bằng WebSearch.
-8. APC được miễn cho bài nộp **trước hoặc đúng ngày 31/12/2026**.
-9. Đọc lại lần cuối toàn bộ `manuscript_anonymized.docx`. Tác giả chịu trách nhiệm cuối cùng về nội dung, theo đúng câu cam kết trong mục AI declaration.
+Đã điền sẵn trong `title_page.docx` theo thông tin bạn gửi: 4 tác giả (Nguyen Thanh Binh, Nguyen Van Trung*, Nguyen Bach Diep, Ha Hong Hanh; đã bỏ Le Hong Minh), đơn vị a/b, tác giả liên hệ, email, ORCID, Acknowledgements "None", competing interests, funding, CRediT. Thư gửi biên tập (`cover_letter.docx`) đã ký tên tác giả liên hệ.
+
+1. **CRediT**: kiểm lại vai của từng người cho *đúng bài FTSE này*. Phần CRediT bạn gửi là của bài Sales-Based REM. Khi bỏ Le Hong Minh, các vai Methodology, Software, Formal analysis của anh ấy không còn ai nhận thêm; hiện chúng do Nguyen Van Trung và Nguyen Bach Diep đảm nhận, đúng như danh sách bạn gửi.
+2. **Nhập đúng thứ tự 4 tác giả** trên Editorial Manager, khớp với title page (tạp chí không cho đổi tác giả sau khi nộp).
+3. **Competing interests**: vào declarations tool của Elsevier, chọn "I have nothing to declare", tải file Word nó sinh ra và upload.
+4. **AI declaration**: bài này khai **Claude (Anthropic)**, vì đã dùng cho code, viết, mô phỏng review và kiểm tra tài liệu. **Không** đổi thành "Gemini … improve language" như bài kia; khai sai là vi phạm chính sách AI của Elsevier.
+5. **Data availability**: nên đưa `Supplementary_Replication_Package.zip` lên Mendeley Data hoặc Zenodo để lấy DOI rồi thay câu trong title page. **Không** đưa link GitHub cá nhân vào bản thảo ẩn danh.
+6. Giữ nguyên chữ "highlights" trong tên file `highlights.docx`.
+7. Chạy iThenticate hoặc Turnitin nếu có điều kiện. Phase D của ARS chỉ là kiểm tra heuristic bằng WebSearch.
+8. APC được miễn cho bài nộp trước hoặc đúng ngày **31/12/2026**.
+9. Đọc lại toàn bộ `manuscript_anonymized.docx` và `ars/stage4_5_integrity/integrity_report_stage4_5.md` trước khi nộp. Tác giả chịu trách nhiệm cuối cùng.
 
 ## 2. File nào upload vào mục nào trên Editorial Manager
 
@@ -81,11 +83,11 @@ Bài: **Who gains from a market upgrade? Stock liquidity and prices around Vietn
 | `manuscript_anonymized.docx` | Manuscript (anonymized) | Bản chính để review: Word một cột, bảng dạng text sửa được, công thức là equation Word gốc, không có thông tin tác giả |
 | `manuscript_anonymized.tex` + `figures/Figure_1.png`, `figures/Figure_2.png` | (tùy chọn) LaTeX source | Chỉ cần nếu muốn nộp bằng LaTeX thay cho Word; template elsarticle |
 | `manuscript_anonymized.pdf` | không bắt buộc | PDF biên dịch từ LaTeX để bạn đọc soát; hệ thống tự tạo PDF riêng |
-| `title_page.docx` | Title page (with author details) | Điền theo mục 1 |
+| `title_page.docx` | Title page (with author details) | Đã điền 4 tác giả; kiểm lại CRediT (mục 1.1) |
 | `highlights.docx` | Highlights | 5 ý, mỗi ý ≤ 85 ký tự (đã kiểm) |
 | `figures/Figure_1.pdf` (vector) hoặc `figures/Figure_1.png` (600 dpi, rộng 4500 px) | Figure | Chú thích hình nằm trong bản thảo |
 | `figures/Figure_2.pdf` hoặc `figures/Figure_2.png` | Figure | |
-| `cover_letter.docx` | Cover letter | Điền ngày, tên, đơn vị, email |
+| `cover_letter.docx` | Cover letter | Đã ký tên tác giả liên hệ, ngày 24/9/2026 (sửa ngày nếu nộp muộn hơn) |
 | File Word từ declarations tool | Declaration of interest | Bạn tự tạo (mục 1.3) |
 | `Supplementary_Replication_Package.zip` | Supplementary material | Dữ liệu gốc, code R, kết quả; đã ẩn danh. Nên đổi thành link DOI (mục 1.5) |
 

@@ -1,4 +1,4 @@
-[Date]
+24 September 2026
 
 The Editor-in-Chief
 Finance Research Open
@@ -19,6 +19,6 @@ The manuscript has not been published elsewhere and is not under consideration b
 
 Sincerely,
 
-[Corresponding author name]
-[Affiliation]
-[Email]
+Nguyen Van Trung (corresponding author), on behalf of all authors
+Academy of Policy and Development, Nam An Khanh Urban Area, Hoai Duc District, Hanoi, Vietnam
+Email: 15233582@st.neu.edu.vn; Tel: +84 355 347 831

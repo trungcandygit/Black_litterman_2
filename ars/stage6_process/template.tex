@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\setmonofont{TeX Gyre Cursor}
+\usepackage{newunicodechar}\newunicodechar{′}{\ensuremath{^{\prime}}}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath,booktabs,longtable,array,calc,graphicx,fancyhdr,xurl}
+\usepackage[hidelinks]{hyperref}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\setlength{\emergencystretch}{3em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\itshape $title$}
+\fancyhead[R]{\small $date$}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{15pt}
+\begin{document}
+\begin{titlepage}\centering\vspace*{5cm}
+{\LARGE\bfseries $title$\par}\vspace{1em}
+{\large $subtitle$\par}\vspace{2em}
+{Run ftse2-20260924-01 · Academic Research Skills v3.22.1\par}\vspace{1em}
+{$date$\par}
+\end{titlepage}
+\tableofcontents\newpage
+\small
+$body$
+\end{document}
