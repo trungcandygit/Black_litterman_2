@@ -1,0 +1,415 @@
+{
+ "schema_version": "integrity-correction-list/1.0",
+ "revision_round": 3,
+ "base_draft_sha256": "a4ceddce5c7a0f7f5964a8719753c252adc2577b6f543581501e17d25812a6c5",
+ "issues": [
+  {
+   "correction_id": "IL-SERIOUS-1",
+   "description": "Phase B MAJOR_DISTORTION: Gregoriou & Nguyen (2010) find no significant effect of FTSE 100 deletions on investment; the manuscript says they find the 'mirror pattern'.",
+   "proposed_targets": [
+    {
+     "block_id": "B0022",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-SERIOUS-2",
+   "description": "Phase B MAJOR_DISTORTION: Hegde & McDermott (2003) measure a sustained liquidity gain over months, not 'for years'.",
+   "proposed_targets": [
+    {
+     "block_id": "B0009",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-1",
+   "description": "Phase C: named-but-excluded announcement-week CAR range stated as 2.3% to 6.3%; Table 4 panel C maximum is 6.2%.",
+   "proposed_targets": [
+    {
+     "block_id": "B0084",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-2",
+   "description": "Phase C: effective-date constituent CAR range stated as -0.5% to 1.0%; Table 4 panel A maximum is 0.9%.",
+   "proposed_targets": [
+    {
+     "block_id": "B0076",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0094",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-3",
+   "description": "Phase C: matched-sample spread rise stated as 0.14 to 0.20 points (unweighted matched sample); the weighted matched estimates in Table 2 column 6 are 0.11 to 0.14.",
+   "proposed_targets": [
+    {
+     "block_id": "B0105",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-4",
+   "description": "Phase C / reproduction: matched-sample pre-trend p = 0.056 depends on residual df; rerun with G-1 cluster df (consistent with clustered t-tests) gives p = 0.092.",
+   "proposed_targets": [
+    {
+     "block_id": "B0068",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-5",
+   "description": "Phase E / internal consistency: Section 4.4 heading, 'This supports H4' and takeaway assert monotone gains by segment; body says the liquidity gain is not monotone and the three-stock segments are descriptive.",
+   "proposed_targets": [
+    {
+     "block_id": "B0096",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0098",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0102",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-6",
+   "description": "Phase B UNVERIFIABLE: the 30 June 2026 data date is attributed to the FTSE FAQ and VIR, neither of which states it; the date follows from the GEIS ground rules (September review liquidity data to the last business day of June).",
+   "proposed_targets": [
+    {
+     "block_id": "B0011",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0168",
+     "allowed_operations": [
+      "insert_after"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-7",
+   "description": "Phase A2: FTSE FAQ reference 'Version 1.3, August 2026' not locatable; indexed versions are v1.0 (Nov 2025) and v1.2 (Apr 2026). Drop unverifiable version/month; use the published title.",
+   "proposed_targets": [
+    {
+     "block_id": "B0169",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-8",
+   "description": "Phase B UNVERIFIABLE: 'FTSE's own illustration' of a 49% investability weight entering at 4.9% is not in the FAQ; state it as the paper's own arithmetic.",
+   "proposed_targets": [
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-9",
+   "description": "Phase A2: LSEG (2025) and LSEG (2026) press-release titles are not the published headlines.",
+   "proposed_targets": [
+    {
+     "block_id": "B0176",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0177",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-10",
+   "description": "Phase B UNVERIFIABLE_ACCESS: the square-root-of-window scaling is attributed to Brown & Warner (1985); attribute only the portfolio (dependence) approach and state the scaling as the paper's assumption.",
+   "proposed_targets": [
+    {
+     "block_id": "B0044",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0082",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-11",
+   "description": "Mode 6 / Phase C: Data availability lists four of six scripts (omits analysis_revision2.R, figure2.R) and no software versions; reproduction from raw data now documented.",
+   "proposed_targets": [
+    {
+     "block_id": "B0150",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-12",
+   "description": "Phase D CLOSE_MATCH: 'country reclassification events show distinct return and volume effects' repeats 8 of 9 words of the Biktimirov & Afego (2026) abstract.",
+   "proposed_targets": [
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-13",
+   "description": "Phase E uncited assertion / E5 nearest prior work: 'Most studies of market reclassification also work with aggregate indices' has no citation; Burnham, Gakidis & Wurgler (2018, FAJ) is the nearest country-level study of MSCI reclassifications and is not cited.",
+   "proposed_targets": [
+    {
+     "block_id": "B0009",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0161",
+     "allowed_operations": [
+      "insert_after"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-14",
+   "description": "Phase E / E6 ADV-E6-5: 'reliable announcement-week price response under three of four benchmarks' applies the defined term 'reliable' (all four) to a result that fails it.",
+   "proposed_targets": [
+    {
+     "block_id": "B0132",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-15",
+   "description": "E6 ADV-E6-1/3/4/6: restore dropped causal caveat (B0013), hedge the unobserved-characteristics reading (B0084), restrict the selection-timing claim to GEE (B0122), restore the portfolio qualifier (B0084, B0137).",
+   "proposed_targets": [
+    {
+     "block_id": "B0013",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0084",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0122",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0137",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-1",
+   "description": "Phase B MINOR_DISTORTION: Amihud (2002) defines the ratio on absolute return over dollar volume; the paper adapts it (log return, VND).",
+   "proposed_targets": [
+    {
+     "block_id": "B0041",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-2",
+   "description": "Phase B MINOR: Shleifer (1986) reports excess returns that do not disappear for at least ten days ('permanent' overstates); Harris & Gurel (1986) measure effects after announcement, not specifically on the effective date; Hegde & McDermott attribute the gain mainly to lower direct trading costs.",
+   "proposed_targets": [
+    {
+     "block_id": "B0021",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-3",
+   "description": "Phase B MINOR: Raddatz et al. (2017) evidence is country-level; the sentence applies it to stock-level attention in a three-stock segment.",
+   "proposed_targets": [
+    {
+     "block_id": "B0138",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-4",
+   "description": "Phase B MINOR: The Investor (2026a) is a March 2026 article; it supports the list size and data date, not the November 2025 appearance.",
+   "proposed_targets": [
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-5",
+   "description": "Phase B MINOR: FTSE's investability weight reflects free float and foreign-ownership limits, not free float alone.",
+   "proposed_targets": [
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-6",
+   "description": "Phase B MINOR: Vietnam-specific rebalancing facts are cited to Harris & Gurel (1986) instead of FTSE Russell (2026)/VIR (2026).",
+   "proposed_targets": [
+    {
+     "block_id": "B0094",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-7",
+   "description": "Phase B MINOR: LSEG (2026) lists the removal of pre-funding among several reforms, for foreign institutional investors; 'credits' overstates.",
+   "proposed_targets": [
+    {
+     "block_id": "B0192",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-8",
+   "description": "Phase B MINOR: 'seven years' on the watch list cites only the 2018 start; add LSEG (2025) for the end point.",
+   "proposed_targets": [
+    {
+     "block_id": "B0055",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-9",
+   "description": "Phase C MINOR: Table 8 note lists EIB among bank constituents; EIB is in the ITT group only.",
+   "proposed_targets": [
+    {
+     "block_id": "B0115",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-10",
+   "description": "Phase E MINOR: B0064 'confirm' sits beside the rejected ITT pre-trend test; B0135 'only the confirmation gain lasted' lacks the three-of-four qualifier; B0076 'up to three times' imprecise (max 2.9).",
+   "proposed_targets": [
+    {
+     "block_id": "B0064",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0076",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0135",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  }
+ ]
+}
