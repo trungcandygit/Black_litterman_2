@@ -70,8 +70,9 @@ md = md.replace("*, **, *** denote", r"\*, \*\*, \*\*\* denote")
 
 # ---------------------------------------------------------------- (b) venue layout
 # figures: separate files named Figure_1 / Figure_2; embedded copies keep the review PDF readable
-md = once(md, "![](figures/figure1_event_study.png)", "![](Figure_1.png){width=100%}")
-md = once(md, "![](figures/figure2_itt_event_study.png)", "![](Figure_2.png){width=100%}")
+for n, old in ((1, "figure1_event_study.png"), (2, "figure2_itt_event_study.png")):
+    src_ref = f"![](figures/{old})" if f"![](figures/{old})" in md else f"![](figures/Figure_{n}.png)"
+    md = once(md, src_ref, f"![](Figure_{n}.png){{width=100%}}")
 
 # AI declaration as its own section before the references (guide: "new section before the references list")
 ai_para = re.search(r"\*\*Declaration of generative AI and AI-assisted technologies in the manuscript preparation process\.\*\* (.+)\n", md)
@@ -174,6 +175,20 @@ Nguyen Thanh Binh: Conceptualization, Supervision, Validation, Writing – revie
 Daily price and volume data are public and were retrieved through the vnstock library (VCI source). The downloaded daily files, the R code that reproduces every table and figure, and the reproduction log are provided as supplementary material (Supplementary_Replication_Package.zip) and will be deposited in a public repository on acceptance.
 """
 (WORK / "title_page.md").write_text(title_page)
+declaration = f"""# Declaration of interests
+
+**Manuscript title:** {title}
+
+**Journal:** Finance Research Open
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+**Authors:** Nguyen Thanh Binh, Nguyen Van Trung (corresponding author), Nguyen Bach Diep, Ha Hong Hanh
+
+**Date:** 24 September 2026
+"""
+(WORK / "declaration_of_competing_interest.md").write_text(declaration)
+
 (WORK / "highlights.md").write_text("# Highlights\n\n" + "\n".join(f"- {h}" for h in HIGHLIGHTS) + "\n")
 
 cover = f"""24 September 2026

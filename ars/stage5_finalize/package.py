@@ -57,51 +57,46 @@ with zipfile.ZipFile(ZIP, "w", zipfile.ZIP_DEFLATED) as z:
 files = sorted(p for p in OUT.rglob("*") if p.is_file() and p.name != "README_NOP_BAI.md")
 manifest = "\n".join(f"| `{p.relative_to(OUT)}` | {p.stat().st_size:,} | `{hashlib.sha256(p.read_bytes()).hexdigest()[:16]}` |" for p in files)
 
-README = f"""# Gói nộp bài cho Finance Research Open (Elsevier)
+SRC_MD = ROOT / "ars/stage4_5_integrity/correction_round5/manuscript_v9.clean.md"
+SRC_SHA = hashlib.sha256(SRC_MD.read_bytes()).hexdigest()
+README = f"""# Gói nộp bài: Finance Research Open (Elsevier)
 
 Bài: **Who gains from a market upgrade? Stock liquidity and prices around Vietnam's FTSE Russell reclassification**
-Được dựng tự động bằng ARS v3.22.1 (Stage 5, format-convert) từ bản thảo đã qua Stage 4.5 FINAL INTEGRITY (PASS): `ars/stage4_5_integrity/correction_round3/manuscript_v7.clean.md`, SHA-256 `3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c`.
 
-## 1. Việc BẠN còn phải làm trước khi bấm Submit
+Nguồn: bản thảo cuối v9 (`ars/stage4_5_integrity/correction_round5/manuscript_v9.clean.md`, SHA-256 `{SRC_SHA}`), đã qua Stage 4.5 của ARS v3.22.1 và các vòng proofreading, stop-slop. Mọi file dưới đây đã điền đủ thông tin, bạn không cần sửa gì thêm.
 
-Đã điền sẵn trong `title_page.docx` theo thông tin bạn gửi: 4 tác giả (Nguyen Thanh Binh, Nguyen Van Trung*, Nguyen Bach Diep, Ha Hong Hanh; đã bỏ Le Hong Minh), đơn vị a/b, tác giả liên hệ, email, ORCID, Acknowledgements "None", competing interests, funding, CRediT. Thư gửi biên tập (`cover_letter.docx`) đã ký tên tác giả liên hệ.
+## 1. Upload lên Editorial Manager
 
-1. **CRediT**: kiểm lại vai của từng người cho *đúng bài FTSE này*. Phần CRediT bạn gửi là của bài Sales-Based REM. Khi bỏ Le Hong Minh, các vai Methodology, Software, Formal analysis của anh ấy không còn ai nhận thêm; hiện chúng do Nguyen Van Trung và Nguyen Bach Diep đảm nhận, đúng như danh sách bạn gửi.
-2. **Nhập đúng thứ tự 4 tác giả** trên Editorial Manager, khớp với title page (tạp chí không cho đổi tác giả sau khi nộp).
-3. **Competing interests**: vào declarations tool của Elsevier, chọn "I have nothing to declare", tải file Word nó sinh ra và upload.
-4. **AI declaration**: bài này khai **Claude (Anthropic)**, vì đã dùng cho code, viết, mô phỏng review và kiểm tra tài liệu. **Không** đổi thành "Gemini … improve language" như bài kia; khai sai là vi phạm chính sách AI của Elsevier.
-5. **Data availability**: nên đưa `Supplementary_Replication_Package.zip` lên Mendeley Data hoặc Zenodo để lấy DOI rồi thay câu trong title page. **Không** đưa link GitHub cá nhân vào bản thảo ẩn danh.
-6. Giữ nguyên chữ "highlights" trong tên file `highlights.docx`.
-7. Chạy iThenticate hoặc Turnitin nếu có điều kiện. Phase D của ARS chỉ là kiểm tra heuristic bằng WebSearch.
-8. APC được miễn cho bài nộp trước hoặc đúng ngày **31/12/2026**.
-9. Đọc lại toàn bộ `manuscript_anonymized.docx` và `ars/stage4_5_integrity/integrity_report_stage4_5.md` trước khi nộp. Tác giả chịu trách nhiệm cuối cùng.
-
-## 2. File nào upload vào mục nào trên Editorial Manager
-
-| File | Loại file khi upload | Ghi chú |
+| File | Chọn loại file (Item type) | Ghi chú |
 |---|---|---|
-| `manuscript_anonymized.docx` | Manuscript (anonymized) | Bản chính để review: Word một cột, bảng dạng text sửa được, công thức là equation Word gốc, không có thông tin tác giả |
-| `manuscript_anonymized.tex` + `figures/Figure_1.png`, `figures/Figure_2.png` | (tùy chọn) LaTeX source | Chỉ cần nếu muốn nộp bằng LaTeX thay cho Word; template elsarticle |
-| `manuscript_anonymized.pdf` | không bắt buộc | PDF biên dịch từ LaTeX để bạn đọc soát; hệ thống tự tạo PDF riêng |
-| `title_page.docx` | Title page (with author details) | Đã điền 4 tác giả; kiểm lại CRediT (mục 1.1) |
-| `highlights.docx` | Highlights | 5 ý, mỗi ý ≤ 85 ký tự (đã kiểm) |
-| `figures/Figure_1.pdf` (vector) hoặc `figures/Figure_1.png` (600 dpi, rộng 4500 px) | Figure | Chú thích hình nằm trong bản thảo |
-| `figures/Figure_2.pdf` hoặc `figures/Figure_2.png` | Figure | |
-| `cover_letter.docx` | Cover letter | Đã ký tên tác giả liên hệ, ngày 24/9/2026 (sửa ngày nếu nộp muộn hơn) |
-| File Word từ declarations tool | Declaration of interest | Bạn tự tạo (mục 1.3) |
-| `Supplementary_Replication_Package.zip` | Supplementary material | Dữ liệu gốc, code R, kết quả; đã ẩn danh. Nên đổi thành link DOI (mục 1.5) |
+| `manuscript_anonymized.docx` | Manuscript (anonymized) | Bản Word một cột; công thức là equation của Word; bảng sửa được; không có tên tác giả |
+| `title_page.docx` | Title page (with author details) | 4 tác giả, đơn vị, tác giả liên hệ, email, ORCID, lời cảm ơn, competing interests, funding, CRediT, data availability |
+| `declaration_of_competing_interest.docx` | Declaration of interest | Đúng câu chuẩn của Elsevier "no known competing financial interests...". Nếu hệ thống bắt dùng declarations tool, chọn "I have nothing to declare" và tải file tool sinh ra lên (nội dung giống hệt file này) |
+| `highlights.docx` | Highlights | 5 ý, mỗi ý ≤ 85 ký tự |
+| `figures/Figure_1.pdf`, `figures/Figure_2.pdf` | Figure | PDF vector. Có thể thay bằng PNG 600 dpi (rộng 4500 px) cùng tên |
+| `cover_letter.docx` | Cover letter | Đã ký tên tác giả liên hệ, ngày 24/9/2026 |
+| `Supplementary_Replication_Package.zip` | Supplementary material | Dữ liệu gốc (405 file giá), code R, kết quả; đã ẩn danh |
+| `manuscript_anonymized.tex` + `manuscript_anonymized.pdf` | (không bắt buộc) | Bản LaTeX (elsarticle) và PDF để đọc soát; chỉ nộp nếu muốn dùng LaTeX thay cho Word |
 
-## 3. Đã kiểm theo guide của FRO
+Khi điền form online: nhập 4 tác giả đúng thứ tự như title page (Nguyen Thanh Binh; Nguyen Van Trung, tác giả liên hệ; Nguyen Bach Diep; Ha Hong Hanh). Ở mục generative AI, chọn "có dùng" và dán đúng câu trong mục "Declaration of generative AI..." của bản thảo (khai Claude). APC được miễn nếu nộp trước hoặc đúng ngày **31/12/2026**.
 
-- Abstract 210 từ (≤ 250), không có trích dẫn; 6 keyword, không keyword nào chứa "and"/"of"; có mã JEL.
-- Ẩn danh kép: bản thảo không có tên, đơn vị, lời cảm ơn hay link định danh; CRediT, competing interests và acknowledgements đã chuyển sang title page.
-- Mục "Declaration of generative AI and AI-assisted technologies in the manuscript preparation process" là một section riêng, nằm ngay trước References, đúng mẫu câu của tạp chí.
-- Bảng là text sửa được, đánh số theo thứ tự xuất hiện, ghi chú đặt dưới bảng, không kẻ dọc; bảng phụ lục đánh số Table A.1, A.2; nguồn bảng ghi "Authors' calculations".
-- Tài liệu tham khảo: 33 tài liệu, đều được kiểm tra có thật ở Stage 4.5; có DOI khi tài liệu có DOI; tài liệu web có URL và ngày truy cập; định dạng APA 7.
-- Hình: file riêng, đặt tên Figure_1/Figure_2, bản vector PDF và PNG 600 dpi rộng hơn 2244 px.
-- Kết quả tái lập được từ dữ liệu gốc: 48/48 file kết quả khớp (xem `ars/stage4_5_integrity/repro/REPRO_REPORT.md`).
+## 2. Đã kiểm theo guide của FRO
 
-## 4. Danh sách file (kích thước, SHA-256 rút gọn)
+- **Abstract:** 218 từ (giới hạn 250), không có trích dẫn, không dùng chữ viết tắt chưa định nghĩa.
+- **Keywords:** 6 từ khóa, không cụm nào chứa "and" hoặc "of"; có mã JEL.
+- **Thân bài:** khoảng 7.900 từ. Có 9 công thức đánh số (1)–(9).
+- **Phản biện ẩn danh kép:** bản thảo không có tên, đơn vị hay lời cảm ơn; mọi thông tin tác giả nằm ở title page.
+- **Bảng:**
+  - dạng text sửa được, không kẻ dọc;
+  - đánh số theo thứ tự được nhắc tới lần đầu, kể cả bảng phụ lục A.1–A.3;
+  - mỗi bảng có câu dẫn;
+  - note một câu, dòng nguồn ghi "Source: Authors' calculations.".
+- **Hình:** là file riêng tên Figure_1 và Figure_2, dạng PDF vector hoặc PNG 600 dpi; chú thích hình nằm trong bản thảo.
+- **Khai báo AI:** là một mục riêng, đúng tiêu đề tạp chí quy định, đặt ngay trước References.
+- **Tài liệu tham khảo:** 33 tài liệu, đều được kiểm tra có thật ở Stage 4.5; có DOI khi tài liệu có DOI; tài liệu web có URL và ngày truy cập; định dạng APA 7.
+- **Tái lập kết quả:** chạy lại từ dữ liệu gốc, cả 48 file kết quả đều khớp.
+
+## 3. Danh sách file (kích thước, SHA-256 rút gọn)
 
 | File | Bytes | SHA-256 (16) |
 |---|---|---|

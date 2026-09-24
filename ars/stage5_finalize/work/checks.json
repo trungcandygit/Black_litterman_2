@@ -1,6 +1,6 @@
 {
- "source_draft_sha256": "270939e4a5a9e00d1ed104eecd3c5021e334e7cdf7fb65919c6b24332d4b5c59",
- "abstract_words": 213,
+ "source_draft_sha256": "d0b8fd66f1eb44cdd1edbf175cf715c53d89fa42edff97946ae93a9942e79f97",
+ "abstract_words": 218,
  "abstract_le_250": true,
  "abstract_has_no_references": true,
  "keywords": [
@@ -13,7 +13,7 @@
  ],
  "keywords_1_to_7": true,
  "keywords_no_and_of": true,
- "body_words_prose_and_tables": 7931,
+ "body_words_prose_and_tables": 7821,
  "highlights": [
   [
    "Vietnam's FTSE upgrade cut illiquidity of likely index stocks by 24% to 56%",

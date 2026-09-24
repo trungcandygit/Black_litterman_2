@@ -1,0 +1,1604 @@
+{
+ "schema_version": "integrity-correction-authorization-input/1.0",
+ "revision_patch_sha256": "8272f6e2a68a717c507b8011f17057dc0fcba94bef885fc25e48cb5c782f305c",
+ "author_events": [
+  {
+   "event_id": "AUTHOR-EVENT-r5-final",
+   "source": "explicit_session_user_message",
+   "actor_role": "author",
+   "input_sha256": "86c1e8255007b56cfbd4857b0b82df7efc6e449f1dd2f9fc1078053ce79c5513"
+  },
+  {
+   "event_id": "AUTHOR-EVENT-r5-notes",
+   "source": "explicit_session_user_message",
+   "actor_role": "author",
+   "input_sha256": "23ad7905079bab11a7730d97511b6e0b780e373f3e7b51b253be01efb96caf02"
+  }
+ ],
+ "author_decisions": [
+  {
+   "correction_id": "IL-MEDIUM-1",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0013",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-2",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-1",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0003",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0060",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0094",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0098",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0107",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0112",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0132",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0135",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0200",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0203",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0208",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-2",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0003",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0007",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0009",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0010",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0012",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0013",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0014",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0021",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0025",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0035",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0037",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0039",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0049",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0050",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0053",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0054",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0060",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0061",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0063",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0064",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0066",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0067",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0068",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0070",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0071",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0076",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0077",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0082",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0083",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0084",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0087",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0093",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0094",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0097",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0098",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0100",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0101",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0104",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0105",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0107",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0108",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0112",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0114",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0115",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0122",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0123",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0125",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0127",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0128",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0131",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0132",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0135",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0136",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0138",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0140",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0141",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0143",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0144",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0145",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0146",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0147",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0148",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0188",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0189",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0192",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0197",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0198",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0199",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0200",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0203",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0204",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0205",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0207",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0208",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0209",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0210",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0211",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0212",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0213",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-3",
+   "author_event_id": "AUTHOR-EVENT-r5-final",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0003",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0007",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0009",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0010",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0012",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0013",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0014",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0021",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0025",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0035",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0037",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0039",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0049",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0050",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0053",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0054",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0060",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0061",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0063",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0064",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0066",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0067",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0068",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0070",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0071",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0076",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0077",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0082",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0083",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0084",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0087",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0093",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0094",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0097",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0098",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0100",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0101",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0104",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0105",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0107",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0108",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0112",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0114",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0115",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0122",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0123",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0125",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0127",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0128",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0131",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0132",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0135",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0136",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0138",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0140",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0141",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0143",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0144",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0145",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0146",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0147",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0148",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0188",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0189",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0192",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0197",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0198",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0199",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0200",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0203",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0204",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0205",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0207",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0208",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0209",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0210",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0211",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0212",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0213",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-4",
+   "author_event_id": "AUTHOR-EVENT-r5-notes",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0003",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0007",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0009",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0010",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0012",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0013",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0014",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0021",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0025",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0035",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0037",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0039",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0049",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0050",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0053",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0054",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0060",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0061",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0063",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0064",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0066",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0067",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0068",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0070",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0071",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0076",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0077",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0082",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0083",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0084",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0087",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0093",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0094",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0097",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0098",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0100",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0101",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0104",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0105",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0107",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0108",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0112",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0114",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0115",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0122",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0123",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0125",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0127",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0128",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0131",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0132",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0135",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0136",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0138",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0140",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0141",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0143",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0144",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0145",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0146",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0147",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0148",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0188",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0189",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0192",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0197",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0198",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0199",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0200",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0203",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0204",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0205",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0207",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0208",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0209",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0210",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0211",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0212",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0213",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  }
+ ]
+}

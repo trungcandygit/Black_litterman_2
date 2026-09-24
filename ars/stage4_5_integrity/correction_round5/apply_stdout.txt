@@ -1,0 +1,1 @@
+apply ok: 81 op(s); 112/193 blocks preserved byte-identical (ratio 0.5803); report manuscript_v9.md.apply-report.json

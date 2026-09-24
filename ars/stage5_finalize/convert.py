@@ -72,7 +72,7 @@ for name, size in (("Normal", 12), ("Body Text", 12), ("First Paragraph", 12), (
 doc.save(ref)
 
 # ---------------------------------------------------------------- DOCX
-for stem in ("manuscript_anonymized", "title_page", "highlights", "cover_letter"):
+for stem in ("manuscript_anonymized", "title_page", "highlights", "cover_letter", "declaration_of_competing_interest"):
     run(["pandoc", f"{stem}.md", "-f", "markdown+tex_math_dollars+superscript", "-o", f"{stem}.docx",
          "--reference-doc", "reference.docx", "--resource-path", "."])
 
@@ -160,6 +160,6 @@ print("overfull boxes > 10pt:", [x for x in overfull if float(x) > 10])
 
 # ---------------------------------------------------------------- copy deliverables
 for f in ("manuscript_anonymized.docx", "manuscript_anonymized.tex", "manuscript_anonymized.pdf", "title_page.docx",
-          "highlights.docx", "cover_letter.docx", "manuscript_anonymized.md"):
+          "highlights.docx", "cover_letter.docx", "declaration_of_competing_interest.docx", "manuscript_anonymized.md"):
     shutil.copy(WORK / f, OUT / f)
 print("done")
