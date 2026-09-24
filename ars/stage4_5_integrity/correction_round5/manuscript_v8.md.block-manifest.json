@@ -1,0 +1,971 @@
+{
+  "manifest_format_version": "1.0",
+  "base_draft_hash": "4d36bbde9133",
+  "blocks": [
+    {
+      "block_id": "B0001",
+      "old_hash": "d3c897d2434d",
+      "first_line_excerpt": "# Who gains from a market upgrade? Stock liquidity and prices around Vietnam's …"
+    },
+    {
+      "block_id": "B0002",
+      "old_hash": "266c21b810ae",
+      "first_line_excerpt": "## Abstract"
+    },
+    {
+      "block_id": "B0003",
+      "old_hash": "49bd48bf2e0e",
+      "first_line_excerpt": "FTSE Russell reclassified Vietnam from frontier to secondary emerging status in…"
+    },
+    {
+      "block_id": "B0004",
+      "old_hash": "c0d3b7aadf43",
+      "first_line_excerpt": "**Keywords**: market reclassification; index effect; stock liquidity; frontier …"
+    },
+    {
+      "block_id": "B0005",
+      "old_hash": "3e844cf435a1",
+      "first_line_excerpt": "**JEL classification**: G12; G14; G15"
+    },
+    {
+      "block_id": "B0006",
+      "old_hash": "e569d07d3d78",
+      "first_line_excerpt": "## 1. Introduction"
+    },
+    {
+      "block_id": "B0007",
+      "old_hash": "e1568610c849",
+      "first_line_excerpt": "The liquidity of likely index stocks improved at each step of Vietnam's market …"
+    },
+    {
+      "block_id": "B0008",
+      "old_hash": "898987939319",
+      "first_line_excerpt": "Market classification decides which benchmarks a country's stocks can enter, an…"
+    },
+    {
+      "block_id": "B0009",
+      "old_hash": "b7a658045cfb",
+      "first_line_excerpt": "Existing evidence says little about this for frontier markets. Additions to the…"
+    },
+    {
+      "block_id": "B0010",
+      "old_hash": "ead91fda74c3",
+      "first_line_excerpt": "Vietnam's reclassification offers a cleaner test. FTSE disclosed it in four dat…"
+    },
+    {
+      "block_id": "B0012",
+      "old_hash": "b0593ce75ec8",
+      "first_line_excerpt": "We estimate difference-in-differences and event-study regressions on 35,752 sto…"
+    },
+    {
+      "block_id": "B0013",
+      "old_hash": "db49efb4b908",
+      "first_line_excerpt": "We make one contribution: we decompose the stock-level liquidity and price effe…"
+    },
+    {
+      "block_id": "B0014",
+      "old_hash": "c04cd6438ad7",
+      "first_line_excerpt": "The remainder of the paper is organized as follows. Section 2 describes the set…"
+    },
+    {
+      "block_id": "B0015",
+      "old_hash": "140305580de1",
+      "first_line_excerpt": "## 2. Setting, literature and hypotheses"
+    },
+    {
+      "block_id": "B0016",
+      "old_hash": "4c8ee2a869b6",
+      "first_line_excerpt": "### 2.1 FTSE Russell's four-step reclassification of Vietnam"
+    },
+    {
+      "block_id": "B0017",
+      "old_hash": "b849ef8f02c2",
+      "first_line_excerpt": "FTSE Russell added Vietnam to its watch list in September 2018 (FTSE Russell, 2…"
+    },
+    {
+      "block_id": "B0018",
+      "old_hash": "80ba344523a6",
+      "first_line_excerpt": "Between these dates the financial press reported FTSE's lists of eligible stock…"
+    },
+    {
+      "block_id": "B0020",
+      "old_hash": "d6dfc2fbfcc2",
+      "first_line_excerpt": "### 2.2 Index inclusion and liquidity"
+    },
+    {
+      "block_id": "B0021",
+      "old_hash": "a68b67974738",
+      "first_line_excerpt": "Two channels link index membership to liquidity and prices. Under the price-pre…"
+    },
+    {
+      "block_id": "B0022",
+      "old_hash": "be238e7449b5",
+      "first_line_excerpt": "Liquidity gains from inclusion also have real consequences: S&P 500 additions w…"
+    },
+    {
+      "block_id": "B0023",
+      "old_hash": "5d3de3ae0aaf",
+      "first_line_excerpt": "### 2.3 Market reclassification and frontier markets"
+    },
+    {
+      "block_id": "B0024",
+      "old_hash": "37e93edb8ab9",
+      "first_line_excerpt": "Reclassification moves a whole market between benchmark families. Because mutua…"
+    },
+    {
+      "block_id": "B0025",
+      "old_hash": "299c29f8b771",
+      "first_line_excerpt": "Liquidity carries particular weight in these markets. Local market liquidity pr…"
+    },
+    {
+      "block_id": "B0026",
+      "old_hash": "cf02fae7fe54",
+      "first_line_excerpt": "### 2.4 Hypotheses"
+    },
+    {
+      "block_id": "B0027",
+      "old_hash": "45d951442a5d",
+      "first_line_excerpt": "The recognition channel predicts that liquidity and prices respond when informa…"
+    },
+    {
+      "block_id": "B0028",
+      "old_hash": "76e5d8a581f1",
+      "first_line_excerpt": "H1. After the reclassification announcement, stocks likely to enter the index b…"
+    },
+    {
+      "block_id": "B0029",
+      "old_hash": "515a821b309f",
+      "first_line_excerpt": "H2. The liquidity gap widens at each later disclosure that resolves uncertainty…"
+    },
+    {
+      "block_id": "B0030",
+      "old_hash": "33c439656977",
+      "first_line_excerpt": "H3. Likely constituents earn abnormal returns at the disclosures, and the first…"
+    },
+    {
+      "block_id": "B0031",
+      "old_hash": "fe96d00f4d92",
+      "first_line_excerpt": "H4. The rebalancing session produces a trading-value surge for constituents, an…"
+    },
+    {
+      "block_id": "B0032",
+      "old_hash": "0d5d818a19b6",
+      "first_line_excerpt": "## 3. Data and empirical design"
+    },
+    {
+      "block_id": "B0033",
+      "old_hash": "28cbb4d33f54",
+      "first_line_excerpt": "### 3.1 Sample and groups"
+    },
+    {
+      "block_id": "B0034",
+      "old_hash": "78c58da76113",
+      "first_line_excerpt": "We collect daily open, high, low and close prices and share volume for all 405 …"
+    },
+    {
+      "block_id": "B0035",
+      "old_hash": "7c85fa01d334",
+      "first_line_excerpt": "We sort the stocks into three groups (Appendix Table A.2). Constituents are the…"
+    },
+    {
+      "block_id": "B0036",
+      "old_hash": "9718034c9465",
+      "first_line_excerpt": "Table 1 compares the groups before the announcement. Constituents traded a mean…"
+    },
+    {
+      "block_id": "B0037",
+      "old_hash": "23bf9302af9e",
+      "first_line_excerpt": "**Table 1. Pre-announcement characteristics by group (October 2024 to 6 October…"
+    },
+    {
+      "block_id": "B0038",
+      "old_hash": "65b2e54626b4",
+      "first_line_excerpt": "| Group | Stocks | Stock-weeks | Amihud | log trading value | CS spread (%) | A…"
+    },
+    {
+      "block_id": "B0039",
+      "old_hash": "3fad31dcc639",
+      "first_line_excerpt": "*Notes*: Weekly means; Amihud as in Eq. (1) with traded value in VND billion. S…"
+    },
+    {
+      "block_id": "B0040",
+      "old_hash": "b6b1c0217b6b",
+      "first_line_excerpt": "### 3.2 Liquidity and return measures"
+    },
+    {
+      "block_id": "B0041",
+      "old_hash": "757c5dbc4469",
+      "first_line_excerpt": "Daily traded value $\\mathrm{VAL}_{it}$ is the closing price times share volume …"
+    },
+    {
+      "block_id": "B0042",
+      "old_hash": "7dda3ad2f601",
+      "first_line_excerpt": "$$\\mathrm{ILLIQ}_{it} = \\frac{|R_{it}|}{\\mathrm{VAL}_{it}}. \\qquad (1)$$"
+    },
+    {
+      "block_id": "B0043",
+      "old_hash": "f654173d6037",
+      "first_line_excerpt": "Traded value makes the ratio comparable across price levels, and our volume fil…"
+    },
+    {
+      "block_id": "B0197",
+      "old_hash": "3a036b86bd8a",
+      "first_line_excerpt": "$$\\beta^{\\mathrm{cs}}_{it} = \\left[\\ln\\frac{H_{it}}{L_{it}}\\right]^2 + \\left[\\l…"
+    },
+    {
+      "block_id": "B0198",
+      "old_hash": "9087e3612b64",
+      "first_line_excerpt": "$$\\alpha^{\\mathrm{cs}}_{it} = \\frac{\\sqrt{2\\beta^{\\mathrm{cs}}_{it}} - \\sqrt{\\b…"
+    },
+    {
+      "block_id": "B0199",
+      "old_hash": "8587b7deedce",
+      "first_line_excerpt": "We winsorize $\\mathrm{ILLIQ}_{it}$ and $S_{it}$ at the 1st and 99th percentiles…"
+    },
+    {
+      "block_id": "B0200",
+      "old_hash": "27dc8f65c23c",
+      "first_line_excerpt": "$$\\mathrm{Amihud}_{iw} = \\ln\\left(\\frac{1}{N_{iw}}\\sum_{t \\in w}\\mathrm{ILLIQ}_…"
+    },
+    {
+      "block_id": "B0201",
+      "old_hash": "4421e0feed7b",
+      "first_line_excerpt": "and the weekly spread is the mean of $S_{it}$ within the week."
+    },
+    {
+      "block_id": "B0044",
+      "old_hash": "5efb303d66e3",
+      "first_line_excerpt": "For prices, the abnormal return of stock $i$ on day $t$ against benchmark retur…"
+    },
+    {
+      "block_id": "B0202",
+      "old_hash": "83a1512ea259",
+      "first_line_excerpt": "$$\\mathrm{AR}_{it} = R_{it} - R_{bt} \\quad \\text{or, in the market model,} \\qua…"
+    },
+    {
+      "block_id": "B0203",
+      "old_hash": "763513d7b35c",
+      "first_line_excerpt": "The four benchmarks are the equal-weighted mean of the 328 never-named stocks, …"
+    },
+    {
+      "block_id": "B0204",
+      "old_hash": "45840c1332f0",
+      "first_line_excerpt": "$$\\mathrm{AR}_{pt} = \\frac{1}{N_g}\\sum_{i \\in g}\\mathrm{AR}_{it}, \\qquad \\mathr…"
+    },
+    {
+      "block_id": "B0205",
+      "old_hash": "071a4b649598",
+      "first_line_excerpt": "where $\\hat\\sigma_p$ is the standard deviation of $\\mathrm{AR}_{pt}$ in the est…"
+    },
+    {
+      "block_id": "B0045",
+      "old_hash": "83e285becb6f",
+      "first_line_excerpt": "### 3.3 Estimation"
+    },
+    {
+      "block_id": "B0046",
+      "old_hash": "66d657c52698",
+      "first_line_excerpt": "The baseline liquidity specification is"
+    },
+    {
+      "block_id": "B0047",
+      "old_hash": "090c9e7b93b0",
+      "first_line_excerpt": "$$y_{iw} = \\alpha_i + \\lambda_w + \\sum_{k=1}^{3}\\beta_k\\left(\\mathrm{Constituen…"
+    },
+    {
+      "block_id": "B0048",
+      "old_hash": "be435d1033cd",
+      "first_line_excerpt": "where $y_{iw}$ is an outcome from Eq. (4) or the weekly spread for stock $i$ in…"
+    },
+    {
+      "block_id": "B0049",
+      "old_hash": "8c8e0043b2af",
+      "first_line_excerpt": "The ITT specification replaces $\\mathrm{Constituent}_i$ in Eq. (7) with $\\mathr…"
+    },
+    {
+      "block_id": "B0206",
+      "old_hash": "500a41d0deaa",
+      "first_line_excerpt": "$$y_{iw} = \\alpha_i + \\lambda_w + \\sum_{m \\neq -1}\\delta_m\\left(\\mathrm{Constit…"
+    },
+    {
+      "block_id": "B0207",
+      "old_hash": "fcc60396cff7",
+      "first_line_excerpt": "where $M_{mw}$ equals one if week $w$ falls in month $m$ relative to October 20…"
+    },
+    {
+      "block_id": "B0050",
+      "old_hash": "8032d16a04f5",
+      "first_line_excerpt": "Because constituents are the largest HOSE stocks, we also use a matched sample …"
+    },
+    {
+      "block_id": "B0051",
+      "old_hash": "f8862a237230",
+      "first_line_excerpt": "For the rebalancing session we estimate, over the 32 sessions from 6 August to …"
+    },
+    {
+      "block_id": "B0208",
+      "old_hash": "3fbf9957166d",
+      "first_line_excerpt": "$$\\ln\\mathrm{VAL}_{id} = \\alpha_i + \\lambda_d + \\theta_1\\left(\\mathrm{Constitue…"
+    },
+    {
+      "block_id": "B0209",
+      "old_hash": "2d40e3e81746",
+      "first_line_excerpt": "where $d$ indexes sessions, $\\lambda_d$ are date fixed effects, and $\\mathrm{Re…"
+    },
+    {
+      "block_id": "B0052",
+      "old_hash": "d392f81aa9fa",
+      "first_line_excerpt": "### 3.4 Identification assumptions"
+    },
+    {
+      "block_id": "B0053",
+      "old_hash": "2e27de28f485",
+      "first_line_excerpt": "The coefficients β_k identify the effect of the upgrade on constituents under f…"
+    },
+    {
+      "block_id": "B0054",
+      "old_hash": "6eb794e1887a",
+      "first_line_excerpt": "First, parallel trends: without the upgrade, constituents and never-named stock…"
+    },
+    {
+      "block_id": "B0058",
+      "old_hash": "dc67df38b009",
+      "first_line_excerpt": "## 4. Results"
+    },
+    {
+      "block_id": "B0059",
+      "old_hash": "b77e6ad35cde",
+      "first_line_excerpt": "### 4.1 Likely constituents became less illiquid from the announcement onward"
+    },
+    {
+      "block_id": "B0060",
+      "old_hash": "afdcab1364ea",
+      "first_line_excerpt": "Table 2 reports Eq. (7). The Amihud illiquidity of constituents fell relative t…"
+    },
+    {
+      "block_id": "B0061",
+      "old_hash": "316d9cdb9875",
+      "first_line_excerpt": "**Table 2. Liquidity of constituents relative to never-named stocks, by disclos…"
+    },
+    {
+      "block_id": "B0062",
+      "old_hash": "78645f52272b",
+      "first_line_excerpt": "| Window | (1) Amihud | (2) Trading value | (3) Amihud, matched | (4) Trading v…"
+    },
+    {
+      "block_id": "B0063",
+      "old_hash": "e120d7b72cc3",
+      "first_line_excerpt": "*Notes*: Eq. (7), outcomes in logs, stock and week fixed effects; columns 3 and…"
+    },
+    {
+      "block_id": "B0064",
+      "old_hash": "46be54d2e56f",
+      "first_line_excerpt": "Table 3 shows that the decline does not depend on FTSE's later choice. The ITT …"
+    },
+    {
+      "block_id": "B0065",
+      "old_hash": "9984ed7c5312",
+      "first_line_excerpt": "**Table 3. Intention-to-treat (ITT) and predicted-constituent estimates**"
+    },
+    {
+      "block_id": "B0066",
+      "old_hash": "0d14e08e236c",
+      "first_line_excerpt": "| Treatment group | Announcement | Confirmation | List | Trading value, list | …"
+    },
+    {
+      "block_id": "B0067",
+      "old_hash": "344f541058a4",
+      "first_line_excerpt": "*Notes*: Log Amihud unless stated. The ITT group is FTSE's preliminary list (27…"
+    },
+    {
+      "block_id": "B0068",
+      "old_hash": "f06bcb75ab34",
+      "first_line_excerpt": "Figure 1 plots the coefficients $\\delta_m$ of Eq. (8). Before the announcement,…"
+    },
+    {
+      "block_id": "B0069",
+      "old_hash": "d9203547aae5",
+      "first_line_excerpt": "**Figure 1. Monthly event-study coefficients for FTSE constituents and named-bu…"
+    },
+    {
+      "block_id": "B0070",
+      "old_hash": "d3fe817ddc2c",
+      "first_line_excerpt": "![](figures/figure1_event_study.png)"
+    },
+    {
+      "block_id": "B0071",
+      "old_hash": "e9e3b4d03592",
+      "first_line_excerpt": "*Note*: Coefficients $\\delta_m$ of Eq. (8), with the same interactions for name…"
+    },
+    {
+      "block_id": "B0187",
+      "old_hash": "4a3dce4bf4f1",
+      "first_line_excerpt": "**Figure 2. Monthly event-study coefficients for the intention-to-treat group**"
+    },
+    {
+      "block_id": "B0188",
+      "old_hash": "cc22056d1164",
+      "first_line_excerpt": "![](figures/figure2_itt_event_study.png)"
+    },
+    {
+      "block_id": "B0189",
+      "old_hash": "b5423474328a",
+      "first_line_excerpt": "*Note*: Eq. (8) for log Amihud with $\\mathrm{ITT}_i$ in place of $\\mathrm{Const…"
+    },
+    {
+      "block_id": "B0072",
+      "old_hash": "796323819d80",
+      "first_line_excerpt": "The trading value of constituents rose by 0.68, 1.03 and 1.19 log points (Table…"
+    },
+    {
+      "block_id": "B0073",
+      "old_hash": "4e18c4add873",
+      "first_line_excerpt": "Randomization inference confirms that the declines exceed those of large HOSE s…"
+    },
+    {
+      "block_id": "B0075",
+      "old_hash": "a09cb7d774d3",
+      "first_line_excerpt": "### 4.2 Prices moved at the announcement and the confirmation"
+    },
+    {
+      "block_id": "B0076",
+      "old_hash": "5a158c995b3b",
+      "first_line_excerpt": "Table 4 reports CARs with portfolio *t*-statistics for every pre-specified wind…"
+    },
+    {
+      "block_id": "B0077",
+      "old_hash": "1f71d2194f35",
+      "first_line_excerpt": "**Table 4. Cumulative abnormal returns around FTSE disclosures, by benchmark**"
+    },
+    {
+      "block_id": "B0078",
+      "old_hash": "0d787ad97763",
+      "first_line_excerpt": "Panel A. Constituents (24)"
+    },
+    {
+      "block_id": "B0079",
+      "old_hash": "2ed581efa696",
+      "first_line_excerpt": "| Event | Window | Never-named | Matched | Large never-named | Market model |"
+    },
+    {
+      "block_id": "B0080",
+      "old_hash": "86960ee17218",
+      "first_line_excerpt": "Panel B. ITT group (27)"
+    },
+    {
+      "block_id": "B0081",
+      "old_hash": "3aff4943576e",
+      "first_line_excerpt": "| Event | Window | Never-named | Matched | Large never-named | Market model |"
+    },
+    {
+      "block_id": "B0082",
+      "old_hash": "43332ed09659",
+      "first_line_excerpt": "*Notes*: CAR from Eq. (6) with the portfolio *t*-statistic in parentheses, for …"
+    },
+    {
+      "block_id": "B0083",
+      "old_hash": "1b95e9aa343a",
+      "first_line_excerpt": "The two gains behaved differently afterwards. Over days 0 to +20 the announceme…"
+    },
+    {
+      "block_id": "B0084",
+      "old_hash": "e0f908d815c4",
+      "first_line_excerpt": "Panel B separates likely constituents from the stocks FTSE passed over. The ITT…"
+    },
+    {
+      "block_id": "B0086",
+      "old_hash": "85f758650267",
+      "first_line_excerpt": "### 4.3 The rebalancing session produced a trading surge only for included stoc…"
+    },
+    {
+      "block_id": "B0087",
+      "old_hash": "f57e09717d51",
+      "first_line_excerpt": "Table 5 reports Eq. (9). On 18 September 2026, the last session before the upgr…"
+    },
+    {
+      "block_id": "B0088",
+      "old_hash": "810da85b70e1",
+      "first_line_excerpt": "**Table 5. Excess log trading value on the rebalancing and effective sessions**"
+    },
+    {
+      "block_id": "B0090",
+      "old_hash": "684cef8436d6",
+      "first_line_excerpt": "| Comparison | 18 Sep 2026 (rebalancing) | 21 Sep 2026 (effective date) | Obser…"
+    },
+    {
+      "block_id": "B0093",
+      "old_hash": "4ab332476f91",
+      "first_line_excerpt": "*Notes*: Eq. (9) over the sessions from 6 August to 23 September 2026, with sto…"
+    },
+    {
+      "block_id": "B0094",
+      "old_hash": "a0e03bca7ee0",
+      "first_line_excerpt": "The surge matches the trading that funds tracking FTSE benchmarks had to do: th…"
+    },
+    {
+      "block_id": "B0096",
+      "old_hash": "e32d2df1da47",
+      "first_line_excerpt": "### 4.4 The rebalancing surge rose with FTSE size segment"
+    },
+    {
+      "block_id": "B0097",
+      "old_hash": "9cd4ac396e0d",
+      "first_line_excerpt": "FTSE assigned the constituents to size segments on 21 August 2026: three large-…"
+    },
+    {
+      "block_id": "B0098",
+      "old_hash": "a33051c1c58f",
+      "first_line_excerpt": "Table 6 splits the constituent coefficients by segment. Illiquidity fell most f…"
+    },
+    {
+      "block_id": "B0099",
+      "old_hash": "3b15018c7898",
+      "first_line_excerpt": "**Table 6. Constituent effects by FTSE size segment**"
+    },
+    {
+      "block_id": "B0100",
+      "old_hash": "b3ced7b3165f",
+      "first_line_excerpt": "| Outcome and window | Large (3) | Mid (3) | Small (18) |"
+    },
+    {
+      "block_id": "B0101",
+      "old_hash": "00d6da6374a9",
+      "first_line_excerpt": "*Notes*: Eq. (7) with segment-by-window interactions (log outcomes); the last r…"
+    },
+    {
+      "block_id": "B0103",
+      "old_hash": "d39138d6d094",
+      "first_line_excerpt": "### 4.5 Volatility rose, so the illiquidity decline is conservative"
+    },
+    {
+      "block_id": "B0104",
+      "old_hash": "00d582a35d29",
+      "first_line_excerpt": "In Table 7, the weekly volatility of constituents rose by 0.34 and 0.21 log poi…"
+    },
+    {
+      "block_id": "B0105",
+      "old_hash": "b21e8c7498d5",
+      "first_line_excerpt": "The CS spread rose by 0.09 to 0.13 percentage points (column 2), and by 0.11 to…"
+    },
+    {
+      "block_id": "B0106",
+      "old_hash": "41471b34c079",
+      "first_line_excerpt": "**Table 7. Volatility, CS spread and Amihud estimates for constituents**"
+    },
+    {
+      "block_id": "B0107",
+      "old_hash": "94dd6bd4810a",
+      "first_line_excerpt": "| Window | (1) Volatility | (2) CS spread | (3) CS spread, matched | (4) CS spr…"
+    },
+    {
+      "block_id": "B0108",
+      "old_hash": "311b33f7be07",
+      "first_line_excerpt": "*Notes*: Eq. (7). Volatility is $\\mathrm{Vol}_{iw}$ from Eq. (4); spreads are i…"
+    },
+    {
+      "block_id": "B0110",
+      "old_hash": "30046879b69a",
+      "first_line_excerpt": "## 5. Robustness and selection"
+    },
+    {
+      "block_id": "B0111",
+      "old_hash": "521d038e618a",
+      "first_line_excerpt": "### 5.1 Robustness of the liquidity result"
+    },
+    {
+      "block_id": "B0112",
+      "old_hash": "564f5d5519ab",
+      "first_line_excerpt": "Table 8 collects the robustness checks for the constituent Amihud result. The c…"
+    },
+    {
+      "block_id": "B0113",
+      "old_hash": "406d3e85af2a",
+      "first_line_excerpt": "**Table 8. Robustness of the constituent Amihud estimates**"
+    },
+    {
+      "block_id": "B0114",
+      "old_hash": "bceaa0e3cda2",
+      "first_line_excerpt": "| Specification | Announcement | Confirmation | List | Observations |"
+    },
+    {
+      "block_id": "B0115",
+      "old_hash": "95640f177388",
+      "first_line_excerpt": "*Notes*: Dependent variable log Amihud. Banks are VCB, BID, VPB, HDB, STB, SHB,…"
+    },
+    {
+      "block_id": "B0116",
+      "old_hash": "7e2dc546ece2",
+      "first_line_excerpt": "**Pre-announcement months.** The positive pre-period deviations in Figure 1 wor…"
+    },
+    {
+      "block_id": "B0117",
+      "old_hash": "de98ac0c5ad7",
+      "first_line_excerpt": "**Size-related shocks.** With size-tercile-by-week fixed effects, the confirmat…"
+    },
+    {
+      "block_id": "B0118",
+      "old_hash": "0190c305b6df",
+      "first_line_excerpt": "**Trading value.** A constituent-specific linear trend in trading value is stro…"
+    },
+    {
+      "block_id": "B0119",
+      "old_hash": "f2394cf6edf3",
+      "first_line_excerpt": "**Inference and influential stocks.** Two-way clustering by stock and week wide…"
+    },
+    {
+      "block_id": "B0192",
+      "old_hash": "80ce7c8fb28d",
+      "first_line_excerpt": "**Sector composition and the pre-funding reform.** Banks and securities firms m…"
+    },
+    {
+      "block_id": "B0120",
+      "old_hash": "1299665f2ec2",
+      "first_line_excerpt": "**Placebo.** A fake event on 7 April 2025, estimated on pre-announcement data o…"
+    },
+    {
+      "block_id": "B0121",
+      "old_hash": "17fd0387676e",
+      "first_line_excerpt": "### 5.2 Selection: FTSE's lists partly followed rising liquidity"
+    },
+    {
+      "block_id": "B0122",
+      "old_hash": "071f2da94854",
+      "first_line_excerpt": "Table 9 uses the 14 stocks FTSE named but did not include to test for selection…"
+    },
+    {
+      "block_id": "B0123",
+      "old_hash": "4601534672b1",
+      "first_line_excerpt": "FTSE screened the April 2026 list on data up to 31 December 2025, the end of wi…"
+    },
+    {
+      "block_id": "B0124",
+      "old_hash": "e551c658129c",
+      "first_line_excerpt": "**Table 9. Named-but-excluded stocks and the timing of FTSE's screening**"
+    },
+    {
+      "block_id": "B0125",
+      "old_hash": "96a33deb6ba3",
+      "first_line_excerpt": "Panel A. Named-but-excluded (14) and constituents, relative to never-named stoc…"
+    },
+    {
+      "block_id": "B0126",
+      "old_hash": "a8f32af7b923",
+      "first_line_excerpt": "| Window | Constituents: Amihud | Named: Amihud | Named: trading value |"
+    },
+    {
+      "block_id": "B0127",
+      "old_hash": "d44ab0e9eee3",
+      "first_line_excerpt": "Panel B. log Amihud by FTSE screening window"
+    },
+    {
+      "block_id": "B0128",
+      "old_hash": "8a7ca13da4f8",
+      "first_line_excerpt": "| Group | W1 | W2 | W3 |"
+    },
+    {
+      "block_id": "B0131",
+      "old_hash": "8734e62737f2",
+      "first_line_excerpt": "*Notes*: One regression per panel on all 366 stocks with stock and week fixed e…"
+    },
+    {
+      "block_id": "B0132",
+      "old_hash": "7ab09e38d8d1",
+      "first_line_excerpt": "FTSE's screens rest on investability, and at least one stock became eligible af…"
+    },
+    {
+      "block_id": "B0134",
+      "old_hash": "84ec97419be9",
+      "first_line_excerpt": "## 6. Discussion and conclusion"
+    },
+    {
+      "block_id": "B0135",
+      "old_hash": "797a9a7585b0",
+      "first_line_excerpt": "Vietnam's reclassification brought liquidity and price gains to likely index st…"
+    },
+    {
+      "block_id": "B0136",
+      "old_hash": "a04b48e0a72d",
+      "first_line_excerpt": "These findings favour the recognition channel over the price-pressure channel a…"
+    },
+    {
+      "block_id": "B0138",
+      "old_hash": "e1ec3ac3caa5",
+      "first_line_excerpt": "The largest liquidity gain, for the three large-capitalization stocks (-2.20 lo…"
+    },
+    {
+      "block_id": "B0139",
+      "old_hash": "4255601eb96f",
+      "first_line_excerpt": "Because FTSE's eligibility lists partly followed rising liquidity and the final…"
+    },
+    {
+      "block_id": "B0140",
+      "old_hash": "7e351152e445",
+      "first_line_excerpt": "The results carry two implications, both drawn from a single event. For regulat…"
+    },
+    {
+      "block_id": "B0141",
+      "old_hash": "09b27052061a",
+      "first_line_excerpt": "The sample omits stocks delisted before 24 September 2026. Only three trading d…"
+    },
+    {
+      "block_id": "B0142",
+      "old_hash": "358db74c4041",
+      "first_line_excerpt": "## Appendix"
+    },
+    {
+      "block_id": "B0210",
+      "old_hash": "9d3043063184",
+      "first_line_excerpt": "Table A.1 reports covariate balance for the matched sample (Section 3.3), Table…"
+    },
+    {
+      "block_id": "B0143",
+      "old_hash": "42c6be8b23a4",
+      "first_line_excerpt": "**Table A.1. Covariate balance before and after matching (constituents vs never…"
+    },
+    {
+      "block_id": "B0144",
+      "old_hash": "d1f9e5a29d9d",
+      "first_line_excerpt": "| Variable | Constituent mean | Control mean, all | SMD, all | Control mean, ma…"
+    },
+    {
+      "block_id": "B0145",
+      "old_hash": "b1f74fcd4d9d",
+      "first_line_excerpt": "*Notes*: Nearest-neighbour propensity-score matching, three controls per consti…"
+    },
+    {
+      "block_id": "B0146",
+      "old_hash": "ac4ff325883c",
+      "first_line_excerpt": "**Table A.2. Stocks by FTSE list**"
+    },
+    {
+      "block_id": "B0147",
+      "old_hash": "369cff8109c5",
+      "first_line_excerpt": "| List | Stocks |"
+    },
+    {
+      "block_id": "B0148",
+      "old_hash": "c3fa31f49f35",
+      "first_line_excerpt": "*Sources*: Viet Nam News (2025); The Investor (2026a, 2026b); FTSE Russell (202…"
+    },
+    {
+      "block_id": "B0211",
+      "old_hash": "9e4c6ada5b3b",
+      "first_line_excerpt": "**Table A.3. Change in log Amihud of named-but-excluded stocks by FTSE screenin…"
+    },
+    {
+      "block_id": "B0212",
+      "old_hash": "a480cd4e686e",
+      "first_line_excerpt": "| Stock | First named | W1 | W2 | W3 |"
+    },
+    {
+      "block_id": "B0213",
+      "old_hash": "c632132365cc",
+      "first_line_excerpt": "*Notes*: Descriptive change in mean log Amihud relative to never-named stocks a…"
+    },
+    {
+      "block_id": "B0149",
+      "old_hash": "bd0612b2e9cb",
+      "first_line_excerpt": "## Declarations"
+    },
+    {
+      "block_id": "B0150",
+      "old_hash": "4aaa4a8180c9",
+      "first_line_excerpt": "**Data availability.** Daily price and volume data are public and were retrieve…"
+    },
+    {
+      "block_id": "B0151",
+      "old_hash": "38c15792a251",
+      "first_line_excerpt": "**Ethics.** The study uses public market data and involves no human participant…"
+    },
+    {
+      "block_id": "B0152",
+      "old_hash": "5a32a8ec8cc3",
+      "first_line_excerpt": "**Author contributions (CRediT).** [To be supplied by the authors before submis…"
+    },
+    {
+      "block_id": "B0153",
+      "old_hash": "9b7a15699aa8",
+      "first_line_excerpt": "**Funding.** This research did not receive any specific grant from funding agen…"
+    },
+    {
+      "block_id": "B0154",
+      "old_hash": "1ee0436fa99c",
+      "first_line_excerpt": "**Declaration of competing interest.** The authors declare no competing interes…"
+    },
+    {
+      "block_id": "B0155",
+      "old_hash": "099cfd4ade59",
+      "first_line_excerpt": "**Declaration of generative AI and AI-assisted technologies in the manuscript p…"
+    },
+    {
+      "block_id": "B0156",
+      "old_hash": "65b72d86eeeb",
+      "first_line_excerpt": "## References"
+    },
+    {
+      "block_id": "B0157",
+      "old_hash": "4d785286c9da",
+      "first_line_excerpt": "Amihud, Y. (2002). Illiquidity and stock returns: Cross-section and time-series…"
+    },
+    {
+      "block_id": "B0158",
+      "old_hash": "62a034852889",
+      "first_line_excerpt": "Becker-Blease, J. R., & Paul, D. L. (2006). Stock liquidity and investment oppo…"
+    },
+    {
+      "block_id": "B0159",
+      "old_hash": "52e66c87d85f",
+      "first_line_excerpt": "Bekaert, G., Harvey, C. R., & Lundblad, C. (2007). Liquidity and expected retur…"
+    },
+    {
+      "block_id": "B0160",
+      "old_hash": "2637e0069d06",
+      "first_line_excerpt": "Biktimirov, E. N., & Afego, P. N. (2026). Is there an index effect in frontier …"
+    },
+    {
+      "block_id": "B0161",
+      "old_hash": "ec45a61da2f5",
+      "first_line_excerpt": "Brown, S. J., & Warner, J. B. (1985). Using daily stock returns: The case of ev…"
+    },
+    {
+      "block_id": "B0194",
+      "old_hash": "b232677f09a3",
+      "first_line_excerpt": "Burnham, T. C., Gakidis, H., & Wurgler, J. (2018). Investing in the presence of…"
+    },
+    {
+      "block_id": "B0162",
+      "old_hash": "8531082be4a0",
+      "first_line_excerpt": "Callaway, B., & Sant'Anna, P. H. C. (2021). Difference-in-differences with mult…"
+    },
+    {
+      "block_id": "B0163",
+      "old_hash": "0375e482543c",
+      "first_line_excerpt": "Cameron, A. C., Gelbach, J. B., & Miller, D. L. (2008). Bootstrap-based improve…"
+    },
+    {
+      "block_id": "B0164",
+      "old_hash": "3e7191613886",
+      "first_line_excerpt": "Chen, H., Noronha, G., & Singal, V. (2004). The price response to S&P 500 index…"
+    },
+    {
+      "block_id": "B0165",
+      "old_hash": "8c8f1dc24470",
+      "first_line_excerpt": "Chordia, T., Roll, R., & Subrahmanyam, A. (2000). Commonality in liquidity. *Jo…"
+    },
+    {
+      "block_id": "B0166",
+      "old_hash": "1a4b37c0cb82",
+      "first_line_excerpt": "Corwin, S. A., & Schultz, P. (2012). A simple way to estimate bid-ask spreads f…"
+    },
+    {
+      "block_id": "B0167",
+      "old_hash": "d552540d27be",
+      "first_line_excerpt": "Dong, S., Zheng, J., Jia, H., & Zhang, Z. (2023). Impact of capital market inte…"
+    },
+    {
+      "block_id": "B0196",
+      "old_hash": "8040664ac4d5",
+      "first_line_excerpt": "FTSE Russell. (n.d.). *FTSE Global Equity Index Series ground rules*. https://w…"
+    },
+    {
+      "block_id": "B0168",
+      "old_hash": "362369d8b762",
+      "first_line_excerpt": "FTSE Russell. (2018, September 26). *FTSE classification of markets: September …"
+    },
+    {
+      "block_id": "B0169",
+      "old_hash": "55f1aa2d4ee2",
+      "first_line_excerpt": "FTSE Russell. (2026, April). *Reclassification of Vietnam from frontier to seco…"
+    },
+    {
+      "block_id": "B0170",
+      "old_hash": "8aa88ec5aa9b",
+      "first_line_excerpt": "Gregoriou, A., & Nguyen, N. D. (2010). Stock liquidity and investment opportuni…"
+    },
+    {
+      "block_id": "B0171",
+      "old_hash": "4f9879d89105",
+      "first_line_excerpt": "Harris, L., & Gurel, E. (1986). Price and volume effects associated with change…"
+    },
+    {
+      "block_id": "B0172",
+      "old_hash": "88d3567d0595",
+      "first_line_excerpt": "Hau, H., Massa, M., & Peress, J. (2010). Do demand curves for currencies slope …"
+    },
+    {
+      "block_id": "B0173",
+      "old_hash": "9af01a9e1d96",
+      "first_line_excerpt": "Hegde, S. P., & McDermott, J. B. (2003). The liquidity effects of revisions to …"
+    },
+    {
+      "block_id": "B0174",
+      "old_hash": "d932c6baac0d",
+      "first_line_excerpt": "Ho, D. E., Imai, K., King, G., & Stuart, E. A. (2007). Matching as nonparametri…"
+    },
+    {
+      "block_id": "B0175",
+      "old_hash": "fac5d9b2a97f",
+      "first_line_excerpt": "Kang, W., & Zhang, H. (2014). Measuring liquidity in emerging markets. *Pacific…"
+    },
+    {
+      "block_id": "B0176",
+      "old_hash": "4897eb25a062",
+      "first_line_excerpt": "LSEG. (2025, October 7). *FTSE Russell announces results of September 2025 semi…"
+    },
+    {
+      "block_id": "B0177",
+      "old_hash": "644b73297e68",
+      "first_line_excerpt": "LSEG. (2026, April 7). *FTSE Russell announces results of March 2026 semi-annua…"
+    },
+    {
+      "block_id": "B0178",
+      "old_hash": "7b1be89b5e75",
+      "first_line_excerpt": "Nguyen, C. T., Hai, P. T., & Nguyen, H. K. (2021). Stock market returns and liq…"
+    },
+    {
+      "block_id": "B0179",
+      "old_hash": "883cee33676a",
+      "first_line_excerpt": "Raddatz, C., Schmukler, S. L., & Williams, T. (2017). International asset alloc…"
+    },
+    {
+      "block_id": "B0180",
+      "old_hash": "6e2bfbc883d4",
+      "first_line_excerpt": "Roth, J., Sant'Anna, P. H. C., Bilinski, A., & Poe, J. (2023). What's trending …"
+    },
+    {
+      "block_id": "B0181",
+      "old_hash": "3199e3660376",
+      "first_line_excerpt": "Shleifer, A. (1986). Do demand curves for stocks slope down? *The Journal of Fi…"
+    },
+    {
+      "block_id": "B0182",
+      "old_hash": "19ce04768e37",
+      "first_line_excerpt": "Stereńczak, S., Zaremba, A., & Umar, Z. (2020). Is there an illiquidity premium…"
+    },
+    {
+      "block_id": "B0183",
+      "old_hash": "2cb9394e04a8",
+      "first_line_excerpt": "The Investor. (2026a, March 4). *FTSE Russell eyes 28 Vietnam stocks ahead of m…"
+    },
+    {
+      "block_id": "B0184",
+      "old_hash": "0c07dee9c6bc",
+      "first_line_excerpt": "The Investor. (2026b, April 8). *FTSE Russell names 32 Vietnamese stocks eligib…"
+    },
+    {
+      "block_id": "B0185",
+      "old_hash": "e3de6d99bd51",
+      "first_line_excerpt": "Viet Nam News. (2025, November 13). *FTSE Russell plans inclusion of 28 Vietnam…"
+    },
+    {
+      "block_id": "B0193",
+      "old_hash": "351be68abf53",
+      "first_line_excerpt": "VietnamPlus. (2024, December 30). *Vietnamese billion dollar oil refinery exits…"
+    },
+    {
+      "block_id": "B0186",
+      "old_hash": "7a545144b9d0",
+      "first_line_excerpt": "VIR. (2026, August 22). *FTSE Russell names 27 Vietnamese stocks in review*. ht…"
+    }
+  ]
+}
