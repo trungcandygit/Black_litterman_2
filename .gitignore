@@ -6,3 +6,4 @@ notes/
 *.bbl
 *.blg
 ars/build/work/
+.DS_Store
