@@ -1,0 +1,110 @@
+{
+ "schema_version": "integrity-correction-authorization-input/1.0",
+ "revision_patch_sha256": "9dfc92b42ca471f292fb07a18246f68532a0918d193d7a3065f6629f487d84d4",
+ "author_events": [
+  {
+   "event_id": "AUTHOR-EVENT-s45-standing",
+   "source": "explicit_session_user_message",
+   "actor_role": "author",
+   "input_sha256": "3e9f44eaf6480676aad14f4f4e944217f17c66950c24421b895c7a2c09a6c984"
+  }
+ ],
+ "author_decisions": [
+  {
+   "correction_id": "IL-MEDIUM-1",
+   "author_event_id": "AUTHOR-EVENT-s45-standing",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0011",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0018",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    },
+    {
+     "block_id": "B0167",
+     "allowed_operations": [
+      "insert_after"
+     ]
+    },
+    {
+     "block_id": "B0195",
+     "allowed_operations": [
+      "delete_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MEDIUM-2",
+   "author_event_id": "AUTHOR-EVENT-s45-standing",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0024",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-1",
+   "author_event_id": "AUTHOR-EVENT-s45-standing",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0021",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-2",
+   "author_event_id": "AUTHOR-EVENT-s45-standing",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0169",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-3",
+   "author_event_id": "AUTHOR-EVENT-s45-standing",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0044",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  },
+  {
+   "correction_id": "IL-MINOR-4",
+   "author_event_id": "AUTHOR-EVENT-s45-standing",
+   "decision": "authorize",
+   "authorized_targets": [
+    {
+     "block_id": "B0022",
+     "allowed_operations": [
+      "replace_block"
+     ]
+    }
+   ]
+  }
+ ]
+}
