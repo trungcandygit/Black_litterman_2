@@ -65,6 +65,19 @@ def _minus(seg):
 parts = re.split(r"(\$\$.*?\$\$|\$[^$\n]*\$)", md, flags=re.S)
 md = "".join(p if p.startswith("$") else _minus(p) for p in parts)
 
+# multi-line equations: one display per line (the aligned environment renders poorly in some
+# DOCX viewers); the equation number stays on its line. Formatting only.
+def _split_aligned(m):
+    body = m.group(1)
+    lines = [ln.replace("&", "").strip() for ln in body.split("\\\\") if ln.strip()]
+    cont = "\\qquad "
+    return "\n\n".join("$$" + (cont if ln.startswith("+") else "") + ln + "$$" for ln in lines)
+md = re.sub(r"\$\$\\begin\{aligned\}(.*?)\\end\{aligned\}\$\$", _split_aligned, md, flags=re.S)
+
+# hypothesis labels with subscript numbers (H1 -> H₁ via pandoc subscript): formatting only
+parts = re.split(r"(\$\$.*?\$\$|\$[^$\n]*\$)", md, flags=re.S)
+md = "".join(p if p.startswith("$") else re.sub(r"\bH([1-4])\b", r"H~\1~", p) for p in parts)
+
 # significance-mark legend: escape so Markdown does not read the asterisks as emphasis
 md = md.replace("*, **, *** denote", r"\*, \*\*, \*\*\* denote")
 
@@ -201,7 +214,7 @@ tp = title_page.replace("## Data availability", "## Ethics\n\n" + ethics + "\n\n
 
 cover = f"""24 September 2026
 
-The Editor-in-Chief
+The Editor-in-Chief\\
 Finance Research Open
 
 **Submission of manuscript: "{title}"**
@@ -220,8 +233,8 @@ The manuscript has not been published elsewhere and is not under consideration b
 
 Sincerely,
 
-Nguyen Van Trung (corresponding author), on behalf of all authors
-Academy of Policy and Development, Nam An Khanh Urban Area, Hoai Duc District, Hanoi, Vietnam
+Nguyen Van Trung (corresponding author), on behalf of all authors\\
+Academy of Policy and Development, Nam An Khanh Urban Area, Hoai Duc District, Hanoi, Vietnam\\
 Email: 15233582@st.neu.edu.vn; Tel: +84 355 347 831
 """
 (WORK / "cover_letter.md").write_text(cover)

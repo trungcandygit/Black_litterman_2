@@ -111,6 +111,16 @@ Khi điền form online: nhập 4 tác giả đúng thứ tự như title page (
 - **Hình:** là file riêng tên Figure_1 và Figure_2, dạng PDF vector hoặc PNG 600 dpi; chú thích hình nằm trong bản thảo.
 - **Khai báo AI:** là một mục riêng, đúng tiêu đề tạp chí quy định, đặt ngay trước References.
 - **Tài liệu tham khảo:** 33 tài liệu, đều được kiểm tra có thật ở Stage 4.5; có DOI khi tài liệu có DOI; tài liệu web có URL và ngày truy cập; định dạng APA 7.
+- **Định dạng Word:**
+  - Times New Roman 12 pt, giãn dòng đôi, lề 2,54 cm;
+  - số trang ở góc trên bên phải;
+  - bản thảo có đánh số dòng liên tục và căn đều hai bên;
+  - toàn bộ chữ màu đen, tiêu đề đậm;
+  - bảng dạng text sửa được, không kẻ dọc, chữ trong bảng giãn dòng đơn;
+  - tài liệu tham khảo thụt dòng treo theo APA 7;
+  - giả thuyết viết H₁–H₄;
+  - công thức là equation của Word;
+  - cả 6 file .docx đều qua bước kiểm tra cấu trúc OOXML (schema).
 - **Tái lập kết quả:** chạy lại từ dữ liệu gốc, cả 48 file kết quả đều khớp.
 
 ## 3. Danh sách file (kích thước, SHA-256 rút gọn)

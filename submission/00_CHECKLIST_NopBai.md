@@ -33,20 +33,30 @@ Khi điền form online: nhập 4 tác giả đúng thứ tự như title page (
 - **Hình:** là file riêng tên Figure_1 và Figure_2, dạng PDF vector hoặc PNG 600 dpi; chú thích hình nằm trong bản thảo.
 - **Khai báo AI:** là một mục riêng, đúng tiêu đề tạp chí quy định, đặt ngay trước References.
 - **Tài liệu tham khảo:** 33 tài liệu, đều được kiểm tra có thật ở Stage 4.5; có DOI khi tài liệu có DOI; tài liệu web có URL và ngày truy cập; định dạng APA 7.
+- **Định dạng Word:**
+  - Times New Roman 12 pt, giãn dòng đôi, lề 2,54 cm;
+  - số trang ở góc trên bên phải;
+  - bản thảo có đánh số dòng liên tục và căn đều hai bên;
+  - toàn bộ chữ màu đen, tiêu đề đậm;
+  - bảng dạng text sửa được, không kẻ dọc, chữ trong bảng giãn dòng đơn;
+  - tài liệu tham khảo thụt dòng treo theo APA 7;
+  - giả thuyết viết H₁–H₄;
+  - công thức là equation của Word;
+  - cả 6 file .docx đều qua bước kiểm tra cấu trúc OOXML (schema).
 - **Tái lập kết quả:** chạy lại từ dữ liệu gốc, cả 48 file kết quả đều khớp.
 
 ## 3. Danh sách file (kích thước, SHA-256 rút gọn)
 
 | File | Bytes | SHA-256 (16) |
 |---|---|---|
-| `01_Title_Page.docx` | 11,548 | `ac6e941a8e4fc4d4` |
-| `02_Manuscript_Anonymized.docx` | 550,130 | `c7f80fabb7a37e09` |
+| `01_Title_Page.docx` | 11,435 | `cd1170c8a8dec5b2` |
+| `02_Manuscript_Anonymized.docx` | 551,332 | `0cad8ea4b7bd8407` |
 | `03_Figures/Figure_1.pdf` | 22,369 | `35fae45813787fc7` |
 | `03_Figures/Figure_1.png` | 388,280 | `037f315456be9bc6` |
 | `03_Figures/Figure_2.pdf` | 10,560 | `5830be0f3b7f1f8b` |
 | `03_Figures/Figure_2.png` | 205,590 | `e37f1462c8e5df03` |
-| `04_Declaration_of_Competing_Interest.docx` | 10,706 | `0be07b6c86761613` |
-| `05_Replication_Package.zip` | 3,195,237 | `c16a066d66abd35f` |
-| `06_Cover_Letter.docx` | 11,547 | `3ea250a1a389be3e` |
-| `07_Manuscript_with_Author_Details.docx` | 550,849 | `b7c0b8c2d2519595` |
-| `08_Highlights.docx` | 10,706 | `1e1fc2c1846394d8` |
+| `04_Declaration_of_Competing_Interest.docx` | 10,588 | `97f7c142bd8e5bf7` |
+| `05_Replication_Package.zip` | 3,195,237 | `2896483b4ec6a413` |
+| `06_Cover_Letter.docx` | 11,427 | `1b22fcbdd8b3314c` |
+| `07_Manuscript_with_Author_Details.docx` | 552,011 | `bcd717c7a1d5da41` |
+| `08_Highlights.docx` | 10,589 | `83d50dafdc48944f` |
