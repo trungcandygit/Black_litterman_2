@@ -3,7 +3,7 @@
 # RR2 groups rebuilt from all public FTSE lists; named-but-excluded stocks removed from controls
 # RR3/RR4 portfolio (calendar-time) CAR tests under four benchmarks
 # SR1 pre-window sensitivity; SR2 wild cluster bootstrap; SR3 level-shift tests; RR6 selection windows by FTSE data cut-off
-src <- readLines("/Users/nguyenvantrung/Downloads/Python for Algorithmic Trading/NCKH/BAI FTSE2/FTSE2_new/code/analysis.R")
+src <- readLines("code/analysis.R")
 cut <- grep("^# -+ matched control sample", src)[1] - 1
 eval(parse(text = src[1:cut]))
 dir.create("output/revision", showWarnings = FALSE)

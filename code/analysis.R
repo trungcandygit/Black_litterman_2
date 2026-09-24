@@ -3,7 +3,7 @@
 suppressPackageStartupMessages({
   library(data.table); library(fixest); library(ggplot2); library(MatchIt)
 })
-setwd("/Users/nguyenvantrung/Downloads/Python for Algorithmic Trading/NCKH/BAI FTSE2/FTSE2_new")
+# Run from the project root (the folder that contains code/, data/ and output/).
 dir.create("output", showWarnings = FALSE)
 set.seed(20260924)
 

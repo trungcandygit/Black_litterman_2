@@ -1,7 +1,7 @@
 # FTSE2 revision round 2 (Stage 4'): analyses requested in ars/stage3prime_review/99_verification_review_report.md
 # R2-M1 ITT event study; R2-M2/M3 symmetric windows and CAR estimation windows excluding earlier event windows;
 # matched estimates with MatchIt weights; post-announcement drift test; sector-composition check; BSR venue check.
-eval(parse(text = readLines("/Users/nguyenvantrung/Downloads/Python for Algorithmic Trading/NCKH/BAI FTSE2/FTSE2_new/code/analysis_revision.R")))
+eval(parse(text = readLines("code/analysis_revision.R")))
 dir.create("output/revision2", showWarnings = FALSE)
 tidy2 <- function(m, tag) { ct <- coeftable(m); data.table(spec = tag, term = rownames(ct), est = ct[, 1], se = ct[, 2], p = ct[, ncol(ct)], n = nobs(m)) }
 

@@ -1,6 +1,6 @@
 # Figure 1 (publication labels) from saved event-study estimates
 suppressPackageStartupMessages({library(data.table); library(ggplot2)})
-setwd("/Users/nguyenvantrung/Downloads/Python for Algorithmic Trading/NCKH/BAI FTSE2/FTSE2_new")
+# Run from the project root (the folder that contains code/, data/ and output/).
 e <- fread("output/revision/t_event_study.csv")
 e <- rbind(e, data.table(outcome = rep(c("lamihud", "lval"), 2), group = rep(c("constituent", "named_excluded"), each = 2), relm = -1L, est = 0, se = 0), fill = TRUE)
 e[, group := factor(group, levels = c("constituent", "named_excluded"), labels = c("FTSE constituents (24)", "Named on FTSE eligible lists, not included (14)"))]

@@ -1,6 +1,6 @@
 # Extensions for revision round 2: price effects, volatility vs spreads, naming timing of near-miss stocks.
 suppressPackageStartupMessages({ library(data.table); library(fixest) })
-setwd("/Users/nguyenvantrung/Downloads/Python for Algorithmic Trading/NCKH/BAI FTSE2/FTSE2_new")
+# Run from the project root (the folder that contains code/, data/ and output/).
 # rebuild daily data exactly as in analysis.R (same filters)
 source_lines <- readLines("code/analysis.R")
 end_prep <- grep("^# ---------------------------------------------------------------- matched control sample", source_lines)[1] - 1
