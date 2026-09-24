@@ -1,0 +1,4740 @@
+{
+ "schema_version": "claim-registry/1.0",
+ "draft_raw_sha256": "3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c",
+ "claims": [
+  {
+   "claim_id": "C001",
+   "claim_text": "FTSE Russell reclassified Vietnam from frontier to secondary emerging status in four public steps between October 2025 and September 2026.",
+   "draft_span": {
+    "start_byte": 123,
+    "end_byte": 261
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C002",
+   "claim_text": "Using daily data on 366 stocks listed on the Ho Chi Minh City Stock Exchange, we trace liquidity and prices at each step.",
+   "draft_span": {
+    "start_byte": 262,
+    "end_byte": 383
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C003",
+   "claim_text": "Because FTSE chose the final constituents on mid-2026 data, we estimate effects both for the 24 eventual constituents and, as an intention-to-treat design, for the 27 stocks FTSE had screened as eligible on data from before the announcement.",
+   "draft_span": {
+    "start_byte": 384,
+    "end_byte": 625
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C004",
+   "claim_text": "Relative to never-named stocks, the Amihud illiquidity of the pre-announcement eligible group fell by 24%, 43% and 56% after the announcement, the confirmation and the constituent list; for the constituents the declines were 32%, 59% and 68%.",
+   "draft_span": {
+    "start_byte": 626,
+    "end_byte": 868
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C005",
+   "claim_text": "Constituents earned cumulative abnormal returns of 3.9% to 7.8% in the week around the announcement and 2.7% to 4.5% around the confirmation, significant under four benchmarks and a test that allows for the common event dates; the constituent list and the effective date of the first 10% index tranche produced no reliable price effect.",
+   "draft_span": {
+    "start_byte": 869,
+    "end_byte": 1205
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C006",
+   "claim_text": "Trading value surged at the rebalancing close for included stocks but not for stocks FTSE named and then excluded.",
+   "draft_span": {
+    "start_byte": 1206,
+    "end_byte": 1320
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C007",
+   "claim_text": "**JEL classification**: G12; G14; G15",
+   "draft_span": {
+    "start_byte": 1567,
+    "end_byte": 1604
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Abstract",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C008",
+   "claim_text": "Vietnam's market upgrade raised the liquidity of likely index stocks before the first index tranche took effect.",
+   "draft_span": {
+    "start_byte": 1626,
+    "end_byte": 1738
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C009",
+   "claim_text": "When FTSE Russell reclassified Vietnam from frontier to secondary emerging status, the Amihud (2002) illiquidity of the 27 stocks FTSE had screened as eligible on 2024 data fell relative to never-named stocks on the Ho Chi Minh City Stock Exchange (HOSE) by 43% after FTSE confirmed the upgrade in April 2026 and by 56% after it named the constituents in August 2026.",
+   "draft_span": {
+    "start_byte": 1739,
+    "end_byte": 2106
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [
+    "Amihud_2002"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C010",
+   "claim_text": "For the stocks FTSE finally included, the declines were 59% and 68%.",
+   "draft_span": {
+    "start_byte": 2107,
+    "end_byte": 2175
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C011",
+   "claim_text": "On the effective date, which carried the first 10% of the eventual index weight, prices did not move; trading value surged at the rebalancing close for included stocks only.",
+   "draft_span": {
+    "start_byte": 2176,
+    "end_byte": 2349
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C012",
+   "claim_text": "Market classification decides which benchmarks a country's stocks can enter, and benchmark weights steer international portfolio allocations (Raddatz et al., 2017).",
+   "draft_span": {
+    "start_byte": 2351,
+    "end_byte": 2515
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Raddatz_2017"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C013",
+   "claim_text": "Whether the promised liquidity reaches individual stocks, which stocks it reaches, and when, bears on issuers' cost of capital, because liquidity is priced in emerging markets (Bekaert et al., 2007).",
+   "draft_span": {
+    "start_byte": 2681,
+    "end_byte": 2880
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "Bekaert_2007"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C014",
+   "claim_text": "In developed markets, additions to the S&P 500 raise trading activity and narrow spreads persistently (Hegde & McDermott, 2003), and added firms with larger liquidity gains invest more (Becker-Blease & Paul, 2006).",
+   "draft_span": {
+    "start_byte": 2953,
+    "end_byte": 3167
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [
+    "Becker-Blease_2006",
+    "Hegde_2003"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C015",
+   "claim_text": "In frontier markets, index additions raise prices persistently, and the evidence points to institutional demand rather than trading pressure or liquidity changes as the cause (Biktimirov & Afego, 2026).",
+   "draft_span": {
+    "start_byte": 3168,
+    "end_byte": 3370
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "Biktimirov_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C016",
+   "claim_text": "Most studies of market reclassification also work with aggregate indices or country-level flows (e.g., Burnham et al., 2018; Raddatz et al., 2017), which cannot separate the stocks an upgrade targets from market-wide trends.",
+   "draft_span": {
+    "start_byte": 3371,
+    "end_byte": 3595
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Burnham_2018",
+    "Raddatz_2017"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C017",
+   "claim_text": "FTSE Russell disclosed the decision in four dated steps: the announcement on 7 October 2025, the confirmation on 7 April 2026, the constituent list on 21 August 2026, and the effective date of 21 September 2026.",
+   "draft_span": {
+    "start_byte": 3896,
+    "end_byte": 4107
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C018",
+   "claim_text": "And FTSE published lists of eligible stocks before it chose the constituents, including a preliminary list screened on data as of 31 December 2024, before the upgrade was announced.",
+   "draft_span": {
+    "start_byte": 4341,
+    "end_byte": 4522
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C019",
+   "claim_text": "The last point matters because FTSE selected the final constituents at its September 2026 review, whose liquidity screen uses data up to the last business day of June 2026 (FTSE Russell, n.d.), in the middle of the period we study.",
+   "draft_span": {
+    "start_byte": 4621,
+    "end_byte": 4852
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_n.d."
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C020",
+   "claim_text": "A stock whose trading grew after October 2025 for any reason was more likely to be selected, so a comparison of final constituents with other stocks could mistake selection for an upgrade effect.",
+   "draft_span": {
+    "start_byte": 4853,
+    "end_byte": 5048
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C021",
+   "claim_text": "We estimate difference-in-differences and event-study regressions on 35,752 stock-weeks and on daily returns from October 2024 to September 2026.",
+   "draft_span": {
+    "start_byte": 5240,
+    "end_byte": 5385
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C022",
+   "claim_text": "The main liquidity measure is the Amihud ratio computed on traded value in Vietnamese dong; we also report trading value, the Corwin and Schultz (2012) high-low spread, volatility and abnormal returns.",
+   "draft_span": {
+    "start_byte": 5386,
+    "end_byte": 5587
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Corwin_2012"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C023",
+   "claim_text": "For prices, we pre-specify the same three windows for every disclosure, test cumulative abnormal returns at the portfolio level, which accounts for the common event dates (Brown & Warner, 1985), and call an effect reliable only if it is significant at 5% under all four benchmarks we use.",
+   "draft_span": {
+    "start_byte": 5588,
+    "end_byte": 5876
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Brown_1985"
+   ],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C024",
+   "claim_text": "First, the illiquidity of the pre-announcement eligible group fell by 0.27, 0.55 and 0.81 log points across the announcement, confirmation and constituent-list windows, about two thirds of the 0.39, 0.89 and 1.13 log-point declines for the final constituents (Tables 2 and 3); the confirmation brought a discrete step beyond a gradual post-announcement drift, the constituent list did not.",
+   "draft_span": {
+    "start_byte": 6158,
+    "end_byte": 6547
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C025",
+   "claim_text": "Second, prices rose reliably in the announcement week and at the confirmation, and the confirmation gain persisted under three of four benchmarks; the constituent list and the effective date produced no reliable price effect (Table 4).",
+   "draft_span": {
+    "start_byte": 6548,
+    "end_byte": 6783
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C026",
+   "claim_text": "Third, trading value rose by 0.79 log points relative to never-named stocks at the rebalancing close, rising with FTSE size segment, while named-but-excluded stocks showed no surge (Tables 5 and 6).",
+   "draft_span": {
+    "start_byte": 6784,
+    "end_byte": 6982
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C027",
+   "claim_text": "Fourth, FTSE's eligibility lists partly followed rising liquidity: GEE, added in April 2026, had become more liquid during the data window FTSE screened (Table 9).",
+   "draft_span": {
+    "start_byte": 6983,
+    "end_byte": 7146
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C028",
+   "claim_text": "This last result limits causal readings of the constituent estimates and is why we report intention-to-treat effects beside them.",
+   "draft_span": {
+    "start_byte": 7147,
+    "end_byte": 7276
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C029",
+   "claim_text": "Section 2 describes the setting, reviews the literature and states the hypotheses.",
+   "draft_span": {
+    "start_byte": 7278,
+    "end_byte": 7360
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C030",
+   "claim_text": "Section 3 presents the data and design.",
+   "draft_span": {
+    "start_byte": 7361,
+    "end_byte": 7400
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C031",
+   "claim_text": "Section 4 reports the results, Section 5 the robustness checks and the selection evidence, and Section 6 concludes.",
+   "draft_span": {
+    "start_byte": 7401,
+    "end_byte": 7516
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "1. Introduction",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C032",
+   "claim_text": "FTSE Russell added Vietnam to its watch list for possible reclassification in September 2018 (FTSE Russell, 2018).",
+   "draft_span": {
+    "start_byte": 7622,
+    "end_byte": 7736
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2018"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C033",
+   "claim_text": "On 7 October 2025 it announced that Vietnam would move from frontier to secondary emerging status with effect from 21 September 2026, subject to an interim review in March 2026 (LSEG, 2025).",
+   "draft_span": {
+    "start_byte": 7737,
+    "end_byte": 7927
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "LSEG_2025"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C034",
+   "claim_text": "On 7 April 2026 it confirmed that Vietnam met all criteria for secondary emerging status and kept the effective date (LSEG, 2026).",
+   "draft_span": {
+    "start_byte": 7928,
+    "end_byte": 8058
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "LSEG_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C035",
+   "claim_text": "Inclusion is phased in four tranches that add 10%, 20%, 35% and 35% of the applicable index weight on 21 September 2026, 22 March 2027, 21 June 2027 and 20 September 2027 (FTSE Russell, 2026).",
+   "draft_span": {
+    "start_byte": 8059,
+    "end_byte": 8251
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C036",
+   "claim_text": "A preliminary list of 28 names appeared in November 2025 (Viet Nam News, 2025); it was screened on data as of 31 December 2024 (The Investor, 2026a).",
+   "draft_span": {
+    "start_byte": 8432,
+    "end_byte": 8581
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Nam News_2025",
+    "The Investor_2026a"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C037",
+   "claim_text": "A list of 32 names, screened on data as of 31 December 2025, followed in April 2026; it dropped Petrolimex (PLX) and added BID, FPT, NVL, GEE and BSR (The Investor, 2026b).",
+   "draft_span": {
+    "start_byte": 8582,
+    "end_byte": 8754
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "The Investor_2026b"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C038",
+   "claim_text": "On Friday 21 August 2026 FTSE published the September semi-annual review with 27 constituents, effective after the close of 18 September 2026 (FTSE Russell, 2026; VIR, 2026); under FTSE's ground rules the September review screens liquidity on data up to the last business day of June (FTSE Russell, n.d.).",
+   "draft_span": {
+    "start_byte": 8755,
+    "end_byte": 9060
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2026",
+    "FTSE Russell_n.d.",
+    "VIR_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C039",
+   "claim_text": "FTSE screened Vietnamese securities as non-constituents on its liquidity, minimum-size and foreign-headroom screens, using each security's investability weight, which reflects its free float and foreign-ownership limits, in the liquidity test (FTSE Russell, 2026).",
+   "draft_span": {
+    "start_byte": 9061,
+    "end_byte": 9325
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C040",
+   "claim_text": "The same investability weight scales a security's weight in the index, and each tranche applies a fraction of it: a security with a 49% investability weight enters at 4.9% after the first tranche (10% of 49%) and at 49% after the last.",
+   "draft_span": {
+    "start_byte": 9326,
+    "end_byte": 9561
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C041",
+   "claim_text": "A constituent's index weight, and the passive demand it attracts, therefore rises with its free-float market capitalization.",
+   "draft_span": {
+    "start_byte": 9562,
+    "end_byte": 9686
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C042",
+   "claim_text": "Appendix Table A.2 lists every stock by list.",
+   "draft_span": {
+    "start_byte": 9687,
+    "end_byte": 9732
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.1 FTSE Russell's four-step reclassification of Vietnam",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C043",
+   "claim_text": "The price-pressure channel works through the trades of index funds: additions lead index funds to buy, which produces temporary volume and price effects that reverse afterwards (Harris & Gurel, 1986).",
+   "draft_span": {
+    "start_byte": 10399,
+    "end_byte": 10599
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Harris_1986"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.2 Index inclusion and liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C044",
+   "claim_text": "Shleifer (1986) interprets excess returns that persist for at least ten days after inclusion as evidence that demand curves for stocks slope down, and Chen et al.",
+   "draft_span": {
+    "start_byte": 10688,
+    "end_byte": 10850
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Shleifer_1986"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.2 Index inclusion and liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C045",
+   "claim_text": "(2004) find asymmetric effects of additions and deletions that fit a gain in investor awareness.",
+   "draft_span": {
+    "start_byte": 10851,
+    "end_byte": 10947
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.2 Index inclusion and liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C046",
+   "claim_text": "Hegde and McDermott (2003) show that S&P 500 additions narrow spreads and raise trading activity persistently, which they attribute mainly to lower direct trading costs.",
+   "draft_span": {
+    "start_byte": 10948,
+    "end_byte": 11117
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [
+    "Hegde_2003"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.2 Index inclusion and liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C047",
+   "claim_text": "Becker-Blease and Paul (2006) find that firms added to the S&P 500 with larger liquidity improvements increase capital investment, whereas Gregoriou and Nguyen (2010) find that the liquidity lost after FTSE 100 deletions has no significant effect on investment.",
+   "draft_span": {
+    "start_byte": 11179,
+    "end_byte": 11440
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [
+    "Becker-Blease_2006",
+    "Gregoriou_2010"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.2 Index inclusion and liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C048",
+   "claim_text": "Liquidity co-moves across stocks (Chordia et al., 2000), so any study of these effects must separate stock-specific changes from market-wide liquidity shocks.",
+   "draft_span": {
+    "start_byte": 11441,
+    "end_byte": 11599
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Chordia_2000"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.2 Index inclusion and liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C049",
+   "claim_text": "Mutual funds allocate across countries with reference to benchmark weights, so a change in classification changes capital flows (Raddatz et al., 2017), and an MSCI index change even moved currency values through this channel (Hau et al., 2010).",
+   "draft_span": {
+    "start_byte": 11721,
+    "end_byte": 11965
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Hau_2010",
+    "Raddatz_2017"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C050",
+   "claim_text": "(2018) show that, when MSCI moves a country to a different index family, the country's stock prices move sharply in the direction implied by the new benchmark before the change is implemented and give back most of that move in the following year.",
+   "draft_span": {
+    "start_byte": 11981,
+    "end_byte": 12227
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C051",
+   "claim_text": "When MSCI included China A-shares in its Emerging Markets Index, the included stocks earned abnormal returns around the announcement, and market quality changed over the longer run through liquidity, turnover and price synchronization (Dong et al., 2023).",
+   "draft_span": {
+    "start_byte": 12228,
+    "end_byte": 12483
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Dong_2023"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C052",
+   "claim_text": "Biktimirov and Afego (2026) study changes to the FTSE Frontier 50 Index from 2008 to 2025.",
+   "draft_span": {
+    "start_byte": 12525,
+    "end_byte": 12615
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Biktimirov_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C053",
+   "claim_text": "(2007) show that local market liquidity predicts returns in emerging markets, where segmentation from global capital is only partial, and Stereńczak et al.",
+   "draft_span": {
+    "start_byte": 13281,
+    "end_byte": 13437
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C054",
+   "claim_text": "(2020) ask whether frontier-market investors demand compensation for illiquidity.",
+   "draft_span": {
+    "start_byte": 13438,
+    "end_byte": 13519
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C055",
+   "claim_text": "Frontier markets also differ from developed ones in who trades: when domestic retail investors dominate turnover, the arrival of benchmark-tracking foreign money is a larger change in the investor base than an S&P 500 addition.",
+   "draft_span": {
+    "start_byte": 13701,
+    "end_byte": 13928
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C056",
+   "claim_text": "(2021) study the returns and liquidity of financial-services stocks during the COVID-19 outbreak.",
+   "draft_span": {
+    "start_byte": 14082,
+    "end_byte": 14179
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C057",
+   "claim_text": "(2023), we did not locate a verified stock-level study of liquidity around the MSCI inclusion of China A-shares, so our comparison with that episode rests on their evidence alone.",
+   "draft_span": {
+    "start_byte": 14200,
+    "end_byte": 14379
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.3 Market reclassification and frontier markets",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C058",
+   "claim_text": "H1.",
+   "draft_span": {
+    "start_byte": 14617,
+    "end_byte": 14620
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.4 Hypotheses",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C059",
+   "claim_text": "H2.",
+   "draft_span": {
+    "start_byte": 14741,
+    "end_byte": 14744
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.4 Hypotheses",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C060",
+   "claim_text": "The liquidity gap widened at each later disclosure that resolved uncertainty about the upgrade and its constituents.",
+   "draft_span": {
+    "start_byte": 14745,
+    "end_byte": 14861
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.4 Hypotheses",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C061",
+   "claim_text": "H3.",
+   "draft_span": {
+    "start_byte": 14863,
+    "end_byte": 14866
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.4 Hypotheses",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C062",
+   "claim_text": "H4.",
+   "draft_span": {
+    "start_byte": 14991,
+    "end_byte": 14994
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.4 Hypotheses",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C063",
+   "claim_text": "The rebalancing session produced a trading-value surge for constituents, and not for excluded stocks, that scaled with index weight.",
+   "draft_span": {
+    "start_byte": 14995,
+    "end_byte": 15127
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "2.4 Hypotheses",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C064",
+   "claim_text": "We collect daily open, high, low and close prices and share volume for all 405 common stocks listed on HOSE as of 24 September 2026, from 1 October 2024 to 23 September 2026.",
+   "draft_span": {
+    "start_byte": 15189,
+    "end_byte": 15363
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C065",
+   "claim_text": "We keep stocks with at least 200 trading days before 7 October 2025, zero volume on fewer than 20% of those days, and a median price of at least VND 1,000, which leaves 366 stocks.",
+   "draft_span": {
+    "start_byte": 15437,
+    "end_byte": 15617
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C066",
+   "claim_text": "We sort them into three groups using FTSE's public lists (Appendix Table A.2).",
+   "draft_span": {
+    "start_byte": 15619,
+    "end_byte": 15697
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C067",
+   "claim_text": "Constituents are the 24 stocks of the final 27 with a full pre-period; TCX, VPL and VCK listed after October 2025.",
+   "draft_span": {
+    "start_byte": 15698,
+    "end_byte": 15812
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C068",
+   "claim_text": "Named-but-excluded stocks are the 14 HOSE stocks that appeared on the November 2025 or April 2026 eligible list but not among the constituents (BSR, DGC, DIG, DPM, DXG, EIB, FRT, GEE, KBC, KDC, KDH, PDR, PLX and SAB); the fifteenth such name, Tasco (HUT), trades on the Hanoi exchange.",
+   "draft_span": {
+    "start_byte": 15813,
+    "end_byte": 16098
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C069",
+   "claim_text": "The comparison group consists of the remaining 328 never-named stocks.",
+   "draft_span": {
+    "start_byte": 16099,
+    "end_byte": 16169
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C070",
+   "claim_text": "The intention-to-treat (ITT) group consists of the 27 HOSE stocks on the preliminary list screened on 2024 data, of which 15 later became constituents and 12 did not.",
+   "draft_span": {
+    "start_byte": 16170,
+    "end_byte": 16336
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C071",
+   "claim_text": "BSR, one of the named-but-excluded stocks, traded on the UPCoM market until 6 January 2025 and on HOSE from 17 January 2025 (VietnamPlus, 2024), so its pre-period series spans two venues; Section 5.2 reports results without it.",
+   "draft_span": {
+    "start_byte": 16338,
+    "end_byte": 16565
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "VietnamPlus_2024"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C072",
+   "claim_text": "Table 1 shows that constituents are much larger and more liquid than the average HOSE stock.",
+   "draft_span": {
+    "start_byte": 16567,
+    "end_byte": 16659
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C073",
+   "claim_text": "Before the announcement, constituents traded a mean of 6.82 log VND billion per week against 2.19 for never-named stocks, and their mean weekly Amihud ratio was about three orders of magnitude lower.",
+   "draft_span": {
+    "start_byte": 16660,
+    "end_byte": 16859
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C074",
+   "claim_text": "**Table 1.",
+   "draft_span": {
+    "start_byte": 17042,
+    "end_byte": 17052
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C075",
+   "claim_text": "Sample composition and pre-announcement characteristics (October 2024 to 6 October 2025)**",
+   "draft_span": {
+    "start_byte": 17053,
+    "end_byte": 17143
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C076",
+   "claim_text": "CS is the Corwin and Schultz (2012) spread.",
+   "draft_span": {
+    "start_byte": 17641,
+    "end_byte": 17684
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Corwin_2012"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.1 Sample and groups",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C077",
+   "claim_text": "Following Amihud (2002), who divides the absolute daily return by dollar volume, we define illiquidity for stock i on day t with the log return and traded value in VND as",
+   "draft_span": {
+    "start_byte": 17884,
+    "end_byte": 18054
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Following Amihud_2002"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C078",
+   "claim_text": "We compute the Corwin and Schultz (2012) spread from two-day high and low prices and set negative estimates to zero.",
+   "draft_span": {
+    "start_byte": 18253,
+    "end_byte": 18369
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Corwin_2012"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C079",
+   "claim_text": "We winsorize the daily Amihud ratio and spread cross-sectionally at the 1st and 99th percentiles of each day and aggregate to a stock-week panel, keeping weeks with at least three trading days and a positive Amihud ratio.",
+   "draft_span": {
+    "start_byte": 18370,
+    "end_byte": 18591
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C080",
+   "claim_text": "Kang and Zhang (2014) show that the Amihud ratio loses accuracy in emerging markets where many days have zero volume, and propose an adjustment; our filter removes stocks with zero volume on 20% or more of pre-period days, which limits this problem.",
+   "draft_span": {
+    "start_byte": 18812,
+    "end_byte": 19061
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Kang_2014"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C081",
+   "claim_text": "We use four benchmarks: the equal-weighted mean of the 328 never-named stocks; the mean of the matched control stocks described below, weighted by their matching weights; the equal-weighted mean of the 110 never-named stocks in the top tercile of pre-period trading value among never-named stocks; and a market model with intercept and slope estimated for each stock against the first benchmark.",
+   "draft_span": {
+    "start_byte": 19156,
+    "end_byte": 19551
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C082",
+   "claim_text": "Because every constituent shares the same event dates, abnormal returns are correlated across stocks, and cross-sectional t-statistics overstate precision.",
+   "draft_span": {
+    "start_byte": 19552,
+    "end_byte": 19707
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C083",
+   "claim_text": "We therefore test cumulative abnormal returns (CARs) on the equal-weighted portfolio of the group, which addresses cross-sectional dependence (Brown & Warner, 1985): the test statistic divides the portfolio CAR by the product of two terms, the standard deviation of daily portfolio abnormal returns in an estimation window and the square root of the number of days in the event window, which assumes independent daily abnormal returns.",
+   "draft_span": {
+    "start_byte": 19708,
+    "end_byte": 20143
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Brown_1985"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C084",
+   "claim_text": "The estimation window runs from trading day -130 to -11 before each event and excludes days -1 to +20 around every earlier disclosure, which removes 22 to 31 event days from the windows of the later disclosures.",
+   "draft_span": {
+    "start_byte": 20144,
+    "end_byte": 20355
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C085",
+   "claim_text": "We pre-specify three windows for every disclosure, [-1,+1], [-1,+5] and [0,+20], report all of them, and call a CAR reliable when it is significant at 5% under all four benchmarks.",
+   "draft_span": {
+    "start_byte": 20356,
+    "end_byte": 20536
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.2 Liquidity and return measures",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C086",
+   "claim_text": "where y_iw is a liquidity measure for stock i in week w, α_i and λ_w are stock and week fixed effects, and P_1, P_2 and P_3 indicate the announcement window (7 October 2025 to 6 April 2026), the confirmation window (7 April to 20 August 2026) and the list-and-rebalancing window (21 August to 23 September 2026).",
+   "draft_span": {
+    "start_byte": 20664,
+    "end_byte": 20978
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C087",
+   "claim_text": "FTSE does not state the hour at which it released the constituent list; the weekly assignment and the [-1,+1] event window, which spans 20, 21 and 24 August, both contain the first Vietnamese session after the release.",
+   "draft_span": {
+    "start_byte": 21149,
+    "end_byte": 21367
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C088",
+   "claim_text": "The ITT specification replaces Constituent_i with an indicator for the 27 stocks on the preliminary list, keeps every other stock in the sample, and in a variant restricts the comparison group to never-named, never-included stocks.",
+   "draft_span": {
+    "start_byte": 21566,
+    "end_byte": 21797
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C089",
+   "claim_text": "A third treatment, \"predicted constituents\", takes the 27 stocks with the highest pre-announcement trading value; 16 of them became constituents.",
+   "draft_span": {
+    "start_byte": 21798,
+    "end_byte": 21943
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C090",
+   "claim_text": "We re-estimate on a matched sample that pairs each constituent with three never-named stocks by nearest-neighbour propensity score, with replacement, on pre-period traded value, price and return volatility (Ho et al., 2007); because matching is with replacement, each control enters the estimates with its matching weight.",
+   "draft_span": {
+    "start_byte": 22061,
+    "end_byte": 22383
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "Ho_2007"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C091",
+   "claim_text": "Matching reduces the standardized mean difference in pre-period traded value from 4.06 to 0.04 (Appendix Table A.1).",
+   "draft_span": {
+    "start_byte": 22384,
+    "end_byte": 22500
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C092",
+   "claim_text": "We also replace week fixed effects with size-tercile-by-week fixed effects, add a constituent-specific linear trend, and estimate a monthly event study relative to September 2025 (Roth et al., 2023).",
+   "draft_span": {
+    "start_byte": 22501,
+    "end_byte": 22700
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Roth_2023"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C093",
+   "claim_text": "For inference with 24 treated stocks, we report a wild cluster bootstrap (Cameron et al., 2008) and randomization inference that draws 500 pseudo-treated groups of 24 stocks from the 85 never-named stocks whose pre-period trading value lies in the top tercile of all 366 sample stocks.",
+   "draft_span": {
+    "start_byte": 22701,
+    "end_byte": 22986
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Cameron_2008"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C094",
+   "claim_text": "Because FTSE treated all constituents at the same dates, the specification has no staggered adoption, and the two-way fixed effects estimator does not suffer the negative-weighting problem that motivates Callaway and Sant'Anna (2021).",
+   "draft_span": {
+    "start_byte": 22987,
+    "end_byte": 23221
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "Sant'Anna_2021"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C095",
+   "claim_text": "For the rebalancing session we estimate a daily regression of log traded value on stock and date fixed effects and constituent indicators for 18 September (the rebalancing session) and 21 September (the effective date), over the 32 sessions from 6 August to 23 September 2026.",
+   "draft_span": {
+    "start_byte": 23223,
+    "end_byte": 23499
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C096",
+   "claim_text": "The coefficients measure the surge on those sessions relative to the other sessions in the window.",
+   "draft_span": {
+    "start_byte": 23500,
+    "end_byte": 23598
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.3 Estimation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C097",
+   "claim_text": "Second, no anticipation before 7 October 2025.",
+   "draft_span": {
+    "start_byte": 24032,
+    "end_byte": 24078
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Identification assumptions",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C098",
+   "claim_text": "Vietnam sat on the FTSE watch list for seven years (FTSE Russell, 2018; LSEG, 2025), so investors could have bought likely constituents in advance of the decision.",
+   "draft_span": {
+    "start_byte": 24079,
+    "end_byte": 24242
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2018",
+    "LSEG_2025"
+   ],
+   "writer_anchors": [],
+   "paper_section": "3.4 Identification assumptions",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C099",
+   "claim_text": "If investors sold never-named stocks to buy constituents, the comparison group's liquidity would fall because of the treatment.",
+   "draft_span": {
+    "start_byte": 24397,
+    "end_byte": 24524
+   },
+   "claim_kinds": [
+    "causal",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Identification assumptions",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C100",
+   "claim_text": "This assumption fails for the final constituents by construction, because FTSE selected them on data as of 30 June 2026.",
+   "draft_span": {
+    "start_byte": 24771,
+    "end_byte": 24891
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Identification assumptions",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C101",
+   "claim_text": "The ITT group avoids the problem: FTSE screened it on data from 2024.",
+   "draft_span": {
+    "start_byte": 24892,
+    "end_byte": 24961
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Identification assumptions",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C102",
+   "claim_text": "ITT estimates measure the average effect on stocks that were likely constituents before the announcement, including the 12 listed stocks that FTSE did not include.",
+   "draft_span": {
+    "start_byte": 24962,
+    "end_byte": 25125
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Identification assumptions",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "methods_critical"
+   ]
+  },
+  {
+   "claim_id": "C103",
+   "claim_text": "Constituents' Amihud illiquidity fell relative to never-named stocks in each disclosure window, and the fall deepened at each stage.",
+   "draft_span": {
+    "start_byte": 25221,
+    "end_byte": 25353
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C104",
+   "claim_text": "Table 2, column 1, reports coefficients of -0.39, -0.89 and -1.13 log points, declines of 32%, 59% and 68%.",
+   "draft_span": {
+    "start_byte": 25354,
+    "end_byte": 25461
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C105",
+   "claim_text": "All three are significant at the 0.1% level, and the wild cluster bootstrap p-values are below 0.001.",
+   "draft_span": {
+    "start_byte": 25462,
+    "end_byte": 25563
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C106",
+   "claim_text": "The matched sample, with each control weighted by its matching weight, gives smaller declines: -0.23 (not significant), -0.47 and -0.69 log points in column 4 (declines of 21%, 38% and 50%).",
+   "draft_span": {
+    "start_byte": 25564,
+    "end_byte": 25754
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C107",
+   "claim_text": "The confirmation brought a discrete step: allowing constituents a linear drift after the announcement (-0.012 log points per week, p = 0.002), the confirmation-window coefficient still exceeds the announcement-window coefficient by 0.21 log points (standard error 0.10, p = 0.035).",
+   "draft_span": {
+    "start_byte": 25755,
+    "end_byte": 26036
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C108",
+   "claim_text": "The constituent list did not: its additional step is 0.10 (standard error 0.11, p = 0.40).",
+   "draft_span": {
+    "start_byte": 26037,
+    "end_byte": 26127
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C109",
+   "claim_text": "H2 therefore holds for the confirmation; after it, liquidity kept improving gradually rather than jumping at the list.",
+   "draft_span": {
+    "start_byte": 26128,
+    "end_byte": 26246
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C110",
+   "claim_text": "**Table 2.",
+   "draft_span": {
+    "start_byte": 26248,
+    "end_byte": 26258
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C111",
+   "claim_text": "*Notes*: Stock-week panel, October 2024 to September 2026; named-but-excluded stocks removed.",
+   "draft_span": {
+    "start_byte": 27239,
+    "end_byte": 27332
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C112",
+   "claim_text": "*, **, *** denote significance at 5%, 1% and 0.1%.",
+   "draft_span": {
+    "start_byte": 27384,
+    "end_byte": 27434
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C113",
+   "claim_text": "Columns 4 to 6 weight each of the 24 distinct matched controls by its matching weight (three controls per constituent, nearest-neighbour propensity score, with replacement).",
+   "draft_span": {
+    "start_byte": 27435,
+    "end_byte": 27608
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C114",
+   "claim_text": "The ITT estimates in Table 3 indicate that the decline is not an artefact of FTSE's later choice.",
+   "draft_span": {
+    "start_byte": 27689,
+    "end_byte": 27786
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C115",
+   "claim_text": "The 27 stocks screened on 2024 data became less illiquid by 0.27, 0.55 and 0.81 log points (declines of 24%, 43% and 56%), all significant at the 1% level or better, and slightly more when the comparison group excludes every named or included stock.",
+   "draft_span": {
+    "start_byte": 27787,
+    "end_byte": 28036
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C116",
+   "claim_text": "The ITT effects are 62% to 72% of the constituent effects, as expected when 12 of the 27 listed stocks were never included.",
+   "draft_span": {
+    "start_byte": 28037,
+    "end_byte": 28160
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C117",
+   "claim_text": "Splitting the ITT group shows where the gains concentrated: listed stocks that later entered the index gained 0.43, 0.87 and 1.12 log points, while listed stocks that did not enter gained 0.11, 0.25 and 0.53, the last significant at 5%.",
+   "draft_span": {
+    "start_byte": 28161,
+    "end_byte": 28397
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C118",
+   "claim_text": "The 27 predicted constituents, chosen by pre-period trading value alone, gained 0.25, 0.59 and 0.74 log points.",
+   "draft_span": {
+    "start_byte": 28398,
+    "end_byte": 28509
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C119",
+   "claim_text": "**Table 3.",
+   "draft_span": {
+    "start_byte": 28511,
+    "end_byte": 28521
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C120",
+   "claim_text": "*Notes*: The preliminary list is FTSE's November 2025 eligible list screened on data as of 31 December 2024 (27 HOSE stocks).",
+   "draft_span": {
+    "start_byte": 29413,
+    "end_byte": 29538
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C121",
+   "claim_text": "Figure 1 shows the timing.",
+   "draft_span": {
+    "start_byte": 29753,
+    "end_byte": 29779
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C122",
+   "claim_text": "They are positive in several months, most clearly three and two months before the announcement (0.33 and 0.23), so constituents were, if anything, becoming less liquid just before October 2025.",
+   "draft_span": {
+    "start_byte": 29898,
+    "end_byte": 30091
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C123",
+   "claim_text": "Because these deviations are precisely estimated, the joint test that all pre-period coefficients are zero rejects in the full sample (F = 6.66, p < 0.001); in the matched sample it does not reject at 5% (F = 1.72, p = 0.092).",
+   "draft_span": {
+    "start_byte": 30092,
+    "end_byte": 30318
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C124",
+   "claim_text": "The coefficient turns negative in October 2025 (-0.23), steps down after the confirmation (-0.62 in April 2026) and reaches -1.12 in August 2026.",
+   "draft_span": {
+    "start_byte": 30412,
+    "end_byte": 30557
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C125",
+   "claim_text": "Section 5 shows that the estimates do not depend on the months before the announcement.",
+   "draft_span": {
+    "start_byte": 30558,
+    "end_byte": 30645
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C126",
+   "claim_text": "The ITT group shows the same shape (Figure 2): coefficients of 0.26 and 0.22 three and two months before the announcement, which make its joint pre-trend test reject as well (F = 7.59, p < 0.001), followed by a decline from -0.22 in October 2025 to -0.78 in August 2026.",
+   "draft_span": {
+    "start_byte": 30647,
+    "end_byte": 30917
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C127",
+   "claim_text": "**Figure 1.",
+   "draft_span": {
+    "start_byte": 30919,
+    "end_byte": 30930
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C128",
+   "claim_text": "*Note*: Coefficients relative to September 2025 from one regression per outcome with stock and week fixed effects; the comparison group is never-named HOSE stocks. 95% confidence intervals from stock-clustered standard errors.",
+   "draft_span": {
+    "start_byte": 31057,
+    "end_byte": 31283
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C129",
+   "claim_text": "**Figure 2.",
+   "draft_span": {
+    "start_byte": 31442,
+    "end_byte": 31453
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C130",
+   "claim_text": "*Note*: log Amihud illiquidity of the 27 stocks on FTSE's preliminary eligible list (screened on 2024 data) relative to never-named, never-included HOSE stocks; coefficients relative to September 2025 from a regression with stock and week fixed effects; 95% confidence intervals from stock-clustered standard errors.",
+   "draft_span": {
+    "start_byte": 31565,
+    "end_byte": 31881
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C131",
+   "claim_text": "Constituents' trading value rose by 0.68, 1.03 and 1.19 log points relative to never-named stocks (Table 2, column 2), but it was already rising before October 2025 (Figure 1, panel B).",
+   "draft_span": {
+    "start_byte": 32015,
+    "end_byte": 32200
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C132",
+   "claim_text": "Trend-adjusted effects fall to 0.28, 0.39 and 0.43 log points (Section 5), and we describe the trading-value result as an association.",
+   "draft_span": {
+    "start_byte": 32201,
+    "end_byte": 32335
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C133",
+   "claim_text": "Randomization inference confirms that the declines are not what large HOSE stocks experienced in general.",
+   "draft_span": {
+    "start_byte": 32337,
+    "end_byte": 32442
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C134",
+   "claim_text": "None of 500 pseudo-groups of 24 stocks drawn from the 85 largest never-named stocks produced a coefficient as negative as the observed one in any window (one-sided p < 0.002).",
+   "draft_span": {
+    "start_byte": 32443,
+    "end_byte": 32618
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C135",
+   "claim_text": "The placebo distribution centres at -0.21 in the list window: large stocks became somewhat more liquid, by less than one fifth of the constituent effect.",
+   "draft_span": {
+    "start_byte": 32619,
+    "end_byte": 32772
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.1 Likely constituents became less illiquid from the announcement onward",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C136",
+   "claim_text": "Constituents earned abnormal returns in the week around the announcement and around the confirmation, and these are the only disclosure-window CARs that are reliable in the sense defined in Section 3.2.",
+   "draft_span": {
+    "start_byte": 33076,
+    "end_byte": 33278
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C137",
+   "claim_text": "Table 4, panel A, reports CARs with portfolio t-statistics for every pre-specified window.",
+   "draft_span": {
+    "start_byte": 33279,
+    "end_byte": 33369
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C138",
+   "claim_text": "Over days -1 to +5 around the announcement, constituents earned between 3.9% and 7.8% depending on the benchmark (t between 2.19 and 3.46).",
+   "draft_span": {
+    "start_byte": 33370,
+    "end_byte": 33509
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C139",
+   "claim_text": "Over days -1 to +1 around the confirmation, they earned between 2.7% and 4.5% (t between 2.22 and 2.93).",
+   "draft_span": {
+    "start_byte": 33510,
+    "end_byte": 33614
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C140",
+   "claim_text": "Around the constituent list, three-day CARs of 1.5% to 2.7% are not significant under any benchmark, and the [-1,+5] CARs of 2.0% to 4.4% are significant under two of four.",
+   "draft_span": {
+    "start_byte": 33743,
+    "end_byte": 33915
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C141",
+   "claim_text": "Around the effective date the three-day CAR lies between -0.5% and 0.9% and is never significant.",
+   "draft_span": {
+    "start_byte": 33916,
+    "end_byte": 34013
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C142",
+   "claim_text": "The last column shows why the portfolio test matters: cross-sectional t-statistics, which ignore the common event date, are up to 2.9 times larger.",
+   "draft_span": {
+    "start_byte": 34014,
+    "end_byte": 34161
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C143",
+   "claim_text": "**Table 4.",
+   "draft_span": {
+    "start_byte": 34163,
+    "end_byte": 34173
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C144",
+   "claim_text": "FTSE constituents (24): CAR (portfolio t) by benchmark",
+   "draft_span": {
+    "start_byte": 34255,
+    "end_byte": 34309
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C145",
+   "claim_text": "Intention-to-treat group (27 stocks on the preliminary list): CAR (portfolio t) by benchmark",
+   "draft_span": {
+    "start_byte": 35407,
+    "end_byte": 35499
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C146",
+   "claim_text": "Named-but-excluded stocks (14): CAR (portfolio t) by benchmark",
+   "draft_span": {
+    "start_byte": 36477,
+    "end_byte": 36539
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C147",
+   "claim_text": "Portfolio t = CAR / (σ × √L), where σ is the standard deviation of daily portfolio abnormal returns in the estimation window and L the number of days in the event window; the portfolio approach follows Brown and Warner (1985).",
+   "draft_span": {
+    "start_byte": 37576,
+    "end_byte": 37807
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Brown_1985"
+   ],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C148",
+   "claim_text": "The estimation window runs from trading day -130 to -11 and excludes days -1 to +20 around every earlier disclosure (120 days for the announcement, 98 for the confirmation and the constituent list, 89 for the effective date).",
+   "draft_span": {
+    "start_byte": 37808,
+    "end_byte": 38033
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C149",
+   "claim_text": "Windows are pre-specified and identical for every event; a CAR is called reliable when it is significant at 5% under all four benchmarks.",
+   "draft_span": {
+    "start_byte": 38204,
+    "end_byte": 38341
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C150",
+   "claim_text": "The effective-date windows beyond +1 are not reported because the data end on 23 September 2026.",
+   "draft_span": {
+    "start_byte": 38342,
+    "end_byte": 38438
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C151",
+   "claim_text": "Over days 0 to +20 the announcement CAR lies between -5.5% and 1.6% and is never significant, so the announcement gain faded within a month.",
+   "draft_span": {
+    "start_byte": 38591,
+    "end_byte": 38731
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C152",
+   "claim_text": "Over the same window after the confirmation, constituents earned 6.2% to 10.6%, significant under three of the four benchmarks (t between 1.94 and 3.03).",
+   "draft_span": {
+    "start_byte": 38732,
+    "end_byte": 38885
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C153",
+   "claim_text": "The fading after the first, conditional announcement is consistent with temporary price pressure (Harris & Gurel, 1986).",
+   "draft_span": {
+    "start_byte": 38886,
+    "end_byte": 39006
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Harris_1986"
+   ],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C154",
+   "claim_text": "The persistent gain after the confirmation, once the upgrade was certain and dated, is consistent with a lasting shift in demand for the stocks (Shleifer, 1986; Chen et al., 2004).",
+   "draft_span": {
+    "start_byte": 39007,
+    "end_byte": 39187
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Chen_2004",
+    "Shleifer_1986"
+   ],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C155",
+   "claim_text": "The pre-announcement eligible group earned 3.5% to 7.5% in the announcement week, significant under three of four benchmarks (the matched benchmark gives t = 1.91), so the announcement response does not depend on FTSE's later choice.",
+   "draft_span": {
+    "start_byte": 39301,
+    "end_byte": 39534
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C156",
+   "claim_text": "At the confirmation, its three-day CARs of 1.3% to 3.1% are significant under three of four benchmarks but not against matched controls.",
+   "draft_span": {
+    "start_byte": 39535,
+    "end_byte": 39671
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C157",
+   "claim_text": "The named-but-excluded stocks gained 2.3% to 6.2% in the announcement week (significant under three of four benchmarks) and nothing at the confirmation (-1.4% to 0.4%, never significant).",
+   "draft_span": {
+    "start_byte": 39672,
+    "end_byte": 39859
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C158",
+   "claim_text": "**Takeaway.** Prices rose in the announcement week and at the confirmation under every benchmark; the confirmation gain persisted under three of four; the constituent list and the first index tranche added no reliable price effect.",
+   "draft_span": {
+    "start_byte": 40246,
+    "end_byte": 40477
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.2 Prices moved at the announcement and the confirmation",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C159",
+   "claim_text": "On 18 September 2026, the last session before the upgrade took effect, constituents' log trading value rose 0.79 above its level on other sessions in the window, relative to never-named stocks (standard error 0.12, t = 6.84; Table 5, panel A), and 0.84 relative to matched controls.",
+   "draft_span": {
+    "start_byte": 40562,
+    "end_byte": 40844
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C160",
+   "claim_text": "On the effective date the excess fell to 0.20 (p = 0.057) and 0.34 (p = 0.007).",
+   "draft_span": {
+    "start_byte": 40845,
+    "end_byte": 40924
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C161",
+   "claim_text": "Named-but-excluded stocks show no surge on either day (-0.01 and -0.16).",
+   "draft_span": {
+    "start_byte": 40925,
+    "end_byte": 40997
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C162",
+   "claim_text": "Panel B shows mean abnormal trading value on 18 September against each stock's mean from 60 to 6 calendar days before the constituent list: constituents +0.76, matched controls -0.28, named-but-excluded stocks 0.00.",
+   "draft_span": {
+    "start_byte": 40998,
+    "end_byte": 41213
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C163",
+   "claim_text": "**Table 5.",
+   "draft_span": {
+    "start_byte": 41215,
+    "end_byte": 41225
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C164",
+   "claim_text": "Excess log trading value on the rebalancing and effective sessions, relative to other sessions from 6 August to 23 September 2026",
+   "draft_span": {
+    "start_byte": 41279,
+    "end_byte": 41408
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C165",
+   "claim_text": "Mean abnormal log trading value on 18 September 2026",
+   "draft_span": {
+    "start_byte": 41798,
+    "end_byte": 41850
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C166",
+   "claim_text": "Panel B: abnormal = daily log trading value minus the stock's mean from 60 to 6 calendar days before 21 August 2026.",
+   "draft_span": {
+    "start_byte": 42124,
+    "end_byte": 42240
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C167",
+   "claim_text": "An event regression that uses the last session before 21 August 2026 as the reference gives 0.62 (t = 3.54) for 18 September, but that reference session was unusually active and several earlier sessions then show significant negative coefficients; we therefore compare each session with the average of the window.",
+   "draft_span": {
+    "start_byte": 42321,
+    "end_byte": 42634
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C168",
+   "claim_text": "This surge matches the trading that funds tracking FTSE benchmarks had to do: they bought the first tranche of constituents at the closing price of 18 September (FTSE Russell, 2026; VIR, 2026), and nothing obliged them to trade the stocks FTSE had named and passed over.",
+   "draft_span": {
+    "start_byte": 42636,
+    "end_byte": 42906
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2026",
+    "VIR_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C169",
+   "claim_text": "Our data do not identify who traded, so we infer index demand from the timing and from the absence of a surge for named-but-excluded stocks.",
+   "draft_span": {
+    "start_byte": 42907,
+    "end_byte": 43047
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C170",
+   "claim_text": "That absence is a direct falsification test: a general rise in trading among large or eligible stocks would have shown up there.",
+   "draft_span": {
+    "start_byte": 43048,
+    "end_byte": 43176
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C171",
+   "claim_text": "The surge moved volume but not prices: the three-day CAR around the effective date is between -0.5% and 0.9% under every benchmark (Table 4), consistent with other investors having bought earlier and supplying the stocks at the close.",
+   "draft_span": {
+    "start_byte": 43177,
+    "end_byte": 43411
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C172",
+   "claim_text": "Because the first tranche carried only 10% of the eventual index weight, this evidence concerns the first tranche; the three later tranches in 2027 may carry larger demand.",
+   "draft_span": {
+    "start_byte": 43412,
+    "end_byte": 43584
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.3 The rebalancing session produced a trading surge only for included stocks",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C173",
+   "claim_text": "FTSE assigned the constituents to size segments on 21 August 2026: three large-capitalization stocks (VCB, VIC, VHM), three mid-capitalization stocks (BID, VPB, HPG) and 18 small-capitalization stocks among those in our sample (VIR, 2026).",
+   "draft_span": {
+    "start_byte": 43816,
+    "end_byte": 44055
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "VIR_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C174",
+   "claim_text": "Index weights, and therefore passive purchases, rise with capitalization, so the price-pressure channel predicts a larger rebalancing surge for large-capitalization constituents.",
+   "draft_span": {
+    "start_byte": 44056,
+    "end_byte": 44234
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C175",
+   "claim_text": "Foreign allocations follow benchmark weights (Raddatz et al., 2017), which points the same way for the persistent effect.",
+   "draft_span": {
+    "start_byte": 44235,
+    "end_byte": 44356
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Raddatz_2017"
+   ],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C176",
+   "claim_text": "Table 6 splits the constituent coefficients by segment.",
+   "draft_span": {
+    "start_byte": 44358,
+    "end_byte": 44413
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C177",
+   "claim_text": "The three large-capitalization stocks show the largest fall in illiquidity: -0.61, -1.35 and -2.20 log points across the three windows, compared with -0.20, -0.63 and -0.82 for mid-capitalization stocks and -0.39, -0.85 and -1.00 for small-capitalization stocks.",
+   "draft_span": {
+    "start_byte": 44414,
+    "end_byte": 44676
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C178",
+   "claim_text": "The rebalancing surge rises monotonically with segment: abnormal log trading value on 18 September 2026 averaged 1.23 for large-capitalization constituents, 0.98 for mid-capitalization and 0.65 for small-capitalization constituents.",
+   "draft_span": {
+    "start_byte": 44915,
+    "end_byte": 45147
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C179",
+   "claim_text": "This ordering is consistent with H4, although the two upper segments contain three stocks each.",
+   "draft_span": {
+    "start_byte": 45148,
+    "end_byte": 45243
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C180",
+   "claim_text": "**Table 6.",
+   "draft_span": {
+    "start_byte": 45245,
+    "end_byte": 45255
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C181",
+   "claim_text": "The last row reports abnormal log trading value relative to each stock's mean from 60 to 6 calendar days before the constituent list.",
+   "draft_span": {
+    "start_byte": 46020,
+    "end_byte": 46153
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C182",
+   "claim_text": "**Takeaway.** The rebalancing trade was largest for the constituents with the largest index weights; the liquidity gain is largest for the three largest stocks but does not rise monotonically across segments, and every segment gained before the first tranche took effect.",
+   "draft_span": {
+    "start_byte": 46331,
+    "end_byte": 46602
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.4 The rebalancing surge rises with FTSE size segment",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C183",
+   "claim_text": "Their weekly log absolute return rose by 0.34 and 0.21 log points in the announcement and confirmation windows relative to never-named stocks, both significant at 0.1%; the list-window coefficient of 0.14 is not significant (Table 7, column 1).",
+   "draft_span": {
+    "start_byte": 46731,
+    "end_byte": 46975
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C184",
+   "claim_text": "Because the Amihud ratio divides absolute returns by traded value, rising volatility pushes the ratio up; the measured decline in illiquidity therefore understates the gain in trading capacity.",
+   "draft_span": {
+    "start_byte": 46976,
+    "end_byte": 47169
+   },
+   "claim_kinds": [
+    "causal",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C185",
+   "claim_text": "Controlling for the weekly log absolute return enlarges the constituent Amihud coefficients to -0.57, -1.00 and -1.20 (column 3).",
+   "draft_span": {
+    "start_byte": 47170,
+    "end_byte": 47299
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C186",
+   "claim_text": "Volatility also explains part of the spread result.",
+   "draft_span": {
+    "start_byte": 47301,
+    "end_byte": 47352
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C187",
+   "claim_text": "The Corwin and Schultz (2012) spread did not narrow: it rose by 0.09 to 0.13 percentage points for constituents (Table 2, column 3), and by 0.11 to 0.14 points in the weighted matched sample, from a pre-period mean of 0.57%.",
+   "draft_span": {
+    "start_byte": 47353,
+    "end_byte": 47577
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C188",
+   "claim_text": "With the volatility control, the increase shrinks to 0.06, 0.08 and 0.12 points (Table 7, column 2).",
+   "draft_span": {
+    "start_byte": 47578,
+    "end_byte": 47678
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C189",
+   "claim_text": "The high-low estimator loads on intraday price ranges, so the residual rise may reflect volatility that the weekly control misses rather than a higher cost of trading.",
+   "draft_span": {
+    "start_byte": 47679,
+    "end_byte": 47846
+   },
+   "claim_kinds": [
+    "causal",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C190",
+   "claim_text": "**Table 7.",
+   "draft_span": {
+    "start_byte": 47990,
+    "end_byte": 48000
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C191",
+   "claim_text": "**Takeaway.** Rising trading value, which more than offset rising volatility, drove the fall in illiquidity.",
+   "draft_span": {
+    "start_byte": 48747,
+    "end_byte": 48855
+   },
+   "claim_kinds": [
+    "causal",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "4.5 Volatility rose, so the illiquidity decline is conservative",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C192",
+   "claim_text": "Table 8 collects the robustness checks for the constituent Amihud result.",
+   "draft_span": {
+    "start_byte": 48933,
+    "end_byte": 49006
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C193",
+   "claim_text": "**Table 8.",
+   "draft_span": {
+    "start_byte": 49085,
+    "end_byte": 49095
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C194",
+   "claim_text": "Wild cluster bootstrap: restricted residuals, Rademacher weights (Cameron et al., 2008).",
+   "draft_span": {
+    "start_byte": 51149,
+    "end_byte": 51237
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Cameron_2008"
+   ],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C195",
+   "claim_text": "The drift row adds a constituent-specific linear trend in weeks since the announcement (-0.012 per week, p = 0.002).",
+   "draft_span": {
+    "start_byte": 51238,
+    "end_byte": 51354
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C196",
+   "claim_text": "**Pre-announcement months.** The pre-period deviations in Figure 1 are positive, so they work against the estimated declines rather than for them.",
+   "draft_span": {
+    "start_byte": 51581,
+    "end_byte": 51727
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C197",
+   "claim_text": "Dropping July and August 2025, the two months with the largest positive deviations, changes the estimates to -0.35, -0.85 and -1.09.",
+   "draft_span": {
+    "start_byte": 51728,
+    "end_byte": 51860
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C198",
+   "claim_text": "A constituent-specific linear trend fitted over the full sample leaves the estimates almost unchanged, with a trend coefficient of -0.0002 per week (standard error 0.003).",
+   "draft_span": {
+    "start_byte": 51861,
+    "end_byte": 52032
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C199",
+   "claim_text": "The most demanding specification, the weighted matched sample with a trend, gives -0.20, -0.42 and -0.64; the confirmation and list estimates are significant at 5%, the announcement estimate is not.",
+   "draft_span": {
+    "start_byte": 52033,
+    "end_byte": 52231
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C200",
+   "claim_text": "The announcement coefficient rises slightly (-0.42), the later two shrink by 12% and 13%, and all remain significant at 0.1%.",
+   "draft_span": {
+    "start_byte": 52550,
+    "end_byte": 52675
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C201",
+   "claim_text": "The predicted-constituent estimates in Table 3, which use only pre-period size, point the same way.",
+   "draft_span": {
+    "start_byte": 52676,
+    "end_byte": 52775
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C202",
+   "claim_text": "**Trading value.** Trading value behaves differently from the Amihud ratio: a constituent-specific linear trend fitted over the full sample is strong (0.010 log points per week, p < 0.001), and trend-adjusted effects fall to 0.28, 0.39 and 0.43 log points, the last significant only at 10%.",
+   "draft_span": {
+    "start_byte": 52777,
+    "end_byte": 53067
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C203",
+   "claim_text": "**Inference and influential stocks.** Two-way clustering by stock and week widens standard errors by less than 17%.",
+   "draft_span": {
+    "start_byte": 53125,
+    "end_byte": 53240
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C204",
+   "claim_text": "Excluding the three Vingroup-family stocks changes the estimates by at most 11%.",
+   "draft_span": {
+    "start_byte": 53241,
+    "end_byte": 53321
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C205",
+   "claim_text": "In the unweighted matched sample, with 48 clusters, the wild cluster bootstrap p-values remain at or below 0.003.",
+   "draft_span": {
+    "start_byte": 53322,
+    "end_byte": 53435
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C206",
+   "claim_text": "**Sector composition and the pre-funding reform.** Banks and securities firms make up 13 of the 24 constituents and 8 of the 27 stocks in the ITT group, and their trading co-moves with market turnover.",
+   "draft_span": {
+    "start_byte": 53437,
+    "end_byte": 53638
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C207",
+   "claim_text": "Dropping them leaves the results intact: the remaining 11 constituents show declines of 0.44, 1.04 and 1.40 log points, and the remaining 19 ITT stocks 0.23, 0.52 and 0.83 (Table 8).",
+   "draft_span": {
+    "start_byte": 53639,
+    "end_byte": 53821
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C208",
+   "claim_text": "LSEG (2026) lists the removal of pre-funding requirements for foreign institutional investors among the reforms behind Vietnam's upgrade, and that reform applies to every stock foreign investors can buy.",
+   "draft_span": {
+    "start_byte": 53822,
+    "end_byte": 54025
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "LSEG_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C209",
+   "claim_text": "The 85 large never-named stocks in the randomization pool, also open to foreign investors within ownership limits, became more liquid by about one fifth as much as constituents in the list window (-0.21 against -1.13).",
+   "draft_span": {
+    "start_byte": 54026,
+    "end_byte": 54244
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C210",
+   "claim_text": "**Placebo.** A fake event on 7 April 2025, estimated on pre-announcement data only, gives a coefficient of 0.04 (standard error 0.10).",
+   "draft_span": {
+    "start_byte": 54364,
+    "end_byte": 54498
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.1 Robustness of the liquidity result",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C211",
+   "claim_text": "The 14 stocks FTSE named as eligible but did not include allow a direct test of selection.",
+   "draft_span": {
+    "start_byte": 54566,
+    "end_byte": 54656
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C212",
+   "claim_text": "As a group they became less illiquid than never-named stocks by 0.29, 0.55 and 0.87 log points across the three windows, 62% to 77% of the constituent effects, with the first estimate significant only at 10% (Table 9, panel A).",
+   "draft_span": {
+    "start_byte": 54657,
+    "end_byte": 54884
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C213",
+   "claim_text": "Excluding BSR, whose pre-period spans two trading venues, the group estimates are -0.23, -0.46 and -0.73, with only the last significant at 5%.",
+   "draft_span": {
+    "start_byte": 55016,
+    "end_byte": 55159
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C214",
+   "claim_text": "FTSE screened the April 2026 list on data as of 31 December 2025, which covers the first twelve weeks after the announcement.",
+   "draft_span": {
+    "start_byte": 55161,
+    "end_byte": 55286
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C215",
+   "claim_text": "GEE entered the list in April; relative to never-named stocks, its illiquidity fell by 1.83 log points between the announcement and 31 December 2025, inside the data window FTSE screened, and by 1.59 by April 2026 (Table 9, panel C).",
+   "draft_span": {
+    "start_byte": 55287,
+    "end_byte": 55520
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C216",
+   "claim_text": "BSR, the other April addition, improved mostly after the cut-off (-0.39 by 31 December, -1.68 by April), and it moved from UPCoM to HOSE only in January 2025, after the data date of the November list (VietnamPlus, 2024), which gives a reason other than liquidity for its later addition.",
+   "draft_span": {
+    "start_byte": 55521,
+    "end_byte": 55807
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "VietnamPlus_2024"
+   ],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C217",
+   "claim_text": "The twelve stocks named in November 2025 changed little: -0.02, -0.19 and -0.30 log points across the three windows, none significant at 5%.",
+   "draft_span": {
+    "start_byte": 55808,
+    "end_byte": 55948
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C218",
+   "claim_text": "At the stock level, PLX, which FTSE dropped in April, and DPM were the only November names to fall by more than 0.5 log points by the April list.",
+   "draft_span": {
+    "start_byte": 55949,
+    "end_byte": 56094
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C219",
+   "claim_text": "**Table 9.",
+   "draft_span": {
+    "start_byte": 56096,
+    "end_byte": 56106
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C220",
+   "claim_text": "Named-but-excluded (14) and constituents vs never-named stocks",
+   "draft_span": {
+    "start_byte": 56180,
+    "end_byte": 56242
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C221",
+   "claim_text": "Panel B. log Amihud by FTSE screening window (W1: 7 Oct to 31 Dec 2025, inside the data FTSE screened for the April list; W2: 1 Jan to 6 Apr 2026; W3: from 7 Apr 2026)",
+   "draft_span": {
+    "start_byte": 56590,
+    "end_byte": 56757
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C222",
+   "claim_text": "*Notes*: Panels A and B: one regression each with stock and week fixed effects on all 366 stocks; standard errors clustered by stock.",
+   "draft_span": {
+    "start_byte": 57827,
+    "end_byte": 57960
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C223",
+   "claim_text": "List membership follows Viet Nam News (2025) and The Investor (2026a, 2026b).",
+   "draft_span": {
+    "start_byte": 57983,
+    "end_byte": 58060
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Nam News_2025",
+    "The Investor_2026a"
+   ],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C224",
+   "claim_text": "The two-stock row reports point estimates only, because clustered inference is not informative with two stocks.",
+   "draft_span": {
+    "start_byte": 58141,
+    "end_byte": 58252
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C225",
+   "claim_text": "Because named-but-excluded stocks enter with their own window interactions, the constituent coefficients in panel A equal those in Table 2 to three decimals.",
+   "draft_span": {
+    "start_byte": 58253,
+    "end_byte": 58410
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal"
+   ]
+  },
+  {
+   "claim_id": "C226",
+   "claim_text": "FTSE's screens rest on investability, and at least one stock became eligible after its liquidity rose during the screening window.",
+   "draft_span": {
+    "start_byte": 58474,
+    "end_byte": 58604
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL"
+  },
+  {
+   "claim_id": "C227",
+   "claim_text": "The same mechanism can operate among the final constituents, which FTSE chose on June 2026 data, and selection on those data could also favour stocks with large gains on disclosure dates.",
+   "draft_span": {
+    "start_byte": 58605,
+    "end_byte": 58792
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C228",
+   "claim_text": "The ITT group is not exposed to this selection: fixed on 2024 data, it shows illiquidity declines of 24% to 56% and an announcement-week price response significant under three of four benchmarks.",
+   "draft_span": {
+    "start_byte": 58793,
+    "end_byte": 58988
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.2 Selection: FTSE's lists partly followed rising liquidity",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C229",
+   "claim_text": "Vietnam's reclassification brought liquidity and price gains to likely index stocks at FTSE's disclosures, before the first index tranche took effect.",
+   "draft_span": {
+    "start_byte": 59444,
+    "end_byte": 59594
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C230",
+   "claim_text": "Stocks that FTSE had screened as eligible on data from before the announcement became 24% less illiquid within months and 56% less illiquid by the constituent list; the stocks FTSE finally included became 32% and 68% less illiquid.",
+   "draft_span": {
+    "start_byte": 59595,
+    "end_byte": 59826
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C231",
+   "claim_text": "Constituents' prices rose by 3.9% to 7.8% in the announcement week and by 2.7% to 4.5% around the confirmation, and only the confirmation gain lasted, under three of four benchmarks.",
+   "draft_span": {
+    "start_byte": 59916,
+    "end_byte": 60098
+   },
+   "claim_kinds": [
+    "quantitative",
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C232",
+   "claim_text": "The first index tranche added a trading surge at the rebalancing close, largest for the largest constituents and absent for excluded stocks, and no price change.",
+   "draft_span": {
+    "start_byte": 60099,
+    "end_byte": 60260
+   },
+   "claim_kinds": [
+    "trend"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C233",
+   "claim_text": "This reading fits developed-market studies that find lasting liquidity gains after inclusion (Hegde & McDermott, 2003) and frontier-market evidence that index effects reflect investor demand rather than liquidity alone (Biktimirov & Afego, 2026).",
+   "draft_span": {
+    "start_byte": 60498,
+    "end_byte": 60744
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [
+    "Biktimirov_2026",
+    "Hegde_2003"
+   ],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C234",
+   "claim_text": "A frontier-to-emerging upgrade differs from a routine reconstitution because it changes which benchmark family can hold the stocks, and the information arrives in advance.",
+   "draft_span": {
+    "start_byte": 60824,
+    "end_byte": 60995
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C235",
+   "claim_text": "The liquidity gain was largest for the three large-capitalization stocks that dominate the index, which is consistent with investors weighting their attention by expected index weight; at the country level, benchmark weights shape fund allocations (Raddatz et al., 2017).",
+   "draft_span": {
+    "start_byte": 61477,
+    "end_byte": 61748
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "Raddatz_2017"
+   ],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C236",
+   "claim_text": "The stock-level design shows that the 2025 and 2026 decisions mattered for the stocks they concerned, while the broad market, which contains hundreds of stocks outside FTSE's screens, moved much less.",
+   "draft_span": {
+    "start_byte": 62084,
+    "end_byte": 62284
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C237",
+   "claim_text": "FTSE's eligibility lists partly followed rising liquidity, and the final constituents were chosen on data from mid-2026.",
+   "draft_span": {
+    "start_byte": 62581,
+    "end_byte": 62701
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C238",
+   "claim_text": "For regulators, the liquidity and price response arrived with credible, dated announcements rather than with index trading, which is consistent with clear and early communication of reclassification steps bringing the response forward; one event cannot show that earlier communication causes larger gains.",
+   "draft_span": {
+    "start_byte": 62937,
+    "end_byte": 63242
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C239",
+   "claim_text": "The sample uses stocks listed on 24 September 2026, which omits stocks delisted during the period.",
+   "draft_span": {
+    "start_byte": 63485,
+    "end_byte": 63583
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C240",
+   "claim_text": "Only three trading days follow the effective date, and the first tranche carried 10% of the eventual weight, so the analysis cannot evaluate the three tranches of 2027.",
+   "draft_span": {
+    "start_byte": 63584,
+    "end_byte": 63752
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C241",
+   "claim_text": "The price data do not identify investor type, so we cannot observe whether foreign investors drove the gains.",
+   "draft_span": {
+    "start_byte": 63753,
+    "end_byte": 63862
+   },
+   "claim_kinds": [
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C242",
+   "claim_text": "Extending the panel through September 2027 and adding foreign-flow data would test whether the constituent effects persist through the remaining tranches and whether foreign trading drives them.",
+   "draft_span": {
+    "start_byte": 64200,
+    "end_byte": 64394
+   },
+   "claim_kinds": [
+    "quantitative",
+    "causal"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "6. Discussion and conclusion",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical",
+    "causal",
+    "headline_conclusion"
+   ]
+  },
+  {
+   "claim_id": "C243",
+   "claim_text": "**Table A.1.",
+   "draft_span": {
+    "start_byte": 64409,
+    "end_byte": 64421
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C244",
+   "claim_text": "*Notes*: Nearest-neighbour matching on a logistic propensity score, three never-named controls per constituent, with replacement; 24 distinct control stocks.",
+   "draft_span": {
+    "start_byte": 64899,
+    "end_byte": 65056
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C245",
+   "claim_text": "Pre-period log trading value is the mean daily log(1 + traded value, VND billion).",
+   "draft_span": {
+    "start_byte": 65057,
+    "end_byte": 65139
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C246",
+   "claim_text": "Log price and volatility remain imbalanced above 0.10, which is why we pair the matched estimates with the size-by-week and trend specifications.",
+   "draft_span": {
+    "start_byte": 65181,
+    "end_byte": 65326
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C247",
+   "claim_text": "Table 2, columns 4 to 6, and the matched benchmark in Table 4 use the matching weights.",
+   "draft_span": {
+    "start_byte": 65407,
+    "end_byte": 65494
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C248",
+   "claim_text": "**Table A.2.",
+   "draft_span": {
+    "start_byte": 65496,
+    "end_byte": 65508
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C249",
+   "claim_text": "*Sources*: Viet Nam News (2025); The Investor (2026a, 2026b); FTSE Russell (2026); VIR (2026).",
+   "draft_span": {
+    "start_byte": 66147,
+    "end_byte": 66241
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "FTSE Russell_2026",
+    "Nam News_2025",
+    "The Investor_2026a",
+    "VIR_2026"
+   ],
+   "writer_anchors": [],
+   "paper_section": "Appendix",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C250",
+   "claim_text": "The downloaded daily files and the R code that reproduces all tables and figures (code/analysis.R, code/analysis_extensions.R, code/analysis_revision.R, code/analysis_revision2.R, code/figure1.R, code/figure2.R; R 4.3.3, fixest 0.14.2, MatchIt 4.5.5, data.table 1.14.10) are available from the corresponding author and will be deposited in a public repository on acceptance.",
+   "draft_span": {
+    "start_byte": 66383,
+    "end_byte": 66757
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Declarations",
+   "selection_tier": "ALL",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  }
+ ]
+}

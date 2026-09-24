@@ -4,7 +4,7 @@
     "academic-pipeline": "3.22.1"
   },
   "pipeline_state": "in_progress",
-  "current_stage": "4.5",
+  "current_stage": "5",
   "entry_point": "1",
   "working_folder": "BAI FTSE2/FTSE2_new",
   "materials_at_intake": [
@@ -135,8 +135,22 @@
     "4.5": {
       "name": "FINAL INTEGRITY",
       "skill": "integrity_verification_agent",
-      "status": "pending",
-      "outputs": []
+      "status": "completed",
+      "outputs": [
+        "ars/stage4_5_integrity/integrity_report_stage4_5.md",
+        "ars/stage4_5_integrity/failure_mode_checklist_stage4_5.md",
+        "ars/stage4_5_integrity/e6_dispositions.md",
+        "ars/stage4_5_integrity/claim_registry_v7.json",
+        "ars/stage4_5_integrity/claim_registry_coverage_v7.json"
+      ],
+      "verdict": "PASS after 3 correction rounds (FAIL -> FAIL -> PASS WITH NOTES -> PASS)",
+      "report": "ars/stage4_5_integrity/integrity_report_stage4_5.md",
+      "accepted_draft": "ars/stage4_5_integrity/correction_round3/manuscript_v7.clean.md",
+      "accepted_draft_sha256": "3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c",
+      "reproduction": "48/48 output CSVs reproduced from data/raw (ars/stage4_5_integrity/repro/REPRO_REPORT.md)",
+      "failure_modes": "all CLEAR",
+      "e6": "8 rows disposed (ars/stage4_5_integrity/e6_dispositions.md)",
+      "tool_notes": "A0 APIs blocked; WebSearch-based verification; tectonic bundle host blocked"
     },
     "5": {
       "name": "FINALIZE",
@@ -152,7 +166,7 @@
     }
   },
   "revision_loops": 0,
-  "round_trips": 15,
+  "round_trips": 19,
   "collaboration_depth_history": [],
   "target_venue": {
     "name": "Finance Research Open (Elsevier, ISSN 3050-7006)",

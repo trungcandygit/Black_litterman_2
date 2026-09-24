@@ -1,0 +1,40 @@
+{
+ "source_draft_sha256": "97c9bac6c5815d82d08295b1bcdb972fbeacbfdb95fc615d1425085664449efd",
+ "abstract_words": 210,
+ "abstract_le_250": true,
+ "abstract_has_no_references": true,
+ "keywords": [
+  "market reclassification",
+  "index effect",
+  "stock liquidity",
+  "frontier markets",
+  "intention to treat",
+  "Vietnam"
+ ],
+ "keywords_1_to_7": true,
+ "keywords_no_and_of": true,
+ "body_words_prose_and_tables": 9815,
+ "highlights": [
+  [
+   "Vietnam's FTSE upgrade cut illiquidity of likely index stocks by 24% to 56%",
+   75
+  ],
+  [
+   "Liquidity and prices moved at FTSE's disclosures, before the first index tranche",
+   80
+  ],
+  [
+   "Prices rose at the announcement and confirmation, not at the list or effective date",
+   83
+  ],
+  [
+   "Rebalancing-day trading surged for included stocks only, with no price change",
+   77
+  ],
+  [
+   "Intention-to-treat on a pre-announcement list separates effects from selection",
+   78
+  ]
+ ],
+ "highlights_3_to_5_le_85": true
+}

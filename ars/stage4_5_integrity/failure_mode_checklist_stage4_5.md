@@ -1,6 +1,6 @@
 # AI Research Failure Mode Checklist, Stage 4.5 (ARS v3.22.1, references/ai_research_failure_modes.md)
 
-Run ftse2-20260924-01. Draft under check: ars/stage4_5_integrity/correction_round1/manuscript_v5.clean.md (SHA-256 a1783491551fbec22f4f2f745cf4ba045e1ce1295aacf779d61a239fbadde377).
+Run ftse2-20260924-01. Draft under check: ars/stage4_5_integrity/correction_round3/manuscript_v7.clean.md (SHA-256 3331a4dea23bb7dddeabf4ca4d82ea4a60b12937637d1fe89374c93d4f7d132c; unchanged verdicts from v5, rounds 2-3 changed references, wording and source notes only).
 Rule at 4.5: re-run all 7 modes; any SUSPECTED, or INSUFFICIENT EVIDENCE on Modes 1/3/5/6, blocks.
 
 | Mode | Status | Evidence |
