@@ -1,0 +1,5 @@
+"group","variant","mean_pct","t_twoway","n","n_events_total","n_missing_next_day"
+"Ceiling rule-based","complete cases",1.664295765992,4.80707692513168,3199,3207,8
+"Ceiling rule-based","missing next day = 0 return",1.65825750262741,4.8077136108564,3207,3207,8
+"Floor rule-based","complete cases",-0.691673933185324,-4.78389642008165,2111,2115,4
+"Floor rule-based","missing next day = 0 return",-0.691877013456037,-4.79271026045129,2115,2115,4

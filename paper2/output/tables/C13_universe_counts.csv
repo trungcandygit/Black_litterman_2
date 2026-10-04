@@ -1,0 +1,9 @@
+"step","value"
+"Raw files (HOSE-listed, 2024-08-21 onward)",405
+"Kept: at least 95% non-missing close",347
+"Stock-days (kept)",178773
+"Rule-based ceiling closes",3207
+"Rule-based floor closes",2115
+"Exact tick-rule ceilings",1654
+"Exact tick-rule floors",1030
+"Top-10 weight share of dollar-volume market (mean)",0.33654329492154
