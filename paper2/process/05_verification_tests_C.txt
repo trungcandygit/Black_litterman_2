@@ -1,5 +1,5 @@
-T1 look-ahead audit (characteristics): 27 cross-sections with t <= 250; max abs difference after replacing all later data by noise = 0 -> PASS
-T2 independent FM recomputation (MOM3M): mean slope pct/week independent = 0.130729 vs table 0.130729 -> PASS
+T1 look-ahead audit (characteristics): 27 cross-sections with t <= 250; max abs difference after replacing all later data by noise = 0.209 -> FAIL
+T2 independent FM recomputation (MOM3M): mean slope pct/week independent = 0.12287 vs table 0.12287 -> PASS
 T3 independent event recomputation (ceiling, t+1): independent mean 1.66022% on 3187 events vs table 1.66022% on 3187 events -> PASS
 T4 gap+intraday vs close-to-close for ceiling events: mean(ar_on)+mean(ar_id)-mean(ar_cc1) = 0.0457 pct (compounding/market-adjustment differences expected small) -> PASS
 T5 event counts: ceiling 3136, floor 2088 (post hoc sample requires open price at t+1 and close at t+5); pre-registered sample 3187 ceilings -> PASS (difference explained by data requirements)

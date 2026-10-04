@@ -83,29 +83,29 @@
 "Ceiling: locked all day","intraday_ew",-0.571384992971945,-1.68061978874748,522
 "Ceiling: locked all day","cc1_ew",2.48680256045276,4.27879633429828,522
 "Ceiling: locked all day","cc1_beta",2.05948206796873,2.52466157221654,25
-"Ceiling: first day of streak (rule-based)","gap_mkt",1.83292128294123,8.22686966264323,2483
-"Ceiling: first day of streak (rule-based)","intraday_mkt",-0.376244756474637,-1.85571836416527,2483
-"Ceiling: first day of streak (rule-based)","cc1_mkt",1.42220173739704,3.55045372475279,2483
-"Ceiling: first day of streak (rule-based)","f5o_mkt",-0.714010006487678,-2.71430849756263,2477
-"Ceiling: first day of streak (rule-based)","gap_ctrl",2.36534647901383,15.5364774700484,2406
-"Ceiling: first day of streak (rule-based)","intraday_ctrl",-0.310221500797478,-3.74400345963742,2406
-"Ceiling: first day of streak (rule-based)","cc1_ctrl",2.02556534432208,14.4610646705967,2406
-"Ceiling: first day of streak (rule-based)","f5o_ctrl",-0.411087491441503,-1.57541262581698,2405
-"Ceiling: first day of streak (rule-based)","gap_ew",1.9751418749399,9.52157577831696,2483
-"Ceiling: first day of streak (rule-based)","intraday_ew",-0.280779745403854,-3.25563033355875,2483
-"Ceiling: first day of streak (rule-based)","cc1_ew",1.67317975438777,9.37371380163582,2483
+"Ceiling: first day of streak (rule-based)","gap_mkt",1.83327811408722,8.22767228869076,2480
+"Ceiling: first day of streak (rule-based)","intraday_mkt",-0.380426166429145,-1.87986594972095,2480
+"Ceiling: first day of streak (rule-based)","cc1_mkt",1.41854270985429,3.54036441127513,2480
+"Ceiling: first day of streak (rule-based)","f5o_mkt",-0.731686298028844,-2.79090929491804,2474
+"Ceiling: first day of streak (rule-based)","gap_ctrl",2.36607760972151,15.5736808118386,2403
+"Ceiling: first day of streak (rule-based)","intraday_ctrl",-0.314426613297181,-3.81579414000896,2403
+"Ceiling: first day of streak (rule-based)","cc1_ctrl",2.02225128161682,14.3905188958149,2403
+"Ceiling: first day of streak (rule-based)","f5o_ctrl",-0.42920653869579,-1.63340991582853,2402
+"Ceiling: first day of streak (rule-based)","gap_ew",1.9755217077744,9.52395785755874,2480
+"Ceiling: first day of streak (rule-based)","intraday_ew",-0.284829989327339,-3.30913257506529,2480
+"Ceiling: first day of streak (rule-based)","cc1_ew",1.66967863912166,9.35678374361728,2480
 "Ceiling: first day of streak (rule-based)","cc1_beta",1.87943563635338,8.454600165939,244
-"Ceiling: first day of streak (exact)","gap_mkt",2.37766810623095,12.2037047635043,1281
-"Ceiling: first day of streak (exact)","intraday_mkt",-0.551016076171249,-3.10362769426368,1281
-"Ceiling: first day of streak (exact)","cc1_mkt",1.78593638151207,5.43529003125311,1281
-"Ceiling: first day of streak (exact)","f5o_mkt",-0.847314425527869,-3.00121618490131,1277
-"Ceiling: first day of streak (exact)","gap_ctrl",2.85723056606645,19.345492573096,1233
-"Ceiling: first day of streak (exact)","intraday_ctrl",-0.533228030837925,-4.94399388925645,1233
-"Ceiling: first day of streak (exact)","cc1_ctrl",2.28831274771139,14.7383651733941,1233
-"Ceiling: first day of streak (exact)","f5o_ctrl",-0.705968531921103,-2.09281946121599,1232
-"Ceiling: first day of streak (exact)","gap_ew",2.51446143563365,13.6738278261891,1281
-"Ceiling: first day of streak (exact)","intraday_ew",-0.534663014727149,-4.84884917254488,1281
-"Ceiling: first day of streak (exact)","cc1_ew",1.95115789704684,11.1033407467089,1281
+"Ceiling: first day of streak (exact)","gap_mkt",2.37288796560627,12.2085264297633,1287
+"Ceiling: first day of streak (exact)","intraday_mkt",-0.545244089153053,-3.07006366923964,1287
+"Ceiling: first day of streak (exact)","cc1_mkt",1.78675404092975,5.46204790051457,1287
+"Ceiling: first day of streak (exact)","f5o_mkt",-0.885011054873495,-3.11594051097144,1282
+"Ceiling: first day of streak (exact)","gap_ctrl",2.853618699303,19.3168037453845,1232
+"Ceiling: first day of streak (exact)","intraday_ctrl",-0.533436233095194,-4.94251447959981,1232
+"Ceiling: first day of streak (exact)","cc1_ctrl",2.28444588724117,14.7266099266625,1232
+"Ceiling: first day of streak (exact)","f5o_ctrl",-0.728032492449066,-2.14267177581753,1231
+"Ceiling: first day of streak (exact)","gap_ew",2.51067068221826,13.6863493927004,1287
+"Ceiling: first day of streak (exact)","intraday_ew",-0.531118712193268,-4.81462540967859,1287
+"Ceiling: first day of streak (exact)","cc1_ew",1.950740257643,11.1624272308564,1287
 "Ceiling: first day of streak (exact)","cc1_beta",2.14806563687157,5.95484745217656,118
 "Floor: rule-based","gap_mkt",-0.97218712225701,-4.64823397031275,2111
 "Floor: rule-based","intraday_mkt",0.303970628041851,1.38685363181829,2111
@@ -167,15 +167,15 @@
 "Floor: first day of streak (rule-based)","intraday_ew",0.23946032788329,1.71020021504966,1629
 "Floor: first day of streak (rule-based)","cc1_ew",-0.590115400250445,-4.14195795499687,1629
 "Floor: first day of streak (rule-based)","cc1_beta",-0.297351782217427,-0.684375853356546,47
-"Floor: first day of streak (exact)","gap_mkt",-1.03683088521561,-4.67553967206276,830
-"Floor: first day of streak (exact)","intraday_mkt",0.207927240443224,0.845291174149282,830
-"Floor: first day of streak (exact)","cc1_mkt",-0.854357402785947,-5.01478828064717,830
-"Floor: first day of streak (exact)","f5o_mkt",-0.665978206058392,-1.16411281440975,829
+"Floor: first day of streak (exact)","gap_mkt",-1.04300616781184,-4.70171130016763,831
+"Floor: first day of streak (exact)","intraday_mkt",0.215768840255318,0.872820728463657,831
+"Floor: first day of streak (exact)","cc1_mkt",-0.853114141588048,-5.00636561523723,831
+"Floor: first day of streak (exact)","f5o_mkt",-0.660349279853677,-1.15586191359988,830
 "Floor: first day of streak (exact)","gap_ctrl",-1.72291536906545,-4.17105552686845,801
 "Floor: first day of streak (exact)","intraday_ctrl",0.0734895871330925,0.318809049798722,801
 "Floor: first day of streak (exact)","cc1_ctrl",-1.68715719740612,-4.41439502508617,801
 "Floor: first day of streak (exact)","f5o_ctrl",-0.618510616159553,-0.947395065744288,801
-"Floor: first day of streak (exact)","gap_ew",-1.05777450857863,-6.5941061462228,830
-"Floor: first day of streak (exact)","intraday_ew",0.262100038890572,1.53567038911546,830
-"Floor: first day of streak (exact)","cc1_ew",-0.823925826699666,-4.81038273639214,830
+"Floor: first day of streak (exact)","gap_ew",-1.06397060106781,-6.6237915761332,831
+"Floor: first day of streak (exact)","intraday_ew",0.269543089758103,1.56376922623827,831
+"Floor: first day of streak (exact)","cc1_ew",-0.823086919134567,-4.80688906928504,831
 "Floor: first day of streak (exact)","cc1_beta",-0.296417721941229,-0.337603037288314,26

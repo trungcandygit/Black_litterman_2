@@ -47,7 +47,7 @@ for (ev in c("ceiling", "floor")) { d <- E[E$event == ev, ]; out[[length(out) + 
   out[[length(out) + 1]] <- summ(d[d$locked == TRUE, ], paste(ev, "locked all day (open=high=low=close)"))
   for (k in 1:3) out[[length(out) + 1]] <- summ(d[d$ter == k, ], paste(ev, "liquidity tercile", k, c("(low)", "(mid)", "(high)")[k])) }
 for (ev in c("near_up_5_6.5", "near_up_3_5", "near_dn_5_6.5", "near_dn_3_5")) out[[length(out) + 1]] <- summ(E[E$event == ev, ], ev)
-R41 <- do.call(rbind, out); write.csv(R41, file.path(od, "tables/C4_limits_robustness.csv"), row.names = FALSE)
+R41 <- do.call(rbind, out); write.csv(R41, file.path(od, "tables/SUPERSEDED_C4_limits_robustness.csv"), row.names = FALSE)
 options(width = 220); sel <- R41[R41$measure %in% c("ar_cc1", "ar_on", "ar_id", "ar_5o", "ar_5c", "ar_cc1_ctrl", "ar_5o_ctrl", "ar_20c"), ]
 w <- reshape(sel[, c("sample", "measure", "mean_pct")], idvar = "sample", timevar = "measure", direction = "wide"); wt <- reshape(sel[, c("sample", "measure", "t_cluster")], idvar = "sample", timevar = "measure", direction = "wide")
 print(w, digits = 3, row.names = FALSE); print(wt, digits = 3, row.names = FALSE); print(table(E$event))
