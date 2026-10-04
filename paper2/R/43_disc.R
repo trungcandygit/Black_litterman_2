@@ -1,3 +1,4 @@
+# SUPERSEDED by R/47_da_response.R for all numbers in manuscript C (see Appendix B); kept for audit. Known issue: NA propagation in the market and control calculations (41), and all-stock population (44).
 # 43_disc.R -- formal discontinuity comparison (limit close vs just-below-limit), tradability of the next-open rule
 suppressPackageStartupMessages({library(sandwich); library(lmtest)}); od <- "/home/user/Black_litterman_2/paper2/output"
 E <- readRDS(file.path(od, "rds/limit_events_full.rds"))

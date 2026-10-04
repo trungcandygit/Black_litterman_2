@@ -1,4 +1,5 @@
 "step","value"
+"Stock-days in the event window (days 61 to nd-5) with a return",156653
 "Raw files (HOSE-listed, 2024-08-21 onward)",405
 "Kept: at least 95% non-missing close",347
 "Stock-days (kept)",178773

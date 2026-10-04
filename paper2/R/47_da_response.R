@@ -37,7 +37,8 @@ AR <- list(
   gap_ew = OVN - ew(OVN), intraday_ew = INT - ew(INT), cc1_ew = CC1 - ew(CC1), cc1_beta = CC1 - beta * mkt_next)
 cl2 <- function(sel, v) { r <- which(sel & is.finite(v)); if (length(r) < 20) return(c(mean_pct = NA, t_twoway = NA, n = length(r))); ii <- row(v)[r]; jj <- col(v)[r]; a <- v[r]; m <- mean(a); e <- a - m; N <- length(a)
   se_d <- sqrt(sum(tapply(e, ii, sum)^2)) / N; se_s <- sqrt(sum(tapply(e, jj, sum)^2)) / N; se_i <- sqrt(sum(e^2)) / N; se2 <- sqrt(max(se_d^2 + se_s^2 - se_i^2, 1e-12)); c(mean_pct = 100 * m, t_twoway = m / se2, n = N) }
-groups <- list(`Ceiling: rule-based` = r_ceil, `Ceiling: exact tick-rule hit` = ex_ceil, `Ceiling: near-hit (rule-based, not exact)` = r_ceil & !ex_ceil, `Ceiling: locked all day` = locked_c, `Ceiling: first day of streak (rule-based)` = strt_c, `Ceiling: first day of streak (exact)` = exs_c,
+ge65 <- !is.na(R0) & R0 >= 0.065; comp5 <- Reduce(`&`, lapply(1:5, function(k) is.finite(Rd[tt + k, ]))); comp5[is.na(comp5)] <- FALSE
+groups <- list(`Ceiling: rule-based` = r_ceil, `Ceiling: README-style (return >= 6.5%, no close = high requirement)` = ge65, `Ceiling: rule-based, complete returns t+1..t+5` = r_ceil & comp5, `Floor: rule-based, complete returns t+1..t+5` = r_floor & comp5, `Ceiling: exact tick-rule hit` = ex_ceil, `Ceiling: near-hit (rule-based, not exact)` = r_ceil & !ex_ceil, `Ceiling: locked all day` = locked_c, `Ceiling: first day of streak (rule-based)` = strt_c, `Ceiling: first day of streak (exact)` = exs_c,
   `Floor: rule-based` = r_floor, `Floor: exact tick-rule hit` = ex_floor, `Floor: near-hit (rule-based, not exact)` = r_floor & !ex_floor, `Floor: locked all day` = locked_f, `Floor: first day of streak (rule-based)` = strt_f, `Floor: first day of streak (exact)` = exs_f)
 rows <- do.call(rbind, lapply(names(groups), function(g) do.call(rbind, lapply(names(AR), function(m) data.frame(group = g, measure = m, t(cl2(groups[[g]], AR[[m]])), row.names = NULL)))))
 write.csv(rows, file.path(od, "tables/C11_da_response_events.csv"), row.names = FALSE)
@@ -46,8 +47,8 @@ cf <- function(sel) { v <- CC1 - wm(CC1); v2 <- v; miss <- sel & !is.finite(CC1)
 cfr <- rbind(data.frame(group = "Ceiling rule-based", variant = c("complete cases", "missing next day = 0 return"), cf(r_ceil)), data.frame(group = "Floor rule-based", variant = c("complete cases", "missing next day = 0 return"), cf(r_floor)))
 cfr$n_events_total <- c(rep(sum(r_ceil, na.rm = TRUE), 2), rep(sum(r_floor, na.rm = TRUE), 2)); cfr$n_missing_next_day <- c(rep(sum(r_ceil & !is.finite(CC1), na.rm = TRUE), 2), rep(sum(r_floor & !is.finite(CC1), na.rm = TRUE), 2))
 write.csv(cfr, file.path(od, "tables/C12_attrition_sensitivity.csv"), row.names = FALSE)
-univ <- data.frame(step = c("Raw files (HOSE-listed, 2024-08-21 onward)", "Kept: at least 95% non-missing close", "Stock-days (kept)", "Rule-based ceiling closes", "Rule-based floor closes", "Exact tick-rule ceilings", "Exact tick-rule floors", "Top-10 weight share of dollar-volume market (mean)"),
-  value = c(n_files, ns, sum(!is.na(Rd)), sum(r_ceil, na.rm = TRUE), sum(r_floor, na.rm = TRUE), sum(ex_ceil, na.rm = TRUE), sum(ex_floor, na.rm = TRUE), top10))
+univ <- data.frame(step = c("Stock-days in the event window (days 61 to nd-5) with a return", "Raw files (HOSE-listed, 2024-08-21 onward)", "Kept: at least 95% non-missing close", "Stock-days (kept)", "Rule-based ceiling closes", "Rule-based floor closes", "Exact tick-rule ceilings", "Exact tick-rule floors", "Top-10 weight share of dollar-volume market (mean)"),
+  value = c(sum(is.finite(R0)), n_files, ns, sum(!is.na(Rd)), sum(r_ceil, na.rm = TRUE), sum(r_floor, na.rm = TRUE), sum(ex_ceil, na.rm = TRUE), sum(ex_floor, na.rm = TRUE), top10))
 write.csv(univ, file.path(od, "tables/C13_universe_counts.csv"), row.names = FALSE)
 # ---- characteristics: MDE, effective number of tests, NW lag sensitivity
 Z <- read.csv(file.path(od, "tables/C1_characteristics_FM.csv")); zp <- readRDS(file.path(od, "rds/zoo_panel.rds")); X <- zp$X; Y <- zp$Y

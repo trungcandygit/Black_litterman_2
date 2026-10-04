@@ -11,6 +11,42 @@
 "Ceiling: rule-based","intraday_ew",-0.478125758272226,-5.26504514802332,3199
 "Ceiling: rule-based","cc1_ew",1.86871020651366,10.8850608810301,3199
 "Ceiling: rule-based","cc1_beta",1.91324886677768,8.46909972890756,309
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","gap_mkt",2.1048510553283,9.55558227978314,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","intraday_mkt",-0.508246508264061,-3.38554580074373,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_mkt",1.55359285837633,4.64846971266712,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","f5o_mkt",-0.7683518871821,-2.94546803351412,3412
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","gap_ctrl",2.54508235828367,19.3968385016345,3315
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","intraday_ctrl",-0.482694532347927,-6.21450829397668,3315
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_ctrl",2.02486012564266,17.3036627932201,3315
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","f5o_ctrl",-0.549180762834836,-2.01372034956241,3312
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","gap_ew",2.2395461798766,10.779645380603,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","intraday_ew",-0.455923340242168,-5.41932757135027,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_ew",1.75267257459276,10.6194093933731,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_beta",1.74185697486604,8.07915241430814,334
+"Ceiling: rule-based, complete returns t+1..t+5","gap_mkt",2.24931359977209,9.70528454673042,3187
+"Ceiling: rule-based, complete returns t+1..t+5","intraday_mkt",-0.538746093023119,-3.49380874010468,3187
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_mkt",1.66672937584163,4.79394987063257,3187
+"Ceiling: rule-based, complete returns t+1..t+5","f5o_mkt",-0.747264755707875,-2.73537545695638,3187
+"Ceiling: rule-based, complete returns t+1..t+5","gap_ctrl",2.69624119191122,20.1613385536202,3098
+"Ceiling: rule-based, complete returns t+1..t+5","intraday_ctrl",-0.496518240464561,-6.00391426712889,3098
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_ctrl",2.16125666999736,17.9802083848418,3098
+"Ceiling: rule-based, complete returns t+1..t+5","f5o_ctrl",-0.524629695045302,-1.81001000468039,3098
+"Ceiling: rule-based, complete returns t+1..t+5","gap_ew",2.38432586932269,10.9112201436113,3187
+"Ceiling: rule-based, complete returns t+1..t+5","intraday_ew",-0.480146987605072,-5.27372941621118,3187
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_ew",1.87252308511325,10.8551666929141,3187
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_beta",1.91324886677768,8.46909972890756,309
+"Floor: rule-based, complete returns t+1..t+5","gap_mkt",-0.978270725189227,-4.65166144699601,2105
+"Floor: rule-based, complete returns t+1..t+5","intraday_mkt",0.296939529540841,1.35554125625884,2105
+"Floor: rule-based, complete returns t+1..t+5","cc1_mkt",-0.704905181041664,-4.86860199991752,2105
+"Floor: rule-based, complete returns t+1..t+5","f5o_mkt",-0.821718803110177,-1.74592084232972,2105
+"Floor: rule-based, complete returns t+1..t+5","gap_ctrl",-1.75632130689409,-3.99825575076213,2045
+"Floor: rule-based, complete returns t+1..t+5","intraday_ctrl",0.135982422096735,0.601454522248062,2045
+"Floor: rule-based, complete returns t+1..t+5","cc1_ctrl",-1.65294940595747,-3.36870999804161,2045
+"Floor: rule-based, complete returns t+1..t+5","f5o_ctrl",-0.362898727448338,-0.565313508715059,2045
+"Floor: rule-based, complete returns t+1..t+5","gap_ew",-1.08456474219774,-5.64578740240659,2105
+"Floor: rule-based, complete returns t+1..t+5","intraday_ew",0.341468762164773,2.52537616357724,2105
+"Floor: rule-based, complete returns t+1..t+5","cc1_ew",-0.769609336668362,-5.0770439462966,2105
+"Floor: rule-based, complete returns t+1..t+5","cc1_beta",-0.764530694599871,-1.34140871936947,57
 "Ceiling: exact tick-rule hit","gap_mkt",2.77140391538833,13.5091597204075,1648
 "Ceiling: exact tick-rule hit","intraday_mkt",-0.734812766799572,-5.31028732341258,1648
 "Ceiling: exact tick-rule hit","cc1_mkt",1.98437763468441,6.96479234015337,1648
