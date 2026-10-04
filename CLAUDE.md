@@ -19,3 +19,10 @@ Start with `academic-research-skills/README.md` and `QUICKSTART.md`, then read t
 ## Git sync
 - Before starting work and before each push, `git fetch origin main` and merge `origin/main` into the working branch (merge, no rebase/force-push); resolve conflicts without asking unless both sides changed the same logic.
 - Pushes go to the designated working branch only; never push directly to `main`.
+
+## Project: BL-K_IO upgrade paper (new manuscript, R only)
+- Goal: a brand-new, stronger journal manuscript that inherits the strengths of the earlier BL-K_IO paper (Round 2 under review elsewhere — do NOT cite it and do NOT reuse its text; it is unpublished). The user said no citation of the unpublished work is needed.
+- All computation is in **R** (scripts under `paper2/R/`, one `run_all.R` entry point, seeds fixed, outputs in `paper2/output/`). Every number in the manuscript must come from a saved R output — no hand-typed or remembered results.
+- Follow `academic-research-skills/` **absolutely** (academic-pipeline → deep-research → academic-paper → integrity gates → reviewer → revision → finalize → process record). Keep its integrity rules: no fabricated citations/results, every reference must be verifiable (DOI check), AI-use disclosure, failure-mode checklist, anti-leakage (session data over memory).
+- Per the user's standing no-ask instruction, non-integrity checkpoints are auto-proceeded and recorded as such in `paper2/process/`; an integrity FAIL/override is never self-approved.
+- Data: `Data_fetch/` (25 banks monthly close and market cap, 2014-06 to 2026-05) and `data/raw/` (daily OHLCV, 2024-08 onward). Risk-free = annual 10-year VGB yield by calendar year (values in `paper2/data/rf_vgb10y.csv`, read from the authors' own earlier figure; flagged approximate).
