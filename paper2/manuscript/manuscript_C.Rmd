@@ -86,7 +86,7 @@ knitr::kable(data.frame(Characteristic = zz$characteristic, `Slope (% per week, 
   `Quintile spread, net of 25 bps (% per week)` = f(zz$quintile_net25_pct, 3), check.names = FALSE), caption = "Table 2. Fama–MacBeth results for the 22 pre-specified characteristics (ordered by absolute full-sample t-statistic).")
 ```
 
-```{r figH2, fig.cap="Figure 1. Fama–MacBeth t-statistics of the 22 characteristics: full sample, discovery half and confirmation half."}
+```{r figH2, fig.cap="Figure 1. Fama-MacBeth t-statistics of the 22 characteristics: full sample, discovery half and confirmation half."}
 knitr::include_graphics(file.path(od, "figures/H2_zoo_tstats.png"))
 ```
 

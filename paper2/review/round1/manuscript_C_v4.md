@@ -95,9 +95,9 @@ Table 2. Fama–MacBeth results for the 22 pre-specified characteristics (ordere
 
 Table 2. Fama–MacBeth results for the 22 pre-specified characteristics (ordered by absolute full-sample t-statistic).
 
-<img src="media/rId25.png" style="width:5.83333in;height:4.66667in" alt="Figure 1. Fama&lt;U+2013&gt;MacBeth t-statistics of the 22 characteristics: full sample, discovery half and confirmation half." />
+<img src="media/rId25.png" style="width:5.83333in;height:4.66667in" alt="Figure 1. Fama-MacBeth t-statistics of the 22 characteristics: full sample, discovery half and confirmation half." />
 
-Figure 1. Fama\<U+2013\>MacBeth t-statistics of the 22 characteristics: full sample, discovery half and confirmation half.
+Figure 1. Fama-MacBeth t-statistics of the 22 characteristics: full sample, discovery half and confirmation half.
 
 None of the 22 characteristics has a full-sample \|t\| above 1.45 (Table 2, Figure 1), none passes the Harvey et al. (2016) threshold of 3, and none survives the family-wide control. The leading candidates, 3-month and idiosyncratic momentum, have t-statistics of 1.45 and 1.45, with confirmation-half t-statistics of 1.17 and 1.14. Standard risk measures are weak in this cross-section: volatility has t = -0.09, idiosyncratic volatility -0.54, and MAX -0.02. The long–short quintile spreads are small and, net of 25 basis points per unit traded, mostly negative; no characteristic combines a significant slope with a spread that survives costs. The tests have limited power with 79 cross-sections, so the null is informative mainly about effects as large as a few tenths of a percent per week.
 
