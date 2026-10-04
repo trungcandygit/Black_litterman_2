@@ -7,3 +7,5 @@ notes/
 *.blg
 ars/build/work/
 .DS_Store
+paper2/output/sim_log.txt
+paper2/manuscript/*.docx

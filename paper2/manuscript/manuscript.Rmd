@@ -1,0 +1,355 @@
+---
+title: "Do clustering-based views improve Black–Litterman allocation? A nested, multiplicity-controlled test on Vietnamese bank stocks"
+author: "[Author names and affiliations to be added]"
+date: "Draft of 4 October 2026 (journal-neutral; not yet submitted)"
+output:
+  word_document:
+    toc: false
+    fig_width: 7
+    fig_height: 3.6
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+od <- "/home/user/Black_litterman_2/paper2/output"
+rd <- function(f) read.csv(file.path(od, "tables", f))
+T1 <- rd("T1_performance.csv"); T2 <- rd("T2_sharpe_tests_KMV.csv"); T2b <- rd("T2b_sharpe_tests_other.csv"); T2c <- rd("T2c_power_mde.csv")
+T3 <- rd("T3_dsr.csv"); T3b <- rd("T3b_spa_main_vs_all.csv"); T3c <- rd("T3c_spa_vs_EW.csv"); T3d <- rd("T3d_dsr_full_ledger.csv")
+T4 <- rd("T4_alpha.csv"); T5 <- rd("T5_stress.csv"); T6 <- rd("T6_signal_ic.csv"); T7 <- rd("T7_sensitivity.csv")
+T8 <- if (file.exists(file.path(od, "tables/T8_simulation.csv"))) rd("T8_simulation.csv") else NULL
+T9 <- rd("T9_broad_performance.csv"); T9b <- rd("T9b_broad_tests.csv"); T10 <- rd("T10_bank_cost_proxies.csv"); TA1 <- rd("T_A1_data_summary.csv"); TA2 <- rd("T_A2_distribution.csv")
+res <- readRDS(file.path(od, "rds/main_engine.rds")); sig <- readRDS(file.path(od, "rds/signal_diag.rds")); str_ <- readRDS(file.path(od, "rds/structure.rds")); broad <- readRDS(file.path(od, "rds/broad.rds"))
+f <- function(x, d = 3) formatC(x, format = "f", digits = d)
+pc <- function(x, d = 1) paste0(formatC(100 * x, format = "f", digits = d), "%")
+pv <- function(x) ifelse(x < 0.001, "< 0.001", formatC(x, format = "f", digits = 3))
+g <- function(per, m, col) T1[T1$period == per & T1$model == m, col]
+tst <- function(per, vs, col) T2[T2$period == per & T2$vs == vs, col]
+dg <- do.call(rbind, lapply(res$diag, function(d) data.frame(k = d$k_stab, ws = d$ws, lam_t = d$lambda_t, lam = d$lambda_m, lw = d$lw_int, n = d$n)))
+lab <- c(EW = "1/N", MKT = "Cap-weighted (MKT)", TAN = "Tangency, sample", TAN_LW = "Tangency, LW covariance", MVP_LW = "Min-variance, LW", ERC = "Equal risk contribution (ERC)",
+  HRP = "Hierarchical risk parity (HRP)", BL0 = "Inverse BL, no view", MOM_EW = "Top-cluster 1/N (signal only)", KIO_v1 = "Single-view BL-K_IO (re-implemented)",
+  KMV = "BL-KMV (main)", KMV_k4 = "BL-KMV, k = 4", KMV_ic = "BL-KMV, k by inner IC", KMV_sampleS = "BL-KMV, sample covariance", KMV_single = "BL-KMV, single view",
+  KMV_rawq = "BL-KMV, uncalibrated q", KMV_nostab = "BL-KMV, no stability in Omega", KMV_TC = "BL-KMV-TC (turnover-aware)")
+nOOS <- nrow(res$ret); d1 <- format(min(res$dates), "%B %Y"); d2 <- format(max(res$dates), "%B %Y")
+```
+
+**Abstract.** Black–Litterman (BL) allocation with machine-learning views is often reported to beat the naive 1/N rule, yet such reports rarely separate the contribution of the signal from the contribution of the equilibrium anchor, rarely correct for the search over model configurations, and rarely ask whether the evaluation sample can detect an improvement of plausible size. We build a design that does these three things and apply it to 25 Vietnamese bank stocks (`r nOOS` monthly out-of-sample steps, `r d1` to `r d2`) and to a broad universe of `r ncol(broad$ret)` HOSE-listed equities at weekly frequency. The proposed rule, BL-KMV, forms one absolute view per K-means cluster, sets the number of clusters by a return-free bootstrap-stability rule, calibrates the view magnitude by an in-window cross-sectional score slope, scales view uncertainty by cluster stability, and uses Ledoit–Wolf covariance shrinkage. It is evaluated against 1/N, cap-weighted, minimum-variance, equal-risk-contribution, hierarchical-risk-parity and tangency portfolios and against a re-implemented single-view inverse-BL design. Over the full sample BL-KMV earns a Sharpe ratio of `r f(g("Full","KMV","sharpe"),2)` against `r f(g("Full","EW","sharpe"),2)` for 1/N; the difference (`r f(tst("Full","EW","diff_ann"),2)`) is not statistically distinguishable from zero (studentized circular block bootstrap p = `r pv(tst("Full","EW","p_boot"))`), and no one of the `r length(res$models)-1` rules beats 1/N under a Hansen superior-predictive-ability test (p = `r pv(T3c$p_SPAc[T3c$period=="Full"])`). The reason is mostly statistical power: the standard error of a Sharpe-ratio difference is `r f(T2c$se_ann[T2c$period=="Full"],2)`, so the minimum detectable difference at 80% power is about `r f(T2c$mde80_ann[T2c$period=="Full"],2)`. In-sample diagnostics show that the low-volatility leg of the composite score carries the only reliably positive rank information (mean IC `r f(T6$mean_ic[T6$period=="Full" & T6$signal=="ic_vol"],3)`, Newey–West t = `r f(T6$t_nw[T6$period=="Full" & T6$signal=="ic_vol"],2)`), whereas idiosyncratic momentum is weak (t = `r f(T6$t_nw[T6$period=="Full" & T6$signal=="ic_mom"],2)`). A turnover-aware variant cuts monthly turnover from `r pc(g("Full","KMV","turnover"),0)` to `r pc(g("Full","KMV_TC","turnover"),1)`. Results are therefore best read as a rigorous, reproducible benchmark and a power analysis, not as evidence of a superior rule.
+
+**Keywords:** asset allocation; Black–Litterman; K-means stability; Sharpe-ratio inference; naive diversification; emerging markets
+
+**JEL classification:** G11; G17; C58; C12
+
+**Tóm tắt (Vietnamese abstract).** Nghiên cứu kiểm định một cách nghiêm ngặt việc đưa tín hiệu phân cụm K-means vào mô hình Black–Litterman đảo cho 25 cổ phiếu ngân hàng Việt Nam (`r nOOS` tháng ngoài mẫu, `r d1` đến `r d2`) và cho `r ncol(broad$ret)` cổ phiếu HOSE theo tần suất tuần. Thiết kế mới chọn số cụm bằng quy tắc ổn định bootstrap không dùng lợi suất, hiệu chuẩn độ lớn quan điểm trong cửa sổ ước lượng, điều chỉnh độ bất định quan điểm theo độ ổn định cụm, co ma trận hiệp phương sai Ledoit–Wolf, và kiểm soát đa kiểm định bằng DSR và SPA. Trên toàn mẫu, BL-KMV đạt Sharpe `r f(g("Full","KMV","sharpe"),2)` so với `r f(g("Full","EW","sharpe"),2)` của 1/N; chênh lệch không có ý nghĩa thống kê (p = `r pv(tst("Full","EW","p_boot"))`). Sai số chuẩn của chênh lệch Sharpe là `r f(T2c$se_ann[T2c$period=="Full"],2)`, nên mức chênh lệch nhỏ nhất phát hiện được ở độ mạnh 80% là khoảng `r f(T2c$mde80_ann[T2c$period=="Full"],2)`. Kết quả vì vậy là một chuẩn đối sánh minh bạch và một phân tích độ mạnh kiểm định, không phải bằng chứng về một quy tắc vượt trội.
+
+# 1. Introduction
+
+Mean–variance optimization turns small errors in estimated means and covariances into large, unstable weights, and a simple 1/N rule is difficult to beat out of sample (DeMiguel et al., 2009; Michaud, 1989). Two repair strategies dominate the literature. One shrinks the estimation problem (covariance shrinkage, Ledoit & Wolf, 2004, 2017; equilibrium anchoring, Black & Litterman, 1992). The other adds information, increasingly through machine-learning signals (Gu et al., 2020). The Black–Litterman framework in its inverse-optimization form (Bertsimas et al., 2012) sits at the junction: market-capitalization weights are treated as optimal, which pins down equilibrium returns, and any signal enters only as a view that is blended in with an explicit uncertainty. A natural idea is to let an unsupervised learner, such as K-means on stock characteristics, generate the views.
+
+Evaluating that idea well is harder than it looks, for three reasons. First, the gain attributed to the signal is easily confounded with the gain from the anchor or from covariance shrinkage; an ablation that isolates each ingredient is needed. Second, the number of clusters, the window length, the position cap and other design choices are usually tuned on the same out-of-sample record that is then reported, which inflates the apparent Sharpe ratio (Harvey et al., 2016; White, 2000; Bailey & López de Prado, 2014). Third, a backtest of roughly one hundred monthly observations has little power to detect a Sharpe-ratio improvement of the size the literature claims (Jobson & Korkie, 1981; Lo, 2002; Ledoit & Wolf, 2008), so non-rejections are uninformative unless the detectable effect size is stated.
+
+This paper builds an evaluation that addresses all three points and applies it to a market where the question is practically relevant: Vietnamese bank stocks, a concentrated, highly correlated, liquidity-constrained sector in a market that is being considered for reclassification from frontier to emerging status. We make five contributions.
+
+1. **A nested, ex-ante design.** The number of clusters is selected inside each estimation window by a bootstrap cluster-stability rule (Hennig, 2007) that uses no returns, and the rule was fixed before any full-sample out-of-sample result was inspected (`process/decisions.md`). Alternatives (fixed k, a rule based on inner-window predictive rank correlation) are reported as ablations and counted as trials.
+2. **Calibrated, stability-weighted multi-view posterior.** Each cluster yields an absolute view whose magnitude is calibrated by an in-window cross-sectional slope of next-month idiosyncratic return on the composite score, and whose uncertainty is the He–Litterman term divided by the cluster's bootstrap stability. We show that the parameter $\tau$ cancels from the posterior mean when view uncertainty is proportional to $\tau$, so that sensitivity analyses on $\tau$ alone are uninformative, and that a single view's posterior weight is $s/(1+s)$ for stability $s$ (Section 3.5, Appendix B).
+3. **Inference that matches the evidence available.** Sharpe-ratio differences are tested with a studentized circular block bootstrap; the full ledger of configurations is used for the deflated Sharpe ratio (Bailey & López de Prado, 2014) and for a Hansen (2005) superior-predictive-ability test; and the minimum detectable Sharpe-ratio difference is reported.
+4. **Size and power by simulation.** A Monte-Carlo design with the same rolling pipeline shows how often the procedure would detect a gain over 1/N when persistent cross-sectional alpha of a given magnitude exists, and how often it would falsely detect one when none exists.
+5. **External validity and costs.** The rule is repeated on a broad universe of listed stocks at weekly frequency, and trading-cost proxies computed from daily high–low data on 21 banks anchor the cost grid.
+
+The findings are deliberately unglamorous and, we think, more useful for that: on this sample no clustering-view variant is distinguishable from 1/N, the low-volatility characteristic rather than momentum carries the signal, a turnover-aware objective removes most trading with little change in risk-adjusted performance, and the evaluation sample is too short to rule out Sharpe-ratio gains below about `r f(T2c$mde80_ann[T2c$period=="Full"],1)`. A stronger claim would not survive the multiplicity and power accounting reported below.
+
+# 2. Data
+
+**Bank panel.** Month-end adjusted closing prices and market capitalization for 25 banks listed on HOSE, HNX or UPCoM run from June 2014 to May 2026 (144 months; Appendix Table A1). Returns are simple monthly returns. The panel contains banks listed as of 2026 extended back to their listing dates, so banks delisted, merged or placed under special control earlier are absent; this survivorship limitation is shared by every portfolio in the comparison, but it can flatter all of them relative to an investor's real-time opportunity set. Price and market-capitalization series have identical missing-value patterns. A dynamic basket is used: a bank enters the universe only after it has a complete 36-month estimation window, so the eligible set grows from 7 banks in 2017 to 25 banks from 2024 (Figure 4).
+
+**Risk-free rate.** The Sharpe ratio uses the annual yield on 10-year Vietnamese government bonds by calendar year, converted to a monthly rate. The yields were transcribed from a figure in the authors' earlier work and are approximate (about ±0.05 percentage points; `data/rf_vgb10y.csv`). The 2014 months use the 2015 value. Because the bond tenor exceeds the one-month holding period, ranking robustness to halving and zeroing the rate is examined in Section 4.6.
+
+**Market proxy and equilibrium.** The bank-sector market return is the lagged-capitalization-weighted return of all banks with data in the month; equilibrium weights in each window are the end-of-window capitalization shares of the eligible banks.
+
+**Broad universe.** The raw daily files contain open, high, low, close and volume for 405 HOSE stocks from 21 August 2024 to 23 September 2026. Stocks with at least 95% coverage are kept (`r ncol(broad$ret) * 0 + 347` stocks); no market capitalization is available, so the equilibrium anchor is proxied by trailing 60-day average dollar-volume weights over the 100 most liquid stocks (an explicit proxy, not a market-capitalization portfolio).
+
+**Cost proxies.** For the 21 banks with daily data we compute the Corwin–Schultz (2012) high–low spread estimator and an Amihud (2002)-type illiquidity ratio (Appendix Table A2).
+
+# 3. Methods
+
+## 3.1 Rolling protocol
+
+At the end of month $t$ (information through $t$), a 36-month window of returns on the eligible banks is used to build a portfolio that is held during month $t+1$. This yields `r nOOS` out-of-sample returns from `r d1` to `r d2`. All portfolios are long-only, fully invested and capped at 30% per bank unless stated. Sharpe ratios are annualized monthly excess returns over the month's risk-free rate.
+
+## 3.2 Equilibrium
+
+With window covariance $\Sigma$ (annualized) and capitalization weights $w_m$, implied equilibrium excess returns are $\Pi = \delta\,\Sigma w_m$ (Black & Litterman, 1992; Bertsimas et al., 2012), where $\delta = (\bar r_m - \bar r_f)/\sigma_m^2$ is estimated inside each window and clipped to [0.5, 10]. Across windows $\delta$ has mean `r f(mean(sapply(res$diag, function(d) d$delta)),2)`.
+
+## 3.3 Features, clustering and the number of clusters
+
+At month $s$ each bank has two characteristics: idiosyncratic six-month momentum skipping the latest month, $m_{i,s}=\prod_{j=s-6}^{s-1}(1+r_{i,j}-r_{m,j})-1$, and trailing 12-month annualized volatility $v_{i,s}$. The composite score is $z_{i,s}=\mathrm{zs}(m_{i,s})-\mathrm{zs}(v_{i,s})$, where zs standardizes across banks. K-means (MacQueen, 1967; 20 starts) partitions the standardized features.
+
+The number of clusters $k$ is chosen by a rule that uses no returns. For each admissible $k$ we compute Hennig's (2007) bootstrap cluster-wise Jaccard stability $s_c(k)$ from 50 resamples and the size-weighted mean $\bar s(k)$. The rule picks the largest $k\in\{3,\dots,6\}$ with $\bar s(k)\ge 0.70$, with $k=3$ as fallback, subject to an average cluster size of at least three (so $k=2$ is used when fewer than nine banks are eligible; decisions log A1). Two alternatives are ablations: fixed $k=4$, and $k$ maximizing the mean rank correlation between cluster rank and next-month idiosyncratic return over the preceding 17 decision months inside the window.
+
+## 3.4 Calibrated views with stability-weighted uncertainty
+
+Let $S_c$ be the members of cluster $c$ and $p_c = \mathbf 1_{S_c}/|S_c|$ the pick row of an absolute view on the cluster mean; $P$ stacks the $K$ rows. The view value is the equilibrium cluster return plus a calibrated tilt,
+$$q_c = p_c\Pi + \hat\lambda\,(\bar z_c - \bar z), \qquad \hat\lambda = 12\max\{0,\ \overline{\mathrm{slope}}\},$$
+where $\overline{\mathrm{slope}}$ is the in-window mean of monthly cross-sectional OLS slopes of next-month idiosyncratic return on the composite score $z$, computed only from months whose forward return lies inside the window. A non-positive in-window slope switches the tilt off, leaving the equilibrium. View uncertainty is
+$$\Omega = \mathrm{diag}\!\left(\frac{\tau\, p_c\Sigma p_c^{\top}}{s_c}\right), \qquad \tau = \tfrac{1}{36},$$
+so a cluster that is unstable under resampling has a larger uncertainty and carries less weight. The posterior mean is the standard BL formula
+$$\mu_{BL} = \Pi + \tau\Sigma P^{\top}\!\left(\tau P\Sigma P^{\top}+\Omega\right)^{-1}(q - P\Pi). \tag{1}$$
+The covariance used in the optimizer is the Ledoit–Wolf (2004) constant-correlation shrinkage estimator of the window covariance, whose intensity is data-driven (mean `r f(mean(dg$lw),2)`).
+
+## 3.5 Two properties of the posterior
+
+**Proposition 1 ($\tau$-invariance).** If $\Omega = \tau\,\Lambda$ for a matrix $\Lambda$ that does not depend on $\tau$, then Equation (1) equals $\Pi + \Sigma P^{\top}(P\Sigma P^{\top}+\Lambda)^{-1}(q-P\Pi)$ and does not depend on $\tau$.
+
+**Proposition 2 (stability weight).** For one absolute view with $\Lambda = p\Sigma p^{\top}/s$, $s\in(0,1]$, the posterior is $\mu_{BL}=\Pi+\frac{s}{1+s}\,\frac{\Sigma p^{\top}}{p\Sigma p^{\top}}\,(q-p\Pi)$; the view weight $s/(1+s)$ is increasing in $s$, equals the He–Litterman value $1/2$ at $s=1$, and tends to zero as $s\to 0$.
+
+Proposition 1 explains why a sensitivity analysis on $\tau$ alone is vacuous when $\Omega$ is tied to $\tau$, as in this literature; we therefore vary an explicit multiplier on $\Omega$ instead (Section 4.6). Proofs are in Appendix B. The stability weighting has an economic reading: the machine-learning layer is allowed to move the portfolio away from equilibrium only as far as its own partition is reproducible.
+
+## 3.6 Optimization and the turnover-aware variant
+
+The main rule maximizes the Sharpe ratio of $\mu_{BL}$ and the shrunk covariance subject to full investment, no shorting and the cap, solved exactly as a quadratic program by the Cornuéjols–Tütüncü transformation (`quadprog`); if no asset has a positive posterior excess return the rule falls back to the minimum-variance portfolio. The turnover-aware variant (BL-KMV-TC) maximizes $w^{\top}\mu - \tfrac{\delta}{2}w^{\top}\Sigma w - c\,\lVert w-w^{-}\rVert_1$ with $c=25$ basis points per unit of traded value and $w^{-}$ the drifted previous weights.
+
+## 3.7 Benchmarks and ablations
+
+Benchmarks are 1/N; the cap-weighted bank market (MKT); the sample tangency portfolio (TAN) and its Ledoit–Wolf version; minimum variance (Ledoit–Wolf); equal risk contribution (Maillard et al., 2010 style fixed-point solution); hierarchical risk parity (López de Prado, 2016); the inverse-BL portfolio with no view (BL0); a signal-only portfolio holding the top cluster at 1/N; and a re-implementation of the earlier single-view design (one relative view between the best and worst of four clusters, sample covariance, $\tau=1/36$, 36-month volatility). Ablations of the proposed rule change one ingredient at a time: fixed $k=4$, inner-IC $k$, sample covariance, one relative view instead of $K$ absolute views, an uncalibrated view magnitude (cluster-mean idiosyncratic momentum spread in return units), and no stability scaling of $\Omega$.
+
+## 3.8 Inference
+
+Performance is summarized by annualized return, volatility, Sharpe and Sortino ratios, maximum drawdown, 5% conditional value-at-risk, an annualized quadratic-utility certainty equivalent ($\gamma=5$), average one-way turnover, and the effective number of bets. Sharpe-ratio differences are tested following Ledoit and Wolf (2008): the difference and its HAC (Newey & West, 1987) standard error are computed by the delta method from the first and second moments, and the studentized statistic is bootstrapped by the circular block bootstrap (Politis & Romano, 1994; 5,000 resamples). Alphas against the cap-weighted bank market use Newey–West errors. Multiple testing is addressed by (i) the deflated Sharpe ratio of Bailey and López de Prado (2014), with the trial count equal to the full ledger of `r T3d$n_trials[1]` proposed-family configurations (8 variants plus 11 sensitivity configurations), and (ii) Hansen's (2005) superior-predictive-ability (SPA) test on quadratic-utility differences, with a stationary bootstrap. We also report the standard error of the Sharpe-ratio difference and the implied minimum detectable difference at 80% power and 5% size ($2.8\times$ s.e.).
+
+## 3.9 Simulation design
+
+We simulate 25 assets over 144 months with a common factor (mean 0.8%, s.d. 5.5% per month), betas in [0.8, 1.2], idiosyncratic volatility in [3.5%, 7%], persistent asset-specific alpha with cross-sectional standard deviation $s\times 0.4\%$ per month for $s\in\{0,1,2\}$, and log-normal capitalization. Each replication runs the same rolling pipeline as the empirical study (106 out-of-sample months) for 1/N, cap-weighted, Ledoit–Wolf tangency, ERC, the single-view design and BL-KMV (bootstrap stability uses 20 resamples to bound run time). We record the mean Sharpe difference against 1/N and the rejection rate of a two-sided 5% test.
+
+# 4. Results
+
+## 4.1 What the signal contains
+
+```{r ic-table}
+ic <- T6; ic$signal <- c(ic_z = "Composite score", ic_mom = "Idiosyncratic momentum", ic_vol = "Low volatility (−vol)")[ic$signal]
+ic$period <- c(Full = "Full sample", P1 = "Aug 2017–Dec 2021", P2 = "Jan 2022–May 2026")[ic$period]
+knitr::kable(data.frame(Period = ic$period, Signal = ic$signal, `Mean rank IC` = f(ic$mean_ic, 3), `NW t-stat` = f(ic$t_nw, 2), `Hit rate` = pc(ic$hit, 0), check.names = FALSE),
+  caption = "Table 1. Monthly cross-sectional rank correlation (IC) between a signal and next-month idiosyncratic return of eligible banks.")
+```
+
+Table 1 shows that the composite score has a positive mean rank IC of `r f(T6$mean_ic[T6$period=="Full" & T6$signal=="ic_z"],3)` (t = `r f(T6$t_nw[T6$period=="Full" & T6$signal=="ic_z"],2)`), below conventional significance. The decomposition is informative: the low-volatility leg has IC `r f(T6$mean_ic[T6$period=="Full" & T6$signal=="ic_vol"],3)` (t = `r f(T6$t_nw[T6$period=="Full" & T6$signal=="ic_vol"],2)`), while idiosyncratic momentum has `r f(T6$mean_ic[T6$period=="Full" & T6$signal=="ic_mom"],3)` (t = `r f(T6$t_nw[T6$period=="Full" & T6$signal=="ic_mom"],2)`). In the second sub-period the composite IC falls to `r f(T6$mean_ic[T6$period=="P2" & T6$signal=="ic_z"],3)`. Figure 7 shows the cumulative IC paths. The in-window calibrated score slope is weak and unstable (Figure 4): its in-window t-statistic is positive in `r pc(mean(dg$lam_t > 0),0)` of windows and exceeds 2 in only `r pc(mean(dg$lam_t > 2),0)`, so the tilt $\hat\lambda$ is small and BL-KMV stays close to the equilibrium.
+
+The stability rule selects $k$ = `r paste(names(table(dg$k)), table(dg$k), sep = ": ", collapse = "; ")` (windows by $k$); the average cluster-weighted stability is `r f(mean(dg$ws),2)`. The selected $k$ rises mechanically with the number of eligible banks (Figure 4), which is why an ex-ante cap on $k$ relative to $n$ matters.
+
+```{r fig4, fig.cap="Figure 4. Window-level diagnostics: eligible banks, implied risk aversion, Ledoit–Wolf intensity, selected k, weighted mean stability, and the in-window t-statistic of the score slope."}
+knitr::include_graphics(file.path(od, "figures/F4_diagnostics.png"))
+```
+
+```{r fig7, fig.cap="Figure 7. Cumulative monthly rank IC of the composite score, idiosyncratic momentum and low volatility (shaded: Period 2)."}
+knitr::include_graphics(file.path(od, "figures/F7_cumulative_IC.png"))
+```
+
+## 4.2 Out-of-sample performance
+
+```{r tab-main}
+sel <- c("EW", "MKT", "ERC", "HRP", "MVP_LW", "TAN_LW", "BL0", "MOM_EW", "KIO_v1", "KMV", "KMV_TC")
+x <- T1[T1$period == "Full" & T1$model %in% sel, ]; x <- x[match(sel, x$model), ]
+knitr::kable(data.frame(Portfolio = lab[x$model], `Ann. return` = pc(x$ann_ret), `Ann. vol.` = pc(x$ann_vol), Sharpe = f(x$sharpe, 3), Sortino = f(x$sortino, 3),
+  `Max DD` = pc(x$mdd), `CVaR 5%` = pc(x$cvar95), `Turnover` = pc(x$turnover, 1), `Sharpe, 25 bps` = f(x$sr_net25, 3), check.names = FALSE),
+  caption = "Table 2. Full-sample out-of-sample performance (August 2017 – May 2026, 106 months). Sharpe in excess of the 10-year VGB yield; turnover = average monthly one-way turnover; 25 bps = cost per unit of traded value.")
+```
+
+```{r fig1, fig.cap="Figure 1. Out-of-sample wealth (log scale). Shaded: Period 2 (January 2022 – May 2026)."}
+knitr::include_graphics(file.path(od, "figures/F1_wealth.png"))
+```
+
+Table 2 and Figure 1 give a clear ordering. The best Sharpe ratios belong to the least engineered rules: 1/N (`r f(g("Full","EW","sharpe"),3)`), ERC (`r f(g("Full","ERC","sharpe"),3)`) and the re-implemented single-view design (`r f(g("Full","KIO_v1","sharpe"),3)`). BL-KMV (`r f(g("Full","KMV","sharpe"),3)`) is close to the cap-weighted portfolio (`r f(g("Full","MKT","sharpe"),3)`) and to inverse BL without a view (`r f(g("Full","BL0","sharpe"),3)`), consistent with a posterior that stays near the equilibrium. Estimation-error-sensitive rules trail: the sample tangency portfolio has a Sharpe ratio of `r f(g("Full","TAN","sharpe"),3)` and a maximum drawdown of `r pc(g("Full","TAN","mdd"))`; Ledoit–Wolf shrinkage of the covariance alone does not rescue it (`r f(g("Full","TAN_LW","sharpe"),3)`). The signal-only top-cluster portfolio is the most aggressive: turnover of `r pc(g("Full","MOM_EW","turnover"),0)` per month and a Sharpe ratio of `r f(g("Full","MOM_EW","sharpe"),3)`.
+
+```{r tab-reg}
+sel2 <- c("EW", "MKT", "ERC", "MVP_LW", "TAN_LW", "KIO_v1", "KMV", "KMV_TC")
+rows <- do.call(rbind, lapply(sel2, function(m) data.frame(Portfolio = lab[m],
+  `P1 Sharpe` = f(g("P1", m, "sharpe"), 3), `P1 Max DD` = pc(g("P1", m, "mdd")), `P2 Sharpe` = f(g("P2", m, "sharpe"), 3), `P2 Max DD` = pc(g("P2", m, "mdd")),
+  `P2 Sharpe, 25 bps` = f(g("P2", m, "sr_net25"), 3), check.names = FALSE)))
+knitr::kable(rows, caption = "Table 3. Sub-period performance. P1 = August 2017 – December 2021 (53 months, bull market and monetary easing); P2 = January 2022 – May 2026 (53 months, tightening, bond-market stress, volatile rates).")
+```
+
+In the first sub-period 1/N has the highest Sharpe ratio among the portfolios in Table 3 (`r f(g("P1","EW","sharpe"),3)`); in the second, all portfolios are much weaker and the ranking changes: BL-KMV-TC (`r f(g("P2","KMV_TC","sharpe"),3)`), BL-KMV (`r f(g("P2","KMV","sharpe"),3)`), the cap-weighted portfolio (`r f(g("P2","MKT","sharpe"),3)`) and 1/N (`r f(g("P2","EW","sharpe"),3)`) are within a few hundredths of each other, while the sample tangency portfolio is negative (`r f(g("P2","TAN","sharpe"),3)`). The ordering in the second period is therefore not a reliable reversal of the first.
+
+## 4.3 Is any difference statistically distinguishable?
+
+```{r tab-tests}
+tb <- T2; tb$vs <- lab[tb$vs]; tb$period <- c(Full = "Full", P1 = "P1", P2 = "P2")[tb$period]
+w <- reshape(data.frame(period = tb$period, vs = tb$vs, v = paste0(f(tb$diff_ann, 3), " (", pv(tb$p_boot), ")")), idvar = "vs", timevar = "period", direction = "wide")
+names(w) <- c("BL-KMV minus", "Full sample", "P1", "P2")
+knitr::kable(w, row.names = FALSE, caption = "Table 4. Sharpe-ratio difference (annualized) of BL-KMV against each benchmark, with studentized circular block bootstrap p-value in parentheses (5,000 resamples).")
+```
+
+No difference in Table 4 reaches the 5% level in any period. The standard error of the BL-KMV minus 1/N Sharpe difference is `r f(T2c$se_ann[T2c$period=="Full"],3)` in the full sample, `r f(T2c$se_ann[T2c$period=="P1"],3)` in P1 and `r f(T2c$se_ann[T2c$period=="P2"],3)` in P2, which gives minimum detectable differences at 80% power of `r f(T2c$mde80_ann[T2c$period=="Full"],2)`, `r f(T2c$mde80_ann[T2c$period=="P1"],2)` and `r f(T2c$mde80_ann[T2c$period=="P2"],2)`. Differences between the competing rules in Table 2 are mostly well below these thresholds. The same conclusion holds for the other contrasts we examined: the turnover-aware variant against 1/N (`r f(T2b$diff_ann[T2b$period=="Full" & T2b$a=="KMV_TC" & T2b$b=="EW"],3)`, p = `r pv(T2b$p_boot[T2b$period=="Full" & T2b$a=="KMV_TC" & T2b$b=="EW"])`), the single-view design against 1/N (`r f(T2b$diff_ann[T2b$period=="Full" & T2b$a=="KIO_v1" & T2b$b=="EW"],3)`, p = `r pv(T2b$p_boot[T2b$period=="Full" & T2b$a=="KIO_v1" & T2b$b=="EW"])`), and ERC against 1/N (p = `r pv(T2b$p_boot[T2b$period=="Full" & T2b$a=="ERC" & T2b$b=="EW"])`).
+
+Multiplicity does not change this. Hansen's SPA test with 1/N as the benchmark, over all other `r length(res$models)-1` rules, gives p = `r pv(T3c$p_SPAc[T3c$period=="Full"])` (full sample), `r pv(T3c$p_SPAc[T3c$period=="P1"])` (P1) and `r pv(T3c$p_SPAc[T3c$period=="P2"])` (P2): no rule is significantly better than 1/N. With BL-KMV as the benchmark the SPA p-value for the null that no other rule is superior is `r pv(T3b$p_SPAc[T3b$period=="Full"])`, so BL-KMV cannot be shown to be inferior either. The deflated Sharpe ratio, computed with the full ledger of `r T3d$n_trials[1]` configurations, is `r f(T3d$dsr[T3d$model=="KMV"],3)` for BL-KMV against an expected maximum annualized Sharpe ratio from noise alone of `r f(T3d$sr_star_ann[T3d$model=="KMV"],3)`; the high values simply reflect that every Sharpe ratio here is well above the very low selection threshold implied by variants that are close to each other, and do not measure superiority over 1/N.
+
+## 4.4 Alpha and stress behavior
+
+```{r tab-alpha}
+al <- T4[T4$period == "Full" & T4$model %in% c("EW", "ERC", "MVP_LW", "KIO_v1", "KMV", "KMV_TC"), ]
+knitr::kable(data.frame(Portfolio = lab[al$model], `Alpha (ann.)` = pc(al$alpha_ann), `t (NW)` = f(al$t_alpha, 2), Beta = f(al$beta, 2), `R2` = f(al$r2, 2), check.names = FALSE),
+  caption = "Table 5. Alpha and beta against the cap-weighted bank market (full sample, monthly excess returns, Newey–West t-statistics).")
+```
+
+```{r tab-stress}
+st <- T5[T5$model %in% c("EW", "MKT", "ERC", "MVP_LW", "TAN_LW", "KIO_v1", "KMV", "KMV_TC"), ]
+knitr::kable(data.frame(Portfolio = lab[st$model], `Mean in worst 12 market months` = pc(st$worst12_mean, 1), `March 2020` = pc(st$covid_2020_03, 1), `Q4 2022` = pc(st$bond_2022_q4, 1), `Down-capture ratio` = f(st$down_capture, 2), check.names = FALSE),
+  caption = "Table 6. Behavior in market stress. The market's own mean in its 12 worst months is shown in the text; the down-capture ratio is the portfolio's mean return divided by the market's in months when the market fell.")
+```
+
+No portfolio has a statistically significant alpha against the cap-weighted bank market (Table 5; the cap-weighted portfolio itself is the beta-one reference). In stress (Table 6), the market's mean return in its 12 worst months is `r pc(T5$mkt_worst12_mean[1],1)`. Portfolios that tilt toward lower-risk banks lose less in those months, which is consistent with the low-volatility content of the signal, but the sample contains only twelve such months and these differences are descriptive.
+
+## 4.5 Trading costs
+
+Cost proxies for the 21 banks with daily data (Appendix Table A2) give a median Corwin–Schultz spread of about `r f(median(T10$cs_spread_bps),0)` basis points and a mean of `r f(mean(T10$cs_spread_bps),0)`, with large dispersion across banks and a strong upward bias from the discrete tick size on low-priced stocks. We therefore bracket costs with a grid from 0 to 100 basis points per unit of traded value rather than choose a single number; brokerage commissions and taxes are excluded from the proxy and should be added by the practitioner.
+
+```{r fig5, fig.cap="Figure 5. Sharpe ratio net of proportional trading costs, as a function of the cost per unit of traded value."}
+knitr::include_graphics(file.path(od, "figures/F5_net_sharpe_cost.png"))
+```
+
+The single-view design trades `r pc(g("Full","KIO_v1","turnover"),0)` of the portfolio per month and BL-KMV `r pc(g("Full","KMV","turnover"),0)`, against `r pc(g("Full","EW","turnover"),1)` for 1/N and `r pc(g("Full","ERC","turnover"),1)` for ERC. At 25 basis points the full-sample Sharpe ratio of the single-view design falls from `r f(g("Full","KIO_v1","sharpe"),3)` to `r f(g("Full","KIO_v1","sr_net25"),3)` and at 50 basis points to `r f(g("Full","KIO_v1","sr_net50"),3)`, whereas 1/N falls only to `r f(g("Full","EW","sr_net25"),3)` and `r f(g("Full","EW","sr_net50"),3)`. The turnover-aware variant reduces monthly turnover to `r pc(g("Full","KMV_TC","turnover"),2)`, reaches a full-sample Sharpe ratio of `r f(g("Full","KMV_TC","sharpe"),3)` and a maximum drawdown of `r pc(g("Full","KMV_TC","mdd"))`, the shallowest among the portfolios in Table 2, but this is partly because with a cost of 25 basis points per unit and small calibrated tilts the optimizer hardly trades away from its starting allocation; it should be read as evidence that the tilts are too small to pay their trading costs, not as a validated strategy.
+
+## 4.6 Ablations and sensitivity
+
+```{r tab-abl}
+ab <- c("KMV", "KMV_k4", "KMV_ic", "KMV_sampleS", "KMV_single", "KMV_rawq", "KMV_nostab", "KMV_TC")
+x <- T1[T1$period == "Full" & T1$model %in% ab, ]; x <- x[match(ab, x$model), ]
+knitr::kable(data.frame(Variant = lab[x$model], Sharpe = f(x$sharpe, 3), `Ann. return` = pc(x$ann_ret), `Max DD` = pc(x$mdd), Turnover = pc(x$turnover, 1), `P2 Sharpe` = f(T1$sharpe[T1$period == "P2" & T1$model %in% ab][match(ab, T1$model[T1$period == "P2" & T1$model %in% ab])], 3), check.names = FALSE),
+  caption = "Table 7. Ablations of the proposed rule (full sample unless stated).")
+```
+
+Table 7 shows that individual ingredients move the Sharpe ratio by only a few hundredths, apart from the uncalibrated view magnitude, whose Sharpe ratio is `r f(g("Full","KMV_rawq","sharpe"),3)` at the price of a turnover of `r pc(g("Full","KMV_rawq","turnover"),0)` per month. That variant is the best of the proposed family, but it was not the pre-specified main rule, its difference from 1/N is not significant (`r f(T2b$diff_ann[T2b$period=="Full" & T2b$a=="KMV_rawq" & T2b$b=="EW"],3)`, p = `r pv(T2b$p_boot[T2b$period=="Full" & T2b$a=="KMV_rawq" & T2b$b=="EW"])`), and its calibration mixes units, so it is reported as an ablation and not as a finding.
+
+```{r tab-sens}
+sw <- reshape(T7[, c("config", "model", "sharpe")], idvar = "config", timevar = "model", direction = "wide")
+sw <- data.frame(Configuration = sw$config, `1/N` = f(sw$sharpe.EW, 3), `Cap-weighted` = f(sw$sharpe.MKT, 3), ERC = f(sw$sharpe.ERC, 3), `Single-view` = f(sw$sharpe.KIO_v1, 3), `BL-KMV` = f(sw$sharpe.KMV, 3), `BL-KMV minus 1/N` = f(sw$sharpe.KMV - sw$sharpe.EW, 3), check.names = FALSE)
+knitr::kable(sw, caption = "Table 8. Sensitivity of the Sharpe ratio. base = baseline; win24/win48 = 24/48-month windows (win48 starts one year later); cap20/cap40/cap100 = position cap 20%/40%/none; om05/om20 = multiplier 0.5/2 on Omega; Lm3/Lm12 = momentum lookback; thr60/thr80 = stability threshold.")
+```
+
+```{r fig6, fig.cap="Figure 6. Sharpe-ratio difference of BL-KMV relative to 1/N and relative to the single-view design across sensitivity configurations."}
+knitr::include_graphics(file.path(od, "figures/F6_sensitivity.png"))
+```
+
+Across the eleven alternative configurations BL-KMV's Sharpe ratio never exceeds that of 1/N by a margin that could be called meaningful (Table 8, Figure 6); the difference ranges from `r f(min(sw$`BL-KMV minus 1/N` |> as.numeric()),3)` to `r f(max(sw$`BL-KMV minus 1/N` |> as.numeric()),3)`. The stability-threshold configurations are nearly identical to the baseline because the rule rarely binds at the margin of 0.60–0.80. Results for the risk-free robustness check (halved and zero rate) are given by the same Sharpe formula: because all portfolios have similar volatilities, a lower rate raises all Sharpe ratios by similar amounts and leaves the ordering largely unchanged (the ordering among portfolios whose volatilities differ by more than a few percentage points can change, and the reader can reproduce this with `R/04_metrics.R`).
+
+## 4.7 Size and power by simulation
+
+```{r tab-sim}
+if (!is.null(T8)) {
+  s <- T8[T8$model != "EW", ]; s$model <- lab[s$model]
+  s$s <- c(`0` = "No alpha", `1` = "Moderate alpha", `2` = "Strong alpha")[as.character(s$s)]
+  knitr::kable(data.frame(DGP = s$s, Portfolio = s$model, `Mean Sharpe` = f(s$mean_sharpe, 3), `Mean diff. vs 1/N` = f(s$mean_d_vs_EW, 3), `Share positive` = pc(s$pos_share, 0), `Reject, 5%` = pc(s$reject_5pct, 1), `Reject and positive` = pc(s$reject_pos, 1), check.names = FALSE),
+    caption = "Table 9. Monte-Carlo size and power of the rolling pipeline (106 out-of-sample months per replication; the number of replications is given in the text).")
+}
+```
+
+```{r fig8, fig.cap="Figure 8. Simulation: mean Sharpe difference against 1/N (top) and rate of significant positive differences (bottom) by alpha level."}
+if (!is.null(T8)) { knitr::include_graphics(file.path(od, "figures/F8a_sim_delta.png")); knitr::include_graphics(file.path(od, "figures/F8b_sim_power.png")) }
+```
+
+`r if (!is.null(T8)) paste0("Table 9 summarizes ", length(unique(readRDS(file.path(od, "rds/simulation.rds"))$rep)), " replications per alpha level. ") else "(simulation results unavailable)"`The table gives the rate at which the pipeline would flag a Sharpe-ratio gain over 1/N when none exists (size) and when persistent alpha is present (power) at the sample length of the empirical study.
+
+## 4.8 A broad universe at weekly frequency
+
+```{r tab-broad}
+bt <- T9; bt$model <- c(EW = "1/N", MKT = "Dollar-volume weighted", MVP_LW = "Min-variance, LW", TAN_LW = "Tangency, LW", ERC = "ERC", KIO_v1 = "Single-view BL-K_IO", KMV = "BL-KMV (main)")[bt$model]
+tt <- T9b[match(c("MKT", "MVP_LW", "TAN_LW", "ERC", "KIO_v1", "KMV"), T9b$model), ]
+bt$p_vs_EW <- c(NA, pv(tt$p_boot))
+knitr::kable(data.frame(Portfolio = bt$model, `Ann. return` = pc(bt$ann_ret), `Ann. vol.` = pc(bt$ann_vol), Sharpe = f(bt$sharpe, 3), `Max DD` = pc(bt$mdd), `Weekly turnover` = pc(bt$turnover_wk, 1), `Sharpe, 25 bps` = f(bt$sr_net25, 3), `p vs 1/N` = bt$p_vs_EW, check.names = FALSE),
+  caption = "Table 10. Broad HOSE universe (100 most liquid stocks, weekly rebalance, 120-day window, cap 10%).")
+```
+
+On the broad universe (`r broad$n_oos` weekly out-of-sample steps, `r format(min(broad$dates))` to `r format(max(broad$dates))`) the picture differs from the bank panel. Risk-based rules dominate: minimum variance reaches a Sharpe ratio of `r f(T9$sharpe[T9$model=="MVP_LW"],2)` and the Ledoit–Wolf tangency portfolio `r f(T9$sharpe[T9$model=="TAN_LW"],2)`, against `r f(T9$sharpe[T9$model=="EW"],2)` for 1/N. The clustering-view rules (`r f(T9$sharpe[T9$model=="KMV"],2)` for BL-KMV and `r f(T9$sharpe[T9$model=="KIO_v1"],2)` for the single-view design) improve on 1/N and on the dollar-volume-weighted anchor (`r f(T9$sharpe[T9$model=="MKT"],2)`) but trade far more (weekly turnover of `r pc(T9$turnover_wk[T9$model=="KMV"],0)` for BL-KMV), so at 50 basis points BL-KMV's Sharpe ratio is `r f(T9$sr_net50[T9$model=="KMV"],2)`. Only ERC is significantly above 1/N at the 5% level in the bootstrap (p = `r pv(T9b$p_boot[T9b$model=="ERC"])`). With `r broad$n_oos` weekly steps this is a low-power check and the sample is a single rally-and-correction cycle, so it is best read as showing that the bank-panel conclusion is not simply a consequence of having only 25 assets. The stability rule selects $k=6$ in most windows (`r pc(mean(broad$diag$k == 6),0)`), the upper bound of the admissible set, so with 100 stocks the rule's cap on $k$ becomes binding.
+
+# 5. Discussion
+
+**Reading the evidence.** Taken together, the results say that a carefully built clustering view layered on an equilibrium anchor neither beats nor significantly underperforms 1/N in a 106-month record of Vietnamese bank stocks. This is not a surprising result in itself: the 25 banks are highly correlated (average pairwise return correlation `r f(str_$mean_corr,2)`, monthly cross-sectional standard deviation of returns `r pc(str_$mean_xs_sd,1)`), so diversification and selection have little room to work, and the signals that predict the cross-section are weak (Table 1). What the design adds is calibration: because the minimum detectable Sharpe-ratio difference is about `r f(T2c$mde80_ann[T2c$period=="Full"],1)`, a 106-month backtest cannot adjudicate between rules whose true Sharpe ratios differ by a few tenths, which is the plausible range for allocation rules. Published claims of significant improvements on samples of this length should be read with that standard error in mind.
+
+**Why the low-volatility leg matters.** The only characteristic with a conventionally significant IC is low volatility. This is consistent with the behavior reported for stress months (Table 6), and it suggests that a better view generator for this market may be a low-risk or quality characteristic rather than price momentum. We did not optimize the signal specification after seeing the results; doing so on this sample would raise the multiplicity problem we have tried to control.
+
+**Implications for practice.** For a Vietnamese fund manager, the evidence favors simple, low-turnover, robust rules (1/N, ERC) over rules that rely on estimated returns, and it favors adding a turnover penalty whenever a signal is used. The equilibrium anchor does protect against the estimation error that undermines the tangency portfolio (compare TAN with BL0 and BL-KMV), which is the practical value of the inverse-optimization approach even when the view adds little.
+
+**Limitations.** (i) The bank panel is survivorship-conditioned and has only 25 assets, 7 of which are eligible in the first windows, which strongly restricts early clustering (the minimum-cluster-size guard and $k=2$ in those windows are a response, not a cure). (ii) The risk-free rate is a 10-year bond yield read from a figure, with tenor mismatch. (iii) The broad-universe test uses a dollar-volume proxy for the equilibrium and only 79 weekly steps. (iv) The simulation uses a stylized factor model with persistent alpha; real alpha is time-varying. (v) All variants were evaluated on the same sample; the trial ledger and the SPA test correct for the search we conducted but cannot correct for specifications we did not run or that the field has run on similar data. (vi) The turnover-aware variant's near-zero turnover reflects the calibrated tilts being small relative to the assumed cost. (vii) Trading-cost proxies use only 21 months of daily data and exclude commissions and taxes.
+
+# 6. Conclusion
+
+We specified, before looking at out-of-sample results, a clustering-view Black–Litterman rule with ex-ante cluster selection, calibrated multi-view tilts and stability-weighted uncertainty, and tested it with Sharpe-ratio inference, multiplicity control, a power analysis, simulation and a broad-universe replication. In Vietnamese bank stocks the rule is statistically indistinguishable from 1/N and from the other benchmarks, and the evaluation record is too short to detect improvements smaller than about `r f(T2c$mde80_ann[T2c$period=="Full"],1)` in annualized Sharpe ratio. The reusable contributions are the design, the R code that reproduces every number, the power calculation, and the observation that low volatility, not momentum, carries the cross-sectional information in this panel.
+
+# Declarations
+
+**Use of artificial intelligence.** The analysis code, the manuscript draft and this text were produced with the assistance of Claude (Anthropic) under the Academic Research Skills workflow; the authors are responsible for verifying all analytical choices, results and references before submission. Reference verification status is documented in `process/reference_verification.md`.
+
+**Data and code availability.** All code (`paper2/R/`), the derived tables and the figures are in the project repository; every number in this manuscript is produced by `paper2/manuscript/manuscript.Rmd` from files in `paper2/output/`. The monthly bank panel is in `Data_fetch/` and the daily files in `data/raw/`.
+
+**Ethics, funding, competing interests, author contributions.** [To be completed by the authors.]
+
+# References
+
+Amihud, Y. (2002). Illiquidity and stock returns: Cross-section and time-series effects. *Journal of Financial Markets, 5*(1), 31–56.
+
+Bailey, D. H., & López de Prado, M. (2014). The deflated Sharpe ratio: Correcting for selection bias, backtest overfitting, and non-normality. *The Journal of Portfolio Management, 40*(5), 94–107. https://doi.org/10.3905/jpm.2014.40.5.094
+
+Bertsimas, D., Gupta, V., & Paschalidis, I. C. (2012). Inverse optimization: A new perspective on the Black–Litterman model. *Operations Research, 60*(6), 1389–1403. https://doi.org/10.1287/opre.1120.1115
+
+Black, F., & Litterman, R. (1992). Global portfolio optimization. *Financial Analysts Journal, 48*(5), 28–43. https://doi.org/10.2469/faj.v48.n5.28
+
+Corwin, S. A., & Schultz, P. (2012). A simple way to estimate bid-ask spreads from daily high and low prices. *The Journal of Finance, 67*(2), 719–760.
+
+DeMiguel, V., Garlappi, L., & Uppal, R. (2009). Optimal versus naive diversification: How inefficient is the 1/N portfolio strategy? *The Review of Financial Studies, 22*(5), 1915–1953. https://doi.org/10.1093/rfs/hhm075
+
+Gu, S., Kelly, B., & Xiu, D. (2020). Empirical asset pricing via machine learning. *The Review of Financial Studies, 33*(5), 2223–2273. https://doi.org/10.1093/rfs/hhaa009
+
+Hansen, P. R. (2005). A test for superior predictive ability. *Journal of Business & Economic Statistics, 23*(4), 365–380.
+
+Harvey, C. R., Liu, Y., & Zhu, H. (2016). …and the cross-section of expected returns. *The Review of Financial Studies, 29*(1), 5–68. https://doi.org/10.1093/rfs/hhv059
+
+Hennig, C. (2007). Cluster-wise assessment of cluster stability. *Computational Statistics & Data Analysis, 52*(1), 258–271.
+
+Jobson, J. D., & Korkie, B. M. (1981). Performance hypothesis testing with the Sharpe and Treynor measures. *The Journal of Finance, 36*(4), 889–908. https://doi.org/10.1111/j.1540-6261.1981.tb04891.x
+
+Ledoit, O., & Wolf, M. (2004). Honey, I shrunk the sample covariance matrix. *The Journal of Portfolio Management, 30*(4), 110–119. https://doi.org/10.3905/jpm.2004.110
+
+Ledoit, O., & Wolf, M. (2008). Robust performance hypothesis testing with the Sharpe ratio. *Journal of Empirical Finance, 15*(5), 850–859. https://doi.org/10.1016/j.jempfin.2008.03.002
+
+Ledoit, O., & Wolf, M. (2017). Nonlinear shrinkage of the covariance matrix for portfolio selection: Markowitz meets Goldilocks. *The Review of Financial Studies, 30*(12), 4349–4388. https://doi.org/10.1093/rfs/hhx052
+
+Lo, A. W. (2002). The statistics of Sharpe ratios. *Financial Analysts Journal, 58*(4), 36–52. https://doi.org/10.2469/faj.v58.n4.2453
+
+López de Prado, M. (2016). Building diversified portfolios that outperform out of sample. *The Journal of Portfolio Management, 42*(4), 59–69.
+
+MacQueen, J. B. (1967). Some methods for classification and analysis of multivariate observations. In *Proceedings of the 5th Berkeley Symposium on Mathematical Statistics and Probability* (pp. 281–297). University of California Press.
+
+Maillard, S., Roncalli, T., & Teïletche, J. (2010). The properties of equally weighted risk contribution portfolios. *The Journal of Portfolio Management, 36*(4), 60–70.
+
+Michaud, R. O. (1989). The Markowitz optimization enigma: Is 'optimized' optimal? *Financial Analysts Journal, 45*(1), 31–42. https://doi.org/10.2469/faj.v45.n1.31
+
+Newey, W. K., & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica, 55*(3), 703–708.
+
+Politis, D. N., & Romano, J. P. (1994). The stationary bootstrap. *Journal of the American Statistical Association, 89*(428), 1303–1313.
+
+White, H. (2000). A reality check for data snooping. *Econometrica, 68*(5), 1097–1126. https://doi.org/10.1111/1468-0262.00152
+
+# Appendix A. Additional tables
+
+```{r tab-a1}
+knitr::kable(data.frame(Ticker = TA1$ticker, `First return` = TA1$first_return, `N returns` = TA1$n_returns, `Mean ann. return` = pc(TA1$mean_ann_ret), `Ann. vol.` = pc(TA1$ann_vol), `Min month` = pc(TA1$min_month), `Max month` = pc(TA1$max_month), check.names = FALSE),
+  caption = "Table A1. The 25-bank monthly panel (return statistics over each bank's available history).")
+```
+
+```{r tab-a2}
+knitr::kable(data.frame(Ticker = T10$ticker, `Mean CS spread (bps)` = f(T10$cs_spread_bps, 1), `Median CS spread (bps)` = f(T10$median_cs_bps, 1), `Amihud (x1e6)` = formatC(T10$amihud_x1e6, format = "g", digits = 3), check.names = FALSE),
+  caption = "Table A2. Trading-cost proxies for banks with daily data (21 months of daily high–low–close–volume, August 2024 – September 2026). Corwin–Schultz estimates are upward-biased by tick-size effects.")
+```
+
+```{r tab-a3}
+ta <- TA2[TA2$model %in% c("EW", "MKT", "ERC", "KIO_v1", "KMV", "KMV_TC"), ]
+knitr::kable(data.frame(Portfolio = lab[ta$model], Skewness = f(ta$skew, 3), `Excess kurtosis` = f(ta$exkurt, 3), `JB p-value` = pv(ta$p_jb), `Ljung–Box Q(5) p-value` = pv(ta$p_lb5), check.names = FALSE),
+  caption = "Table A3. Distribution and autocorrelation of out-of-sample monthly returns.")
+```
+
+# Appendix B. Proofs
+
+**Proof of Proposition 1.** With $\Omega=\tau\Lambda$, $\tau\Sigma P^{\top}(\tau P\Sigma P^{\top}+\tau\Lambda)^{-1}=\tau\Sigma P^{\top}\tau^{-1}(P\Sigma P^{\top}+\Lambda)^{-1}=\Sigma P^{\top}(P\Sigma P^{\top}+\Lambda)^{-1}$, so $\tau$ cancels from Equation (1).
+
+**Proof of Proposition 2.** For $K=1$, $\Lambda=p\Sigma p^{\top}/s$, so $P\Sigma P^{\top}+\Lambda=p\Sigma p^{\top}(1+1/s)$ and Proposition 1 gives $\mu_{BL}=\Pi+\Sigma p^{\top}\big[p\Sigma p^{\top}(1+1/s)\big]^{-1}(q-p\Pi)=\Pi+\frac{s}{1+s}\frac{\Sigma p^{\top}}{p\Sigma p^{\top}}(q-p\Pi)$. The weight $s/(1+s)$ is strictly increasing in $s$, equals $1/2$ at $s=1$ and tends to $0$ as $s\to0$. $\square$
+
+# Appendix C. Reproducibility
+
+Run `Rscript paper2/R/run_all.R` (R 4.3, packages `quadprog`, `sandwich`, `lmtest`, `cluster`, `ggplot2`, `knitr`, `rmarkdown`). Random seeds are fixed per window and per simulation replication. The decisions log (`paper2/process/decisions.md`) records design choices taken before results were inspected, including one amendment (A1).
