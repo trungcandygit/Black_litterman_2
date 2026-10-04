@@ -1,0 +1,275 @@
+---
+title: "What drives Black–Litterman performance? Anchor, views and covariance in a factorial test on Vietnamese bank and equity portfolios"
+author: "[Author names and affiliations to be added]"
+date: "Draft of 4 October 2026 (journal-neutral; not yet submitted)"
+output:
+  word_document:
+    toc: false
+    fig_width: 7
+    fig_height: 3.6
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE); options(knitr.kable.NA = "—")
+root <- "/home/user/Black_litterman_2/paper2"; od <- file.path(root, "output")
+source(file.path(root, "R/lib.R"))
+rd <- function(f) read.csv(file.path(od, "tables", f))
+cellsB <- rd("B1_cells_banks.csv"); cellsW <- rd("B1_cells_broad.csv"); shB <- rd("B2_shares_banks.csv"); shW <- rd("B2_shares_broad.csv")
+mgB <- rd("B3_marginal_banks.csv"); mgW <- rd("B3_marginal_broad.csv"); ctB <- rd("B4_contrasts_banks.csv"); ctW <- rd("B4_contrasts_broad.csv")
+eqB <- rd("B5_equivalence_views_banks.csv"); eqW <- rd("B5_equivalence_views_broad.csv"); rfB <- rd("B6_refs_banks.csv"); rfW <- rd("B6_refs_broad.csv")
+mech <- rd("B7_mechanism.csv"); spa <- rd("B8_spa_cells_vs_EW.csv"); reg <- rd("B9_shares_by_regime.csv"); oth <- rd("B10_shares_other_outcomes.csv")
+T1 <- rd("T1_performance.csv"); T2 <- rd("T2_sharpe_tests_KMV.csv"); T2b <- rd("T2b_sharpe_tests_other.csv"); T2c <- rd("T2c_power_mde.csv"); TA1 <- rd("T_A1_data_summary.csv"); T10 <- rd("T10_bank_cost_proxies.csv")
+fb <- readRDS(file.path(od, "rds/factorial_banks.rds")); fw <- readRDS(file.path(od, "rds/factorial_broad.rds"))
+f <- function(x, d = 3) formatC(x, format = "f", digits = d)
+pc <- function(x, d = 1) paste0(formatC(100 * x, format = "f", digits = d), "%")
+pv <- function(x) ifelse(x < 0.001, "< 0.001", formatC(x, format = "f", digits = 3))
+sB <- function(comp, col) shB[shB$component == comp, col]; sW <- function(comp, col) shW[shW$component == comp, col]
+mB <- function(lv) mgB$mean_sharpe[mgB$level == lv]; mW <- function(lv) mgW$mean_sharpe[mgW$level == lv]
+cB <- function(ct, col) ctB[ctB$contrast == ct, col]; cW <- function(ct, col) ctW[ctW$contrast == ct, col]
+rB <- function(r) rfB$sharpe[rfB$ref == r]; rW <- function(r) rfW$sharpe[rfW$ref == r]
+cell <- function(d, id, col = "sharpe") d[d$id == id, col]
+nB <- nrow(fb$ret); nW <- nrow(fw$ret); d1 <- format(min(fb$dates), "%B %Y"); d2 <- format(max(fb$dates), "%B %Y")
+w1 <- format(min(fw$dates), "%d %B %Y"); w2 <- format(max(fw$dates), "%d %B %Y")
+bestB <- cellsB[which.max(cellsB$sharpe), ]; bestW <- cellsW[which.max(cellsW$sharpe), ]
+exB <- fb$ret[, cellsB$id] - fb$rf_m; srB_m <- apply(exB, 2, mean) / apply(exB, 2, sd)
+dsrB <- dsr(exB[, bestB$id], 80, var(srB_m))$dsr
+exW <- fw$ret[, cellsW$id] - fw$rf_m; srW_m <- apply(exW, 2, mean) / apply(exW, 2, sd); dsrW <- dsr(exW[, bestW$id], 80, var(srW_m))$dsr
+lab <- c(anchor = "Anchor", view = "View", cov = "Covariance", cap = "Position cap", twoway = "All two-way interactions", higher = "Higher-order interactions")
+```
+
+**Abstract.** Black–Litterman (BL) portfolios combine four ingredients that practitioners tune separately: an equilibrium anchor, a view signal, a covariance estimator and a position cap. We ask how much of the out-of-sample Sharpe-ratio variation across BL portfolios each ingredient explains, and whether the answer replicates across universes. We run a fully crossed design of 4 anchors (capitalization, equal weight, equal risk contribution, a 50/50 blend) × 5 views (none, momentum, low volatility, composite, K-means cluster views) × 2 covariance estimators (sample, Ledoit–Wolf) × 2 caps = 80 portfolios, on 25 Vietnamese bank stocks (`r nB` monthly out-of-sample steps, `r d1`–`r d2`) and, as a confirmation sample, on the 100 most liquid of `r fw$n_stocks` HOSE stocks (`r nW` weekly steps). Variance shares are computed by ANOVA on cell Sharpe ratios, with uncertainty from a circular block bootstrap of months, a label-permutation noise benchmark, Holm-corrected contrasts and equivalence tests. In banks the anchor accounts for `r pc(sB("anchor","share"),0)` of the variance (bootstrap interval `r pc(sB("anchor","lo"),0)`–`r pc(sB("anchor","hi"),0)`) and the view for `r pc(sB("view","share"),0)`; momentum, composite and cluster views are equivalent to no view within ±0.10 Sharpe units. In the broad universe the ranking reverses: the view accounts for `r pc(sW("view","share"),0)` (`r pc(sW("view","lo"),0)`–`r pc(sW("view","hi"),0)`) and the anchor for `r pc(sW("anchor","share"),0)`. Covariance estimator and cap explain under `r pc(max(sB("cov","share"), sB("cap","share"), sW("cov","share"), sW("cap","share")),0)` in both. The one signal that replicates is low volatility (rank IC `r f(mech$ic_lowvol[1],3)`, t = `r f(mech$t_lowvol[1],2)` in banks; `r f(mech$ic_lowvol[2],3)`, t = `r f(mech$t_lowvol[2],2)` in the broad sample), while momentum does not (t = `r f(mech$t_mom[1],2)` and `r f(mech$t_mom[2],2)`). No BL cell is significantly better than 1/N under Hansen's superior-predictive-ability test (p = `r pv(spa$p_SPAc[1])` banks, `r pv(spa$p_SPAc[2])` broad). The design offers practitioners a map of where tuning effort pays: on the anchor in a concentrated sector, on the signal in a wide cross-section.
+
+**Keywords:** Black–Litterman; equilibrium anchor; low-volatility; variance attribution; Sharpe-ratio inference; emerging markets
+
+**JEL classification:** G11; G17; C12; C52
+
+**Tóm tắt.** Bài viết phân rã phương sai Sharpe ngoài mẫu của 80 danh mục Black–Litterman (4 neo cân bằng × 5 loại quan điểm × 2 ước lượng hiệp phương sai × 2 mức trần) trên 25 cổ phiếu ngân hàng (`r nB` tháng) và trên 100 cổ phiếu thanh khoản nhất HOSE (`r nW` tuần). Ở nhóm ngân hàng, neo cân bằng giải thích `r pc(sB("anchor","share"),0)` phương sai Sharpe còn quan điểm chỉ `r pc(sB("view","share"),0)`; ở mẫu rộng thứ tự đảo ngược (quan điểm `r pc(sW("view","share"),0)`, neo `r pc(sW("anchor","share"),0)`). Chỉ biến động thấp là tín hiệu lặp lại ở cả hai mẫu, momentum thì không. Không danh mục nào vượt 1/N có ý nghĩa thống kê theo kiểm định SPA.
+
+# 1. Introduction
+
+The Black–Litterman (BL) approach (Black & Litterman, 1992) is usually presented as a single method, yet a practitioner who builds one chooses at least four things: what portfolio serves as the equilibrium anchor, what signal generates views and how confident to be in it, how to estimate the covariance matrix, and how tightly to cap positions. The inverse-optimization formulation (Bertsimas et al., 2012) makes the first choice explicit: whatever portfolio is declared optimal pins down the implied returns. Empirical BL papers typically vary one ingredient at a time, and attribute the result to whichever ingredient is new. When a naive benchmark is hard to beat (DeMiguel et al., 2009), it is then unclear whether any improvement comes from the signal, from a better anchor, or from the shrinkage built into the covariance estimator (Ledoit & Wolf, 2004).
+
+This paper makes the attribution itself the object of study. We estimate a fully crossed factorial of 80 BL portfolios on two samples and ask four questions. Which ingredient explains most of the dispersion in out-of-sample Sharpe ratios? How precise is that attribution given a few hundred observations? Do view signals add Sharpe ratio beyond the anchor at all, in the sense of an equivalence test rather than a failure to reject? And does the ranking of ingredients replicate on an independent universe? The two samples are chosen to differ in what each is good for: 25 Vietnamese bank stocks observed monthly over twelve years (long time series, a concentrated and highly correlated sector), and a wide cross-section of liquid HOSE stocks observed weekly over twenty months (many assets, a short time series).
+
+We contribute (i) a design that separates anchor, view, covariance and cap effects by construction; (ii) an attribution method with proper uncertainty: circular block-bootstrap intervals for variance shares and marginal contrasts (Politis & Romano, 1992), Holm (1979) correction, a label-permutation noise benchmark, equivalence tests in the two-one-sided-test tradition (Schuirmann, 1987), and Sharpe-ratio inference that respects serial dependence (Ledoit & Wolf, 2008; Harvey et al., 2016); (iii) a discovery–confirmation test of the signals, in which the signal that works in the bank panel is tested again in an independent, much wider sample; and (iv) a transparent reproducible R pipeline in which every number in this manuscript is generated from saved output. Hypotheses were fixed before the factorial was computed (Section 3.6). Several were motivated by an earlier clustering-view study by the same project; we flag where that makes a hypothesis less than independent.
+
+# 2. Data
+
+**Bank panel.** Month-end adjusted prices and market capitalization for 25 banks listed on HOSE, HNX or UPCoM from June 2014 to May 2026 (144 months; Appendix Table A1). A bank enters the eligible universe once it has a complete 36-month estimation window, so the eligible set grows from 7 to 25 banks. The panel contains banks listed in 2026 extended back to their listing dates; banks delisted or merged earlier are absent, a survivorship limitation shared by all 80 cells.
+
+**Broad universe.** Daily open–high–low–close–volume files for 405 HOSE stocks run from 21 August 2024 to 23 September 2026. We keep the `r fw$n_stocks` stocks with at least 95% coverage. At each weekly rebalance the 100 most liquid stocks by trailing 60-day dollar volume that have a complete 120-day window form the universe. No market capitalization is available for this sample, so the capitalization anchor is proxied by dollar-volume weights; this is a proxy and the capitalization contrast is therefore not like-for-like across the two samples.
+
+**Risk-free rate.** The annual yield on 10-year Vietnamese government bonds by calendar year, converted to the holding-period rate. The values were read from a figure in the authors' earlier work and are approximate (about ±0.05 percentage points; `data/rf_vgb10y.csv`).
+
+# 3. Methods
+
+## 3.1 Rolling protocol
+
+Banks: at the end of month $t$ a 36-month window of returns on eligible banks is used and the portfolio is held in month $t+1$ (`r nB` steps, `r d1`–`r d2`). Broad universe: a 120-trading-day window, weekly rebalance, held for the next five trading days (`r nW` steps, `r w1`–`r w2`). All portfolios are long-only and fully invested. Sharpe ratios are annualized excess-return Sharpe ratios.
+
+## 3.2 Four ingredients
+
+**Anchor.** The inverse-BL equilibrium excess return vector is $\Pi=\delta\,\Sigma\,w_a$ for an anchor portfolio $w_a$ (Bertsimas et al., 2012). The four anchors are the capitalization portfolio (CAP; dollar-volume proxy in the broad sample), equal weights (EW), the equal-risk-contribution portfolio computed from the Ledoit–Wolf covariance (ERC; Maillard et al., 2010), and a 50/50 blend of CAP and EW (SHR). The scalar $\delta=(\bar r_a-\bar r_f)/\sigma_a^2$ is computed in each window from the anchor portfolio's own window return and variance and clipped to [0.5, 10]. With a different anchor, $\delta$ and $\Pi$ change.
+
+**View.** None (the posterior equals $\Pi$), or one of four signals: idiosyncratic momentum (Jegadeesh & Titman, 1993), low volatility (Ang et al., 2006), a composite (momentum minus volatility, standardized), or K-means cluster views. For the first three, banks are split into score terciles and each tercile defines an absolute view on its mean return; the cluster view uses K-means groups with the number of clusters $k\in\{3,\dots,6\}$ chosen by a return-free bootstrap-stability rule (Hennig, 2007) and view uncertainty divided by cluster stability. For every view, the view value is $q_c=p_c\Pi+\hat\lambda(\bar z_c-\bar z)$, where $p_c$ is the equal-weight pick row of group $c$, $\bar z_c$ the group's mean standardized score, and $\hat\lambda$ the annualized in-window mean cross-sectional slope of next-period idiosyncratic return on the score, floored at zero; view uncertainty is $\Omega=\mathrm{diag}(\tau\,p_c\Sigma p_c^{\top})$ with $\tau=1/W$ ($W$ the window length). The posterior mean is $\mu=\Pi+\tau\Sigma P^{\top}(\tau P\Sigma P^{\top}+\Omega)^{-1}(q-P\Pi)$. Because $\Omega\propto\tau$, $\tau$ cancels from $\mu$, so $\tau$ is not a tuning ingredient (Appendix B).
+
+**Covariance.** The sample covariance of the window (with a tiny ridge), or the Ledoit–Wolf constant-correlation shrinkage estimator (Ledoit & Wolf, 2004).
+
+**Cap and optimizer.** The portfolio maximizes the Sharpe ratio of $\mu$ and the covariance subject to full investment and no shorting, solved exactly as a quadratic program through the Cornuéjols–Tütüncü (2006) transformation. The cap is 30% per bank (10% per stock in the broad sample) or none. If no asset has positive posterior excess return the optimizer falls back to minimum variance.
+
+The cross of the four ingredients gives 4 × 5 × 2 × 2 = 80 cells per universe, all of which are reported. Reference portfolios (1/N, capitalization, ERC, Ledoit–Wolf minimum variance, and for banks hierarchical risk parity; López de Prado, 2016) are computed alongside.
+
+## 3.3 Attribution
+
+For each universe let $y_j$ be the out-of-sample annualized Sharpe ratio of cell $j$. We fit the balanced linear model with the four main effects and all six two-way interactions and report each component's sum of squares as a share of the total. Because the 80 Sharpe ratios are estimated from the same return series, the shares have a sampling distribution that is obtained by re-sampling **months** with a circular block bootstrap (Politis & Romano, 1992; block length $T^{1/3}$ rounded; 2,000 resamples; the portfolio weights are held fixed and the whole factorial is recomputed on each resample), and we report percentile intervals. A *noise-only benchmark* is the 95th percentile of the share of a factor when the observed Sharpe ratios are randomly permuted across cells (5,000 permutations): a share well above it signals structure that labels do not produce by chance. Marginal contrasts between factor levels (averaged over the other factors) use the same bootstrap with Holm (1979) correction across all contrasts in a universe. For views, equivalence relative to "no view" is declared when the 90% bootstrap interval of the marginal Sharpe difference lies within ±0.10 (a two-one-sided-test logic; Schuirmann, 1987). We also attribute net-of-cost Sharpe ratios (25 basis points per unit of one-way traded value), turnover and maximum drawdown, and repeat the bank attribution in the two sub-periods August 2017–December 2021 and January 2022–May 2026.
+
+## 3.4 Multiple comparisons and "best cell"
+
+Hansen's (2005) test of superior predictive ability (SPA, stationary bootstrap, 5,000 resamples) uses quadratic-utility differences ($\gamma=5$) between each of the 80 cells and 1/N, with a stationary bootstrap (Politis & Romano, 1994). The deflated Sharpe ratio (Bailey & López de Prado, 2014) of the best cell uses 80 trials.
+
+## 3.5 Mechanism diagnostics
+
+For each universe we report the average pairwise correlation among assets, the cross-sectional standard deviation of period returns, and the mean cross-sectional rank correlation (IC) of each signal with the next period's idiosyncratic return, with Newey–West (1987) t-statistics.
+
+## 3.6 Pre-specified hypotheses
+
+Fixed before any factorial result was computed (`process/01_brainstorm_RQ_brief.md`, `process/decisions.md`): **H1** the anchor explains a larger share than the view; **H2** Ledoit–Wolf has a higher marginal Sharpe than sample covariance; **H3** views raise Sharpe by no more than 0.10 over "no view" (equivalence); **H4** the factor ranking is the same in the two universes; **H5** equal-weight and ERC anchors have higher marginal Sharpe than capitalization in the bank panel. H1 and H5 were motivated by the single-sample results of an earlier clustering-view study and are not independent of them; the broad universe is the confirmation sample and no design choice was changed after the bank results were seen.
+
+# 4. Results
+
+## 4.1 The cells and the references
+
+```{r tab-refs}
+ids_show <- c("CAP|NONE|SAMPLE|capped", "CAP|CLUSTER|LW|capped", "EW|NONE|LW|capped", "ERC|NONE|LW|capped", "EW|LOWVOL|LW|capped")
+nm <- c("CAP|NONE|SAMPLE|capped" = "BL, cap anchor, no view, sample cov., capped", "CAP|CLUSTER|LW|capped" = "BL, cap anchor, cluster views, LW, capped",
+  "EW|NONE|LW|capped" = "BL, equal-weight anchor, no view, LW, capped", "ERC|NONE|LW|capped" = "BL, ERC anchor, no view, LW, capped", "EW|LOWVOL|LW|capped" = "BL, equal-weight anchor, low-vol views, LW, capped")
+one <- function(d, fbx, rfx, ann) rbind(
+  data.frame(Portfolio = c("1/N", "Cap-weighted / dollar-volume weighted", "ERC", "Minimum variance (LW)"), Sharpe = f(c(rfx$sharpe[rfx$ref == "REF_EW"], rfx$sharpe[rfx$ref == "REF_CAP"], rfx$sharpe[rfx$ref == "REF_ERC"], rfx$sharpe[rfx$ref == "REF_MVP"]), 3), Turnover = NA_character_, MDD = NA_character_),
+  data.frame(Portfolio = nm[ids_show], Sharpe = f(sapply(ids_show, function(i) d$sharpe[d$id == i]), 3), Turnover = pc(sapply(ids_show, function(i) d$turnover[d$id == i]), 1), MDD = pc(sapply(ids_show, function(i) d$mdd[d$id == i]), 1)),
+  data.frame(Portfolio = "Best of 80 cells (ex post)", Sharpe = f(max(d$sharpe), 3), Turnover = pc(d$turnover[which.max(d$sharpe)], 1), MDD = pc(d$mdd[which.max(d$sharpe)], 1)),
+  data.frame(Portfolio = "Worst of 80 cells (ex post)", Sharpe = f(min(d$sharpe), 3), Turnover = pc(d$turnover[which.min(d$sharpe)], 1), MDD = pc(d$mdd[which.min(d$sharpe)], 1)))
+tb <- cbind(one(cellsB, fb, rfB, 12), one(cellsW, fw, rfW, 52)[, -1])
+names(tb) <- c("Portfolio", "Banks: Sharpe", "Turnover", "Max DD", "Broad: Sharpe", "Turnover", "Max DD")
+knitr::kable(tb, row.names = FALSE, caption = "Table 1. Reference portfolios and selected cells. Banks: monthly, 106 steps; broad: weekly, 79 steps; turnover = average one-way turnover per rebalance. The ex-post best/worst cells are shown for scale only.")
+```
+
+Table 1 gives the scale of the problem. In the bank panel the 80 cells' Sharpe ratios lie between `r f(min(cellsB$sharpe),3)` and `r f(max(cellsB$sharpe),3)` (median `r f(median(cellsB$sharpe),3)`); 1/N has `r f(rB("REF_EW"),3)`. The classic no-view inverse BL portfolio with a capitalization anchor has `r f(cell(cellsB,"CAP|NONE|SAMPLE|capped"),3)`. In the broad sample the range is wider, `r f(min(cellsW$sharpe),3)` to `r f(max(cellsW$sharpe),3)`, with 1/N at `r f(rW("REF_EW"),3)` and the dollar-volume-weighted portfolio at `r f(rW("REF_CAP"),3)`; the Ledoit–Wolf minimum-variance reference reaches `r f(rW("REF_MVP"),3)`, `r if (rW("REF_MVP") > max(cellsW$sharpe)) "higher than every one of the 80 BL cells" else "within the range of the BL cells"` (the best cell is `r f(max(cellsW$sharpe),3)`). The best bank cell, `r bestB$id`, has Sharpe `r f(bestB$sharpe,3)` and a deflated Sharpe ratio for 80 trials of `r f(dsrB,3)`; the best broad cell, `r bestW$id`, has `r f(bestW$sharpe,3)` and `r f(dsrW,3)`, with a net-of-cost (25 bps) Sharpe of `r f(bestW$sharpe_net25,3)`. Selecting a best cell ex post is not evidence of a superior strategy, and we do not use it as such.
+
+## 4.2 Attribution in the bank panel
+
+```{r tab-shares}
+mk <- function(sh, u) { x <- sh[match(c("anchor", "view", "cov", "cap", "twoway", "higher"), sh$component), ]
+  data.frame(Component = lab[x$component], Share = pc(x$share, 1), `95% interval` = paste0(pc(x$lo, 1), " – ", pc(x$hi, 1)), `Noise-only 95th pct.` = pc(x$perm95, 1), `p (permutation)` = pv(x$p_perm), `Share, net of 25 bps` = pc(x$share_net25, 1), check.names = FALSE) }
+knitr::kable(mk(shB), caption = "Table 2a. Banks: share of the variance of cell Sharpe ratios (80 cells) attributed to each component; block-bootstrap interval; noise-only benchmark from label permutation.")
+knitr::kable(mk(shW), caption = "Table 2b. Broad universe: same attribution (80 cells, 79 weekly steps).")
+```
+
+```{r figG1, fig.cap="Figure 1. Share of Sharpe-ratio variance across the 80 cells attributed to each ingredient. Bars: observed share; whiskers: 95% block-bootstrap interval; crosses: 95th percentile of the noise-only (label-permutation) distribution."}
+knitr::include_graphics(file.path(od, "figures/G1_shares.png"))
+```
+
+In the bank panel (Table 2a, Figure 1) the anchor explains `r pc(sB("anchor","share"),1)` of the variance of cell Sharpe ratios, far above its noise-only benchmark of `r pc(sB("anchor","perm95"),1)` (permutation p = `r pv(sB("anchor","p_perm"))`), and the view explains `r pc(sB("view","share"),1)` (benchmark `r pc(sB("view","perm95"),1)`). Covariance and cap each explain well under 1%. The interpretation requires care: the marginal Sharpe means by anchor are `r f(mB("CAP"),3)` (capitalization), `r f(mB("EW"),3)` (equal weight), `r f(mB("ERC"),3)` (ERC) and `r f(mB("SHR"),3)` (blend), and the bootstrap interval of the anchor *share* runs from `r pc(sB("anchor","lo"),0)` to `r pc(sB("anchor","hi"),0)`, so the data cannot say with confidence that the anchor matters more than the view in the bank panel. H1 is supported by the point estimate and not by the interval. A reason is visible in the contrasts (Table 4): the equal-weight anchor beats the capitalization anchor by `r f(cB("anchor:EW - CAP","diff"),3)` Sharpe units on average, but with a 95% interval of `r f(cB("anchor:EW - CAP","lo"),2)` to `r f(cB("anchor:EW - CAP","hi"),2)` (Holm p = `r pv(cB("anchor:EW - CAP","p_holm"))`). H5 is therefore supported in direction only. Over the two sub-periods the picture is not stable: the anchor share is `r pc(reg$share[reg$sample=="banks P1" & reg$component=="anchor"],0)` in 2017–2021 and `r pc(reg$share[reg$sample=="banks P2" & reg$component=="anchor"],0)` in 2022–2026, when the view share rises to `r pc(reg$share[reg$sample=="banks P2" & reg$component=="view"],0)` (Appendix Table A3).
+
+## 4.3 Attribution in the broad universe
+
+In the broad universe (Table 2b, Figure 1) the ranking is reversed: the view explains `r pc(sW("view","share"),1)` (interval `r pc(sW("view","lo"),0)`–`r pc(sW("view","hi"),0)`, noise-only benchmark `r pc(sW("view","perm95"),1)`) and the anchor `r pc(sW("anchor","share"),1)` (interval `r pc(sW("anchor","lo"),0)`–`r pc(sW("anchor","hi"),0)`; permutation p = `r pv(sW("anchor","p_perm"))`). The lower end of the view interval lies above the noise-only benchmark, while for the anchor the interval spans it. Covariance estimator and cap again explain very little (`r pc(sW("cov","share"),1)` and `r pc(sW("cap","share"),1)`). H4 is not supported: the point-estimate ranking of the factors reverses between the universes. Because the share intervals are wide (Table 2), we do not claim that the two rankings are statistically different. Hypothesis H2 (Ledoit–Wolf over sample covariance) is not supported anywhere: the marginal difference is `r f(cB("cov:LW - SAMPLE","diff"),3)` in banks (p = `r pv(cB("cov:LW - SAMPLE","p_boot"))`) and `r f(cW("cov:LW - SAMPLE","diff"),3)` in the broad sample (p = `r pv(cW("cov:LW - SAMPLE","p_boot"))`). Because the cap and the covariance are far less influential than the signal and the anchor, the common practice of spending effort on covariance refinements may be less important for Sharpe ratio than choices about the anchor and the view, at least for a Sharpe-maximizing objective with these sample sizes.
+
+```{r tab-contr}
+sel <- c("view:MOM - NONE", "view:LOWVOL - NONE", "view:COMP - NONE", "view:CLUSTER - NONE", "anchor:EW - CAP", "anchor:ERC - CAP", "anchor:SHR - CAP", "anchor:ERC - EW", "cov:LW - SAMPLE", "cap:nocap - capped")
+mkc <- function(ct) { x <- ct[match(sel, ct$contrast), ]; paste0(f(x$diff, 3), " [", f(x$lo, 2), ", ", f(x$hi, 2), "]; p=", pv(x$p_holm)) }
+knitr::kable(data.frame(Contrast = sel, Banks = mkc(ctB), Broad = mkc(ctW)), caption = "Table 4. Marginal Sharpe-ratio differences (annualized, averaged over the other factors) with 95% block-bootstrap interval and Holm-adjusted p-value over all 18 contrasts in each universe.")
+```
+
+```{r figG2, fig.cap="Figure 2. Marginal contrasts with 95% block-bootstrap intervals (not Holm-adjusted)."}
+knitr::include_graphics(file.path(od, "figures/G2_contrasts.png"))
+```
+
+## 4.4 Do views add Sharpe ratio? Equivalence tests
+
+```{r tab-eq}
+e <- rbind(eqB, eqW); e$contrast <- sub("view:", "", e$contrast)
+knitr::kable(data.frame(Universe = e$universe, View = e$contrast, `Mean Sharpe difference` = f(e$diff, 3), `90% interval` = paste0("[", f(e$lo90, 3), ", ", f(e$hi90, 3), "]"), `Equivalent within ±0.10` = ifelse(e$equivalent_pm0.10, "Yes", "No"), check.names = FALSE),
+  caption = "Table 5. Equivalence test (H3): view versus no view, averaged over anchor, covariance and cap.")
+```
+
+In the bank panel the momentum, composite and cluster views are equivalent to no view within ±0.10 Sharpe units (Table 5), so the data positively support the statement that these signals add (or subtract) less than 0.10; the low-volatility view has a point estimate of `r f(cB("view:LOWVOL - NONE","diff"),3)` and an interval that touches the margin, so equivalence is not established for it. In the broad sample the 90% intervals are wide (for example `r f(eqW$lo90[eqW$contrast=="view:LOWVOL - NONE"],2)` to `r f(eqW$hi90[eqW$contrast=="view:LOWVOL - NONE"],2)` for low volatility) and no view is shown to be equivalent to no view; the point estimates of the low-volatility, composite and cluster views are `r f(cW("view:LOWVOL - NONE","diff"),2)`, `r f(cW("view:COMP - NONE","diff"),2)` and `r f(cW("view:CLUSTER - NONE","diff"),2)`, positive, but the Holm-adjusted p-values are `r pv(cW("view:LOWVOL - NONE","p_holm"))`, `r pv(cW("view:COMP - NONE","p_holm"))` and `r pv(cW("view:CLUSTER - NONE","p_holm"))`. The number of contrasts in either sample that survive Holm correction at 5% is `r sum(ctB$p_holm < 0.05) + sum(ctW$p_holm < 0.05)`: ERC over equal weight as an anchor in the broad sample (difference `r f(cW("anchor:ERC - EW","diff"),3)`, adjusted p = `r pv(cW("anchor:ERC - EW","p_holm"))`).
+
+## 4.5 Costs, turnover and drawdown
+
+The turnover of a cell is driven almost entirely by its view. In the bank panel the view explains `r pc(oth$view.view[oth$universe=="banks" & oth$outcome=="turnover"],0)` of the variance of cell turnover and the anchor `r pc(oth$anchor.anchor[oth$universe=="banks" & oth$outcome=="turnover"],0)`; in the broad sample the view explains `r pc(oth$view.view[oth$universe=="broad" & oth$outcome=="turnover"],0)`. For maximum drawdown the anchor explains `r pc(oth$anchor.anchor[oth$universe=="banks" & oth$outcome=="max drawdown"],0)` in banks and the view `r pc(oth$view.view[oth$universe=="broad" & oth$outcome=="max drawdown"],0)` in the broad sample (Appendix Table A3). Net of 25 basis points per unit traded, the attribution of the Sharpe ratio changes little in the banks (anchor `r pc(sB("anchor","share_net25"),0)`, view `r pc(sB("view","share_net25"),0)`) and the view's share drops from `r pc(sW("view","share"),0)` to `r pc(sW("view","share_net25"),0)` in the broad sample, where the average weekly turnover of the cells is `r pc(mean(cellsW$turnover),0)`. The best broad cell loses `r f(bestW$sharpe - bestW$sharpe_net25,2)` Sharpe units to costs. Cost proxies from daily high–low spreads for 21 banks (Appendix Table A2) average `r f(mean(T10$cs_spread_bps),0)` basis points (an upward-biased estimator), so a 25 basis point cost is not conservative for the smaller banks.
+
+## 4.6 Why do the universes differ? Mechanism diagnostics
+
+```{r tab-mech}
+knitr::kable(data.frame(Universe = mech$universe, `Assets` = mech$n_assets, `Mean pairwise corr.` = f(mech$mean_pairwise_corr, 2), `Cross-sectional s.d. per period` = pc(mech$xs_dispersion_per_period, 1),
+  `IC momentum (t)` = paste0(f(mech$ic_mom, 3), " (", f(mech$t_mom, 2), ")"), `IC low vol. (t)` = paste0(f(mech$ic_lowvol, 3), " (", f(mech$t_lowvol, 2), ")"), `IC composite (t)` = paste0(f(mech$ic_comp, 3), " (", f(mech$t_comp, 2), ")"), Periods = mech$n_periods, check.names = FALSE),
+  caption = "Table 6. Mechanism diagnostics. IC = mean cross-sectional rank correlation between the signal and the next period's idiosyncratic return; Newey–West t-statistics in parentheses.")
+```
+
+Two facts line up with the attribution (Table 6). First, the bank sector is more tightly correlated (average pairwise correlation `r f(mech$mean_pairwise_corr[1],2)` against `r f(mech$mean_pairwise_corr[2],2)`), leaving less diversification and selection room, so what the portfolio is anchored to matters more than which assets a signal favors. Second, the one signal with a consistent, conventionally significant IC is low volatility, in both samples: `r f(mech$ic_lowvol[1],3)` (t = `r f(mech$t_lowvol[1],2)`) in the 25 banks, where it was found, and `r f(mech$ic_lowvol[2],3)` (t = `r f(mech$t_lowvol[2],2)`) in the 100-stock cross-section where it is a genuine out-of-sample confirmation, the weekly broad sample being entirely disjoint from the bank panel (the broad universe may include some of the same large banks; we do not remove them, so independence is partial). Idiosyncratic momentum does not replicate (broad IC `r f(mech$ic_mom[2],3)`, t = `r f(mech$t_mom[2],2)`). The ordering of views by marginal Sharpe in the broad sample (cluster `r f(mW("CLUSTER"),2)`, low volatility `r f(mW("LOWVOL"),2)`, composite `r f(mW("COMP"),2)`, none `r f(mW("NONE"),2)`, momentum `r f(mW("MOM"),2)`) is consistent with the IC evidence, with the cluster view probably benefiting from the low-volatility component of its two features. These are interpretations; the design does not identify the channel.
+
+## 4.7 Does any cell beat 1/N?
+
+```{r tab-spa}
+knitr::kable(data.frame(Universe = spa$universe, `Best cell by mean utility gain` = spa$best_cell, `Mean utility difference vs 1/N (monthly/weekly)` = f(spa$best_mean_util_diff, 4), `SPA p-value` = pv(spa$p_SPAc), `Reality-check p-value` = pv(spa$p_RC), check.names = FALSE),
+  caption = "Table 7. Hansen's SPA test and White's reality check: is any of the 80 cells better than 1/N under quadratic utility (gamma = 5)?")
+```
+
+The SPA test (Table 7) does not reject that 1/N is as good as the best of the 80 BL cells in either universe (p = `r pv(spa$p_SPAc[1])` and `r pv(spa$p_SPAc[2])`). The unrefined reality check rejects in the broad universe (p = `r pv(spa$p_RC[2])`), but that test is known to lose power and to be size-distorted when poor models are included; we report it for completeness and treat the SPA result as the primary one. Together with the broad-sample reference in which minimum variance alone reaches a Sharpe ratio of `r f(rW("REF_MVP"),2)`, this is consistent with the gains relative to 1/N in the broad sample reflecting risk reduction (low-risk stocks) at least as much as signal-based alpha; the design does not separate the two.
+
+## 4.8 Link to the earlier single-view and cluster-view designs
+
+The factorial contains, as cells, the two designs on which the preceding clustering-view study focused. The cell "capitalization anchor, cluster views, Ledoit–Wolf, capped" has a bank Sharpe ratio of `r f(cell(cellsB,"CAP|CLUSTER|LW|capped"),3)` and the cell "capitalization anchor, no view, sample covariance, capped" (the classical inverse BL portfolio) `r f(cell(cellsB,"CAP|NONE|SAMPLE|capped"),3)`, both below 1/N (`r f(rB("REF_EW"),3)`). The cluster-view cell differs slightly from the Sharpe ratio reported by the standalone clustering-view rule (`r f(T1$sharpe[T1$period=="Full" & T1$model=="KMV"],3)`) only because the factorial computes $\delta$ from the anchor portfolio's own window return rather than from the sector market series. In that study the Sharpe-ratio difference between the cluster-view rule and 1/N had a standard error of `r f(T2c$se_ann[T2c$period=="Full"],3)` over 106 months, giving a minimum detectable difference at 80% power of about `r f(T2c$mde80_ann[T2c$period=="Full"],2)`: effects of the size of the marginal differences in Table 4 are well below what a sample of this length can detect, which is why the equivalence margin of 0.10 is demanding and why its satisfaction in banks is informative only for the three views that meet it.
+
+# 5. Discussion
+
+**What the factorial says.** In a sector as concentrated and correlated as Vietnamese banking, the portfolio one declares to be in equilibrium is the single biggest determinant of out-of-sample risk-adjusted performance among the ingredients tested, although its precise importance is poorly pinned down by 106 months. Signals that have sometimes been celebrated (momentum, cluster-based views) add nothing detectable beyond ±0.10 Sharpe units. In a wide cross-section the roles reverse and a signal-bearing view (especially low volatility) is the main driver. Covariance shrinkage, the standard defense against estimation error, is almost irrelevant for a Sharpe-maximizing BL objective here, probably because the BL posterior already shrinks the return vector toward the anchor and the cap bounds the weights.
+
+**What it does not say.** It does not show that any BL variant beats 1/N (Table 7). The attribution is a descriptive decomposition of a finite sample of cells; the intervals are wide, and the single clearly significant marginal contrast is ERC over equal weight as an anchor in the broad sample. The broad universe covers twenty months with a single market regime and an anchor proxy, and the bank sample is survivorship-conditioned.
+
+**Practical implications.** For a fund manager in this market: (i) do not default to the capitalization portfolio as the BL prior in a concentrated sector without testing an equal-weight or ERC prior; (ii) if a signal is used, low volatility is the one with out-of-sample support in both samples (consistent with the volatility effect documented by Ang et al., 2006), momentum is not; (iii) in wide universes weekly turnover is large and the costs matter, so the gain from any view should be evaluated net of costs.
+
+**Limitations.** (i) Eligible banks number only 7 in the first three years, so early windows are small. (ii) The risk-free rate is read from a figure and has a tenor mismatch. (iii) The capitalization anchor in the broad sample is a dollar-volume proxy. (iv) The broad universe may contain some of the same large banks as the bank panel, which weakens the independence of the confirmation. (v) The attribution treats the 80 cells symmetrically; other factor levels (other signals, other anchors such as minimum variance, cap levels) could change the shares. (vi) The factorial used a fixed seed per window; clustering uses bootstrap stability with 50 (banks) and 30 (broad) resamples. (vii) The simulation evidence on the size and power of the pipeline is reported in the companion working paper.
+
+# 6. Conclusion
+
+A fully crossed test of 80 Black–Litterman portfolios on two Vietnamese samples shows that what matters depends on the market's structure: the anchor in a concentrated, highly correlated banking sector and the view signal in a broad cross-section, with covariance estimator and cap of minor importance in both. Low volatility is the only signal that replicates between the samples; momentum and cluster-based views add nothing detectable in the bank panel. No cell is significantly better than 1/N. The reusable contributions are the factorial design with proper uncertainty, the equivalence logic for signals, the discovery–confirmation split, and a reproducible R pipeline.
+
+# Declarations
+
+**Use of artificial intelligence.** The analysis code, tables and manuscript draft were produced with the assistance of Claude (Anthropic) under the Academic Research Skills workflow; the authors are responsible for verifying all choices, results and references before submission. Reference verification status is documented in `process/reference_verification.md`.
+
+**Data and code availability.** Code in `paper2/R/`, derived tables in `paper2/output/tables/`, and this manuscript's source (`paper2/manuscript/manuscript_B.Rmd`) regenerate every number from saved output.
+
+**Ethics, funding, competing interests, author contributions.** [To be completed by the authors.]
+
+# References
+
+Ang, A., Hodrick, R. J., Xing, Y., & Zhang, X. (2006). The cross-section of volatility and expected returns. *The Journal of Finance, 61*(1), 259–299.
+
+Bailey, D. H., & López de Prado, M. (2014). The deflated Sharpe ratio: Correcting for selection bias, backtest overfitting, and non-normality. *The Journal of Portfolio Management, 40*(5), 94–107. https://doi.org/10.3905/jpm.2014.40.5.094
+
+Bertsimas, D., Gupta, V., & Paschalidis, I. C. (2012). Inverse optimization: A new perspective on the Black–Litterman model. *Operations Research, 60*(6), 1389–1403. https://doi.org/10.1287/opre.1120.1115
+
+Black, F., & Litterman, R. (1992). Global portfolio optimization. *Financial Analysts Journal, 48*(5), 28–43. https://doi.org/10.2469/faj.v48.n5.28
+
+Cornuéjols, G., & Tütüncü, R. (2006). *Optimization methods in finance*. Cambridge University Press.
+
+DeMiguel, V., Garlappi, L., & Uppal, R. (2009). Optimal versus naive diversification: How inefficient is the 1/N portfolio strategy? *The Review of Financial Studies, 22*(5), 1915–1953. https://doi.org/10.1093/rfs/hhm075
+
+Hansen, P. R. (2005). A test for superior predictive ability. *Journal of Business & Economic Statistics, 23*(4), 365–380.
+
+Harvey, C. R., Liu, Y., & Zhu, H. (2016). …and the cross-section of expected returns. *The Review of Financial Studies, 29*(1), 5–68. https://doi.org/10.1093/rfs/hhv059
+
+Hennig, C. (2007). Cluster-wise assessment of cluster stability. *Computational Statistics & Data Analysis, 52*(1), 258–271.
+
+Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics, 6*(2), 65–70.
+
+Jegadeesh, N., & Titman, S. (1993). Returns to buying winners and selling losers: Implications for stock market efficiency. *The Journal of Finance, 48*(1), 65–91.
+
+Ledoit, O., & Wolf, M. (2004). Honey, I shrunk the sample covariance matrix. *The Journal of Portfolio Management, 30*(4), 110–119. https://doi.org/10.3905/jpm.2004.110
+
+Ledoit, O., & Wolf, M. (2008). Robust performance hypothesis testing with the Sharpe ratio. *Journal of Empirical Finance, 15*(5), 850–859. https://doi.org/10.1016/j.jempfin.2008.03.002
+
+López de Prado, M. (2016). Building diversified portfolios that outperform out of sample. *The Journal of Portfolio Management, 42*(4), 59–69.
+
+Maillard, S., Roncalli, T., & Teïletche, J. (2010). The properties of equally weighted risk contribution portfolios. *The Journal of Portfolio Management, 36*(4), 60–70.
+
+Newey, W. K., & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica, 55*(3), 703–708.
+
+Politis, D. N., & Romano, J. P. (1992). A circular block-resampling procedure for stationary data. In R. LePage & L. Billard (Eds.), *Exploring the limits of bootstrap* (pp. 263–270). Wiley.
+
+Politis, D. N., & Romano, J. P. (1994). The stationary bootstrap. *Journal of the American Statistical Association, 89*(428), 1303–1313.
+
+Schuirmann, D. J. (1987). A comparison of the two one-sided tests procedure and the power approach for assessing the equivalence of average bioavailability. *Journal of Pharmacokinetics and Biopharmaceutics, 15*(6), 657–680.
+
+# Appendix A. Additional tables
+
+```{r tab-a1}
+knitr::kable(data.frame(Ticker = TA1$ticker, `First return` = TA1$first_return, `N returns` = TA1$n_returns, `Mean ann. return` = pc(TA1$mean_ann_ret), `Ann. vol.` = pc(TA1$ann_vol), check.names = FALSE),
+  caption = "Table A1. The 25-bank monthly panel.")
+```
+
+```{r tab-a2}
+knitr::kable(data.frame(Ticker = T10$ticker, `Mean CS spread (bps)` = f(T10$cs_spread_bps, 1), `Median CS spread (bps)` = f(T10$median_cs_bps, 1)), caption = "Table A2. Corwin–Schultz high–low spread proxy for banks with daily data (upward-biased by tick-size effects).")
+```
+
+```{r tab-a3}
+rg <- reg[reg$component %in% c("anchor", "view", "cov", "cap"), ]
+knitr::kable(data.frame(Sample = rg$sample, Component = lab[rg$component], Share = pc(rg$share, 1), `95% interval` = paste0(pc(rg$lo, 1), " – ", pc(rg$hi, 1))), caption = "Table A3a. Bank attribution by sub-period (P1 = Aug 2017–Dec 2021, P2 = Jan 2022–May 2026).")
+knitr::kable(data.frame(Universe = oth$universe, Outcome = oth$outcome, Anchor = pc(oth$anchor.anchor, 1), View = pc(oth$view.view, 1), Covariance = pc(oth$cov.cov, 1), Cap = pc(oth$cap.cap, 1), `Two-way` = pc(oth$twoway, 1), check.names = FALSE), caption = "Table A3b. Shares of the variance of cell turnover and maximum drawdown.")
+```
+
+```{r figG3, fig.cap="Figure A1. Mean Sharpe ratio by anchor and view (averaged over covariance and cap)."}
+knitr::include_graphics(file.path(od, "figures/G3_heatmap.png"))
+```
+
+# Appendix B. Properties of the posterior
+
+**Proposition 1 ($\tau$-invariance).** If $\Omega=\tau\Lambda$ with $\Lambda$ independent of $\tau$, then $\tau\Sigma P^{\top}(\tau P\Sigma P^{\top}+\tau\Lambda)^{-1}=\Sigma P^{\top}(P\Sigma P^{\top}+\Lambda)^{-1}$, so the posterior mean does not depend on $\tau$. (Direct cancellation of $\tau$.) This is why $\tau$ is not an ingredient of the factorial.
+
+**Proposition 2 (stability weight).** For one absolute view with $\Lambda=p\Sigma p'/s$, the posterior mean is $\mu=\Pi+\dfrac{s}{1+s}\,\dfrac{\Sigma p'}{p\Sigma p'}\,(q-p\Pi)$. The weight $s/(1+s)$ increases in $s$ and equals $1/2$ at $s=1$.
+
+# Appendix C. Reproducibility
+
+`Rscript paper2/R/run_all.R` regenerates all outputs (R 4.3; packages `quadprog`, `sandwich`, `lmtest`, `cluster`, `ggplot2`, `knitr`, `rmarkdown`). Random seeds are fixed per window; bootstrap and permutation seeds are fixed in each script. Design choices fixed before results are in `paper2/process/decisions.md`.
