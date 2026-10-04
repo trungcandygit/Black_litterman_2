@@ -1,0 +1,17 @@
+"contrast","outcome","diff_pct","t_cluster","n_limit","n_comparison"
+"ceiling vs 5-6.5% up, close = high","gap_mkt",3.14260494283565,14.4975203079036,3199,679
+"ceiling vs 5-6.5% up, close = high","intraday_mkt",-0.658608476108077,-3.40543580934415,3199,679
+"ceiling vs 5-6.5% up, close = high","cc1_mkt",2.47381785585788,7.23233218898902,3199,679
+"ceiling vs 5-6.5% up, close = high","f5o_mkt",-0.490200440781553,-1.53151580430183,3193,673
+"ceiling vs 3-5% up, close = high","gap_mkt",2.80668378750842,13.1053787859573,3199,1795
+"ceiling vs 3-5% up, close = high","intraday_mkt",-0.605068710906371,-3.84439387321087,3199,1795
+"ceiling vs 3-5% up, close = high","cc1_mkt",2.17436892194303,6.3662402585092,3199,1795
+"ceiling vs 3-5% up, close = high","f5o_mkt",-0.642012286151343,-2.65987908188684,3193,1790
+"floor vs 5-6.5% down, close = low","gap_mkt",-1.80819917221957,-8.69646278003727,2111,722
+"floor vs 5-6.5% down, close = low","intraday_mkt",-0.128094920627615,-0.569537236505186,2111,722
+"floor vs 5-6.5% down, close = low","cc1_mkt",-1.94591556195313,-10.6604930495986,2111,722
+"floor vs 5-6.5% down, close = low","f5o_mkt",-1.22508995870771,-2.77322852821535,2108,715
+"floor vs 3-5% down, close = low","gap_mkt",-1.35499326917389,-7.39404844586516,2111,2228
+"floor vs 3-5% down, close = low","intraday_mkt",0.180804415861442,0.831199281282962,2111,2228
+"floor vs 3-5% down, close = low","cc1_mkt",-1.1878895746859,-7.98922427370893,2111,2228
+"floor vs 3-5% down, close = low","f5o_mkt",-1.06496435665723,-2.48448535764231,2108,2218
