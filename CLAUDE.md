@@ -15,3 +15,7 @@ Start with `academic-research-skills/README.md` and `QUICKSTART.md`, then read t
 - `academic-paper-reviewer/SKILL.md` — reviewing and critiquing papers or models
 - `academic-pipeline/SKILL.md` — end-to-end research → paper → review pipeline
 - `sr-screener/SKILL.md` — systematic-review screening
+
+## Git sync
+- Before starting work and before each push, `git fetch origin main` and merge `origin/main` into the working branch (merge, no rebase/force-push); resolve conflicts without asking unless both sides changed the same logic.
+- Pushes go to the designated working branch only; never push directly to `main`.
