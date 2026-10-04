@@ -1,0 +1,177 @@
+"sample","measure","mean_pct","t_cluster","n"
+"ceiling all","ar_cc1",1.62916531998671,4.30923582670905,2819
+"ceiling all","ar_on",2.26407289841037,10.5750117962291,3136
+"ceiling all","ar_id",-0.553637552056628,-3.73471892167697,3136
+"ceiling all","ar_5o",-0.791869657903458,-3.73434495312121,3136
+"ceiling all","ar_5c",1.4346751212474,3.86334295937482,3136
+"ceiling all","ar_cc1_ctrl",2.20485831267805,11.5983542452933,451
+"ceiling all","ar_5o_ctrl",-0.325975239929798,-0.743665688298563,451
+"ceiling all","ar_20c",0.676176351748352,1.36791166693617,3127
+"ceiling first half","ar_cc1",1.37598669849879,2.21539971032855,1570
+"ceiling first half","ar_on",2.22081894367971,5.5390366876392,1592
+"ceiling first half","ar_id",-0.775885216703626,-3.32270490322557,1592
+"ceiling first half","ar_5o",-1.09746572365403,-3.56421842400385,1592
+"ceiling first half","ar_5c",1.10119046006773,1.75661740954439,1592
+"ceiling first half","ar_cc1_ctrl",2.20485831267805,11.5983542452933,451
+"ceiling first half","ar_5o_ctrl",-0.325975239929798,-0.743665688298563,451
+"ceiling first half","ar_20c",0.278970014558501,0.374683738573697,1592
+"ceiling second half","ar_cc1",1.94741226613245,12.6469404813418,1249
+"ceiling second half","ar_on",2.30867153567152,21.3891281818609,1544
+"ceiling second half","ar_id",-0.324480633586408,-3.00806594107949,1544
+"ceiling second half","ar_5o",-0.476773196326447,-1.95538730352055,1544
+"ceiling second half","ar_5c",1.77852718122023,6.61579732896762,1544
+"ceiling second half","ar_cc1_ctrl",NA,NA,0
+"ceiling second half","ar_5o_ctrl",NA,NA,0
+"ceiling second half","ar_20c",1.08813237051463,1.92968395525339,1535
+"ceiling excl. market-crash days (mkt < -2%)","ar_cc1",1.63938571527513,4.22891322974369,2753
+"ceiling excl. market-crash days (mkt < -2%)","ar_on",2.26479108918733,9.36576612736611,2753
+"ceiling excl. market-crash days (mkt < -2%)","ar_id",-0.580317915078788,-3.56405931574876,2753
+"ceiling excl. market-crash days (mkt < -2%)","ar_5o",-0.672122251078885,-2.80962219154346,2753
+"ceiling excl. market-crash days (mkt < -2%)","ar_5c",1.55179557323928,3.63671137446479,2753
+"ceiling excl. market-crash days (mkt < -2%)","ar_cc1_ctrl",2.15775382328045,11.3587632356743,439
+"ceiling excl. market-crash days (mkt < -2%)","ar_5o_ctrl",-0.439122955182605,-0.993992692510761,439
+"ceiling excl. market-crash days (mkt < -2%)","ar_20c",0.772788508245942,1.40550110083155,2748
+"ceiling not locked all day","ar_cc1",1.68394068851861,7.91762958565161,2347
+"ceiling not locked all day","ar_on",2.13636542730127,16.3165707762899,2620
+"ceiling not locked all day","ar_id",-0.406669780589436,-4.16542012766445,2620
+"ceiling not locked all day","ar_5o",-0.793934763437841,-3.70060038363647,2620
+"ceiling not locked all day","ar_5c",1.306929294103,4.51619857182121,2620
+"ceiling not locked all day","ar_cc1_ctrl",2.140971766681,10.4732991448177,412
+"ceiling not locked all day","ar_5o_ctrl",-0.466774067015925,-1.04626110266088,412
+"ceiling not locked all day","ar_20c",0.56585806204432,1.21539036724814,2614
+"ceiling locked all day (open=high=low=close)","ar_cc1",1.356797120952,1.18337553671172,472
+"ceiling locked all day (open=high=low=close)","ar_on",2.9125100579178,3.04137463082152,516
+"ceiling locked all day (open=high=low=close)","ar_id",-1.29986925989393,-5.99143299728933,516
+"ceiling locked all day (open=high=low=close)","ar_5o",-0.781384044531202,-1.80859799832386,516
+"ceiling locked all day (open=high=low=close)","ar_5c",2.08330703426744,1.68867355304749,516
+"ceiling locked all day (open=high=low=close)","ar_cc1_ctrl",2.87976233705715,4.51330968466793,39
+"ceiling locked all day (open=high=low=close)","ar_5o_ctrl",1.16143801031339,0.614111725782806,39
+"ceiling locked all day (open=high=low=close)","ar_20c",1.23830502482114,1.03595037111242,513
+"ceiling liquidity tercile 1 (low)","ar_cc1",2.66899090468819,7.29383746426063,125
+"ceiling liquidity tercile 1 (low)","ar_on",3.37785810708508,9.83603164435801,131
+"ceiling liquidity tercile 1 (low)","ar_id",-0.570265928146291,-1.50747002298023,131
+"ceiling liquidity tercile 1 (low)","ar_5o",-2.8806201442729,-3.6320759757902,131
+"ceiling liquidity tercile 1 (low)","ar_5c",0.417834643238859,0.518602609708051,131
+"ceiling liquidity tercile 1 (low)","ar_cc1_ctrl",2.88203934046825,10.1528784144429,131
+"ceiling liquidity tercile 1 (low)","ar_5o_ctrl",-2.14982143500686,-2.85717117153491,131
+"ceiling liquidity tercile 1 (low)","ar_20c",-3.47262547458688,-2.6645734225868,131
+"ceiling liquidity tercile 2 (mid)","ar_cc1",2.37720819602985,8.78782902452237,162
+"ceiling liquidity tercile 2 (mid)","ar_on",3.2976658476954,15.9191824876198,166
+"ceiling liquidity tercile 2 (mid)","ar_id",-0.864100503065193,-4.72735502382115,166
+"ceiling liquidity tercile 2 (mid)","ar_5o",-0.100368427401563,-0.135213372439195,166
+"ceiling liquidity tercile 2 (mid)","ar_5c",3.27884089913825,3.95700921432139,166
+"ceiling liquidity tercile 2 (mid)","ar_cc1_ctrl",2.42269769299827,9.38473113239567,166
+"ceiling liquidity tercile 2 (mid)","ar_5o_ctrl",0.523320419611479,0.747087741910405,166
+"ceiling liquidity tercile 2 (mid)","ar_20c",2.89096762497172,1.33262048032498,166
+"ceiling liquidity tercile 3 (high)","ar_cc1",1.34674827513933,4.97583988496425,152
+"ceiling liquidity tercile 3 (high)","ar_on",1.87713639396679,10.0257877128114,154
+"ceiling liquidity tercile 3 (high)","ar_id",-0.492707226253773,-2.19182377735325,154
+"ceiling liquidity tercile 3 (high)","ar_5o",0.140257903546284,0.223761120682739,154
+"ceiling liquidity tercile 3 (high)","ar_5c",2.0289726116809,3.03521467999374,154
+"ceiling liquidity tercile 3 (high)","ar_cc1_ctrl",1.39400083362824,4.78118106235614,154
+"ceiling liquidity tercile 3 (high)","ar_5o_ctrl",0.310003799493857,0.480485131353654,154
+"ceiling liquidity tercile 3 (high)","ar_20c",2.13135393049405,1.44255753648045,154
+"floor all","ar_cc1",-0.782483645450924,-5.33915899848925,1829
+"floor all","ar_on",-0.984544364541408,-4.94539557639299,2088
+"floor all","ar_id",0.30537755374444,1.38135170754583,2088
+"floor all","ar_5o",-0.800295640862769,-1.81314812744859,2088
+"floor all","ar_5c",-1.7481212295615,-4.85789877336377,2088
+"floor all","ar_cc1_ctrl",-0.987489336051685,-2.41779880376005,69
+"floor all","ar_5o_ctrl",-0.286012475149207,-0.344765950071501,69
+"floor all","ar_20c",-1.88496924699858,-3.59965741357158,2086
+"floor first half","ar_cc1",-0.594871328459262,-2.77136113313262,1042
+"floor first half","ar_on",-0.545162551792876,-2.43655813419896,1059
+"floor first half","ar_id",-0.089891189128825,-0.284939507065768,1059
+"floor first half","ar_5o",-1.69438815940797,-6.87216824400752,1059
+"floor first half","ar_5c",-2.18801715171816,-11.6866275231206,1059
+"floor first half","ar_cc1_ctrl",-0.987489336051685,-2.41779880376005,69
+"floor first half","ar_5o_ctrl",-0.286012475149207,-0.344765950071501,69
+"floor first half","ar_20c",-1.92525152852392,-5.14898359705793,1059
+"floor second half","ar_cc1",-1.03088521381854,-5.82846079502366,787
+"floor second half","ar_on",-1.4367361426762,-8.2192650198847,1029
+"floor second half","ar_id",0.712170166672319,4.51965568273179,1029
+"floor second half","ar_5o",0.119863714957799,0.240312084924938,1029
+"floor second half","ar_5c",-1.29540035340611,-2.20186221364259,1029
+"floor second half","ar_cc1_ctrl",NA,NA,0
+"floor second half","ar_5o_ctrl",NA,NA,0
+"floor second half","ar_20c",-1.84343182135562,-1.87166160316334,1027
+"floor excl. market-crash days (mkt < -2%)","ar_cc1",-1.19851995455455,-6.23835549071326,596
+"floor excl. market-crash days (mkt < -2%)","ar_on",-1.92103419588874,-12.3740321128632,596
+"floor excl. market-crash days (mkt < -2%)","ar_id",0.783688953766804,4.56190203560472,596
+"floor excl. market-crash days (mkt < -2%)","ar_5o",-0.701388454684112,-1.95269551646191,596
+"floor excl. market-crash days (mkt < -2%)","ar_5c",-2.57347940874578,-6.78669688074392,596
+"floor excl. market-crash days (mkt < -2%)","ar_cc1_ctrl",-0.872991048473423,-2.06098930770608,63
+"floor excl. market-crash days (mkt < -2%)","ar_5o_ctrl",0.0989154133574705,0.123879885387121,63
+"floor excl. market-crash days (mkt < -2%)","ar_20c",-3.87241157717624,-5.49677326468407,594
+"floor not locked all day","ar_cc1",-0.712476198692574,-4.43126528013941,1597
+"floor not locked all day","ar_on",-0.768145086163754,-4.28322690385893,1831
+"floor not locked all day","ar_id",0.19093433730469,0.896515063345859,1831
+"floor not locked all day","ar_5o",-0.358250045018268,-0.83597206879806,1831
+"floor not locked all day","ar_5c",-1.10135551229034,-3.24635369124412,1831
+"floor not locked all day","ar_cc1_ctrl",-0.512160096444817,-1.01702420653176,56
+"floor not locked all day","ar_5o_ctrl",-0.0984577788920475,-0.108740688478147,56
+"floor not locked all day","ar_20c",-1.04693788631142,-2.08387201520194,1831
+"floor locked all day (open=high=low=close)","ar_cc1",-1.26438835438664,-3.49192329846478,232
+"floor locked all day (open=high=low=close)","ar_on",-2.52628397041489,-5.58591300744012,257
+"floor locked all day (open=high=low=close)","ar_id",1.12072980783464,2.33708811311068,257
+"floor locked all day (open=high=low=close)","ar_5o",-3.94965550853313,-4.17215610096772,257
+"floor locked all day (open=high=low=close)","ar_5c",-6.35601239035336,-10.019672566757,257
+"floor locked all day (open=high=low=close)","ar_cc1_ctrl",-3.03506144512742,-2.40928388311221,13
+"floor locked all day (open=high=low=close)","ar_5o_ctrl",-1.09394039748774,-0.593044444260402,13
+"floor locked all day (open=high=low=close)","ar_20c",-7.90236305648173,-9.1482279985899,255
+"floor liquidity tercile 1 (low)","ar_cc1",0.387948701915492,0.643776135655137,26
+"floor liquidity tercile 1 (low)","ar_on",-1.0354201612276,-2.4800371412613,29
+"floor liquidity tercile 1 (low)","ar_id",0.940448668087842,1.40348811623439,29
+"floor liquidity tercile 1 (low)","ar_5o",-0.519888806388568,-0.349297515752734,29
+"floor liquidity tercile 1 (low)","ar_5c",-1.60915710153479,-1.14011702921475,29
+"floor liquidity tercile 1 (low)","ar_cc1_ctrl",0.305007059919907,0.481995165471293,29
+"floor liquidity tercile 1 (low)","ar_5o_ctrl",0.256153420974805,0.200531258650183,29
+"floor liquidity tercile 1 (low)","ar_20c",-5.25627051717142,-3.19582320266003,29
+"floor liquidity tercile 2 (mid)","ar_cc1",-2.90923801849396,-4.0393101344788,21
+"floor liquidity tercile 2 (mid)","ar_on",-3.83523472364856,-5.41726392012701,23
+"floor liquidity tercile 2 (mid)","ar_id",1.30941945493468,3.09578112180041,23
+"floor liquidity tercile 2 (mid)","ar_5o",-1.11711588567569,-0.726922154959015,23
+"floor liquidity tercile 2 (mid)","ar_5c",-4.89914747505405,-2.95296238753714,23
+"floor liquidity tercile 2 (mid)","ar_cc1_ctrl",-2.32229327082993,-3.07649395971947,23
+"floor liquidity tercile 2 (mid)","ar_5o_ctrl",-0.379736751323886,-0.250660183316814,23
+"floor liquidity tercile 2 (mid)","ar_20c",-9.6634578511249,-3.53242523168162,23
+"floor liquidity tercile 3 (high)","ar_cc1",-0.826302271491471,-1.05793939310833,16
+"floor liquidity tercile 3 (high)","ar_on",-1.7997240325005,-1.80636637701077,17
+"floor liquidity tercile 3 (high)","ar_id",0.550069649341412,0.710815311349198,17
+"floor liquidity tercile 3 (high)","ar_5o",-0.837667698233518,-0.54227412990789,17
+"floor liquidity tercile 3 (high)","ar_5c",-2.54358348430158,-1.06216276474598,17
+"floor liquidity tercile 3 (high)","ar_cc1_ctrl",-1.38642492330325,-1.57312289391217,17
+"floor liquidity tercile 3 (high)","ar_5o_ctrl",-1.08408027724208,-0.761560432714871,17
+"floor liquidity tercile 3 (high)","ar_20c",-4.88803819122546,-0.98965385541377,17
+"near_up_5_6.5","ar_cc1",-0.660799612017936,-6.57050789392091,1480
+"near_up_5_6.5","ar_on",-0.404077401226989,-6.65692021203931,1696
+"near_up_5_6.5","ar_id",-0.217255565513091,-2.58881631304432,1696
+"near_up_5_6.5","ar_5o",-0.736680388892744,-4.44422168522243,1696
+"near_up_5_6.5","ar_5c",-1.16708153288125,-6.7120779720083,1696
+"near_up_5_6.5","ar_cc1_ctrl",-0.438335629645512,-2.44578222964193,272
+"near_up_5_6.5","ar_5o_ctrl",-1.16087332899521,-3.74217211686839,272
+"near_up_5_6.5","ar_20c",-1.43911185396161,-4.03100156778352,1679
+"near_up_3_5","ar_cc1",-0.37123947806015,-6.78151421419103,5122
+"near_up_3_5","ar_on",-0.140007649500655,-4.446383331027,5768
+"near_up_3_5","ar_id",-0.233028362053462,-5.21520236186896,5768
+"near_up_3_5","ar_5o",-0.318897705655313,-3.04469007246573,5768
+"near_up_3_5","ar_5c",-0.471109556824967,-4.38439260884382,5768
+"near_up_3_5","ar_cc1_ctrl",-0.368627128442978,-3.98537412868918,1041
+"near_up_3_5","ar_5o_ctrl",-0.465862189524221,-2.87023337465641,1041
+"near_up_3_5","ar_20c",-0.769606800082052,-3.72270967279929,5751
+"near_dn_5_6.5","ar_cc1",0.933943953488792,7.9259629901671,1251
+"near_dn_5_6.5","ar_on",0.595701392070172,6.14591804114841,1462
+"near_dn_5_6.5","ar_id",0.376015328665688,3.62017964296658,1462
+"near_dn_5_6.5","ar_5o",0.164957771632494,0.787137736090203,1462
+"near_dn_5_6.5","ar_5c",0.754194915008687,3.56850324995514,1462
+"near_dn_5_6.5","ar_cc1_ctrl",1.22975151030097,3.62536345553004,114
+"near_dn_5_6.5","ar_5o_ctrl",0.336974624109251,0.570167202711034,114
+"near_dn_5_6.5","ar_20c",0.994999599717656,2.46718264811858,1457
+"near_dn_3_5","ar_cc1",0.281866859206779,4.15175245800958,4330
+"near_dn_3_5","ar_on",0.153052094980776,3.72154328240177,5024
+"near_dn_3_5","ar_id",0.168293278897375,2.99432102243343,5024
+"near_dn_3_5","ar_5o",0.0652144752408308,0.535355014741403,5024
+"near_dn_3_5","ar_5c",0.209255626402657,1.67074720235184,5024
+"near_dn_3_5","ar_cc1_ctrl",0.333776703826857,2.57770634700927,526
+"near_dn_3_5","ar_5o_ctrl",0.215750571413065,1.08704547722597,526
+"near_dn_3_5","ar_20c",-0.125000351243277,-0.488968778048835,5002

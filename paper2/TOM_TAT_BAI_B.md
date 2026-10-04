@@ -38,6 +38,9 @@ Mọi con số dưới đây lấy từ `paper2/output/tables/` (do R sinh ra); 
 
 ## 3. Điều cần nói thẳng
 
+- **Biến động thấp chỉ lặp lại trong 100 cổ phiếu thanh khoản nhất**; trên toàn bộ 347 cổ phiếu (hồi quy Fama–MacBeth, kiểm định đã đăng ký trước của Paper C) hệ số biến động không có ý nghĩa (t = −0,09). Vì vậy không nên viết "biến động thấp lặp lại trên thị trường".
+- Mô phỏng Monte Carlo của bài đầu (A) chạy xong nhưng cột kích thước/độ mạnh kiểm định bị lỗi mã (p-value NA); cần chạy lại nếu dùng.
+
 - Khoảng tin cậy của tỷ lệ phương sai rất rộng (ví dụ neo ở ngân hàng 5%–98%): chỉ nên diễn giải theo ước lượng điểm, và nói rõ H1/H5 chỉ được ủng hộ về hướng, chưa về mặt thống kê.
 - Mẫu rộng chỉ có 79 tuần, một chế độ thị trường, và neo vốn hóa là **xấp xỉ bằng trọng số giá trị giao dịch** (không có vốn hóa thật).
 - Lãi suất phi rủi ro được đọc từ biểu đồ trong bài cũ (sai số khoảng ±0,05 điểm %).
