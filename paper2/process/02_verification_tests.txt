@@ -1,0 +1,10 @@
+T1 weights: max |sum-1| = 2.22e-16; min weight = 0; max cap excess (capped cells) = 1.21e-11 -> PASS
+T2 QP vs SLSQP: largest Sharpe shortfall of QP vs SLSQP over 20 random problems = 1.62e-11 -> PASS
+T3 BL posterior: max abs difference master vs precision form = 9.02e-17 -> PASS
+T4 tau-invariance: max abs difference = 1.39e-17 -> PASS
+T5 ANOVA shares: max abs difference vs aov() = 3e-15 -> PASS
+T6 look-ahead audit (bank pipeline): max abs weight difference when all data after month 49 is replaced by noise = 0 -> PASS
+T7 look-ahead audit (broad pipeline): decisions with t <= 300 (36 of 79): max abs weight difference = 0 -> PASS
+T8 reproducibility: max abs difference between two runs = 0 -> PASS
+T9 return accounting: max abs difference for cell EW|LOWVOL|LW|capped = 0 -> PASS
+T10 value screen: distinct Sharpe values among 80 cells = 68; min cell s.d. of returns = 0.0757 -> PASS (cells are not identical; some duplicates arise by construction when the cap does not bind)

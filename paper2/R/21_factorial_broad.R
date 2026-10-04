@@ -41,5 +41,6 @@ RW <- t(sapply(seq_along(ts), wk_ret))
 ret <- sapply(ids, function(m) rowSums(Wl[[m]] * RW))
 to <- sapply(ids, function(m) { w <- Wl[[m]]; tv <- rep(NA_real_, nrow(w)); for (i in 2:nrow(w)) { g <- w[i - 1, ] * (1 + RW[i - 1, ]); g <- g / sum(g); tv[i] <- sum(abs(w[i, ] - g)) }; tv })
 rfw <- sapply(ts, function(t) prod(1 + rf_d[(t + 1):(t + H)]) - 1); dd <- dts[ts + H]
+saveRDS(Wl, file.path(od, if (nzchar(la)) "rds/broad_weights_LA.rds" else "rds/broad_weights.rds")); if (nzchar(la)) quit(save = "no")
 saveRDS(list(ids = ids, ret = ret, turnover = to, rf_m = rfw, dates = dd, n_stocks = ncol(C), n_universe = N_UNI, ann = 52), file.path(od, "rds/factorial_broad.rds"))
 ex <- ret - rfw; sr <- apply(ex, 2, ann_sharpe, ann = 52); cat("OOS weeks", length(ts), "\n"); print(summary(sr[CELLS$id])); print(round(sr[c("REF_EW", "REF_CAP", "REF_ERC", "REF_MVP")], 3))

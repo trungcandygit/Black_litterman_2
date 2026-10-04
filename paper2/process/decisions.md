@@ -25,3 +25,7 @@ Date: 2026-10-04. Trigger: user asked to brainstorm another idea given the wider
 16. Views: terciles of the relevant score (MOM = z(mom); LOWVOL = -z(vol); COMP = z(mom)-z(vol)) as three absolute views with calibrated tilt (in-window slope, floored at 0) and Omega = tau p S p'/1; CLUSTER = the Paper-A BL-KMV view (stability-selected k, stability-scaled Omega).
 17. Inference: circular block bootstrap over months (weights fixed) of the whole factorial -> percentile intervals for ANOVA shares and marginal contrasts (Holm); label-permutation noise-only benchmark for shares; equivalence margin 0.10 annualized Sharpe for views.
 18. Hypotheses H1-H5 as in the brief; H1/H5 flagged as motivated by Paper A's results (not independent); the broad universe is the confirmation sample; no design change after viewing bank results (any change gets logged here).
+
+## Amendment A3 — Paper C (characteristics + price limits), pre-registered 2026-10-04 before computation
+19. Family of 26 primary tests, estimators, FDR/Holm/HLZ controls, discovery/confirmation split (first half of the weekly cross-sections vs second half), and survival rule fixed in `process/03_brainstorm_round2.md`. All 26 results will be reported.
+20. Paper B stays as a separate manuscript; Paper C results may be linked to it in the discussion only after C is complete.
