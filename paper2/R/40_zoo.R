@@ -1,4 +1,4 @@
-# 40_zoo.R -- Paper C: pre-registered characteristic zoo (22 tests) + price-limit events (4 tests), 347 HOSE stocks, weekly cross-sections
+# 40_zoo.R -- Paper C: specified-in-log characteristic zoo (22 tests) + price-limit events (4 tests), 347 HOSE stocks, weekly cross-sections
 source("/home/user/Black_litterman_2/paper2/R/lib.R")
 root <- "/home/user/Black_litterman_2"; od <- file.path(root, "paper2/output"); set.seed(20261004)
 fl <- list.files(file.path(root, "data/raw"), full.names = TRUE)

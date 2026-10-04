@@ -57,3 +57,15 @@ Section 4.4: comparison groups restricted to stocks that also close at their hig
 ## Points where the revision changed the paper's claim
 - "4 of 4 limit tests survive" holds for the implemented horizons, but the multi-day horizon adds nothing beyond day t+1. The abstract and conclusion now say so.
 - The "discontinuity" and "attached to the limit itself" wording is withdrawn.
+
+## Addendum after the Stage 3' re-review (minor revision; items N1–N8 of `rereview_report.md`)
+- N1: abstract and conclusion now say the "carried by day t+1" statement holds for ceilings; for floors days t+2..t+5 add a further −1.10% that fails the confirmation half.
+- N2: sample length corrected to about 25 months everywhere; "single-regime sample" removed from Section 5.
+- N3: "pre-specified" replaced by "log-specified" (headings, captions, Appendix A, limitations); script comments and the C15 label no longer say "pre-registered". The response letter's R1 wording above ("reworded") is accurate only after this change.
+- N4: Table 3b caption explains that its date-clustered t uses a G/(G−1) correction; the text cites Table 3's 4.01.
+- N5: "delayed price discovery" removed from the keywords and hedged in Section 5; floor volume terciles reported (opposite pattern); garbled sentence fixed.
+- N6: outlier-bound limitation stated (events dropped, stock-days stay in the benchmark, only |r| > 8% caught).
+- N7: Appendix C no longer says "all verified"; abstract-level checks and unresolved DOIs are stated.
+- N8: R5 and R6 above should be read as PARTIAL: rules and the 5 May 2025 date are sourced to brokerage and press pages, not exchange circulars.
+- R4: Section 5 names the data that would test the hypotheses. Abstract length (S9) was not shortened further.
+- Still needs human action: external time stamp or deposit of the specification, exchange-circular sourcing, declarations, final DOI checks.

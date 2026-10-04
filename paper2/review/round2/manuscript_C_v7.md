@@ -10,34 +10,36 @@ false-discovery-rate control and a confirmation half-sample (not a
 strict hold-out), 0 of the 22 characteristics survive (largest absolute
 Fama–MacBeth t-statistic 1.45; the tests can rule out only slopes above
 roughly 0.1–0.3 percentage points per week), while the four limit tests
-survive, also with calendar-week-clustered errors. Their survival at the
-five-day horizon is carried by day t+1: abnormal returns over days t+2
-to t+5 are not significant after ceiling closes (-0.24%, t = -1.5). A
-stock that closes at its daily ceiling earns an abnormal return of 1.66%
-on the next day (date-clustered t = 4.9, 3,187 events), and a stock that
-closes at its floor earns -0.71% (t = -5.3; the floor figure depends on
-the benchmark and is -1.65% against same-date controls). Analyses added
-after seeing these results show that the ceiling effect is an overnight
-gap (2.23%, two-way-clustered t = 9.8) followed by a partial intraday
-reversal (-0.53%, t = -3.5), and that the gap is 2.66 percentage points
-larger than for stocks that rose 5–6.5% without reaching the limit (t =
-14.0), and 3.14 points larger when those comparison stocks also closed
-at their day’s high. We read this as a break at the limit that is
-consistent with demand blocked by the limit being realized at the next
-opening, but the design cannot separate that from news and attention:
-the gap is larger after strong prior run-ups and heavy volume. The
-effect is not available to an outside buyer: buying at the quoted next
-open and holding to the fifth close returns -0.75% relative to the
-market (t = -2.7) and -0.53% relative to same-date liquidity-matched
-controls (t = -1.8). A public, non-peer-reviewed analysis whose longer
-sample contains our window reports a close-to-close ceiling effect of
-similar size; our incremental content is the overnight–intraday
-decomposition, the comparison with moves just below the limit, and the
-multiplicity-controlled frame, and the sample is a single exchange with
-a trading-platform change in May 2025.
+survive, also with calendar-week-clustered errors. For ceilings,
+survival at the five-day horizon is carried by day t+1: abnormal returns
+over days t+2 to t+5 are not significant (-0.24%, t = -1.5); for floors,
+days t+2 to t+5 add a further -1.10% that does not pass the confirmation
+half. A stock that closes at its daily ceiling earns an abnormal return
+of 1.66% on the next day (date-clustered t = 4.9, 3,187 events), and a
+stock that closes at its floor earns -0.71% (t = -5.3; the floor figure
+depends on the benchmark and is -1.65% against same-date controls).
+Analyses added after seeing these results show that the ceiling effect
+is an overnight gap (2.23%, two-way-clustered t = 9.8) followed by a
+partial intraday reversal (-0.53%, t = -3.5), and that the gap is 2.66
+percentage points larger than for stocks that rose 5–6.5% without
+reaching the limit (t = 14.0), and 3.14 points larger when those
+comparison stocks also closed at their day’s high. We read this as a
+break at the limit that is consistent with demand blocked by the limit
+being realized at the next opening, but the design cannot separate that
+from news and attention: the gap is larger after strong prior run-ups
+and heavy volume. The effect is not available to an outside buyer:
+buying at the quoted next open and holding to the fifth close returns
+-0.75% relative to the market (t = -2.7) and -0.53% relative to
+same-date liquidity-matched controls (t = -1.8). A public,
+non-peer-reviewed analysis whose longer sample contains our window
+reports a close-to-close ceiling effect of similar size; our incremental
+content is the overnight–intraday decomposition, the comparison with
+moves just below the limit, and the multiplicity-controlled frame, and
+the sample is a single exchange with a trading-platform change in May
+2025.
 
-**Keywords:** price limits; delayed price discovery; overnight returns;
-multiple testing; Vietnam; retail investors
+**Keywords:** price limits; overnight returns; multiple testing;
+Vietnam; retail investors
 
 **JEL classification:** G14; G15; G18
 
@@ -207,7 +209,7 @@ dollar-volume weights.
 
 # 3. Design
 
-## 3.1 A pre-specified family of 26 tests
+## 3.1 A log-specified family of 26 tests
 
 Before computing any result we fixed the family, the estimators, the
 multiplicity controls and the survival rule in a time-stamped internal
@@ -227,7 +229,7 @@ any result tables (commit 9b8644b) is dated 07:36:19 UTC the same day.
 Commit dates are set by the committer and are not an independent time
 stamp; only the push times recorded by the repository host are external,
 and the authors should deposit the files with an independent time stamp
-before submission. We use the words “pre-specified” in the sense just
+before submission. We use the words “log-specified” in the sense just
 defined and not as “pre-registered”. The family is 22 characteristics
 measured at the end of each week and four price-limit event tests.
 
@@ -328,8 +330,8 @@ exclusion of events near returns beyond ±8%.
 
 ## 4.1 The 22 characteristics
 
-Table 2. Fama–MacBeth results for the 22 pre-specified characteristics
-(ordered by absolute full-sample t-statistic).
+Table 2. Fama–MacBeth results for the 22 characteristics specified in
+the log (ordered by absolute full-sample t-statistic).
 
 | Characteristic | Slope (% per week, per s.d.) | t (full) | t (discovery) | t (confirmation) | t (excl. least liquid 20%) | Quintile spread, net of 25 bps (% per week) |
 |----------------|------------------------------|----------|---------------|------------------|----------------------------|---------------------------------------------|
@@ -375,12 +377,12 @@ costs. The tests have limited power with 79 cross-sections, so the null
 is informative mainly about effects as large as a few tenths of a
 percent per week.
 
-## 4.2 The pre-specified limit tests
+## 4.2 The four limit tests specified in advance
 
-Table 3. Pre-specified price-limit event tests: market-adjusted returns
-after a ceiling or floor close. Events require complete returns for days
-t+1 to t+5, so Table 3 has slightly fewer events than Table 4, which
-requires only the open and close of day t+1; later tables use the
+Table 3. Price-limit event tests specified in the log: market-adjusted
+returns after a ceiling or floor close. Events require complete returns
+for days t+1 to t+5, so Table 3 has slightly fewer events than Table 4,
+which requires only the open and close of day t+1; later tables use the
 lagged-weight market and the samples stated in their notes.
 
 | Event   | Horizon  | Mean abnormal return (%) | t (date-clustered) | Events | Dates | t (first half) | t (second half) |
@@ -405,9 +407,9 @@ which is likely at the five-day horizon because windows overlap. With
 calendar-week clusters (95 weeks) and 10-day-block clusters (46 blocks)
 and a t reference with G−1 degrees of freedom, all four tests keep their
 sign and remain significant: the ceiling five-day t-statistic falls from
-4.00 to 3.67 and 3.81, and the confirmation-half t-statistic of the
-floor five-day test, which clears 1.96 by the smallest margin, is -2.16
-with date clusters, -2.22 with week clusters and -2.46 with block
+4.01 (Table 3) to 3.67 and 3.81, and the confirmation-half t-statistic
+of the floor five-day test, which clears 1.96 by the smallest margin, is
+-2.16 with date clusters, -2.22 with week clusters and -2.46 with block
 clusters. Re-applying the survival rule with week-clustered statistics
 and t-based p-values (all 26 tests, Benjamini–Hochberg) leaves all four
 event tests surviving (adjusted p-values up to 2.6e-03). The split at
@@ -426,9 +428,11 @@ and a one-day effect with some further drift after floor closes, not as
 a multi-day continuation.
 
 Table 3b. Inference for the event tests under alternative clustering
-(post hoc). Same events and market-adjusted returns as Table 3. Halves:
-split at the median event date. Weeks 1-39 / 40-79: the split of the
-specification, applied to events from trading day 120.
+(post hoc). Same events and market-adjusted returns as Table 3; the
+date-clustered t-statistics here use a G/(G−1) small-cluster correction
+and differ slightly from Table 3. Halves: split at the median event
+date. Weeks 1-39 / 40-79: the split of the specification, applied to
+events from trading day 120.
 
 | Event   | Horizon  | Mean (%) | t (date) | t (week) | t (10-day block) | t (halves, week) | t (weeks 1-39 / 40-79) |
 |---------|----------|----------|----------|----------|------------------|------------------|------------------------|
@@ -443,7 +447,7 @@ specification, applied to events from trading day 120.
 
 Table 4. Decomposition of the next-day abnormal return into the
 overnight gap and the intraday return, with three clustering schemes.
-Upper block: events defined by the pre-specified rule; lower block:
+Upper block: events defined by the log-specified rule; lower block:
 events defined by the exact tick rule.
 
 | Event         | Measure        | Mean (%) | t (date) | t (stock) | t (two-way) | Events | Stocks |
@@ -478,7 +482,7 @@ weak reversal (0.31%, t = 1.4). The exact tick rule, which picks about
 half as many events (1,666 ceilings), strengthens the estimates: the
 ceiling gap is 2.76% (t = 13.5) and the intraday return -0.73% (t =
 -5.3). The rule-based definition therefore includes some closes that
-were near but not at the limit, and the pre-specified estimate
+were near but not at the limit, and the log-specified estimate
 understates the exact-limit effect.
 
 ## 4.4 A break at the limit (post hoc)
@@ -584,13 +588,17 @@ the overnight gap rises with the day-$t$ volume relative to the prior
 stock’s prior 20-day return (1.97, 1.41%, 2.16, 2.18% and 2.63, 3.16%;
 repository table C24), so the gap is larger where attention and news are
 plausibly stronger, which fits reading (2) as well as reading (1); it
-remains positive and significant in the lowest tercile of both proxies
-(t = 4.8 and 4.8, 4.2). The contrast with 5–6.5% risers that also closed
-at their high (Table 5b) removes selection on a strong close but not
-selection on news. The intraday giveback after ceiling closes (-0.53%)
-fits readings (2) and (3) at least as well as a permanent
-price-discovery story. We therefore use “break at the limit” as a
-description, and “delayed price discovery” as a hypothesis.
+remains positive and significant in the lowest tercile of each proxy (t
+= 4.8 for volume and 4.8, 4.2 for prior return). For floors the pattern
+is not the same: the gap moves from -1.20% to -0.68% across volume
+terciles (less negative with more volume) and is not monotone in the
+prior return, so the attention reading does not carry over cleanly to
+floors. The contrast with 5–6.5% risers that also closed at their high
+(Table 5b) removes selection on a strong close but not selection on
+news. The intraday giveback after ceiling closes (-0.53%) fits readings
+(2) and (3) at least as well as a permanent price-discovery story. We
+therefore use “break at the limit” as a description, and “delayed price
+discovery” as a hypothesis.
 
 ## 4.5 Robustness (post hoc)
 
@@ -688,12 +696,12 @@ the period before the platform change (Section 4.8).
 
 ## 4.7 Responses to design concerns (post hoc)
 
-An independent devil’s-advocate review of the pre-specified design
+An independent devil’s-advocate review of the log-specified design
 (`review/DA_checkpoint1_report.md`; retrospective, because it was run
-after the pre-specified results were known, as the reviewer noted)
+after the log-specified results were known, as the reviewer noted)
 raised concerns about the event definition, overlapping events, the
 hold-out split, selection across projects, the benchmark and attrition.
-We addressed each with additional analyses that were not pre-specified
+We addressed each with additional analyses that were not log-specified
 and are labelled post hoc (`process/decisions.md` A5).
 
 Table 7. Next-day abnormal returns (%) by event definition and benchmark
@@ -725,7 +733,7 @@ day minus one), 1,654 in the event window (days up to the last trading
 day minus five), 1,648 of these with a next-day price and 1,583 with a
 control value (Table 7).
 
-*Event definition.* The pre-specified rule includes strong closes that
+*Event definition.* The log-specified rule includes strong closes that
 did not reach the limit price. Table 7 separates exact tick-rule hits
 from near-hits: for exact ceiling hits the overnight gap is 2.77%
 against the market (t = 13.5) and the intraday return -0.73%; near-hits
@@ -737,7 +745,7 @@ adjustment status for corporate actions is not documented by the vendor.
 *Overlapping events.* Restricting to the first day of a streak removes
 mechanical dependence between consecutive limit days: for exact hits the
 gap is 2.37% (t = 12.2) and the intraday return -0.55% (t = -3.1). The
-four pre-specified event tests are two effective tests (ceiling and
+four log-specified event tests are two effective tests (ceiling and
 floor), each at two nested horizons.
 
 *Benchmark.* Dollar-volume weights are concentrated (the ten largest
@@ -755,7 +763,10 @@ which a 7% band does not allow (first-day listing bands, resumed trading
 or unadjusted corporate actions are candidates). Dropping every event
 whose stock has such a return within five trading days leaves the
 ceiling gap at 2.26% (t = 9.7, from 2.24%) and the floor gap at -0.98%
-(from -0.97%) (repository table C25).
+(from -0.97%) (repository table C25). The exclusion drops events only;
+the outlier stock-days stay in the market benchmark, and it catches only
+returns beyond ±8%, so it bounds but does not remove the
+corporate-action concern.
 
 *Attrition.* Of 3,207 rule-based ceiling closes and 2,115 floor closes,
 8 and 4 lack a next-day price; treating a missing next day as a zero
@@ -855,24 +866,24 @@ details differ; it does not isolate an effect of the auction rules.
 
 # 5. Discussion
 
-**Interpretation.** The evidence fits delayed price discovery in the
-sense of Kim and Rhee (1997) and the continuation reported by Berkman
-and Lee (2002), with a refinement on timing: the continuation is
-concentrated in the opening, not spread over the next days, and the
-intraday return that follows reverses part of it. Berkman et al. (2012)
-document, for U.S. stocks and without any limit, positive overnight
-returns followed by intraday reversals, concentrated among stocks that
-recently attracted retail attention. The signature after ceiling closes
-is the same, and Lou et al. (2019) show that overnight and intraday
-returns have different persistence and that heterogeneous traders can
-explain it. Our data cannot identify who trades, what news arrived, or
-how the opening auction formed its price (Section 4.4 lists the rival
-readings). What is specific to this setting is that the gap is larger
-than for comparable moves just below the limit, including those that
-also closed at their high, which is the part of the evidence that a pure
-attention reading must explain. The post-open drift after floor closes,
-which is confined to the period before the platform change (Section
-4.8), is not explained by a gap-only reading.
+**Interpretation.** The evidence is consistent with delayed price
+discovery in the sense of Kim and Rhee (1997) and with the continuation
+reported by Berkman and Lee (2002), with a refinement on timing: the
+continuation is concentrated in the opening, not spread over the next
+days, and the intraday return that follows reverses part of it. Berkman
+et al. (2012) document, for U.S. stocks and without any limit, positive
+overnight returns followed by intraday reversals, concentrated among
+stocks that recently attracted retail attention. The signature after
+ceiling closes is the same, and Lou et al. (2019) show that overnight
+and intraday returns have different persistence and that heterogeneous
+traders can explain it. Our data cannot identify who trades, what news
+arrived, or how the opening auction formed its price (Section 4.4 lists
+the rival readings). What is specific to this setting is that the gap is
+larger than for comparable moves just below the limit, including those
+that also closed at their high, which is the part of the evidence that a
+pure attention reading must explain. The post-open drift after floor
+closes, which is confined to the period before the platform change
+(Section 4.8), is not explained by a gap-only reading.
 
 **Relation to the characteristic zoo.** The 22 characteristics serve as
 a multiplicity device and a null benchmark: the same procedure that lets
@@ -881,7 +892,7 @@ contrast the family-wide frame was built to deliver. It is not a
 separate finding about the cross-section, because the zoo has limited
 power (minimum detectable slopes of 0.12 to 0.31 percentage points per
 week). The limit hits are rare (about 2.0% of stock-days in the event
-window close at the ceiling by the pre-specified rule and about 1.1% by
+window close at the ceiling by the log-specified rule and about 1.1% by
 the exact tick rule), whereas the characteristics are measured on all
 stocks every week. We therefore do not claim that limit hits explain the
 cross-section of returns.
@@ -896,12 +907,14 @@ the benefits a limit is meant to deliver; a regulator should read them
 as a description of the post-limit opening. For investors the figures
 are consistent with not chasing limit-up stocks at the quoted open and
 with treating the next open as the point at which most of the day-$t$
-effect is realized; they are not trading advice, and costs, rationing at
-the open and the single-regime sample are not modelled.
+effect is realized; the data that would test them are announcement time
+stamps, order-book queue sizes at the close and a market or period
+without a limit; they are not trading advice, and costs, rationing at
+the open and the platform change within the sample are not modelled.
 
 # 6. Limitations
 
-The limitations are as follows. (i) The sample is about 21 months (519
+The limitations are as follows. (i) The sample is about 25 months (519
 trading days), which is short; the specified family and the confirmation
 half address this only partly, but a longer sample is desirable. The
 public analysis of tungtran0911 (2026) covers a longer period that
@@ -915,14 +928,14 @@ circulars; the tick-size table and the treatment of ex-rights and
 ex-dividend reference prices, first-day listing bands and resumed
 trading are assumptions of the exact-tick definition. (iv) Prices may be
 adjusted for corporate actions in ways that affect limit-hit
-classification; the pre-specified rule and the exact tick rule give the
+classification; the log-specified rule and the exact tick rule give the
 same sign and similar sizes, which limits but does not eliminate this
 concern. (v) The decomposition, control group, comparison-group and
 robustness analyses are post hoc, although they were motivated by the
-pre-specified result and are reported in full; they should be read as
-explanations of a pre-specified finding. (vi) The characteristic tests
+log-specified result and are reported in full; they should be read as
+explanations of a log-specified finding. (vi) The characteristic tests
 use one-at-a-time Fama–MacBeth regressions; multivariate and non-linear
-specifications were not part of the pre-specified family. (vii)
+specifications were not part of the log-specified family. (vii)
 Clustered standard errors treat dates, weeks, blocks and stocks as the
 dependence dimensions (Table 3b); events in the same market episode may
 be more strongly dependent than that allows, and no calendar-time
@@ -933,16 +946,16 @@ infeasible with 79 weekly cross-sections. (ix) The Corwin–Schultz spread
 and range volatility are computed from high and low prices that price
 limits censor, and some characteristics (REV1W, MAX, MIN, LIMITFREQ,
 OVERNIGHT) are mechanically related to the event definition. (x) The
-sample is one exchange over 21 months that includes a change of trading
-platform (5 May 2025; Section 4.8) and a period of market-wide stress,
-so it is not a single stable regime and the pre-change sample is small.
-(xi) The project selected this manuscript among several (Section 4.7),
-so its estimates are subject to a winner’s-curse bias. (xii) The sample
-contains no announcement, news or order-book data, so selection on news
-and the unfilled-demand mechanism are not separated (Section 4.4); the
-quoted next open is not an achievable fill (Section 4.6). (xiii) The
-floor effect depends on the benchmark (Table 6) and no beta- and
-size-matched control was used for the five-day outcome.
+sample is one exchange over about 25 months that includes a change of
+trading platform (5 May 2025; Section 4.8) and a period of market-wide
+stress, so it is not a single stable regime and the pre-change sample is
+small. (xi) The project selected this manuscript among several (Section
+4.7), so its estimates are subject to a winner’s-curse bias. (xii) The
+sample contains no announcement, news or order-book data, so selection
+on news and the unfilled-demand mechanism are not separated (Section
+4.4); the quoted next open is not an achievable fill (Section 4.6).
+(xiii) The floor effect depends on the benchmark (Table 6) and no beta-
+and size-matched control was used for the five-day outcome.
 
 # 7. Conclusion
 
@@ -950,18 +963,19 @@ In a family of 26 tests specified in a project log before computation,
 none of 22 familiar price- and volume-based characteristics survives
 false-discovery-rate control and a confirmation half (with limited
 power), whereas all four price-limit tests do, also with week- and
-block-clustered inference; the five-day tests are carried by the first
-day. A ceiling close is followed by a next-day abnormal return of about
-+1.7%, which is an overnight gap of 2.2% followed by a partial intraday
-reversal. The gap is 2.7 percentage points larger than for stocks that
-rose 5–6.5% without hitting the limit, and 3.1 points larger than for
-those that also closed at their high. The close-to-close effect is
-already reported publicly for a longer sample; the decomposition and the
-comparison with sub-limit moves are exploratory. The pattern is
-consistent with delayed price discovery at the limit, but news and
-attention are not excluded, and the effect is a feature of the opening
-after a limit close, not a profit opportunity for investors who buy
-after the close.
+block-clustered inference; for ceilings the five-day test is carried by
+the first day, and for floors the days after the first add a further
+drift that does not pass the confirmation half. A ceiling close is
+followed by a next-day abnormal return of about +1.7%, which is an
+overnight gap of 2.2% followed by a partial intraday reversal. The gap
+is 2.7 percentage points larger than for stocks that rose 5–6.5% without
+hitting the limit, and 3.1 points larger than for those that also closed
+at their high. The close-to-close effect is already reported publicly
+for a longer sample; the decomposition and the comparison with sub-limit
+moves are exploratory. The pattern is consistent with delayed price
+discovery at the limit, but news and attention are not excluded, and the
+effect is a feature of the opening after a limit close, not a profit
+opportunity for investors who buy after the close.
 
 # Declarations
 
@@ -1098,12 +1112,12 @@ discovery and momentum strategies: Evidence from Vietnam* (SSRN
 Scholarly Paper No. 1009042). Social Science Research Network.
 <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1009042>
 
-# Appendix A. Pre-specified versus post hoc analyses
+# Appendix A. Log-specified versus post hoc analyses
 
 | Analysis                                                                                                                                                                                                                                  | Status                                      |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| 22 characteristics, Fama–MacBeth, quintile spreads, discovery/confirmation split, illiquidity exclusion                                                                                                                                   | Pre-specified                               |
-| Ceiling and floor event tests at t+1 and t+1..t+5; BH/Holm/HLZ control over 26 tests; survival rule                                                                                                                                       | Pre-specified                               |
+| 22 characteristics, Fama–MacBeth, quintile spreads, discovery/confirmation split, illiquidity exclusion                                                                                                                                   | Specified in the log before computation     |
+| Ceiling and floor event tests at t+1 and t+1..t+5; BH/Holm/HLZ control over 26 tests; survival rule                                                                                                                                       | Specified in the log before computation     |
 | Overnight–intraday decomposition; next-open returns; same-date liquidity-matched control                                                                                                                                                  | Post hoc (A4)                               |
 | Comparison with 3–5% and 5–6.5% moves; discontinuity plot and table                                                                                                                                                                       | Post hoc (A4)                               |
 | Exact tick-rule definition; two-way clustering; sub-sample robustness                                                                                                                                                                     | Post hoc (A4)                               |
@@ -1136,12 +1150,16 @@ and the post hoc amendments (A4, A5).
 
 The search strategy, the prior-art finding that bounds the novelty
 claim, and the verification status of every reference are in
-`process/04_literature_search_log.md`. All references were verified
-against records returned by web search; the DOI resolver and Crossref
-were not reachable from the analysis environment. After the first review
-round the search was extended to price-limit theory (Subrahmanyam,
-1994), Turkish and Chinese evidence (Bildik & Gülay, 2006; Qi, 2023) and
-the HOSE rules and platform change (HSC, 2025; Viet Nam News, 2025);
+`process/04_literature_search_log.md`. References were checked against
+records returned by web search (publisher, IDEAS/RePEc, SSRN, PMC or
+abstract pages); for Le (2012), Chen (1993) and Berkman and Lee (2002)
+only abstract-level or bibliographic records were seen, and no DOI was
+resolved because the DOI resolver and Crossref were not reachable from
+the analysis environment; DOIs in the list come from the search records
+and need a final check by the authors. After the first review round the
+search was extended to price-limit theory (Subrahmanyam, 1994), Turkish
+and Chinese evidence (Bildik & Gülay, 2006; Qi, 2023) and the HOSE rules
+and platform change (HSC, 2025; Viet Nam News, 2025);
 Vietnamese-language journals, further Chinese A-share studies and Le
 (2012) were not retrieved or checked in full text, and the novelty
 statement remains bounded by this search.

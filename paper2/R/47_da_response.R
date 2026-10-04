@@ -63,7 +63,7 @@ Cmean <- Reduce(`+`, lapply(1:dim(X)[1], function(i) { M <- sapply(CH, function(
 ev <- eigen(Cmean, symmetric = TRUE, only.values = TRUE)$values; meff_pr <- sum(ev)^2 / sum(ev^2); meff_lj <- sum(ev >= 1) + sum(ev - floor(ev)); 
 write.csv(sens, file.path(od, "tables/C14_characteristics_power_lags.csv"), row.names = FALSE)
 fam <- read.csv(file.path(od, "tables/C3_family_control.csv")); pmax_ev <- max(fam$p[23:26])
-prog <- data.frame(item = c("Effective number of tests, participation ratio of the characteristic correlation matrix", "Effective number of tests, Li-Ji", "Largest event-test p-value (4 pre-registered)", "Largest programme size m for which all 4 event tests survive Bonferroni at 5%"),
+prog <- data.frame(item = c("Effective number of tests, participation ratio of the characteristic correlation matrix", "Effective number of tests, Li-Ji", "Largest event-test p-value (4 log-specified)", "Largest programme size m for which all 4 event tests survive Bonferroni at 5%"),
   value = c(meff_pr, meff_lj, pmax_ev, floor(0.05 / pmax_ev)))
 write.csv(prog, file.path(od, "tables/C15_programme_multiplicity.csv"), row.names = FALSE)
 options(width = 200); print(rows[rows$measure %in% c("gap_mkt", "intraday_mkt", "cc1_mkt", "f5o_mkt", "gap_ctrl", "intraday_ctrl", "cc1_ctrl", "f5o_ctrl"), ], digits = 3, row.names = FALSE)
