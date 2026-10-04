@@ -38,3 +38,13 @@ HOSE trading-session times, settlement cycle and tick-size schedule were not ver
 | Newey & West (1987) Econometrica 55(3), 703-708 | VERIFIED | JSTOR / EconPapers / Econometric Society search results |
 Berkman, Koch, Tuttle & Zhang (2012): abstract read via the SSRN/Semantic Scholar search result: U.S. stocks, positive overnight returns followed by intraday reversals, opening price inflated among stocks that attracted retail attention, high net retail buying at the start of the day. This is the closest peer-reviewed precedent for the overnight-then-intraday signature; the manuscript now cites it in the novelty statement and the interpretation.
 All 20 references cited in Paper C are VERIFIED (17 by title/abstract/record in search results; the 2 grey/working-paper items by the repository README and SSRN record).
+
+## Update after review round 1 (4 October 2026) — references added in manuscript v7
+| Reference | Verification (web search; DOI resolver and Crossref unreachable) |
+|---|---|
+| Subrahmanyam (1994), Journal of Finance 49(1), 237–254 | Wiley page and abstract returned by search; DOI taken from the Wiley URL |
+| Bildik & Gülay (2006), Journal of Financial Research 29(3), 383–403 | Wiley page, IDEAS/RePEc and SSRN records returned; authors confirmed by search |
+| Qi (2023), PLOS ONE 18(6), e0287548 | PLOS ONE and PMC pages returned; author, date and DOI from the search record |
+| HSC (2025), "Important changes of new trading system" | Appeared in search results (page not fetched; egress blocked); used for the ATO/ATC priority change and the ±7% band |
+| Viet Nam News (2025), "KRX system officially goes live" | Appeared in search results (page not fetched); used for the 5 May 2025 launch |
+Status notes: Le (2012), Chen (1993), Berkman and Lee (2002) remain checked at abstract/bibliographic level only. Vietnamese-language journals and further Chinese A-share studies were not searched. Corrections to earlier entries: the manuscript no longer describes the study as an independent replication or as "pre-registered"; the term is "log-specified" (fixed in a version-controlled log; no external registry).
