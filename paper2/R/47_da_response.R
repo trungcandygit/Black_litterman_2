@@ -65,3 +65,29 @@ prog <- data.frame(item = c("Effective number of tests, participation ratio of t
 write.csv(prog, file.path(od, "tables/C15_programme_multiplicity.csv"), row.names = FALSE)
 options(width = 200); print(rows[rows$measure %in% c("gap_mkt", "intraday_mkt", "cc1_mkt", "f5o_mkt", "gap_ctrl", "intraday_ctrl", "cc1_ctrl", "f5o_ctrl"), ], digits = 3, row.names = FALSE)
 print(cfr, digits = 3); print(univ); print(sens, digits = 3); print(prog)
+
+# ================= NA-safe rebuild of Tables 1, 5, 6 (response to the independent integrity report; post hoc) =================
+mk_t <- sapply(tt, function(t) { a <- adv[t - 60, ]; r <- Rd[t, ]; ok <- is.finite(a) & is.finite(r); sum(r[ok] * a[ok]) / sum(a[ok]) })          # market return on day t (weights: trailing dollar volume)
+ter_t <- t(sapply(1:nt, function(i) { out <- rep(NA_integer_, ns); ok <- which(is.finite(adv[i, ])); out[ok] <- cut(rank(adv[i, ok]) / length(ok), c(0, 1/3, 2/3, 1), labels = FALSE); out }))
+half_c <- function(sel, first) { r <- which(sel, arr.ind = TRUE); med <- median(r[, 1]); keepm <- matrix(FALSE, nt, ns); rr <- if (first) r[r[, 1] <= med, , drop = FALSE] else r[r[, 1] > med, , drop = FALSE]; keepm[rr] <- TRUE; keepm }
+crash <- matrix(mk_t < -0.02, nt, ns); crash[is.na(crash)] <- FALSE
+subs <- list()
+for (ev in c("Ceiling", "Floor")) { base <- if (ev == "Ceiling") r_ceil else r_floor; lk <- if (ev == "Ceiling") locked_c else locked_f; base[is.na(base)] <- FALSE
+  subs[[paste(ev, "all")]] <- base; subs[[paste(ev, "first half (by event date)")]] <- half_c(base, TRUE); subs[[paste(ev, "second half (by event date)")]] <- half_c(base, FALSE)
+  subs[[paste(ev, "excluding market-crash days (market < -2%)")]] <- base & !crash; subs[[paste(ev, "locked all day")]] <- base & lk; subs[[paste(ev, "not locked all day")]] <- base & !lk
+  for (k in 1:3) subs[[paste(ev, "liquidity tercile", k)]] <- base & (ter_t == k) & !is.na(ter_t) }
+rows16 <- do.call(rbind, lapply(names(subs), function(g) do.call(rbind, lapply(c("gap_mkt", "intraday_mkt", "cc1_mkt", "gap_ctrl", "intraday_ctrl", "cc1_ctrl", "f5o_mkt"), function(m) data.frame(sample = g, measure = m, t(cl2(subs[[g]], AR[[m]])), row.names = NULL)))))
+write.csv(rows16, file.path(od, "tables/C16_subsamples_nasafe.csv"), row.names = FALSE)
+# discontinuity: limit close vs just-below-limit moves (date-clustered OLS on the indicator)
+dcmp <- function(sel_t, sel_c, m, label) { v <- AR[[m]]; rt <- which(sel_t & is.finite(v)); rc <- which(sel_c & is.finite(v)); idx <- c(rt, rc); y <- v[idx]; d <- c(rep(1, length(rt)), rep(0, length(rc))); dt <- row(v)[idx]
+  fit <- lm(y ~ d); vc <- vcovCL(fit, cluster = dt, type = "HC1"); b <- coef(fit)[2]; data.frame(contrast = label, outcome = m, diff_pct = 100 * b, t_cluster = b / sqrt(vc[2, 2]), n_limit = length(rt), n_comparison = length(rc), row.names = NULL) }
+nb_up_56 <- !is.na(R0) & R0 >= 0.05 & R0 < 0.065; nb_up_35 <- !is.na(R0) & R0 >= 0.03 & R0 < 0.05; nb_dn_56 <- !is.na(R0) & R0 <= -0.05 & R0 > -0.065; nb_dn_35 <- !is.na(R0) & R0 <= -0.03 & R0 > -0.05
+rc <- r_ceil; rc[is.na(rc)] <- FALSE; rf_ <- r_floor; rf_[is.na(rf_)] <- FALSE
+cm <- list(list(rc, nb_up_56, "ceiling vs 5-6.5% up"), list(rc, nb_up_35, "ceiling vs 3-5% up"), list(rf_, nb_dn_56, "floor vs 5-6.5% down"), list(rf_, nb_dn_35, "floor vs 3-5% down"))
+rows17 <- do.call(rbind, lapply(cm, function(z) do.call(rbind, lapply(c("gap_mkt", "intraday_mkt", "cc1_mkt", "f5o_mkt"), function(m) dcmp(z[[1]], z[[2]], m, z[[3]])))))
+write.csv(rows17, file.path(od, "tables/C17_discontinuity_nasafe.csv"), row.names = FALSE)
+# pile-up on the 347 analysed stocks (both tails); returns between consecutive calendar observations
+rr <- Rd[!is.na(Rd)]; brk <- c(-Inf, -0.08, -0.071, -0.069, -0.065, -0.06, 0.06, 0.065, 0.069, 0.071, 0.08, Inf)
+lab <- c("< -8.0%", "-8.0% to -7.1%", "-7.1% to -6.9%", "-6.9% to -6.5%", "-6.5% to -6.0%", "-6.0% to 6.0%", "6.0% to 6.5%", "6.5% to 6.9%", "6.9% to 7.1%", "7.1% to 8.0%", "> 8.0%")
+tb <- table(cut(rr, brk, labels = lab)); pile <- data.frame(range = names(tb), n = as.integer(tb), share_pct = 100 * as.numeric(tb) / length(rr)); write.csv(pile, file.path(od, "tables/C9b_pileup_347.csv"), row.names = FALSE)
+cat("pile-up 347 stocks:", length(rr), "\n"); print(pile, digits = 3); print(rows17, digits = 3); print(head(rows16[rows16$measure == "gap_mkt", ], 20), digits = 3)

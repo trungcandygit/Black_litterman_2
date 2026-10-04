@@ -24,7 +24,7 @@ for (ii in seq_along(ts)) {
   fw <- (t + 1):(t + H5); okf <- ok[colSums(is.na(Rd[fw, ok, drop = FALSE])) == 0]
   a <- adv60(t); wm <- a[okf] / sum(a[okf]); mk <- as.vector(Rd[1:t, okf, drop = FALSE][(t - 114):t, ] %*% wm)   # market proxy over lookback (day t-114..t)
   Rk <- Rd[wL, okf, drop = FALSE]; idx60 <- (nrow(Rk) - 59):nrow(Rk); idx20 <- (nrow(Rk) - 19):nrow(Rk)
-  idxM3 <- (nrow(Rk) - 64 + 1 - 0):(nrow(Rk) - 5); idxM6 <- 1:(nrow(Rk) - 5)
+  idxM3 <- (nrow(Rk) - 64):(nrow(Rk) - 5); idxM6 <- 1:(nrow(Rk) - 5)
   for (jj in seq_along(okf)) { s <- okf[jj]; r <- Rk[, jj]; r60 <- r[idx60]; m60 <- mk[idx60]
     fit <- lm.fit(cbind(1, m60), r60); res <- r60 - cbind(1, m60) %*% fit$coefficients; vv <- Vv[w60, s]; dv <- DV[w60, s]; pos <- vv > 0
     X[ii, s, "REV1W"] <- prod(1 + r[(length(r) - 4):length(r)]) - 1; X[ii, s, "REV1M"] <- prod(1 + r[idx20]) - 1

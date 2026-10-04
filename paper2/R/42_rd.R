@@ -28,7 +28,7 @@ bins$kind <- ifelse(bins$bin %in% c("CEIL", "FLOOR"), "Closed at the 7% limit", 
 bins$x[bins$kind == "Beyond 6.5%, not at limit"] <- sign(bins$x[bins$kind == "Beyond 6.5%, not at limit"]) * 0.0825
 g <- ggplot(bins[bins$kind == "Interior bin", ], aes(x * 100, mean_pct, colour = measure)) + geom_hline(yintercept = 0, colour = "grey60") + geom_pointrange(aes(ymin = lo, ymax = hi), size = 0.25) + geom_line(linewidth = 0.3) +
   geom_pointrange(data = bins[bins$kind == "Closed at the 7% limit", ], aes(ymin = lo, ymax = hi), size = 0.5, shape = 17) + geom_pointrange(data = bins[bins$kind == "Beyond 6.5%, not at limit", ], aes(ymin = lo, ymax = hi), size = 0.4, shape = 15) + facet_wrap(~measure, ncol = 1, scales = "free_y") +
-  scale_colour_manual(values = oi) + labs(x = "Day-t return (%). Triangles: closed at the 7% limit; squares: moved more than 6.5% but not closed at the limit", y = "Next-day abnormal return (%)") + theme_minimal(base_size = 10) + theme(legend.position = "none", panel.grid.minor = element_blank())
+  scale_colour_manual(values = oi) + labs(x = "Day-t return (%)", y = "Next-day abnormal return (%)") + theme_minimal(base_size = 10) + theme(legend.position = "none", panel.grid.minor = element_blank())
 ggsave(file.path(fd, "H1_rd_bins.png"), g, width = 7, height = 7.2, dpi = 300, bg = "white")
 # ---- two-way clustering (date and stock) for headline measures
 cl2 <- function(sel, v) { r <- which(sel & is.finite(v)); ii <- row(v)[r]; jj <- col(v)[r]; a <- v[r]; m <- mean(a); e <- a - m; N <- length(a)

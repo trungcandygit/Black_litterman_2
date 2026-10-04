@@ -44,3 +44,13 @@ Independence caveat recorded by the DA: Checkpoint 1 ran after the pre-registere
 28. DA-M6 (benchmark): primary benchmark becomes the same-date, same-liquidity-tercile non-event control; equal-weighted market and beta-adjusted versions are sensitivity; report the top-10 weight share of the dollar-volume market.
 29. DA-M7 (survivorship, attrition): report universe construction counts and event attrition, and a carry-forward (zero return for missing post-event days) sensitivity.
 All additions are post hoc and labelled as such; none changes the pre-registered results.
+
+## Amendment A6 — Disposition of the independent Stage 2.5 integrity report, round 1 (`review/integrity_stage2_5_independent.md`; verdict FAIL)
+30. IL-SERIOUS-1 (NA propagation in `R/41_limits_robust.R` truncated Table 5/6 samples): Tables 5 and 6 and the control column are rebuilt from the NA-safe matrix code in `R/47_da_response.R` (tables C16, C17); `R/41` and `R/43` outputs (C4, C8) are no longer used in the manuscript. The decomposition tables 4 and 7 were already NA-safe and were reproduced by the verifier.
+31. IL-SERIOUS-2 ("independent replication" of the GitHub analysis): removed; the manuscript now states the overlap in sample and vendor family, the definition and benchmark differences, credits the README's mechanism and non-tradability inference, and reports a like-for-like equal-weighted figure.
+32. IL-MEDIUM-1 (Table 1 population): rebuilt on the 347 analysed stocks (178,773 stock-days; both tails).
+33. IL-MEDIUM-2 (event counts and caption reasons): corrected the caption reasons, added n columns, documented the market-weight convention (same-day in Table 3, lagged elsewhere).
+34. IL-MEDIUM-3 (specification vs implementation): four deviations disclosed in Section 3.1; the 59-day momentum window was corrected to the specified 60 days and all downstream tables regenerated (results unchanged in substance: MOM3M t = 1.45, IMOM t = 1.45, still null).
+35. IL-MEDIUM-4: the DA review is described as retrospective; the economically primary outcomes (next-open, control-matched) are described as such in Sections 4.6-4.7 while the pre-specified close-to-close outcome remains the headline of Tables 3-4 because it was the pre-specified test.
+36. Minor items: data source and retrieval stated; 0.073% / both-tail share; cost-proxy caveat; Le (2012) added; encoding artefacts fixed; Appendix wording aligned; abstract reports the two-way t and the control-based figure for the tradable shortfall.
+Next: independent re-verification of the corrected items (round 2 of at most 3).
