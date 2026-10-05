@@ -1,0 +1,13 @@
+"item","value"
+"Files retrieved (HOSE-listed, vnstock 4.0.4, source VCI, 24 September 2026)",405
+"Rows in the VCI listing file (all instrument types)",743
+"Stocks kept (at least 95% non-missing close)",347
+"Trading days (21 Aug 2024 to 23 Sep 2026)",519
+"Stock-days with a return",178773
+"Mean daily return (%)",0.017881545408121
+"Standard deviation of daily returns (%)",2.09820479930789
+"Median daily return (%)",0
+"Median daily dollar volume (million VND)",2557.7456
+"Mean daily dollar volume (million VND)",51226.2719807676
+"Distinct two-digit ICB sector codes among kept stocks",18
+"Share of kept stocks in the largest sector (%)",14.985590778098
