@@ -389,3 +389,31 @@ Citation-context checks rest on search-returned abstracts and records, because p
 1. Fix IL-SERIOUS-1: the Zhang et al. (2022) sentence. Correct evidence-file entry 16 and the Theme 2 sentence as well.
 2. Fix IL-MINOR-1 to IL-MINOR-4. Each is a one-line text or reference edit.
 3. Re-render the manuscript, then re-verify only these five locations plus a C2 check of the changed sentences. No re-analysis is needed.
+
+## Narrow re-verification (Stage 4.5, round 3 corrections)
+
+Run on 2026-10-05 by an independent integrity_verification_agent with a fresh context, under the Stage 4.5 rule "FAIL -> fix -> re-verify -> PASS -> Stage 5". The scope is limited to IL-SERIOUS-1 and IL-MINOR-1 to IL-MINOR-4, plus a C2 consistency check of the changed sentences and a character check of the rendered text. No manuscript, code or data file was edited. Sources checked: `manuscript/manuscript_final.Rmd` and `manuscript/manuscript_final.docx` (both dated 2026-10-05 11:58), rendered with `pandoc -t plain --wrap=none`. `manuscript_final_styled.docx` was also rendered, and it differs from `manuscript_final.docx` only in table column widths.
+
+### Verdict: PASS
+
+| ID | Status | Evidence |
+|---|---|---|
+| IL-SERIOUS-1 | RESOLVED | Rmd line 57 and docx now read: "Zhang et al. (2022) find higher liquidity, higher volatility, and a higher probability of informed trading after the widening, and Jia et al. (2024) find lower crash risk." This session's WebSearch abstract record (ScienceDirect `S0927538X22000737`; SSRN 4019883; DOI 10.1016/j.pacfin.2022.101778) says the change "significantly improves market liquidity, increases market volatility and the probability of informed trading". The sentence matches that finding. The Section 5 citation (line 195, "changed volatility, liquidity, and execution quality") is unchanged and still correct. Evidence file `process/08_literature_review_benchmark.md`: entry 16 now records that liquidity, volatility and VPIN all rise, read as more information asymmetry, and flags the earlier error. Theme 2 (line 120) now separates "a higher probability of informed trading (Zhang et al., 2022)" from "lower information asymmetry (Jia et al., 2024)". Both are corrected. |
+| IL-MINOR-1 | RESOLVED | Limitation (iv), Rmd line 228 and docx: "against 100% for stocks below 10 thousand dong, where the 0.01 tick equals the two-decimal resolution of the files and the check is uninformative". This is accurate given the round-3 check that every close in `data/raw` has at most two decimals. The 100% figure is now presented as mechanical, not as evidence. The rest of the sentence is unchanged and its rendered numbers match the round-3 table (25/31/58%, 62% vs 23%). The added clause adds no new claim. |
+| IL-MINOR-2 | RESOLVED | Section 6, Rmd line 218 and docx: "... turns positive after at-the-open orders lose priority (Table 4). This is consistent with auction design shaping how the opening absorbs overnight pressure, but the market period changed at the same time, so the split cannot isolate the auction rules (Section 5)." This is consistent with the Section 5 statement "We cannot attribute the differences between the periods to the auction rules." The Table 4 numbers cited in Section 5 are unchanged (floor gap −0.42 → −1.37, intraday after floor closes 0.64). |
+| IL-MINOR-3 | RESOLVED | Huang, Liu and Shu (2023): `*Pacific-Basin Finance Journal, 82*, 102176`. WebSearch confirms the journal PDF header "Pacific-Basin Finance Journal 82 (2023) 102176" and ScienceDirect `S0927538X23002470`. Lin, Qiu and Zheng (2023): `*Journal of Banking & Finance, 150*, 106818`. WebSearch confirms JBF 150 (May 2023), article 106818, DOI 10.1016/j.jbankfin.2023.106818 (ScienceDirect `S0378426623000432`; IDEAS `jbfina/v150y2023ics0378426623000432`). Both article numbers are correct. |
+| IL-MINOR-4 | RESOLVED | "Gu, M., Hu, Y., & Xiong, Z. (2025)" (Rmd line 284) now precedes "Gutierrez, R. C., Jr., & Kelley, E. K. (2008)" (line 286). A scripted surname-key check of the whole rendered reference list (accents folded, punctuation stripped) found no adjacent pair out of APA alphabetical order. |
+
+Changed-sentence C2 check: no new inconsistency was found.
+- The new Zhang wording does not conflict with the Section 5 citation or with Table 5.
+- The Section 6 sentence now defers to Section 5 instead of going beyond it.
+- The limitation (iv) clause is consistent with the Table 2 paragraph, which already treats exact and near hits as a data check.
+
+Rendered-character check: `manuscript_final.docx` contains no U+FFFD and no `<U+...>` strings.
+- The only non-ASCII characters in the changed lines are no-break spaces in "et al." citations, which are intended.
+- The reference list contains only en dashes, curly quotes, "ü", an ellipsis, and "×" and "²".
+- The thin spaces (U+2005/U+2006) occur in the Appendix A math text, not in the references.
+
+Remaining issues: none blocking. Advisory only (A2, not a defect under this round's correction): the Lin et al. (2023) and Huang et al. (2023) entries still carry no DOI. The round-3 suggestion for Lin offered `https://doi.org/10.1016/j.jbankfin.2023.106818`, and APA 7 prefers a DOI when one exists. Several other entries also lack DOIs (e.g., Hou et al., 2020; Zhang et al., 2022), so DOI completeness can be handled as a single pass at Stage 5. The earlier notes N-A1 to N-A3 and the process notes stand unchanged.
+
+Next step: Stage 4.5 PASS -> Stage 5 (FINALIZE).
