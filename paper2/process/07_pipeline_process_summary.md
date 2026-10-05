@@ -31,3 +31,16 @@
 
 ## Items that need the human authors
 External time stamp or deposit of the specification; exchange circulars for the HOSE rules; final DOI checks and full-text checks of Le (2012), Chen (1993) and Berkman and Lee (2002); ethics, funding, competing interests and author contributions; choice of target journal and template; decision on the Stage 2.5 cap deviation.
+
+## Update, 5 October 2026: second finalization cycle
+| Step | What was done | Outcome |
+|---|---|---|
+| Stage 1 re-entry (deviation) | deep-research lit-review mode run by one independent general-purpose agent (`process/08_literature_review_benchmark.md`): 52 peer-reviewed items, recent evidence prioritized, benchmark table, UNVERIFIED list | Not a standard pipeline loop; recorded as a deviation. Verification was at abstract/record level only (full text blocked) |
+| Stage 4 | New Section 2 (literature), Section 3 (data and institutional setting), Table 5 benchmark, comparisons in Sections 5 and 6, 49 references; compact journal style (8 sections, 5 tables, 2 figures) | |
+| Style rounds 1 and 2 | stop-slop and proofreading skills applied by the author-agent, then by an independent agent (two rounds in total on the compact version, plus one more round on the extended text) | score 33/50 before edits |
+| Stage 3' | Independent re-review of the extended text | Major Revision (text-only: attribution defects M1-M6, minors m1-m17) |
+| Stage 4' | All items applied | |
+| Stage 4.5 | Independent final integrity check | FAIL (one unsupported priority claim, N1) then fixed; narrow re-verification PASS |
+| Stage 5 | `final/Paper_C_Closing_at_the_limit.{docx,md,Rmd}` | PDF not produced (no LaTeX) |
+
+Open points for the authors: the public GitHub analysis (grey literature) is not cited in the manuscript at the user's instruction, and the paper makes no priority claim for the close-to-close effect; the VCI source name is not spelled out; two reference entries lack article numbers; DOIs come from search records, not from resolver checks; Berkman and Lee (2002), Huang et al. (2001) and Qiao and Dam (2020) were checked at abstract or record level only.

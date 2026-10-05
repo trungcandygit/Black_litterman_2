@@ -101,3 +101,40 @@ All v1 items (M1 522 count, M2 tercile garble, M3 log gap, m1-m8) are resolved o
 ## Required to reach PASS
 
 Fix N1 (bound or remove "the first for this market"; attribute the unfilled-order mechanism or cite the precedent). Then re-verify that sentence only. Fixing n1-n10 is recommended at the same time because Stage 4.5 counts minor items.
+
+
+---
+
+## Narrow re-verification (Stage 4.5, re-verify round after the v2 FAIL)
+
+Scope: only the corrected items, in `manuscript_final.Rmd` (docx rendered with pandoc, same timestamp 02:18). No file edited except this append.
+
+### Verdict: PASS (with minor residual items, none blocking)
+
+### N1 (priority claim): RESOLVED
+Search of the rendered text for first / novel / new / to our knowledge / none of / priority / unique / only. Findings:
+- The Section 6 sentence "the first for this market" is gone. It now reads "are our estimates for this market. We know of no peer-reviewed study that measures them in the same way." This is bounded to peer-reviewed work, consistent with 04_literature_search_log.md (the GitHub repository is grey literature, excluded from the benchmark in 08_literature_review_benchmark.md line 158) and does not contradict the repository README (+1.694% close-to-close ceiling effect), since no claim of priority or of a first remains.
+- Section 1 ("to our knowledge, none of the studies we reviewed splits ... gap and session, ... family of tests, ... 2025 platform move"), Section 2 ("none of these studies reports the next-day return ... split", "We found no peer-reviewed study of post-limit returns on HOSE"), "Gap and hypotheses" ("None uses the 2025 platform change") are bounded and correspond to what the log says the repository does not do (decomposition, family control, platform split). "First/Second/Third" in the contributions paragraph are ordinals; "a new factor needs t above 3.0" is a Harvey et al. quotation; "new trading platform" is descriptive. No remaining priority language.
+- Mechanism sentence (Section 5): now "A stock that closes at its ceiling may carry a queue of unfilled buy orders into the night, the mechanism that delayed price discovery assumes (Kim & Rhee, 1997)": hedged and attributed to the peer-reviewed source. Resolved.
+- Residual (advisory, not blocking): the repository precedent is no longer named anywhere in the manuscript. Because the claim is bounded to peer-reviewed work this is not a distortion; naming or citing it (as the earlier v1 version did) would be the more transparent choice if the authors want to be conservative.
+
+### Minor items
+- n1 RESOLVED. Section 1 and Section 6 say "meet our definition of an upper-limit close (the ceiling, Section 4)". Numbers: 3,207/156,653 = 2.05% (text 2.0%), 2,115/156,653 = 1.35% (text 1.4%), C13_universe_counts.csv agrees; the Section 3 pile-up shares (1.98%, 1.30%, 0.29%, all 178,773 stock-days, different band) are distinct and labeled.
+- n2 RESOLVED. Section 3 now says "Table 1 uses weights through day d+1, and Tables 2 to 4 lag the weights to day d"; the Table 2 and Table 3 captions say lagged weights. Consistent with the earlier recomputation (1.660 vs 1.667).
+- n3 PARTLY. Section 2 now says Zeng et al. "relate the frequency of limit hits to lower future returns"; Table 5 says "frequent limit hits". Neither is wrong as a paraphrase but still not the abstract's net (upper minus lower) hitting ratio. Minor wording, not a distortion.
+- n4 RESOLVED. Section 2 and Table 5 state "with microcaps mitigated, 65% of 452 anomalies fail the single-test hurdle of 1.96".
+- n6 RESOLVED (acceptable). Lu et al. now "trace night-minus-day returns to the market makers who absorb retail order imbalances near the open"; Section 6 says "market makers absorbing retail imbalances", dropping the inventory phrase; remains a paraphrase of abstract-level evidence.
+- n7 RESOLVED. Availability statement lists R scripts 40 to 50 and C1 to C26 (covers R/50 and C26).
+- n8 RESOLVED. Now "Studies of overnight returns measure them on all stocks; none conditions on a limit close", no longer follows Jones et al. as an overnight study claim.
+- n9 RESOLVED. New sentence in Section 5: "excluding the least liquid 20% of stocks leaves the largest |t| at 1.62". Recomputed max |t_excl_illiq| over the 22 rows of C1_characteristics_FM.csv = 1.6199 (MIN); next 1.52, 1.49. Matches. The plan's departures list (four items) no longer needs this item because it is now reported.
+- n10 PARTLY. HSC is defined at first use ("Ho Chi Minh City Securities Corporation [HSC], 2025"), correct. "VCI" still appears undefined ("source VCI", "VCI data source"); it is a vendor label in vnstock, acceptable but could be spelled out. Reference entries for Huang X. et al. (2023) and Lin et al. (2023) still lack article numbers (102176 for Huang; Lin has none). Minor reference-format point.
+- n11 RESOLVED. R/46 T5 now prints "log-specified sample"; no "pre-registered" string remains in the script, and the manuscript uses "written analysis plan".
+- n5 (not in this round's list): the 2.0% statement still appears in Section 1 and Section 6 but now carries the "meets our definition" wording and the event-window denominator; accepted.
+
+### Regression check
+Every inline number in the changed sentences (2.0%, 1.4%, 1.98%/1.30%/0.29%, 1.62, 1.45/1.17/1.14, 1.79, 2.24/-0.54/-0.97/0.30, 2.77/2.37/1.67, 740 of 2,111, 96, 2.24 to 2.26 and -0.97 to -0.98, -0.75 (t -2.7), -0.53 (t -1.8), 1.7/2.2/0.5 abstract) matches the saved tables and the earlier recomputation. Reference list: 49 entries; every surname-year pair resolves to an in-text citation (HSC and Viet Nam News are group-author citations and are cited); no orphan or missing entry; no new citation introduced.
+
+### Remaining issues (all minor, none blocking)
+1. Optionally name/cite the grey-literature repository precedent (transparency; not required by the bounded claim).
+2. Zeng et al. wording could say "net limit-hit ratio".
+3. Spell out VCI; add article numbers for Huang X. et al. (102176) and Lin et al. (2023) in the reference list.
