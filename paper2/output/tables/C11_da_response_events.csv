@@ -47,18 +47,18 @@
 "Floor: rule-based, complete returns t+1..t+5","intraday_ew",0.341468762164773,2.52537616357724,2105
 "Floor: rule-based, complete returns t+1..t+5","cc1_ew",-0.769609336668362,-5.0770439462966,2105
 "Floor: rule-based, complete returns t+1..t+5","cc1_beta",-0.764530694599871,-1.34140871936947,57
-"Ceiling: exact tick-rule hit","gap_mkt",2.77140391538833,13.5091597204075,1648
-"Ceiling: exact tick-rule hit","intraday_mkt",-0.734812766799572,-5.31028732341258,1648
-"Ceiling: exact tick-rule hit","cc1_mkt",1.98437763468441,6.96479234015337,1648
-"Ceiling: exact tick-rule hit","f5o_mkt",-1.01083694211923,-2.95092904420457,1643
-"Ceiling: exact tick-rule hit","gap_ctrl",3.18793661789452,21.4742116366366,1583
-"Ceiling: exact tick-rule hit","intraday_ctrl",-0.740779830138619,-7.50080617339219,1583
-"Ceiling: exact tick-rule hit","cc1_ctrl",2.40075729559178,16.3444057868469,1583
-"Ceiling: exact tick-rule hit","f5o_ctrl",-0.884069640450043,-2.3275768992321,1582
-"Ceiling: exact tick-rule hit","gap_ew",2.9030964779793,14.8509206318652,1648
-"Ceiling: exact tick-rule hit","intraday_ew",-0.743588335788283,-7.24655233386511,1648
-"Ceiling: exact tick-rule hit","cc1_ew",2.11864574090697,12.4508377377714,1648
-"Ceiling: exact tick-rule hit","cc1_beta",2.37998191960681,6.83440280163563,156
+"Ceiling: exact tick-rule hit","gap_mkt",2.78555522556764,13.8097285853647,1642
+"Ceiling: exact tick-rule hit","intraday_mkt",-0.736412103046743,-5.25729310678444,1642
+"Ceiling: exact tick-rule hit","cc1_mkt",1.99687828392837,7.06964297428679,1642
+"Ceiling: exact tick-rule hit","f5o_mkt",-1.01869345875846,-2.96513295686836,1637
+"Ceiling: exact tick-rule hit","gap_ctrl",3.20170718377419,21.4061168831861,1577
+"Ceiling: exact tick-rule hit","intraday_ctrl",-0.742092052501979,-7.49464658480644,1577
+"Ceiling: exact tick-rule hit","cc1_ctrl",2.41315601298908,16.3884214018251,1577
+"Ceiling: exact tick-rule hit","f5o_ctrl",-0.892193342217245,-2.34848244007583,1576
+"Ceiling: exact tick-rule hit","gap_ew",2.9168941750255,15.1785311376912,1642
+"Ceiling: exact tick-rule hit","intraday_ew",-0.745455437592417,-7.30696226653627,1642
+"Ceiling: exact tick-rule hit","cc1_ew",2.13050240571065,12.6141576108638,1642
+"Ceiling: exact tick-rule hit","cc1_beta",2.40507419070643,6.88786042654467,155
 "Ceiling: near-hit (rule-based, not exact)","gap_mkt",1.67190212498763,6.36694590146562,1557
 "Ceiling: near-hit (rule-based, not exact)","intraday_mkt",-0.323496347421588,-1.6123611987619,1557
 "Ceiling: near-hit (rule-based, not exact)","cc1_mkt",1.31355684855366,3.12895587583398,1557
@@ -95,18 +95,18 @@
 "Ceiling: first day of streak (rule-based)","intraday_ew",-0.284829989327339,-3.30913257506529,2480
 "Ceiling: first day of streak (rule-based)","cc1_ew",1.66967863912166,9.35678374361728,2480
 "Ceiling: first day of streak (rule-based)","cc1_beta",1.87943563635338,8.454600165939,244
-"Ceiling: first day of streak (exact)","gap_mkt",2.37288796560627,12.2085264297633,1287
-"Ceiling: first day of streak (exact)","intraday_mkt",-0.545244089153053,-3.07006366923964,1287
-"Ceiling: first day of streak (exact)","cc1_mkt",1.78675404092975,5.46204790051457,1287
-"Ceiling: first day of streak (exact)","f5o_mkt",-0.885011054873495,-3.11594051097144,1282
-"Ceiling: first day of streak (exact)","gap_ctrl",2.853618699303,19.3168037453845,1232
-"Ceiling: first day of streak (exact)","intraday_ctrl",-0.533436233095194,-4.94251447959981,1232
-"Ceiling: first day of streak (exact)","cc1_ctrl",2.28444588724117,14.7266099266625,1232
-"Ceiling: first day of streak (exact)","f5o_ctrl",-0.728032492449066,-2.14267177581753,1231
-"Ceiling: first day of streak (exact)","gap_ew",2.51067068221826,13.6863493927004,1287
-"Ceiling: first day of streak (exact)","intraday_ew",-0.531118712193268,-4.81462540967859,1287
-"Ceiling: first day of streak (exact)","cc1_ew",1.950740257643,11.1624272308564,1287
-"Ceiling: first day of streak (exact)","cc1_beta",2.14806563687157,5.95484745217656,118
+"Ceiling: first day of streak (exact)","gap_mkt",2.38916068661778,12.5618989204711,1281
+"Ceiling: first day of streak (exact)","intraday_mkt",-0.546406226586289,-3.03480371471909,1281
+"Ceiling: first day of streak (exact)","cc1_mkt",1.80185187425999,5.55294638802903,1281
+"Ceiling: first day of streak (exact)","f5o_mkt",-0.894498642972975,-3.13037137292582,1276
+"Ceiling: first day of streak (exact)","gap_ctrl",2.86969559561677,19.0347057164263,1226
+"Ceiling: first day of streak (exact)","intraday_ctrl",-0.534109408531375,-4.90716329895311,1226
+"Ceiling: first day of streak (exact)","cc1_ctrl",2.29982509514121,14.7465269968345,1226
+"Ceiling: first day of streak (exact)","f5o_ctrl",-0.737719619875274,-2.17033729234189,1225
+"Ceiling: first day of streak (exact)","gap_ew",2.52651866330749,14.078124295841,1281
+"Ceiling: first day of streak (exact)","intraday_ew",-0.532516810101792,-4.84240178771124,1281
+"Ceiling: first day of streak (exact)","cc1_ew",1.965151819476,11.3299229715966,1281
+"Ceiling: first day of streak (exact)","cc1_beta",2.17932534403144,5.97049792383987,117
 "Floor: rule-based","gap_mkt",-0.97218712225701,-4.64823397031275,2111
 "Floor: rule-based","intraday_mkt",0.303970628041851,1.38685363181829,2111
 "Floor: rule-based","cc1_mkt",-0.691673933185324,-4.78389642008165,2111
@@ -119,18 +119,18 @@
 "Floor: rule-based","intraday_ew",0.348816420143693,2.5739303107431,2111
 "Floor: rule-based","cc1_ew",-0.755400571297155,-4.97031140081009,2111
 "Floor: rule-based","cc1_beta",-0.764530694599871,-1.34140871936947,57
-"Floor: exact tick-rule hit","gap_mkt",-1.29252795002077,-5.04601830822998,1028
-"Floor: exact tick-rule hit","intraday_mkt",0.405009661989215,1.72373542191587,1028
-"Floor: exact tick-rule hit","cc1_mkt",-0.924065587058566,-5.65493587824465,1028
-"Floor: exact tick-rule hit","f5o_mkt",-0.962641434298881,-1.83755372772341,1027
-"Floor: exact tick-rule hit","gap_ctrl",-1.93049299629307,-4.84789891392605,984
-"Floor: exact tick-rule hit","intraday_ctrl",0.231168423026911,0.93736964231274,984
-"Floor: exact tick-rule hit","cc1_ctrl",-1.74353024849018,-4.11224590843804,984
-"Floor: exact tick-rule hit","f5o_ctrl",-0.493946190327483,-0.814169173069941,984
-"Floor: exact tick-rule hit","gap_ew",-1.33755852575264,-6.27291897875421,1028
-"Floor: exact tick-rule hit","intraday_ew",0.424874234148377,2.34976686846634,1028
-"Floor: exact tick-rule hit","cc1_ew",-0.949728693636822,-5.38865223510201,1028
-"Floor: exact tick-rule hit","cc1_beta",-0.740517280538807,-0.760026908316819,30
+"Floor: exact tick-rule hit","gap_mkt",-1.30199898201292,-5.05441117213368,1025
+"Floor: exact tick-rule hit","intraday_mkt",0.41041467891522,1.7373380881478,1025
+"Floor: exact tick-rule hit","cc1_mkt",-0.92811921753407,-5.68386170014722,1025
+"Floor: exact tick-rule hit","f5o_mkt",-0.978722951045181,-1.8618414724485,1024
+"Floor: exact tick-rule hit","gap_ctrl",-1.94329778106395,-4.88272021386003,981
+"Floor: exact tick-rule hit","intraday_ctrl",0.23692916136063,0.955730892914594,981
+"Floor: exact tick-rule hit","cc1_ctrl",-1.75059682273698,-4.12922718243319,981
+"Floor: exact tick-rule hit","f5o_ctrl",-0.511278159464844,-0.840148758087454,981
+"Floor: exact tick-rule hit","gap_ew",-1.34792878082235,-6.30027254843901,1025
+"Floor: exact tick-rule hit","intraday_ew",0.430944606230594,2.36866123002703,1025
+"Floor: exact tick-rule hit","cc1_ew",-0.954031586535638,-5.41959902496883,1025
+"Floor: exact tick-rule hit","cc1_beta",-0.907184235747282,-0.942216699655742,29
 "Floor: near-hit (rule-based, not exact)","gap_mkt",-0.660900606373206,-3.68985774487223,1086
 "Floor: near-hit (rule-based, not exact)","intraday_mkt",0.203505478736876,0.882160933739842,1086
 "Floor: near-hit (rule-based, not exact)","cc1_mkt",-0.468509645471267,-2.85806793137072,1086
@@ -167,15 +167,15 @@
 "Floor: first day of streak (rule-based)","intraday_ew",0.23946032788329,1.71020021504966,1629
 "Floor: first day of streak (rule-based)","cc1_ew",-0.590115400250445,-4.14195795499687,1629
 "Floor: first day of streak (rule-based)","cc1_beta",-0.297351782217427,-0.684375853356546,47
-"Floor: first day of streak (exact)","gap_mkt",-1.04300616781184,-4.70171130016763,831
-"Floor: first day of streak (exact)","intraday_mkt",0.215768840255318,0.872820728463657,831
-"Floor: first day of streak (exact)","cc1_mkt",-0.853114141588048,-5.00636561523723,831
-"Floor: first day of streak (exact)","f5o_mkt",-0.660349279853677,-1.15586191359988,830
-"Floor: first day of streak (exact)","gap_ctrl",-1.72291536906545,-4.17105552686845,801
-"Floor: first day of streak (exact)","intraday_ctrl",0.0734895871330925,0.318809049798722,801
-"Floor: first day of streak (exact)","cc1_ctrl",-1.68715719740612,-4.41439502508617,801
-"Floor: first day of streak (exact)","f5o_ctrl",-0.618510616159553,-0.947395065744288,801
-"Floor: first day of streak (exact)","gap_ew",-1.06397060106781,-6.6237915761332,831
-"Floor: first day of streak (exact)","intraday_ew",0.269543089758103,1.56376922623827,831
-"Floor: first day of streak (exact)","cc1_ew",-0.823086919134567,-4.80688906928504,831
-"Floor: first day of streak (exact)","cc1_beta",-0.296417721941229,-0.337603037288314,26
+"Floor: first day of streak (exact)","gap_mkt",-1.05253131121919,-4.7203734713615,829
+"Floor: first day of streak (exact)","intraday_mkt",0.221466304979079,0.892346668224623,829
+"Floor: first day of streak (exact)","cc1_mkt",-0.856858726205356,-5.02890545531929,829
+"Floor: first day of streak (exact)","f5o_mkt",-0.675244165841965,-1.17822893111089,828
+"Floor: first day of streak (exact)","gap_ctrl",-1.73500446884769,-4.20025729191859,799
+"Floor: first day of streak (exact)","intraday_ctrl",0.0794210946508582,0.343107705965349,799
+"Floor: first day of streak (exact)","cc1_ctrl",-1.69328691749768,-4.43060432081897,799
+"Floor: first day of streak (exact)","f5o_ctrl",-0.63270384993687,-0.967062227369453,799
+"Floor: first day of streak (exact)","gap_ew",-1.0736924250321,-6.6430446688735,829
+"Floor: first day of streak (exact)","intraday_ew",0.275533158940892,1.59102487958201,829
+"Floor: first day of streak (exact)","cc1_ew",-0.826763640705638,-4.82733218138324,829
+"Floor: first day of streak (exact)","cc1_beta",-0.471987407639156,-0.542669853827233,25

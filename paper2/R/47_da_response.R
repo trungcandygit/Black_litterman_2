@@ -18,7 +18,7 @@ ceil_px <- floor(refp * 1.07 / tick(refp) + 1e-9) * tick(refp); floor_px <- ceil
 ex_ceil <- !is.na(Cc[tt, ]) & abs(Cc[tt, ] - ceil_px) < 1e-6; ex_floor <- !is.na(Cc[tt, ]) & abs(Cc[tt, ] - floor_px) < 1e-6
 r_ceil <- !is.na(R0) & R0 >= 0.065 & Cc[tt, ] >= Hh[tt, ] - 1e-9; r_floor <- !is.na(R0) & R0 <= -0.065 & Cc[tt, ] <= Ll[tt, ] + 1e-9
 locked_c <- r_ceil & Oo[tt, ] >= Hh[tt, ] - 1e-9 & Hh[tt, ] <= Ll[tt, ] + 1e-9; locked_f <- r_floor & Oo[tt, ] <= Ll[tt, ] + 1e-9 & Hh[tt, ] <= Ll[tt, ] + 1e-9
-ex_ceil[is.na(ex_ceil)] <- FALSE; ex_floor[is.na(ex_floor)] <- FALSE
+ex_ceil[is.na(ex_ceil)] <- FALSE; ex_floor[is.na(ex_floor)] <- FALSE; ex_ceil <- ex_ceil & r_ceil %in% TRUE; ex_floor <- ex_floor & r_floor %in% TRUE   # exact hits are a subset of rule-based events
 shift1 <- function(M) { M[is.na(M)] <- FALSE; rbind(NA, M[-nrow(M), ]) }       # previous-day status; the first event-window day has no previous day (NA)
 streak <- function(M) { M[is.na(M)] <- FALSE; out <- M & !(shift1(M) %in% TRUE); out[1, ] <- FALSE; matrix(out, nrow(M), ncol(M)) }   # first-day events are dropped from streak groups because their previous day is unobserved
 strt_c <- streak(r_ceil); strt_f <- streak(r_floor); exs_c <- streak(ex_ceil); exs_f <- streak(ex_floor)

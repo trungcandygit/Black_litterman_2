@@ -1,0 +1,335 @@
+---
+title: "Closing at the limit: price limits, overnight gaps and next-day returns on the Ho Chi Minh Stock Exchange"
+author: "[Author names and affiliations]"
+output:
+  word_document:
+    reference_docx: reference.docx
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = "asis"); options(knitr.kable.NA = "—"); invisible(Sys.setlocale("LC_ALL", "C.UTF-8"))
+kable <- function(x, caption = NULL, ...) { if (!is.null(caption)) cat("\n\n", caption, "\n\n", sep = ""); print(knitr::kable(x, ...)); cat("\n\n") }
+root <- "/home/user/Black_litterman_2/paper2"; od <- file.path(root, "output")
+rd <- function(f) read.csv(file.path(od, "tables", f))
+Z <- rd("C1_characteristics_FM.csv"); EV <- rd("C2_price_limit_events.csv"); FAM <- rd("C3_family_control.csv")
+C11 <- rd("C11_da_response_events.csv"); C13 <- rd("C13_universe_counts.csv"); C14 <- rd("C14_characteristics_power_lags.csv"); C16 <- rd("C16_subsamples_nasafe.csv"); C17 <- rd("C17_discontinuity_nasafe.csv"); PILE <- rd("C9b_pileup_347.csv"); C26 <- rd("C26_sample_description.csv")
+C18 <- rd("C18_inference_horizons.csv"); C20 <- rd("C20_family_control_week_cluster.csv"); C21 <- rd("C21_programme_t_reference.csv"); C22 <- rd("C22_krx_split.csv"); C23 <- rd("C23_discontinuity_close_at_extreme.csv"); C24 <- rd("C24_attention_proxies.csv"); C25 <- rd("C25_outlier_bound.csv")
+f <- function(x, d = 2) sub("-", "\u2212", formatC(x, format = "f", digits = d), fixed = TRUE); fi <- function(x) formatC(x, format = "d", big.mark = ",")
+ev <- function(e, h, col) EV[EV$event == e & EV$horizon == h, col]
+c11 <- function(g, m, col = "mean_pct") C11[C11$group == g & C11$measure == m, col]
+c16 <- function(sm, m, col = "mean_pct") C16[C16$sample == sm & C16$measure == m, col]
+c17 <- function(ct, o, col) C17[C17$contrast == ct & C17$outcome == o, col]; c23 <- function(ct, o, col) C23[C23$contrast == ct & C23$outcome == o, col]
+c18 <- function(e, o, cl, col) C18[C18$event == e & C18$outcome == o & C18$cluster == cl, col]
+c22 <- function(e, m, col) C22[C22$event == e & C22$measure == m, col]
+c24 <- function(e, px, k, m, col = "mean_pct") C24[C24$event == e & grepl(px, C24$proxy) & C24$tercile == k & C24$measure == m, col]
+c25 <- function(e, m, col) C25[C25$event == e & C25$measure == m, col]; c21 <- function(i) C21$value[i]
+cell <- function(m, t, d = 2) paste0(f(m, d), "\u00a0(", f(t, 1), ")")
+nstocks <- 347; nsd <- sum(PILE$n); nsurv_char <- sum(FAM$survives[1:22]); nsurv_ev <- sum(FAM$survives[23:26])
+c26 <- function(i) C26$value[i]
+pu <- function(r) sum(PILE$share_pct[PILE$range %in% r])
+```
+
+**Abstract.** Daily price limits aim to cool markets but can delay price discovery. Evidence on prices after limit closes in emerging markets is thin, and published limit studies do not account for the many price-based signals a researcher could have examined. We study `r nstocks` stocks on the Ho Chi Minh Stock Exchange (HOSE) from August 2024 to September 2026 and run 26 tests under false-discovery-rate control: four price-limit event tests and 22 price- and volume-based characteristics. None of the 22 characteristics survives, although the tests have limited power, while all four limit tests do. A ceiling close is followed by a next-day abnormal return of `r f(ev("ceiling","t+1","mean_ar_pct"),1)`%: an overnight gap of `r f(c16("Ceiling all","gap_mkt"),1)`% less an intraday reversal of `r f(abs(c16("Ceiling all","intraday_mkt")),1)`%, and the gap exceeds that of stocks that rose almost as far without reaching the limit. A buyer at the next open earns `r f(c11("Ceiling: rule-based","f5o_mkt"),1)`% by the fifth close. The pattern fits delayed price discovery, but news and attention can explain it as well, and our data cannot separate the two.
+
+**Keywords:** price limits; overnight returns; multiple testing; market microstructure; Vietnam
+
+**JEL classification:** G14; G15; G18
+
+# 1. Introduction
+
+A daily price limit stops a stock from moving beyond a fixed band within one trading day. Regulators adopt limits to cool markets after large shocks, and exchanges in Tokyo, Taipei, Seoul, Shenzhen, and Ho Chi Minh City have used them. Economists have long asked whether a limit protects prices or only postpones their adjustment, and recent band changes in China, Taiwan, and Korea have reopened the question. The question is sharpest in markets where a limit close is common and where opening and closing prices come from call auctions. The Ho Chi Minh Stock Exchange (HOSE) has both features: it applies one 7% band to every stock, and about `r f(100 * C13$value[5] / C13$value[1], 1)`% of stock-days in our event window meet our definition of an upper-limit close (the ceiling, Section 4) and about `r f(100 * C13$value[6] / C13$value[1], 1)`% meet our definition of a lower-limit close (the floor).
+
+The literature has not settled what happens after a limit close in such a market. Studies of band changes document effects on volatility, liquidity, and crash risk (Qi, 2023; Lien et al., 2019; Jia et al., 2024), and account-level work shows that large investors buy on the limit day and sell on the next day (Chen et al., 2019). However, to our knowledge, none of the studies we reviewed splits the next-day return after a limit close into the overnight gap and the trading session that follows, none places the limit result in a family of tests that controls for the many other price-based signals a researcher could have examined, and none examines the 2025 move of HOSE to a new trading platform.
+
+We estimate the abnormal return after ceiling and floor closes on HOSE, measure how much of it arises in the overnight gap, and test whether an outside buyer can capture it. To discipline the search, we place four limit tests in one family of 26 tests with 22 familiar price- and volume-based characteristics and control the false-discovery rate (FDR; Benjamini & Hochberg, 1995; Harvey et al., 2016).
+
+We make three contributions. First, we decompose the next-day abnormal return after limit closes into an overnight gap and an intraday return, and show that the ceiling effect is a gap followed by a partial reversal. Second, we compare limit closes with stocks that moved almost as far without reaching the limit, including stocks that also closed at their daily high, and find that the gap is larger at the limit. Third, we show that the limit effect survives a multiplicity-controlled family in which no characteristic survives, and that a buyer at the next open cannot capture it. We also compare each result with the studies reviewed in Section 2 and split the events at the 2025 change of trading platform.
+
+Section 2 reviews the related literature and states the hypotheses, Section 3 describes the data and the institutional setting, and Section 4 the design. Section 5 reports the results, Section 6 compares them with earlier studies and discusses mechanisms and implications, Section 7 lists limitations, and Section 8 concludes.
+
+# 2. Related literature and hypotheses
+
+**Theory.** Theory predicts protection or distortion, depending on the source of the shock. Brennan (1986) provides a rationale for price limits in futures markets, and Kodres and O'Brien (1994) show that well-chosen limits can be Pareto superior when fluctuations come from fundamental news, because limits insure traders against part of the implementation risk. Greenwald and Stein (1991) link crashes to imperfections in transactional mechanisms. Against this case, Subrahmanyam (1994) shows that trading halts can advance trades in time and raise price variability, and Chen et al. (2024) show in an equilibrium model that volatility rises as the price approaches a circuit breaker, which produces a magnet effect. The next-day return after a limit close lets us test which prediction fits.
+
+**Classic evidence on price-limit performance.** Kim and Rhee (1997) organize the empirical debate around three criticisms of limits: they spill volatility into later days, delay price discovery, and interfere with trading. They find support for all three in Tokyo. Bildik and Gülay (2006) find the same in Istanbul and show that price locks at the limit give stronger evidence than limit moves alone. Chen (1993) finds that serial correlation falls as the Taiwanese limit widens, which implies a delay, and Berkman and Lee (2002) examine volatility and trading activity around a revision of the limit system in Korea. Huang et al. (2001) report for Taiwan that the overnight overreaction after limit hits is corrected during the following trading day, which is the timing pattern we examine on HOSE. Cho et al. (2003) add a fourth hypothesis, the magnet effect, and find that prices accelerate toward the upper limit in five-minute Taiwanese data. Kim and Limpaphayom (2000) show that small, volatile, high-volume stocks are more likely to hit limits, and Deb et al. (2013) argue that rigid limits in Tokyo can disrupt price discovery and liquidity provision. These studies infer delay from volatility and serial correlation across days; none splits the next-day return into the overnight gap and the session that follows.
+
+**Recent evidence from band changes and investor-level data.** Band changes and investor-level data now show what limits do to markets and traders. The widening of the ChiNext band from 10% to 20% in August 2020 gave several studies a quasi-natural experiment. Qi (2023) confirms delayed price discovery, volatility spillover, and trading interference, with stronger effects at the lower limit and no magnet effect. Zhang et al. (2022) find higher liquidity and lower information asymmetry after the widening, and Jia et al. (2024) find lower crash risk. Lien et al. (2019) find higher spreads and intraday volatility but better execution quality after Taiwan widened its band in 2015, and Kim and Jun (2019) find higher intraday realized variance after Korea widened its band from 15% to 30%. Chen et al. (2019) use account-level Shenzhen data and show that large investors tend to buy on the day a stock hits the 10% upper limit and sell on the next day, and that their net buying on the limit day predicts stronger long-run reversal. Two recent studies look at the cross-section: Lin et al. (2023) find that stocks with large exposure to daily price limits attract attention and earn lower future returns, with the largest effect where retail investors hold many shares, and Zeng et al. (2024) relate the frequency of limit hits to lower future returns. Liang and Hu (2025) show that a forecasting model predicts a share of limit hits, which says nothing about returns after the hit. None of these studies reports the next-day return after a limit close split into its overnight and intraday parts.
+
+**Overnight and intraday returns.** Overnight and intraday returns differ, and explanations range from investor attention and sentiment to funding costs and market-maker inventory. Kelly and Clark (2011) document that overnight and intraday returns differ for index funds. Berkman et al. (2012) find positive overnight returns followed by intraday reversals in U.S. stocks, concentrated among stocks with recent retail attention. Aboody et al. (2018) tie overnight persistence to investor sentiment, Lou et al. (2019) show strong overnight and intraday continuation with an offsetting cross-period reversal, and Akbas et al. (2022) show that a persistent pattern of positive overnight and negative daytime returns predicts higher future returns. Bogousslavsky (2021) links them to differences in margin and lending costs, and Lu et al. (2023) trace night-minus-day returns to the market makers who absorb retail order imbalances near the open. Chinese evidence adds institutional detail: Qiao and Dam (2020) show that overnight returns are on average negative and link them to the T+1 rule, under which shares bought on one day cannot be sold until the next. Qiu et al. (2025) find that day-night anomalies concentrate at the open and close, and Jones et al. (2025) find weak stock selection among small retail investors. Studies of overnight returns measure them on all stocks; none conditions on a limit close.
+
+**Multiple testing and weekly regressions.** Testing many signals raises the bar for each one. Harvey et al. (2016) argue that a new factor needs a *t*-statistic above 3.0. Harvey and Liu (2020) tie the hurdle to a chosen false-discovery rate, Chordia et al. (2020) find that multiple-testing thresholds for cross-sectional regressions are near 3.4, and Hou et al. (2020) find that, with microcaps mitigated, 65% of 452 anomalies fail the single-test hurdle of 1.96. Petersen (2009) compares standard-error estimators for panel data, which motivates our alternative clusters, and Gutierrez and Kelley (2008) study weekly returns, the frequency of our regressions. For Vietnam, Huang et al. (2023) find a significant size effect and an earnings-to-price effect. We found no peer-reviewed study of post-limit returns on HOSE.
+
+**Gap and hypotheses.** The reviewed studies document volatility, liquidity, and long-run effects of limits and the overnight-intraday split for all stocks, but none combines the two in a market with call auctions or controls for multiple testing. None uses the 2025 platform change. Four hypotheses follow. If a limit delays price discovery, a ceiling close predicts a positive next-day abnormal return and a floor close a negative one (H1). If the opening auction absorbs the blocked demand, the effect concentrates in the overnight gap (H2). If only the limit blocks trading, the gap after a limit close exceeds the gap after moves that come close to the limit (H3). An investor who buys at the next open does not earn the gap (H4). The 22 characteristics provide a benchmark for H1: a limit effect that survives the procedure that screens every characteristic is more credible than a single large estimate.
+
+# 3. Data and institutional setting
+
+**Data source.** We obtained daily open, high, low, close, and volume series for every stock on the HOSE listing with the vnstock Python library (version 4.0.4), which retrieves them from its VCI source (Vietcap Securities Joint Stock Company), on 24 September 2026. A listing file from the same source and date (`r fi(c26(2))` rows, all instrument types) defines the universe. The retrieval returned `r fi(c26(1))` HOSE stock files with daily records through 23 September 2026, and we use the 519 trading days from 21 August 2024. Prices are in thousand dong. The vendor does not document corporate-action adjustment, and the files contain no market capitalization, order book, investor type, or news.
+
+**Sample.** We keep the `r nstocks` stocks with at least 95% non-missing closes, which yields `r fi(nsd)` stock-days. Returns are close-to-close. The mean daily return is `r f(c26(6),3)`%, the median is `r f(c26(8),2)`%, and the standard deviation is `r f(c26(7),2)`%. Liquidity is skewed: the median stock-day with a price has a dollar volume of `r f(c26(9)/1000,1)` billion dong and the mean is `r f(c26(10)/1000,1)` billion dong. The stocks span `r c26(11)` two-digit sector codes of the Industry Classification Benchmark, and the largest sector holds `r f(c26(12),0)`% of them. The listing file excludes stocks delisted before 24 September 2026. The market return is the dollar-volume-weighted return of all stocks, with weights from the trailing 60-day average dollar volume, and abnormal returns are stock returns minus the market return over the same interval. Table 1 uses weights through day *d*+1, and Tables 2 to 4 lag the weights to day *d*.
+
+**Institutional setting.** HOSE sets a daily price limit of 7% around the reference price, which is the previous close on normal trading days, (Ho Chi Minh City Securities Corporation [HSC], 2025). On 5 May 2025 HOSE moved to the trading platform of the Korea Exchange (KRX). The band stayed unchanged, but at-the-open and at-the-close orders lost their priority over limit orders in the call auctions that set the opening and closing prices (HSC, 2025; Viet Nam News, 2025). The close defines the event and the open defines the gap, so both auction prices matter here. We treat the 7% band, the tick sizes, and the reference-price rule as assumptions and check the band against the data: `r f(pu(c("6.5% to 6.9%","6.9% to 7.1%")),2)`% of all stock-days fall between +6.5% and +7.1% and `r f(pu(c("-6.9% to -6.5%","-7.1% to -6.9%")),2)`% between −7.1% and −6.5%, against `r f(pu("6.0% to 6.5%"),2)`% between +6.0% and +6.5%. The pile-up fits a 7% band.
+
+# 4. Design
+
+**Returns and events.** For stock *i* on day *d*, let $C_{i,d}$, $O_{i,d}$, $H_{i,d}$, and $L_{i,d}$ denote the close, open, high, and low, and let $R_{i,d}$ denote the close-to-close return,
+
+$$R_{i,d} = \frac{C_{i,d}}{C_{i,d-1}} - 1. \qquad (1)$$
+
+A ceiling event is an event day *d* with $R_{i,d} \geq 0.065$ and $C_{i,d} = H_{i,d}$. A floor event has $R_{i,d} \leq -0.065$ and $C_{i,d} = L_{i,d}$. The market return $R^{m}_{d}$ is the dollar-volume-weighted return of all stocks,
+
+$$R^{m}_{d} = \sum_{j} w_{j,d}\, R_{j,d}, \qquad w_{j,d} = \frac{\overline{V}_{j,d}}{\sum_{k} \overline{V}_{k,d}}, \qquad (2)$$
+
+where $\overline{V}_{j,d}$ is the trailing 60-day average dollar volume of stock *j*. An exact limit hit has a close equal to the limit price,
+
+$$P^{\text{ceiling}}_{i,d} = \left\lfloor \frac{1.07\, C_{i,d-1}}{\tau} \right\rfloor \tau, \qquad P^{\text{floor}}_{i,d} = \left\lceil \frac{0.93\, C_{i,d-1}}{\tau} \right\rceil \tau, \qquad (3)$$
+
+where the tick $\tau$ is 0.01, 0.05, or 0.10 thousand dong for reference prices below 10, from 10 to below 50, and from 50 thousand dong upward. Closes that meet the event rule but not Equation (3) are near hits.
+
+**Outcomes.** The market-adjusted return on day *d*+1 and the cumulative return over days *d*+1 to *d*+5 are
+
+$$AR_{i} = R_{i,d+1} - R^{m}_{d+1}, \qquad CAR_{i} = \prod_{k=1}^{5} \left(1 + R_{i,d+k}\right) - \prod_{k=1}^{5} \left(1 + R^{m}_{d+k}\right). \qquad (4)$$
+
+We split the day-*d*+1 return into the overnight gap and the intraday return,
+
+$$G_{i} = \frac{O_{i,d+1}}{C_{i,d}} - 1, \qquad I_{i} = \frac{C_{i,d+1}}{O_{i,d+1}} - 1, \qquad 1 + R_{i,d+1} = (1 + G_{i})(1 + I_{i}), \qquad (5)$$
+
+and subtract the market counterpart of each component to obtain abnormal values. The return a buyer at the next open can earn through day *d*+5 is $C_{i,d+5}/O_{i,d+1} - 1$, again less its market counterpart. The control benchmark replaces $R^{m}$ with the mean return of non-event stocks (absolute return below 6.5%) on the same date and in the same tercile of trailing dollar volume.
+
+**Inference.** For a sample of *N* events with outcome $y_i$, the mean is $\overline{y} = N^{-1}\sum_i y_i$, and the cluster-robust variance is
+
+$$\widehat{\operatorname{Var}}(\overline{y}) = \frac{1}{N^{2}} \cdot \frac{G}{G-1} \sum_{g=1}^{G} \left( \sum_{i \in g} (y_i - \overline{y}) \right)^{2}, \qquad (6)$$
+
+where *g* indexes clusters. We cluster by event date (without the $G/(G-1)$ factor), calendar week, and 10-day block, and we use a *t* reference distribution with $G-1$ degrees of freedom for the week and block clusters. Two-way clustering by date and stock sets the variance to the date-clustered variance plus the stock-clustered variance minus the unclustered variance (Cameron et al., 2011). To compare limit closes with near-limit moves, we regress $y_i = \alpha + \beta D_i + u_i$, where $D_i = 1$ for limit closes and $D_i = 0$ for the comparison group, and we cluster the standard error of $\hat{\beta}$ by date.
+
+**Characteristics.** At the end of each of 79 weeks $\tau$, we rank-normalize each characteristic across stocks, $z_{i,\tau} = \Phi^{-1}\!\left((\operatorname{rank}(x_{i,\tau}) - 0.5)/n_\tau\right)$, and regress the next five days' abnormal return on it,
+
+$$y_{i,\tau} = a_{\tau} + \gamma_{\tau}\, z_{i,\tau} + \varepsilon_{i,\tau}, \qquad \hat{\gamma} = \frac{1}{79} \sum_{\tau} \hat{\gamma}_{\tau}, \qquad (7)$$
+
+with the Newey and West (1987) *t*-statistic of $\hat{\gamma}$ computed with four lags (Fama & MacBeth, 1973). The characteristics cover momentum and reversal (5-day, 20-day, 3-month, 6-month, and idiosyncratic momentum), risk (volatility, idiosyncratic volatility, beta, downside deviation, Parkinson (1980) range volatility, the maximum daily return (MAX; Bali et al., 2011), the minimum daily return (MIN), skewness, and kurtosis), liquidity and volume (Amihud (2002) illiquidity, log dollar volume, dollar-volume and volume ratios, and the Corwin and Schultz (2012) spread), and intraday behavior (mean overnight return, mean intraday return, and the frequency of moves of 6.5% or more). Lookbacks reach up to 115 days. The minimum detectable slope at 80% power and a 5% two-sided level is $\text{MDE} = 2.8 \times \widehat{\text{SE}}(\hat{\gamma})$.
+
+**Multiplicity and survival.** The family has $m = 26$ tests: 22 characteristics and the ceiling and floor tests at the two horizons of Equation (4). Order the *p*-values as $p_{(1)} \leq \dots \leq p_{(m)}$. The Benjamini–Hochberg (BH) adjusted *p*-value at a 5% false-discovery rate (FDR) is
+
+$$\tilde{p}_{(k)} = \min_{j \geq k} \left\{ \min\!\left( 1, \frac{m}{j}\, p_{(j)} \right) \right\}, \qquad (8)$$
+
+and we also report Holm (1979) adjustments and the hurdle of |*t*| = 3 of Harvey et al. (2016). A test survives if $\tilde{p} < 0.05$, the sign in the discovery half (the first 39 weeks, or the first half of event dates) agrees with the full sample, and the confirmation-half |*t*| exceeds 1.96. Lookbacks overlap the discovery half, so the confirmation half is not a strict hold-out. The largest number of tests that all four event tests survive under a Bonferroni correction is $m_{\max} = \lfloor 0.05 / p_{\max} \rfloor$, where $p_{\max}$ is the largest event-test *p*-value.
+
+**Analysis plan.** We fixed the family, estimators, multiplicity control, and survival rule in a written analysis plan before computing results. A version-control time stamp predates the first analysis code, but no external registry holds the plan, and we had examined related data in earlier work, so the plan gives no independent confirmation. We departed from the plan in four ways. The plan was ambiguous about the second horizon (days *d*+2 to *d*+5 or *d*+1 to *d*+5), and we implemented the second reading. We split the event half-samples at the median event date instead of at weeks 39 and 40. We report quintile spreads instead of deciles. We did not run the plan's same-stock control and multivariate model. Analyses added after the first results are exploratory: the decomposition, the next-open returns, the control group, the comparison with sub-limit moves, exact hits, two-way clustering, subsamples, the volume and prior-return terciles, the platform-change split, and the outlier exclusion. We also screened several candidate ideas on the same data before choosing this one, so effect-size estimates may overstate the true effect.
+
+# 5. Results
+
+The event sample holds `r fi(ev("ceiling","t+1","n_events"))` ceiling events on `r fi(ev("ceiling","t+1","n_dates"))` dates and `r fi(ev("floor","t+1","n_events"))` floor events on `r fi(ev("floor","t+1","n_dates"))` dates, so events cluster in market episodes with several limit closes on the same day. This clustering is why we report standard errors that allow for dependence across dates, weeks, and stocks.
+
+Figure 1 plots the *t*-statistics of the 22 characteristics: none reaches |*t*| = 3, and none survives the family-wide control. The largest full-sample |*t*| is `r f(max(abs(Z$t_nw)),2)`, for 3-month and idiosyncratic momentum (confirmation-half *t* of `r f(Z$t_conf[Z$characteristic=="MOM3M"],2)` and `r f(Z$t_conf[Z$characteristic=="IMOM"],2)`). Volatility has *t* = `r f(Z$t_nw[Z$characteristic=="VOL"],2)`, idiosyncratic volatility `r f(Z$t_nw[Z$characteristic=="IVOL"],2)` and MAX `r f(Z$t_nw[Z$characteristic=="MAX"],2)`. After a cost of 25 basis points per unit of traded value, `r sum(Z$quintile_net25_pct < 0)` of the 22 long–short quintile spreads are negative. Power is limited: with 79 cross-sections the minimum detectable slope at 80% power is `r f(min(C14$mde80_pct_per_week),2)` to `r f(max(C14$mde80_pct_per_week),2)` percentage points per week per standard deviation, and no characteristic reaches |*t*| = 3 with eight Newey–West lags (largest |*t*| `r f(max(abs(C14$t_lag8)),2)`). The null excludes only large effects, and excluding the least liquid 20% of stocks leaves the largest |*t*| at `r f(max(abs(Z$t_excl_illiq), na.rm = TRUE),2)`. The result is in line with the multiple-testing literature: the hurdles of Harvey et al. (2016) and Chordia et al. (2020) and the replication failures that Hou et al. (2020) report lead us to expect few survivors, and no characteristic here reaches even 1.96 in the full sample. Huang et al. (2023) find a size effect and an earnings-to-price effect in Vietnam, but our files contain no market capitalization or accounting data, so we cannot test those two signals and our null does not contradict theirs. Three features of this market can produce it. The sample is short, so a premium of a tenth of a percentage point per week stays invisible. Daily limits censor the highs and lows that several characteristics use, which weakens range-based measures. Slow-moving signals such as momentum and volatility may also carry little information in a market where short selling is costly and arbitrage capital is thin. Our data cannot tell these explanations apart, and we draw no conclusion about market efficiency from the null.
+
+```{r fig1, fig.cap="Figure 1. *t*-statistics of the Fama and MacBeth regressions for the 22 characteristics in the full sample, the discovery half and the confirmation half. Dashed lines mark |*t*| = 1.96 and dotted lines mark |*t*| = 3. Characteristics are ordered by absolute full-sample *t*."}
+knitr::include_graphics(file.path(od, "figures/F1_characteristics.png"))
+```
+
+Table 1 reports the event tests. Stocks that close at the ceiling earn a market-adjusted return of `r f(ev("ceiling","t+1","mean_ar_pct"),2)`% on day *d*+1 and `r f(ev("ceiling","t+1..t+5","mean_ar_pct"),2)`% over days *d*+1 to *d*+5. Stocks that close at the floor earn `r f(ev("floor","t+1","mean_ar_pct"),2)`% and `r f(ev("floor","t+1..t+5","mean_ar_pct"),2)`%. All four tests survive the BH control (adjusted *p*-values from `r formatC(min(FAM$p_bh[23:26]), format = "e", digits = 1)` to `r formatC(max(FAM$p_bh[23:26]), format = "e", digits = 1)`). They keep their signs in both halves, and the confirmation-half |*t*| exceeds 1.96. Clustering by calendar week or 10-day block, with a *t* reference distribution, leaves all four significant. The floor five-day test clears the confirmation criterion by the smallest margin (*t* = `r f(c18("floor","t+1..t+5","calendar week","t_second_half"),2)` with week clusters), and all four tests survive the rule re-applied with week-clustered statistics.
+
+For ceilings, the five-day result comes from the first day. Over days *d*+2 to *d*+5 the ceiling return is `r f(c18("ceiling","t+2..t+5","event date","mean_pct"),2)`% (*t* = `r f(c18("ceiling","t+2..t+5","event date","t"),2)`). After floor closes, days *d*+2 to *d*+5 add `r f(c18("floor","t+2..t+5","event date","mean_pct"),2)`% (*t* = `r f(c18("floor","t+2..t+5","event date","t"),2)`), but the confirmation-half week-clustered *t* is `r f(c18("floor","t+2..t+5","calendar week","t_second_half"),2)`. If the second horizon were days *d*+2 to *d*+5, the ceiling test would fail and the floor test would fail the confirmation criterion. The evidence shows a one-day effect after ceiling closes and a one-day effect with some later drift after floor closes. The ceiling result fits the delayed price discovery that Kim and Rhee (1997) find support for in Tokyo, because the abnormal return arrives after the limit day. None of these studies reports a next-day abnormal return of comparable construction, so we cannot compare magnitudes, and Section 6 compares them in qualitative terms. These tests support H1: limit closes carry information about the next day that none of the 22 characteristics carries. They leave open when in the day that information arrives (H2).
+
+```{r tab-ev}
+H <- c("t+1" = "*d*+1", "t+1..t+5" = "*d*+1 to *d*+5", "t+2..t+5" = "*d*+2 to *d*+5")
+t2 <- do.call(rbind, lapply(c("ceiling", "floor"), function(e) do.call(rbind, lapply(names(H), function(o) data.frame(Event = tools::toTitleCase(e), Horizon = H[[o]], `Mean (%)` = f(c18(e, o, "event date", "mean_pct"), 2), `*t* (date)` = f(c18(e, o, "event date", "t"), 2), `*t* (week)` = f(c18(e, o, "calendar week", "t"), 2), `*t* (10-day)` = f(c18(e, o, "10-day block", "t"), 2), `*t* (halves)` = paste0(f(c18(e, o, "calendar week", "t_first_half"), 1), " / ", f(c18(e, o, "calendar week", "t_second_half"), 1)), Events = fi(c18(e, o, "event date", "n")), check.names = FALSE)))))
+kable(t2, row.names = FALSE, caption = "Table 1. Market-adjusted returns after ceiling and floor closes. Mean returns are in percent. *t* (date), *t* (week) and *t* (10-day) use clusters by event date, calendar week and 10-day block; the week and 10-day statistics use a *t* reference distribution and a G/(G − 1) correction, where G is the number of clusters. *t* (halves) gives week-clustered statistics for the first and second half of event dates. Events require complete returns for days *d*+1 to *d*+5.")
+```
+
+Table 2 decomposes the next-day return. After a ceiling close the overnight gap is `r f(c16("Ceiling all","gap_mkt"),2)`% (two-way-clustered *t* = `r f(c16("Ceiling all","gap_mkt","t_twoway"),1)`), and the intraday return is `r f(c16("Ceiling all","intraday_mkt"),2)`% (*t* = `r f(c16("Ceiling all","intraday_mkt","t_twoway"),1)`). The close-to-close effect is positive because the gap exceeds the giveback, and the session reverses about `r f(100 * abs(c16("Ceiling all","intraday_mkt")) / c16("Ceiling all","gap_mkt"), 0)`% of the gap. The decomposition places the effect in the opening auction, which supports H2. A stock that closes at its ceiling may carry a queue of unfilled buy orders into the night, the mechanism that delayed price discovery assumes (Kim & Rhee, 1997). Those orders and any overnight news set the opening price, and the session that follows undoes part of the move, which suggests that part of the opening price reflects demand that does not persist. The pattern has the same signs as the overnight-gain-then-intraday-reversal that Berkman et al. (2012) find in U.S. stocks and the cross-period reversal that Lou et al. (2019) and Akbas et al. (2022) document, and it matches the correction of overnight overreaction on the following trading day that Huang et al. (2001) report for Taiwan. It also matches the account-level finding of Chen et al. (2019) that large Shenzhen investors who buy on the limit day sell on the next day, which would produce an intraday reversal after a high opening. The overnight return after a ceiling close is positive, in contrast to the negative average overnight return that Qiao and Dam (2020) find for all Chinese stocks under the T+1 rule, so the ceiling gap is not the negative overnight pattern they report for Chinese stocks. After a floor close the gap is `r f(c16("Floor all","gap_mkt"),2)`% (*t* = `r f(c16("Floor all","gap_mkt","t_twoway"),1)`) and the intraday return is a weak reversal of `r f(c16("Floor all","intraday_mkt"),2)`%. The pattern holds for exact limit hits, where the ceiling gap is `r f(c11("Ceiling: exact tick-rule hit","gap_mkt"),2)`%, and for the first day of a streak of exact hits, where it is `r f(c11("Ceiling: first day of streak (exact)","gap_mkt"),2)`%. Near hits show a smaller gap (`r f(c11("Ceiling: near-hit (rule-based, not exact)","gap_mkt"),2)`%) and no significant intraday return, so the effect grows as the close approaches the limit. It appears in both halves of the sample, in each liquidity tercile for ceilings (the gap is `r f(c16("Ceiling liquidity tercile 3","gap_mkt"),2)`% in the most liquid tercile), and on days when the stock stayed locked at one price from open to close. Against same-date control stocks of similar liquidity the ceiling gap is `r f(c11("Ceiling: rule-based","gap_ctrl"),2)`% and the floor close-to-close return is `r f(c16("Floor all","cc1_ctrl"),2)`%, so the floor effect depends on the benchmark. Floor events cluster on market-wide down days (only `r fi(c16("Floor excluding market-crash days (market < -2%)","gap_mkt","n"))` of `r fi(c16("Floor all","gap_mkt","n"))` remain when we drop days on which the market fell more than 2%), and the floor gap is not significant in the least liquid tercile (*t* = `r f(c16("Floor liquidity tercile 1","gap_mkt","t_twoway"),1)`).
+
+The close-to-close continuation is not available to an outside buyer. A buyer who wants a stock at its ceiling joins a queue at the close, so the first price available to an outside buyer is the next open, which already contains the gap. From that open the ceiling return is `r f(c11("Ceiling: rule-based","f5o_mkt"),2)`% through the fifth close against the market (*t* = `r f(c11("Ceiling: rule-based","f5o_mkt","t_twoway"),1)`) and `r f(c11("Ceiling: rule-based","f5o_ctrl"),2)`% against same-date controls (*t* = `r f(c11("Ceiling: rule-based","f5o_ctrl","t_twoway"),1)`). A holder who sells at the next open instead of the close avoids an average giveback of `r f(abs(c16("Ceiling all","intraday_mkt")),2)` percentage points. These figures, which support H4, use quoted prices and ignore achievable fills: `r fi(c16("Ceiling locked all day","gap_mkt","n"))` ceiling events were locked at one price all day, and some of those open again at the limit, where a buyer may be rationed. After floor closes, prices fall a further `r f(abs(c11("Floor: rule-based","f5o_mkt")),2)`% from the next open to the fifth close against the market (*t* = `r f(c11("Floor: rule-based","f5o_mkt","t_twoway"),1)`; Table 2), which is not significant at the 5% level.
+
+```{r tab-dec}
+M <- c(gap_mkt = "Overnight gap", intraday_mkt = "Intraday", cc1_mkt = "Close-to-close", f5o_mkt = "Open to day *d*+5")
+nm <- c("Sample", "Events", unname(M))
+row_c11 <- function(g, lab, suf = "mkt") { ms <- sub("mkt", suf, names(M)); r <- data.frame(lab, fi(c11(g, ms[1], "n")), t(sapply(ms, function(m) cell(c11(g, m), c11(g, m, "t_twoway")))), row.names = NULL); names(r) <- nm; r }
+row_c16 <- function(sm, lab) { r <- data.frame(lab, fi(c16(sm, "gap_mkt", "n")), t(sapply(names(M), function(m) cell(c16(sm, m), c16(sm, m, "t_twoway")))), row.names = NULL); names(r) <- nm; r }
+blk <- function(pre, ev_name) rbind(
+  row_c16(paste(pre, "all"), "All, vs market"),
+  row_c11(paste0(ev_name, ": rule-based"), "All, vs same-date controls", "ctrl"),
+  row_c11(paste0(ev_name, ": exact tick-rule hit"), "Exact limit hit"),
+  row_c11(paste0(ev_name, ": near-hit (rule-based, not exact)"), "Near hit"),
+  row_c16(paste(pre, "locked all day"), "Locked all day"),
+  row_c16(paste(pre, "first half (by event date)"), "First half of sample"),
+  row_c16(paste(pre, "second half (by event date)"), "Second half of sample"),
+  row_c16(paste(pre, "excluding market-crash days (market < -2%)"), "Excluding days with market < −2%"))
+hd <- function(l) { r <- data.frame(l, "", "", "", "", ""); names(r) <- nm; r }
+t3 <- rbind(hd("Ceiling closes"), blk("Ceiling", "Ceiling"), hd("Floor closes"), blk("Floor", "Floor"))
+kable(t3, row.names = FALSE, caption = "Table 2. Next-day abnormal returns by component and sample. Entries are mean abnormal returns in percent with two-way-clustered *t*-statistics in parentheses. Benchmarks are the dollar-volume-weighted market (weights lagged to day *d*) or same-date non-event stocks in the same liquidity tercile. Open to day *d*+5 is the return from the day-*d*+1 open to the day-*d*+5 close. Exact hits and near hits are defined in Section 4. Close-to-close need not equal the sum of the two components because returns compound. Events are the stock-days that meet the event definition in Section 4 and have the stated return.")
+```
+
+Figure 2 plots the three next-day measures against the size of the day-*d* move. Inside the band the close-to-close relation is negative: larger rises are followed by lower returns, a short-term reversal. At the limit the relation breaks: the overnight gap jumps up at the ceiling and down at the floor.
+
+```{r fig2, fig.cap="Figure 2. Next-day abnormal return by the size of the day-*d* move, split into overnight gap, intraday return and close-to-close return. Circles are interior bins, triangles are closes at the 7% limit and squares are moves beyond 6.5% that did not close at the limit. Bars show 95% confidence intervals clustered by date."}
+knitr::include_graphics(file.path(od, "figures/F2_break_at_limit.png"))
+```
+
+Table 3 quantifies the break. Ceiling closers have a gap `r f(c17("ceiling vs 5-6.5% up","gap_mkt","diff_pct"),2)` percentage points larger than stocks that rose 5% to 6.5% (*t* = `r f(c17("ceiling vs 5-6.5% up","gap_mkt","t_cluster"),1)`) and an intraday return `r f(abs(c17("ceiling vs 5-6.5% up","intraday_mkt","diff_pct")),2)` points lower. Floor closers have a gap `r f(abs(c17("floor vs 5-6.5% down","gap_mkt","diff_pct")),2)` points lower than stocks that fell 5% to 6.5% (*t* = `r f(c17("floor vs 5-6.5% down","gap_mkt","t_cluster"),1)`). The event rule requires a close at the day's high, so we repeat the comparison with stocks that also closed at their high (low). The ceiling gap is then `r f(c23("ceiling vs 5-6.5% up, close = high","gap_mkt","diff_pct"),2)` points larger (*t* = `r f(c23("ceiling vs 5-6.5% up, close = high","gap_mkt","t_cluster"),1)`) and the floor gap `r f(abs(c23("floor vs 5-6.5% down, close = low","gap_mkt","diff_pct")),2)` points lower, so a strong close does not explain the contrast, which supports H3. The comparison is an association around a rule-based threshold. It makes no regression-discontinuity claim, because it has no bandwidth choice, manipulation test or covariate balance, and stocks that reach the limit may differ in news content.
+
+```{r tab-disc}
+O <- c(gap_mkt = "Overnight gap", intraday_mkt = "Intraday", cc1_mkt = "Close-to-close", f5o_mkt = "Open to day *d*+5")
+cl <- c("ceiling vs 5-6.5% up", "ceiling vs 5-6.5% up, close = high", "ceiling vs 3-5% up", "ceiling vs 3-5% up, close = high", "floor vs 5-6.5% down", "floor vs 5-6.5% down, close = low", "floor vs 3-5% down", "floor vs 3-5% down, close = low")
+lab <- c("Ceiling vs 5–6.5% rises", "  same, comparison closes at its high", "Ceiling vs 3–5% rises", "  same, comparison closes at its high", "Floor vs 5–6.5% falls", "  same, comparison closes at its low", "Floor vs 3–5% falls", "  same, comparison closes at its low")
+src <- function(ct, o, col) if (grepl("close =", ct)) c23(ct, o, col) else c17(ct, o, col)
+t4 <- do.call(rbind, lapply(seq_along(cl), function(i) data.frame(Contrast = lab[i], t(sapply(names(O), function(o) cell(src(cl[i], o, "diff_pct"), src(cl[i], o, "t_cluster")))), `Comparison stock-days` = fi(src(cl[i], "gap_mkt", "n_comparison")), check.names = FALSE, row.names = NULL)))
+names(t4) <- c("Contrast", O, "Comparison stock-days")
+kable(t4, row.names = FALSE, caption = "Table 3. Differences in next-day abnormal returns between limit closes and stocks that moved 3–5% or 5–6.5% in the same direction without closing at the limit. Entries are differences in percentage points with date-clustered *t*-statistics in parentheses. Returns are market-adjusted with lagged weights.")
+```
+
+Three readings fit the pattern, and our data do not separate them. (1) Demand or supply that the limit blocked on day *d* clears at the next opening, the delayed price discovery of Kim and Rhee (1997). (2) Stocks that reach a limit are selected on news and retail attention, which persist overnight and are followed by the overnight-gain-then-reversal of attention-grabbing stocks (Berkman et al., 2012), with or without a limit. (3) The opening call auction overshoots and corrects part of the move within the day. The sample has no announcement data, no order book, and no stock-days without a limit, so we run two partial checks. First, the ceiling gap rises with day-*d* volume relative to the prior 60-day mean (`r f(c24("Ceiling","volume",1,"gap_mkt"),2)`%, `r f(c24("Ceiling","volume",2,"gap_mkt"),2)`% and `r f(c24("Ceiling","volume",3,"gap_mkt"),2)`% across terciles) and with the prior 20-day return of the stock (`r f(c24("Ceiling","prior 20",1,"gap_mkt"),2)`%, `r f(c24("Ceiling","prior 20",2,"gap_mkt"),2)`% and `r f(c24("Ceiling","prior 20",3,"gap_mkt"),2)`%). The gap is larger where attention and news are likely stronger, which fits reading (2) as well as reading (1), and it stays positive and significant in the lowest tercile of each proxy (*t* = `r f(c24("Ceiling","volume",1,"gap_mkt","t_twoway"),1)` and `r f(c24("Ceiling","prior 20",1,"gap_mkt","t_twoway"),1)`). For floors the gap moves from `r f(c24("Floor","volume",1,"gap_mkt"),2)`% to `r f(c24("Floor","volume",3,"gap_mkt"),2)`% across volume terciles and is not monotone in the prior return, so the attention reading does not carry over. Second, the comparison with stocks that closed at their high removes selection on the shape of the close but not selection on news. The intraday giveback fits readings (2) and (3) at least as well as a permanent price-discovery story. Comparisons with 3% to 5% moves give the same result: the ceiling gap exceeds that of 3% to 5% risers by `r f(c17("ceiling vs 3-5% up","gap_mkt","diff_pct"),2)` percentage points and the floor gap falls short of that of 3% to 5% fallers by `r f(abs(c17("floor vs 3-5% down","gap_mkt","diff_pct")),2)` points (Table 3). We use "break at the limit" as a description and treat delayed price discovery as one hypothesis. The comparison also bears on the magnet effect. Cho et al. (2003) and Chen et al. (2024) predict that prices accelerate toward a limit on the limit day, and our data lack the intraday prices needed to test that. The rise of the gap at the limit relative to near-limit moves shows only that the close at the limit carries information that a close just below the limit does not.
+
+Table 4 splits the events at the move to the KRX platform.
+
+```{r tab-krx}
+t5 <- do.call(rbind, lapply(c("Ceiling", "Floor"), function(e) do.call(rbind, lapply(names(O), function(m) data.frame(Event = e, Outcome = O[[m]], `Before the change` = cell(c22(e, m, "pre_mean"), c22(e, m, "pre_t")), `After the change` = cell(c22(e, m, "post_mean"), c22(e, m, "post_t")), Difference = cell(c22(e, m, "diff"), c22(e, m, "diff_t")), `Events (before / after)` = paste0(fi(c22(e, m, "pre_n")), " / ", fi(c22(e, m, "post_n"))), check.names = FALSE, row.names = NULL)))))
+kable(t5, row.names = FALSE, caption = "Table 4. Next-day abnormal returns before and after the move to the KRX platform on 5 May 2025. Entries are mean abnormal returns in percent with two-way-clustered *t*-statistics in parentheses. The split uses the date of the opening that defines the gap, and the difference *t*-statistic treats the two periods as independent.")
+```
+
+Band changes in other markets changed volatility, liquidity, and execution quality (Lien et al., 2019; Kim & Jun, 2019; Qi, 2023; Zhang et al., 2022). Our split follows a change in auction priority, not a change in the band, so it speaks to a different margin. The ceiling gap appears in both periods (`r f(c22("Ceiling","gap_mkt","pre_mean"),2)`% before, `r f(c22("Ceiling","gap_mkt","post_mean"),2)`% after the move to KRX; difference *t* = `r f(c22("Ceiling","gap_mkt","diff_t"),1)`; Table 4). The floor gap is larger after the move (`r f(c22("Floor","gap_mkt","pre_mean"),2)`% before, `r f(c22("Floor","gap_mkt","post_mean"),2)`% after; difference *t* = `r f(c22("Floor","gap_mkt","diff_t"),1)`), and the intraday return after floor closes turns positive (`r f(c22("Floor","intraday_mkt","post_mean"),2)`%). The drift from the next open to day *d*+5 after floor closes exists only before the move (`r f(c22("Floor","f5o_mkt","pre_mean"),2)`% before, `r f(c22("Floor","f5o_mkt","post_mean"),2)`% after). The change coincides with a different market period, and the post-change sample holds `r f(100*c22("Ceiling","gap_mkt","post_n")/(c22("Ceiling","gap_mkt","pre_n")+c22("Ceiling","gap_mkt","post_n")),0)`% of the ceiling events and `r f(100*c22("Floor","gap_mkt","post_n")/(c22("Floor","gap_mkt","pre_n")+c22("Floor","gap_mkt","post_n")),0)`% of the floor events. The split shows the main pattern on both sides, with differences in detail, and cannot isolate an effect of the auction rules.
+
+Returns beyond ±8%, which a 7% band does not allow, occur on `r fi(sum(PILE$n[PILE$range %in% c("< -8.0%", "> 8.0%")]))` stock-days and may reflect unadjusted corporate actions or listing-day bands. Dropping every event within five trading days of such a return changes the ceiling gap from `r f(c25("Ceiling","gap_mkt","all_mean"),2)`% to `r f(c25("Ceiling","gap_mkt","excl_mean"),2)`% and the floor gap from `r f(c25("Floor","gap_mkt","all_mean"),2)`% to `r f(c25("Floor","gap_mkt","excl_mean"),2)`%. The exclusion removes events but leaves the outlier days in the market benchmark.
+
+To bound the effect of a larger project-wide search, we compute how many tests the four event tests could absorb. They survive a Bonferroni correction at 5% for families of up to `r fi(c21(5))` tests with date clusters and up to `r fi(c21(6))` tests with calendar-week clusters (largest *p*-values `r formatC(c21(2), format = "e", digits = 1)` and `r formatC(c21(3), format = "e", digits = 1)`, *t* reference). The bound limits false discoveries and leaves the upward bias in effect sizes untouched.
+
+Taken together, the results support H1 to H4. The limit effect appears in each measure, survives alternative benchmarks, clusters, and definitions, and grows as the close approaches the limit. It differs between ceilings and floors in the details: the ceiling effect is a one-day gap with a partial reversal, and the floor effect combines a gap with drift that appears only before the 2025 platform change. The effect is not available to an outside buyer at the quoted next open. The evidence does not settle why the gap arises, and Section 6 returns to that question.
+
+# 6. Discussion
+
+The evidence is consistent with delayed price discovery and with the rival readings of Section 5. The continuation after a ceiling close sits in the opening. Days *d*+2 to *d*+5 add no significant return, and the *d*+1 session reverses part of it. Lou et al. (2019) show continuation in both periods with an offsetting cross-period reversal. The contrast with stocks that moved almost as far, including those that also closed at their high, is the part of the evidence that a pure attention reading must explain. The post-open drift after floor closes, which exists only before the platform change, does not fit a gap-only reading.
+
+Our decomposition adds timing to the evidence of Kim and Rhee (1997): on HOSE the continuation arrives at the next opening and stops there after the first day, which differs from a multi-day adjustment. We do not test the magnet effect that Cho et al. (2003) document, because our data lack intraday prices.
+Table 5 sets each result against the studies reviewed in Section 2. No source reports the next-day abnormal return, the overnight gap, or the intraday return after a limit close in a form that matches ours, so the comparison concerns signs, timing, and mechanism, not magnitudes. Our estimates of +`r f(ev("ceiling","t+1","mean_ar_pct"),1)`% for the ceiling, +`r f(c16("Ceiling all","gap_mkt"),1)`% for the gap, and `r f(c16("Ceiling all","intraday_mkt"),1)`% for the intraday return are our estimates for this market. We know of no peer-reviewed study that measures them in the same way.
+
+```{r tab-bench}
+bm <- data.frame(
+  Study = c("Kim and Rhee (1997)", "Berkman and Lee (2002)", "Huang et al. (2001)", "Cho et al. (2003)", "Chen et al. (2019)", "Qi (2023)", "Lin et al. (2023); Zeng et al. (2024)", "Berkman et al. (2012)", "Lou et al. (2019)", "Qiao and Dam (2020)", "Hou et al. (2020); Harvey et al. (2016)"),
+  Setting = c("Tokyo; limit-hit events", "Korea; revision of the limit system", "Taiwan; limit hits", "Taiwan; five-minute data", "Shenzhen; account-level data", "ChiNext; band widened from 10% to 20%", "China; cross-section of stocks", "United States; intraday data", "United States; stock-level returns", "China A-shares; all stocks", "United States; published anomalies"),
+  `Reported finding` = c("Support for volatility spillover, delayed price discovery, and trading interference", "Volatility and trading activity examined around the revision", "Overnight overreaction after limit hits corrected on the following day", "Prices accelerate toward the upper limit", "Large investors buy on the limit day and sell on the next day; their net buying predicts long-run reversal", "Delayed price discovery, volatility spillover, and trading interference, stronger at the lower limit; no magnet effect", "Stocks with large limit exposure, or frequent limit hits, earn lower future returns", "Positive overnight returns followed by intraday reversals, concentrated in high-attention stocks", "Overnight and intraday continuation with an offsetting cross-period reversal", "Average overnight return is negative; T+1 rule lowers opening prices", "With microcaps mitigated, 65% of 452 anomalies fail the 1.96 hurdle; a new factor needs *t* above 3.0"),
+  `Relation to our result` = c("Our significant next-day return after ceiling closes is consistent with delayed price discovery; we do not test spillover or interference", "Different question; no comparison with our returns", "Same timing: positive gap, partial intraday reversal", "Not tested; our data lack intraday prices", "Consistent with our intraday reversal; our data lack account identities", "Different outcome: Qi studies market quality after a band change, we study returns after limit closes; both ceiling and floor closes carry a significant next-day return here, with a weaker floor effect that depends on the benchmark", "Different horizon; a positive one-day return can coexist with later reversal, which we do not measure", "Same signs after limit closes; the gap here also rises with volume and prior return", "The gap-then-reversal has the sign of that cross-period reversal at a one-day horizon", "Opposite sign: the overnight return after a ceiling close is positive", "None of our 22 characteristics reaches 1.96"), check.names = FALSE)
+kable(bm, row.names = FALSE, caption = "Table 5. Comparison with earlier studies. The second and third columns summarize each source as reported in its abstract or in the records we could access; the last column relates it to our results.")
+```
+
+The findings bear on two design choices, the width of the band and the priority of auction orders. A 7% band leaves room for a large overnight gap, so the opening auction may do much of the adjustment that a wider band would allow on day *d*. The floor gap grows and the intraday return after floor closes turns positive after at-the-open orders lose priority (Table 4), which suggests that auction design shapes how overnight pressure resolves. The split cannot identify the rule change, because the market period changed with it. The widening of the ChiNext band studied by Qi (2023) shows how a band change can serve as a natural experiment, and a similar change on HOSE would test the readings directly.
+
+The volume and prior-return results fit an attention channel. If attention drives the gap, the limit acts as an amplifier: a stock at its ceiling may appear on screens and rankings the next morning, and a queue at the limit may signal excess demand to every investor. Berkman et al. (2012) trace the overnight returns of U.S. stocks to such attention, and Akbas et al. (2022) and Lu et al. (2023) trace the split between overnight and intraday returns to different clienteles, with noise traders overnight, arbitrageurs by day, and market makers absorbing retail imbalances near the open. A limit then adds a visible, rule-based trigger to a mechanism that already exists without limits. Under this reading the limit creates the attention event.
+
+We use the 22 characteristics to set the multiplicity burden and as a null benchmark: the procedure that lets the limit tests survive leaves no characteristic significant. The null says little about the cross-section because power is low (Section 5). Limit hits are rare: about `r f(100 * C13$value[5] / C13$value[1], 1)`% of stock-days in the event window meet the ceiling definition, and we do not claim that limit hits explain the cross-section of returns.
+
+The estimates describe what follows limit closes on HOSE in 2024 to 2026: the next opening carries about two percentage points after ceiling closes and about one after floor closes. They cannot show what the limit does to price discovery: the band does not vary, no period lacks a limit, and we measure none of the benefits a limit is meant to deliver. Announcement time stamps, order-book queue sizes at the close, and a market or period without a limit would test the readings. For investors, the figures suggest that buying limit-up stocks at the quoted open returned `r f(c11("Ceiling: rule-based","f5o_mkt"),2)`% by the fifth close. The figures omit costs and rationing at the open, so they offer no trading advice.
+
+# 7. Limitations
+
+(i) The sample covers about 25 months on one exchange, with one trading-platform change and a period of market stress. (ii) We have no order-book, investor-type, announcement or news data, so the unfilled-demand mechanism is inferred and selection on news is not separated from it. (iii) The 7% band, the reference price and the platform change come from brokerage and press descriptions and we check only against the return distribution, with no exchange circulars. Tick sizes, reference-price treatment on corporate-action days, and wider bands for first-day listings and resumed trading are assumptions. (iv) Prices may be adjusted for corporate actions in ways that affect event classification, and the listing snapshot excludes earlier delistings. (v) Clustered standard errors allow dependence across dates, weeks, blocks, and stocks, but events in the same market episode may depend on each other more, and we did not compute calendar-time portfolio or Driscoll–Kraay estimates. (vi) Several characteristics (5-day return, MAX, MIN, move frequency, overnight return) share inputs with the event definition, and the Corwin–Schultz spread and range volatility use high and low prices that limits censor. (vii) The floor effect depends on the benchmark, and we built no beta- and size-matched control for the five-day outcome. (viii) The characteristic tests have limited power, and the effect sizes carry winner's-curse bias because we chose the idea among several.
+
+# 8. Conclusion
+
+Of 26 tests on 347 HOSE stocks, the four price-limit tests survive FDR control and a confirmation half, and the 22 characteristic tests do not, although the latter have limited power. A ceiling close is followed by a next-day abnormal return of about `r f(ev("ceiling","t+1","mean_ar_pct"),1)`%, which is an overnight gap of `r f(c16("Ceiling all","gap_mkt"),1)`% less an intraday reversal of `r f(abs(c16("Ceiling all","intraday_mkt")),1)`%. The gap is `r f(c17("ceiling vs 5-6.5% up","gap_mkt","diff_pct"),1)` percentage points larger than for stocks that rose 5% to 6.5% and `r f(c23("ceiling vs 5-6.5% up, close = high","gap_mkt","diff_pct"),1)` points larger than for those that also closed at their high. The pattern is consistent with delayed price discovery at the limit, but news and attention remain possible. An outside buyer at the next open loses `r f(abs(c11("Ceiling: rule-based","f5o_mkt")),2)`% by the fifth close against the market. Longer samples, announcement data and order-book data would let future work separate the readings.
+
+# Declarations
+
+**Generative AI.** The authors used Claude (Anthropic) to write analysis code, draft text and check numbers against output files. The authors are responsible for all content. We checked the references and the institutional facts in Section 3 by web search and did not consult primary documents.
+
+**Data and code availability.** Daily price files and code are in the project repository (`trungcandygit/black_litterman_2`, commit 63bdc6d for the analysis plan; R scripts `paper2/R/40` to `50`, tables C1 to C26 in `paper2/output/tables`). The data come from the vnstock library (version 4.0.4, source VCI), retrieved on 24 September 2026.
+
+**Funding, competing interests, ethics and author contributions.** [To be completed by the authors.]
+
+# References
+
+Aboody, D., Even-Tov, O., Lehavy, R., & Trueman, B. (2018). Overnight returns and firm-specific investor sentiment. *Journal of Financial and Quantitative Analysis, 53*(2), 485–505.
+
+Akbas, F., Boehmer, E., Jiang, C., & Koch, P. D. (2022). Overnight returns, daytime reversals, and future stock returns. *Journal of Financial Economics, 145*(3), 850–875. https://doi.org/10.1016/j.jfineco.2021.09.019
+
+Amihud, Y. (2002). Illiquidity and stock returns: Cross-section and time-series effects. *Journal of Financial Markets, 5*(1), 31–56. https://doi.org/10.1016/S1386-4181(01)00024-6
+
+Bali, T. G., Cakici, N., & Whitelaw, R. F. (2011). Maxing out: Stocks as lotteries and the cross-section of expected returns. *Journal of Financial Economics, 99*(2), 427–446. https://doi.org/10.1016/j.jfineco.2010.08.014
+
+Benjamini, Y., & Hochberg, Y. (1995). Controlling the false discovery rate: A practical and powerful approach to multiple testing. *Journal of the Royal Statistical Society: Series B, 57*(1), 289–300. https://doi.org/10.1111/j.2517-6161.1995.tb02031.x
+
+Berkman, H., Koch, P. D., Tuttle, L., & Zhang, Y. J. (2012). Paying attention: Overnight returns and the hidden cost of buying at the open. *Journal of Financial and Quantitative Analysis, 47*(4), 715–741. https://doi.org/10.1017/S0022109012000270
+
+Berkman, H., & Lee, J. B. T. (2002). The effectiveness of price limits in an emerging market: Evidence from the Korean Stock Exchange. *Pacific-Basin Finance Journal, 10*(5), 517–530. https://doi.org/10.1016/S0927-538X(02)00040-9
+
+Bildik, R., & Gülay, G. (2006). Are price limits effective? Evidence from the Istanbul Stock Exchange. *Journal of Financial Research, 29*(3), 383–403. https://doi.org/10.1111/j.1475-6803.2006.00185.x
+
+Bogousslavsky, V. (2021). The cross-section of intraday and overnight returns. *Journal of Financial Economics, 141*(1), 172–194.
+
+Brennan, M. J. (1986). A theory of price limits in futures markets. *Journal of Financial Economics, 16*(2), 213–233. https://doi.org/10.1016/0304-405X(86)90061-9
+
+Chen, H., Petukhov, A., Wang, J., & Xing, H. (2024). The dark side of circuit breakers. *The Journal of Finance, 79*(2), 1405–1455. https://doi.org/10.1111/jofi.13310
+
+Chen, T., Gao, Z., He, J., Jiang, W., & Xiong, W. (2019). Daily price limits and destructive market behavior. *Journal of Econometrics, 208*(1), 249–264. https://doi.org/10.1016/j.jeconom.2018.09.014
+
+Chen, Y.-M. (1993). Price limits and stock market volatility in Taiwan. *Pacific-Basin Finance Journal, 1*(2), 139–153. https://doi.org/10.1016/0927-538X(93)90005-3
+
+Cho, D. D., Russell, J., Tiao, G. C., & Tsay, R. S. (2003). The magnet effect of price limits: Evidence from high-frequency data on Taiwan Stock Exchange. *Journal of Empirical Finance, 10*(1–2), 133–168. https://doi.org/10.1016/S0927-5398(02)00024-5
+
+Chordia, T., Goyal, A., & Saretto, A. (2020). Anomalies and false rejections. *The Review of Financial Studies, 33*(5), 2134–2179.
+
+Corwin, S. A., & Schultz, P. (2012). A simple way to estimate bid-ask spreads from daily high and low prices. *The Journal of Finance, 67*(2), 719–760. https://doi.org/10.1111/j.1540-6261.2012.01729.x
+
+Deb, S. S., Kalev, P. S., & Marisetty, V. B. (2013). Flexible price limits: The case of Tokyo Stock Exchange. *Journal of International Financial Markets, Institutions and Money, 24*, 66–84.
+
+Fama, E. F., & MacBeth, J. D. (1973). Risk, return, and equilibrium: Empirical tests. *Journal of Political Economy, 81*(3), 607–636. https://doi.org/10.1086/260061
+
+Greenwald, B. C., & Stein, J. C. (1991). Transactional risk, market crashes, and the role of circuit breakers. *Journal of Business, 64*(4), 443–462.
+
+Gutierrez, R. C., Jr., & Kelley, E. K. (2008). The long-lasting momentum in weekly returns. *The Journal of Finance, 63*(1), 415–447. https://doi.org/10.1111/j.1540-6261.2008.01320.x
+
+Harvey, C. R., & Liu, Y. (2020). False (and missed) discoveries in financial economics. *The Journal of Finance, 75*(5), 2503–2553. https://doi.org/10.1111/jofi.12951
+
+Harvey, C. R., Liu, Y., & Zhu, H. (2016). …and the cross-section of expected returns. *The Review of Financial Studies, 29*(1), 5–68. https://doi.org/10.1093/rfs/hhv059
+
+Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics, 6*(2), 65–70.
+
+Hou, K., Xue, C., & Zhang, L. (2020). Replicating anomalies. *The Review of Financial Studies, 33*(5), 2019–2133.
+
+HSC. (2025). *Important changes of new trading system* [Web page]. Ho Chi Minh City Securities Corporation. https://www.hsc.com.vn/en/important-changes-of-new-trading-system
+
+Huang, X., Liu, C., & Shu, T. (2023). Factors and anomalies in the Vietnamese stock market. *Pacific-Basin Finance Journal, 82*.
+
+Huang, Y.-S., Fu, T.-W., & Ke, M.-C. (2001). Daily price limits and stock price behavior: Evidence from the Taiwan Stock Exchange. *International Review of Economics & Finance, 10*(3), 263–288.
+
+Jia, S., An, Y., Yang, L., & Zhou, F. (2024). Price limit relaxation and stock price crash risk: Evidence from China. *Finance Research Letters, 59*, 104715. https://doi.org/10.1016/j.frl.2023.104715
+
+Jones, C. M., Shi, D., Zhang, X., & Zhang, X. (2025). Retail trading and return predictability in China. *Journal of Financial and Quantitative Analysis, 60*(1), 68–104.
+
+Kelly, M. A., & Clark, S. P. (2011). Returns in trading versus non-trading hours: The difference is day and night. *Journal of Asset Management, 12*, 132–145. https://doi.org/10.1057/jam.2011.2
+
+Kim, K. A., & Limpaphayom, P. (2000). Characteristics of stocks that frequently hit price limits: Empirical evidence from Taiwan and Thailand. *Journal of Financial Markets, 3*(3), 315–332.
+
+Kim, K. A., & Rhee, S. G. (1997). Price limit performance: Evidence from the Tokyo Stock Exchange. *The Journal of Finance, 52*(2), 885–901. https://doi.org/10.1111/j.1540-6261.1997.tb04827.x
+
+Kim, W., & Jun, S. (2019). Effects of a price limit change on market stability at the intraday horizon in the Korean stock market. *Applied Economics Letters, 26*(7), 582–586.
+
+Kodres, L. E., & O'Brien, D. P. (1994). The existence of Pareto-superior price limits. *American Economic Review, 84*(4), 919–932.
+
+Liang, H., & Hu, Y. (2025). Stock price limit and its predictability in the Chinese stock market. *Journal of Forecasting, 44*, 297–319. https://doi.org/10.1002/for.3197
+
+Lien, D., Hung, P.-H., Zhu, J.-D., & Chen, Y.-H. (2019). Price limit changes and market quality in the Taiwan Stock Exchange. *Pacific-Basin Finance Journal, 55*, 239–258.
+
+Lin, F., Qiu, Z., & Zheng, W. (2023). Cranes among chickens: The general-attention-grabbing effect of daily price limits in China's stock market. *Journal of Banking & Finance, 150*.
+
+Lou, D., Polk, C., & Skouras, S. (2019). A tug of war: Overnight versus intraday expected returns. *Journal of Financial Economics, 134*(1), 192–213. https://doi.org/10.1016/j.jfineco.2019.03.011
+
+Lu, Z., Malliaris, S. G., & Qin, Z. (2023). Heterogeneous liquidity providers and night-minus-day return predictability. *Journal of Financial Economics, 148*(3), 175–200.
+
+Newey, W. K., & West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica, 55*(3), 703–708. https://doi.org/10.2307/1913610
+
+Parkinson, M. (1980). The extreme value method for estimating the variance of the rate of return. *The Journal of Business, 53*(1), 61–65. https://doi.org/10.1086/296071
+
+Petersen, M. A. (2009). Estimating standard errors in finance panel data sets: Comparing approaches. *The Review of Financial Studies, 22*(1), 435–480.
+
+Qi, B. (2023). Effectiveness of price limits: Evidence from China's ChiNext market. *PLOS ONE, 18*(6), e0287548. https://doi.org/10.1371/journal.pone.0287548
+
+Qiao, K., & Dam, L. (2020). The overnight return puzzle and the "T+1" trading rule in Chinese stock markets. *Journal of Financial Markets, 50*, 100534.
+
+Qiu, J., Huang, W., & Jiang, Y. (2025). Day-night anomaly returns in China: The role of institutions. *Research in International Business and Finance, 75*, 102776.
+
+Subrahmanyam, A. (1994). Circuit breakers and market volatility: A theoretical perspective. *The Journal of Finance, 49*(1), 237–254. https://doi.org/10.1111/j.1540-6261.1994.tb04427.x
+
+Viet Nam News. (2025). *KRX system officially goes live* [News article]. https://vietnamnews.vn/economy/1717047/krx-system-officially-goes-live.html
+
+Zeng, Z., Wang, G., & Tang, G. (2024). Price limits hitting effect and cross-sectional stock returns: Evidence from China. *Finance Research Letters, 60*, 104803. https://doi.org/10.1016/j.frl.2023.104803
+
+Zhang, X., Wang, Z., Hao, J., & He, F. (2022). Price limit and stock market quality: Evidence from a quasi-natural experiment in the Chinese stock market. *Pacific-Basin Finance Journal, 74*, 101778.
