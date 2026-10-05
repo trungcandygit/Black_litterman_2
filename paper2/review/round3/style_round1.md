@@ -52,11 +52,11 @@ The paper is factual and hedges its claims carefully. Its numbers in the abstrac
 
 ### Top issues to address
 
-1. **[ERROR] Check 2.3:** $\tau$ means both tick size (Eq. 3) and week (Eq. 7). $G$ means both the overnight gap (Eq. 5) and the number of clusters (Eq. 6, Table 1 caption). $i$ means both stock and event (Eqs. 4–6). $j$ and $k$ each mean both a stock and a rank or day (Eqs. 2, 4, 8). Fix with edits M3–M5, M8–M10 and M14.
+1. **[ERROR] Check 2.3:** $\tau$ means both tick size (Eq. 3) and week (Eq. 7). $G$ means both the overnight gap (Eq. 5) and the number of clusters (Eq. 6, Table 1 caption). $i$ means both stock and event (Eqs. 4–6). $j$ and $k$ each mean both a stock and a rank or day (Eqs. 2, 4, 8). Fix with edits M3, M5, M6, M9, M10, M13–M16, M21 and M22.
 2. **[ERROR] Integrity / Check 4.2 analogue:** Section 4 cites "Cameron et al., 2011", but the reference list does not include it. Add Cameron, A. C., Gelbach, J. B., & Miller, D. L. (2011). Robust inference with multiway clustering. *Journal of Business & Economic Statistics, 29*(2), 238–249. https://doi.org/10.1198/jbes.2010.07136. **Run the DOI check from the integrity gate before inserting it.** Do not self-approve this item.
 3. **[ERROR] Check 6 / 4.3:** Figure 1 labels its axis with code names (REV1W, CSSPREAD, LIMITFREQ, DVOLCHG, TURNCHG, …) that the paper never defines. Edit R-F1 adds a key to the caption.
-4. **[ERROR] Check 2.2:** Section 4 never defines $G$, $\Phi^{-1}$, $x_{i,\tau}$, $n_\tau$, $k$ (Eq. 4) or $\widehat{\text{SE}}$. It writes AR, CAR and MDE as bare letters with no abbreviation defined. Fix with edits M4–M13.
-5. **[WARN] Check 5.9:** Claims repeat across Sections 5, 6 and Table 5 (literature comparisons, the magnet effect, "no comparable study", the platform-split caveat). Edits R15, R11, R26, S3–S5 remove the duplicates.
+4. **[ERROR] Check 2.2:** Section 4 never defines $G$, $\Phi^{-1}$, $x_{i,\tau}$, $n_\tau$, $k$ (Eq. 4) or $\widehat{\text{SE}}$. It writes AR, CAR and MDE as bare letters with no abbreviation defined. Fix with edits M7, M8, M9, M15, M17, M19 and M20.
+5. **[WARN] Check 5.9:** Claims repeat across Sections 5, 6 and Table 5 (literature comparisons, the magnet effect, "no comparable study", the platform-split caveat). Edits R10, R14, R22 and S1–S3, S5 and S8 remove the duplicates.
 6. **[WARN] Check 1.1/5.6:** The numbers are inconsistent in one place. The abstract says the buyer "earns −0.7%", the conclusion says "loses 0.75%" and Section 6 says "returned −0.75%". Edits A6 and C5 align them at one decimal.
 
 ---
