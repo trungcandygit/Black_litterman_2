@@ -60,6 +60,7 @@ def style_tables(path, out):
             for r in t.rows:
                 txt = r.cells[j].text
                 m = max(m, (max(len(w) for w in txt.split(' ')) + 3) if j > 0 else min(len(txt), 34) * 0.6)
+            if j > 0: m = max(m, min(sum(len(r.cells[j].text) for r in t.rows) / len(t.rows), 70) * 0.45)
             lens.append(max(m, 4))
         lens[0] = max(lens[0], 12) * 1.2
         tot = sum(lens); widths = [int(total * l / tot) for l in lens]
@@ -69,6 +70,7 @@ def style_tables(path, out):
         tw = tblPr.find(qn("w:tblW"))
         if tw is None: tw = OxmlElement("w:tblW"); tblPr.append(tw)
         tw.set(qn("w:type"), "dxa"); tw.set(qn("w:w"), str(total))
+        avg = [sum(len(r.cells[j].text) for r in t.rows) / len(t.rows) for j in range(ncol)]
         for ri, r in enumerate(t.rows):
             trPr = r._tr.get_or_add_trPr()
             if ri == 0:
@@ -80,7 +82,7 @@ def style_tables(path, out):
                 tcW.set(qn("w:type"), "dxa"); tcW.set(qn("w:w"), str(widths[j]))
                 for p in c.paragraphs:
                     p.paragraph_format.space_after = Pt(1); p.paragraph_format.space_before = Pt(1); p.paragraph_format.line_spacing = 1.0
-                    p.paragraph_format.alignment = 0 if j == 0 else 1
+                    p.paragraph_format.alignment = 0 if (j == 0 or avg[j] > 30) else 1
                     if ri < len(t.rows) - 1 and len(t.rows) <= 12: p.paragraph_format.keep_with_next = True
                     for run in p.runs:
                         run.font.size = Pt(8.5); run.font.name = "Times New Roman"
