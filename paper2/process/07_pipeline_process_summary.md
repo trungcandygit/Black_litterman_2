@@ -44,3 +44,16 @@ External time stamp or deposit of the specification; exchange circulars for the 
 | Stage 5 | `final/Paper_C_Closing_at_the_limit.{docx,md,Rmd}` | PDF not produced (no LaTeX) |
 
 Open points for the authors: the public GitHub analysis (grey literature) is not cited in the manuscript at the user's instruction, and the paper makes no priority claim for the close-to-close effect; the VCI source name is not spelled out; two reference entries lack article numbers; DOIs come from search records, not from resolver checks; Berkman and Lee (2002), Huang et al. (2001) and Qiao and Dam (2020) were checked at abstract or record level only.
+
+## Update, 5 October 2026 (later): third cycle and Stage 6
+| Step | Outcome |
+|---|---|
+| Method-fidelity audit (Opus) | 5 mismatches and 16 imprecisions between Section 4 text and code; all fixed in the text; exact hits restricted to rule-based events in code (C11, C13 changed slightly) |
+| Style rounds 1 and 2 (Opus, proofreading + stop-slop, section by section) | 114 + 58 edits; mean stop-slop score 34.8 to 37.4 / 50 |
+| Stage 3' (Opus) | Minor Revision; NEW-1 (near hits reflect vendor price adjustment; diagnostic C27 added) and NEW-2 (novelty versus Huang et al. 2001) fixed |
+| Stage 4.5 (Opus) | FAIL (Zhang et al. 2022 finding misdescribed, inherited from the evidence file; 4 minor items), fixed; narrow re-verification PASS |
+| Reproducibility | `R/run_all.R` added; full rerun reproduced tables C1-C27 byte for byte |
+| Stage 6 | Collaboration-depth observer: Delegation 9/10, Vigilance 4/10, Reallocation 4/10, Zone 2 Mid (`process/10_collaboration_depth.md`); observer ran only once at the end, not at every checkpoint |
+| After Stage 6 | User asked for a further 20% length cut; this text change re-opens integrity verification for the changed passages |
+
+Additional deviations: the re-review synthesis checker (`check_re_review_synthesis.py`) and the claim-registry tools could not run because the project has no contract manifest or claim registry; the observer was not run at intermediate checkpoints; all reviewer and verifier agents share the author-agent's model family.
