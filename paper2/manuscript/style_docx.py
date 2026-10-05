@@ -98,6 +98,8 @@ def style_tables(path, out):
             sp = ppr.find(qn('w:spacing'))
             if sp is None: sp = OxmlElement('w:spacing'); ppr.append(sp)
             sp.set(qn('w:before'), '160')
+    for p in d.paragraphs:  # heading keep-with-next
+        if p.style.name.startswith('Heading'): p.paragraph_format.keep_with_next = True
     # caption paragraphs: paragraph directly before a table starting with "Table " keeps with next, 10 pt, not bold
     for p in d.paragraphs:
         if re.match(r"^(Table|Figure) \d+\. ", p.text):
