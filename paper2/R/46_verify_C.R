@@ -27,7 +27,7 @@ rep_("T3 independent event recomputation (ceiling, t+1): independent mean ", for
 E <- readRDS(file.path(od, "rds/limit_events_full.rds")); e <- E[E$event == "ceiling" & is.finite(E$ar_on) & is.finite(E$ar_id) & is.finite(E$ar_cc1), ]
 rep_("T4 gap+intraday vs close-to-close for ceiling events: mean(ar_on)+mean(ar_id)-mean(ar_cc1) = ", format(100 * (mean(e$ar_on) + mean(e$ar_id) - mean(e$ar_cc1)), digits = 3), " pct (compounding/market-adjustment differences expected small) -> ", if (abs(100 * (mean(e$ar_on) + mean(e$ar_id) - mean(e$ar_cc1))) < 0.1) "PASS" else "CHECK")
 # T5 event dates are real trading days and counts reconcile with Table C10
-cnt <- read.csv(file.path(od, "tables/SUPERSEDED_C10_event_counts.csv")); rep_("T5 event counts: ceiling ", cnt$n[cnt$event == "ceiling"], ", floor ", cnt$n[cnt$event == "floor"], " (post hoc sample requires open price at t+1 and close at t+5); pre-registered sample ", nT, " ceilings -> PASS (difference explained by data requirements)")
+cnt <- read.csv(file.path(od, "tables/SUPERSEDED_C10_event_counts.csv")); rep_("T5 event counts: ceiling ", cnt$n[cnt$event == "ceiling"], ", floor ", cnt$n[cnt$event == "floor"], " (post hoc sample requires open price at t+1 and close at t+5); log-specified sample ", nT, " ceilings -> PASS (difference explained by data requirements)")
 # T6 reproducibility of the family-wide control
 f1 <- read.csv(file.path(od, "tables/C3_family_control.csv")); rep_("T6 family control: ", sum(f1$survives), " survivors of ", nrow(f1), " tests; BH uses ", nrow(f1), " p-values -> ", if (nrow(f1) == 26) "PASS" else "FAIL")
 writeLines(out, file.path(root, "paper2/process/05_verification_tests_C.txt"))
