@@ -1,0 +1,56 @@
+---
+output:
+  word_document:
+    reference_docx: ../reference.docx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = "asis"); options(knitr.kable.NA = "—"); invisible(Sys.setlocale("LC_ALL", "C.UTF-8"))
+kable <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL
+  if (!is.null(caption)) { m <- regmatches(caption, regexec("^(Table [0-9]+\\. .*?\\.)\\s+(.*)$", caption, perl = TRUE))[[1]]; if (length(m) == 3) { tt <- m[2]; nt <- m[3] } }
+  if (!is.null(tt)) cat("\n\n**", tt, "**\n\n", sep = ""); print(knitr::kable(x, ...)); if (!is.null(nt)) cat("\n\n", nt, "\n\n", sep = ""); cat("\n\n") }
+root <- "/home/user/Black_litterman_2/paper2"; od <- file.path(root, "output")
+rd <- function(f) read.csv(file.path(od, "tables", f))
+Z <- rd("C1_characteristics_FM.csv"); EV <- rd("C2_price_limit_events.csv"); FAM <- rd("C3_family_control.csv")
+C11 <- rd("C11_da_response_events.csv"); C13 <- rd("C13_universe_counts.csv"); C5 <- rd("C5_rd_bins.csv"); C28 <- rd("C28_event_definitions.csv"); C29 <- rd("C29_event_time_balance.csv"); C30 <- rd("C30_placebo_breaks.csv"); C31 <- rd("C31_krx_did.csv"); C32 <- rd("C32_family_sensitivity.csv"); C14 <- rd("C14_characteristics_power_lags.csv"); C16 <- rd("C16_subsamples_nasafe.csv"); C17 <- rd("C17_discontinuity_nasafe.csv"); PILE <- rd("C9b_pileup_347.csv"); C27 <- rd("C27_tick_grid_diagnostic.csv"); C26 <- rd("C26_sample_description.csv")
+C18 <- rd("C18_inference_horizons.csv"); C20 <- rd("C20_family_control_week_cluster.csv"); C21 <- rd("C21_programme_t_reference.csv"); C22 <- rd("C22_krx_split.csv"); C23 <- rd("C23_discontinuity_close_at_extreme.csv"); C24 <- rd("C24_attention_proxies.csv"); C25 <- rd("C25_outlier_bound.csv")
+f <- function(x, d = 2) sub("-", "\u2212", formatC(x, format = "f", digits = d), fixed = TRUE); fi <- function(x) formatC(x, format = "d", big.mark = ",")
+ev <- function(e, h, col) EV[EV$event == e & EV$horizon == h, col]
+c11 <- function(g, m, col = "mean_pct") C11[C11$group == g & C11$measure == m, col]
+c16 <- function(sm, m, col = "mean_pct") C16[C16$sample == sm & C16$measure == m, col]
+c17 <- function(ct, o, col) C17[C17$contrast == ct & C17$outcome == o, col]; c23 <- function(ct, o, col) C23[C23$contrast == ct & C23$outcome == o, col]
+c18 <- function(e, o, cl, col) C18[C18$event == e & C18$outcome == o & C18$cluster == cl, col]
+c22 <- function(e, m, col) C22[C22$event == e & C22$measure == m, col]
+c24 <- function(e, px, k, m, col = "mean_pct") C24[C24$event == e & grepl(px, C24$proxy) & C24$tercile == k & C24$measure == m, col]
+c25 <- function(e, m, col) C25[C25$event == e & C25$measure == m, col]; c21 <- function(i) C21$value[i]
+cell <- function(m, t, d = 2) paste0(f(m, d), "\u00a0(", f(t, 1), ")")
+nstocks <- 347; nsd <- sum(PILE$n); nsurv_char <- sum(FAM$survives[1:22]); nsurv_ev <- sum(FAM$survives[23:26])
+c26 <- function(i) C26$value[i]; c28 <- function(g, col = "mean_pct") C28[C28$definition == g & C28$measure == "gap_mkt", col]; c31 <- function(ct, o, col) C31[C31$contrast == ct & C31$outcome == o, col]; pl <- C30[!C30$krx, ]; c27 <- function(i) C27$value[i]
+pu <- function(r) sum(PILE$share_pct[PILE$range %in% r])
+```
+
+6 October 2026
+
+The Editors, *PLOS One*
+
+**Submission of a Research Article: "Closing at the limit: Price limits, overnight gaps, and next-day returns on the Ho Chi Minh Stock Exchange"**
+
+Dear Editors,
+
+We submit the above manuscript for consideration as a Research Article in *PLOS One*.
+
+**Contribution.** Daily price limits are common in Asian stock markets, yet little is known about what happens to prices after a stock closes at its limit in a retail-heavy market with call auctions. Using `r nstocks` stocks on the Ho Chi Minh Stock Exchange (August 2024 to September 2026), we split the next-day return after limit closes into an overnight gap and an intraday return. After a ceiling close the overnight gap is `r f(c16("Ceiling all","gap_mkt"),1)`%, of which the following session reverses about `r f(100 * abs(c16("Ceiling all","intraday_mkt")) / c16("Ceiling all","gap_mkt"), 0)`%, and the gap is `r f(c17("ceiling vs 5-6.5% up","gap_mkt","diff_pct"),1)` percentage points larger than after rises that stop short of the limit. The four limit tests are placed in one family of 26 tests with 22 price- and volume-based characteristics under false discovery rate control; all four limit tests survive and no characteristic does. We report the results as associations consistent with several mechanisms and do not claim to identify one.
+
+**Relation to published work.** The study builds on evidence that price limits delay price discovery (Kim and Rhee, 1997; Qi, 2023, published in *PLOS One*), on the overnight-intraday return literature (Berkman et al., 2012; Lou et al., 2019), and on multiple-testing standards in asset pricing (Harvey et al., 2016). It adds the overnight-intraday decomposition after limit closes, a comparison with near-limit moves, and a family-wide multiplicity control for an emerging market that has not been studied in this way.
+
+**Fit with the journal's criteria.** The analysis is fully reproducible: one R script regenerates every number, table, and figure, and the code, data-retrieval steps, and output tables are publicly available. The manuscript reports its analysis plan, its deviations from that plan, alternative clustering schemes, placebo tests, and a detailed list of limitations.
+
+**Article type and prior interactions.** The manuscript is a Research Article. It has not been published and is not under consideration elsewhere, and we have had no prior interactions with *PLOS One* about it.
+
+**Editors and reviewers.** We would welcome an Academic Editor with expertise in empirical finance, market microstructure, or emerging-market asset pricing. We have no opposed reviewers.
+
+Sincerely,
+
+Nguyen Van Trung (corresponding author), on behalf of all authors\
+Academy of Policy and Development, Hanoi, Vietnam\
+Email: kontrungcany@gmail.com; Tel: +84 355 347 831

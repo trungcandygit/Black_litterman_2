@@ -1,0 +1,28 @@
+---
+output:
+  word_document:
+    reference_docx: plos_reference.docx
+---
+
+**S1 Appendix. Characteristic definitions and literature search.**
+
+Supporting information for: Closing at the limit: Price limits, overnight gaps, and next-day returns on the Ho Chi Minh Stock Exchange.
+
+## A. Characteristic definitions
+
+All characteristics use data up to each week's formation day. REV1W and REV1M are the compounded returns over the last 5 and 20 trading days, and MOM3M and MOM6M over 60 and 110 trading days ending five days before formation. IMOM compounds the return in excess of the dollar-volume-weighted market over the MOM3M window. Over the last 60 days, VOL is the standard deviation of daily returns; BETA and IVOL are the slope and residual standard deviation of a regression of those returns on the dollar-volume-weighted return of that week's cross-section; DOWNVOL is the square root of the mean of min(*r*, 0)^2^; RANGEVOL is the Parkinson [1] high-low estimator; SKEW and KURT are the third and fourth standardized moments; AMIHUD is the mean ratio of absolute return to dollar volume [2]; LNDVOL is the log of mean dollar volume; and CSSPREAD is the Corwin and Schultz [3] spread estimator. Over the last 20 days, MAX and MIN are the largest and smallest daily returns [4], OVERNIGHT and INTRADAY the mean open-over-previous-close and close-over-open returns, and LIMITFREQ the share of days with an absolute return of 6.5% or more. DVOLCHG and TURNCHG are the ratios of 20-day to 60-day mean dollar volume and share volume. The quintile spread is the equal-weighted abnormal return of the top minus the bottom quintile over the next five days; the net spread subtracts 2 × 0.0025 × (TO~*L*~ + TO~*S*~), where TO~*L*~ and TO~*S*~ are the shares of the long and short legs replaced since the previous week.
+
+
+## B. Literature search
+
+We searched on 4 and 5 October 2026 with the web search tool of the AI assistant named in the Acknowledgments of the article; no subscription database (Scopus or Web of Science) was available, and publisher pages could not be opened. The search topics were price-limit performance (delayed price discovery, volatility spillover, trading interference, and magnet effect), price-limit band changes, price limits in Vietnam and on HOSE and HNX, overnight versus intraday returns, lottery-type (MAX) and low-volatility effects, circuit breakers, multiple testing and false discoveries in asset pricing, Fama–MacBeth and clustered standard errors, regression discontinuity, weekly return predictability, and anomalies in the Vietnamese stock market; exact query strings were not logged. We screened about 100 records by title and abstract and kept peer-reviewed journal articles in English whose bibliographic record we could confirm; working papers, theses, code repositories, and press items were not used as evidence, except for press and brokerage descriptions of HOSE rules (Materials and methods of the article). Vietnamese-language journals were not searched, and the coverage of Chinese A-share studies is incomplete. We read the bibliographic records and the abstract text returned by the search tool, not full texts. Statements in this paper that no study reports a given result refer to the peer-reviewed studies this search identified.
+
+## References
+
+1. Parkinson M. The extreme value method for estimating the variance of the rate of return. Journal of Business. 1980;53(1): 61–65. doi: 10.1086/296071
+
+2. Amihud Y. Illiquidity and stock returns: Cross-section and time-series effects. Journal of Financial Markets. 2002;5(1): 31–56. doi: 10.1016/S1386-4181(01)00024-6
+
+3. Corwin SA, Schultz P. A simple way to estimate bid-ask spreads from daily high and low prices. Journal of Finance. 2012;67(2): 719–760. doi: 10.1111/j.1540-6261.2012.01729.x
+
+4. Bali TG, Cakici N, Whitelaw RF. Maxing out: Stocks as lotteries and the cross-section of expected returns. Journal of Financial Economics. 2011;99(2): 427–446. doi: 10.1016/j.jfineco.2010.08.014
