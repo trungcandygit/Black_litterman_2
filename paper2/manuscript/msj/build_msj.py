@@ -75,6 +75,8 @@ ap = b.index("*Analysis plan.*"); ape = b.index("\n\n", ap)
 b = b[:ape] + ("\n\n*Software and code.* We use R 4.3.3 (packages sandwich 3.1.0, lmtest 0.9.40, and ggplot2 3.4.4). One script "
                "reproduces every number, table, and figure; code, data, and output tables are public (Section 6.5).") + b[ape:]
 
+import sys; sys.path.insert(0, HERE); import lang_edits
+b = lang_edits.apply(b)
 # ---- move figures and tables to the end (journal rule: after the References) ----
 figs, tabs = [], []
 FT = {"fig1": ("Figure 1 Fama–MacBeth *t*-statistics of the 22 characteristics",
@@ -112,7 +114,7 @@ This research did not receive any financial support.
 
 ## 6.5. Data availability
 
-The price files (vnstock 4.0.4, source VCI, retrieved on 24 September 2026), the R code, and the output tables are available at https://github.com/trungcandygit/black_litterman_2 (folders data/raw and paper2).
+The price files (vnstock 4.0.4, source VCI, retrieved on September 24, 2026), the R code, and the output tables are available at https://github.com/trungcandygit/black_litterman_2 (folders data/raw and paper2).
 
 ## 6.6. Author contributions
 
@@ -143,6 +145,8 @@ setup_msj = setup.replace(
     '    if (length(m) == 4) { tt <- paste0("Table ", m[2], " ", m[3]); nt <- m[4] } else tt <- sub("^Table ([0-9]+)\\\\. ", "Table \\\\1 ", caption) }\n'
     '  cat("\\n\\n", tt, "\\n\\n", sep = ""); print(knitr::kable(x, ...)); if (!is.null(nt)) cat("\\n\\n[[NOTE]] ", nt, "\\n\\n", sep = ""); cat("\\n\\n") }')
 assert setup_msj != setup
+setup_msj = setup_msj.replace("```{r setup, include=FALSE}\n", "```{r setup, include=FALSE}\nnw <- function(n) if (n >= 1 && n <= 9) c(\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\")[n] else as.character(n)\n", 1)
+assert "nw <- function" in setup_msj
 # APA-style table titles and short notes (academic-paper skill: label + short title above, "Note." below)
 TT = {
  "1": ("Market-adjusted returns after ceiling and floor closes",
@@ -151,14 +155,15 @@ TT = {
        "*Note.* Percent; two-way-clustered *t*-statistics in parentheses. Benchmarks are the volume-weighted market (weights lagged to day *d*) or same-date controls in the same liquidity tercile. Crash days have a market return below −2%. Components compound, so they need not sum."),
  "3": ("Limit closes versus near-limit moves",
        "*Note.* Differences in percentage points from same-direction moves of 3–5% or 5–6.5% that did not close at the limit; market-adjusted returns; date-clustered *t*-statistics in parentheses."),
- "4": ("Returns before and after the KRX platform change of 5 May 2025",
+ "4": ("Returns before and after the KRX platform change of May 5, 2025",
        "*Note.* Percent; two-way-clustered *t*-statistics in parentheses. Periods are split by the date of the opening that defines the gap; the difference *t*-statistic treats the periods as independent."),
  "5": ("Events and overnight gaps by calendar quarter",
        "*Note.* Market-adjusted gaps in percent; two-way-clustered *t*-statistics in parentheses. Counts are events with a day-*d*+1 open. The first and last quarters are partial; the KRX change falls in 2025-Q2."),
  "6": ("Comparison with earlier studies",
        "*Note.* Findings as reported in each source's abstract or in the records we could access."),
 }
-rdef = "TT <- list(" + ", ".join('"%s" = c("%s", "%s")' % (k, v[0], v[1].replace('"', '\\"')) for k, v in TT.items()) + ")\n"
+def resc(x): return x.replace('"', '\\"').replace("\u2212", "\\u2212").replace("\u2013", "\\u2013").replace("\u2014", "\\u2014")
+rdef = "TT <- list(" + ", ".join('"%s" = c("%s", "%s")' % (k, resc(v[0]), resc(v[1])) for k, v in TT.items()) + ")\n"
 setup_msj = setup_msj.replace("kable <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n",
     rdef + "kable <- function(x, caption = NULL, ...) { k <- sub(\"^Table ([0-9]+).*$\", \"\\\\1\", caption); cat(\"\\n\\n[[CAP]] Table \", k, \" \", TT[[k]][1], \"\\n\\n\", sep = \"\"); print(knitr::kable(x, ...)); cat(\"\\n\\n[[NOTE]] \", TT[[k]][2], \"\\n\\n\", sep = \"\") }\nkable_old <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n")
 assert "kable_old" in setup_msj
@@ -173,6 +178,7 @@ open(os.path.join(HERE, "manuscript_msj.Rmd"), "w", encoding="utf-8").write(doc)
 # ---- supplementary material ----
 A = appA.replace("# Appendix A. Characteristic definitions", "## S1.1. Characteristic definitions")
 B = appB.replace("# Appendix B. Literature search", "## S1.2. Literature search")
+B = B.replace("on 4 and 5 October 2026", "on October 4 and 5, 2026")
 B = B.replace("named in the Declarations", "named in Section 6.2 of the article").replace("(Section 3)", "(Section 2.1 of the article)")
 sup = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n"
        "**Supplementary Material S1**\n\nDo price limits delay price discovery? Overnight gaps after limit closes in Vietnam\n\n"
