@@ -54,6 +54,9 @@ def finish(path, out):
     for p in d.paragraphs:
         pf = p.paragraph_format
         pf.line_spacing = 2.0
+        # justify body text (not headings, captions/titles, or display equations)
+        if not p.style.name.startswith("Heading") and p._p.find(".//" + qn("m:oMathPara")) is None and p.text.strip():
+            pf.alignment = 3
         if re.match(r"^Table \d+\. ", p.text):
             for r in p.runs: r.font.size = Pt(12); r.font.bold = True
     body = d.element.body
@@ -72,6 +75,13 @@ def finish(path, out):
             if ppr.find(qn("w:suppressLineNumbers")) is None: ppr.append(OxmlElement("w:suppressLineNumbers"))
     d.save(out); os.remove(tmp)
 
+def justify(path, out):
+    d = Document(path)
+    for p in d.paragraphs:
+        if p.text.strip() and not p.style.name.startswith("Heading"): p.paragraph_format.alignment = 3
+    d.save(out)
+
 if __name__ == "__main__":
     if sys.argv[1] == "ref": make_reference(sys.argv[2], sys.argv[3])
+    elif sys.argv[1] == "justify": justify(sys.argv[2], sys.argv[3])
     else: finish(sys.argv[2], sys.argv[3])

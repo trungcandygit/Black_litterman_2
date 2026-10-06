@@ -8,6 +8,7 @@ for f in manuscript_plos S1_Appendix; do Rscript -e "rmarkdown::render('$f.Rmd',
 python3 style_plos.py tab manuscript_plos.docx manuscript_plos_final.docx
 python3 style_plos.py tab S1_Appendix.docx S1_Appendix_final.docx
 Rscript -e "rmarkdown::render('cover_letter.Rmd', quiet=TRUE)" >/dev/null 2>&1
+python3 style_plos.py justify cover_letter.docx cover_letter.docx
 P=../../final/PLOS_ONE; mkdir -p $P
 cp manuscript_plos_final.docx $P/Manuscript_PLOS_ONE.docx; cp S1_Appendix_final.docx $P/S1_Appendix.docx; cp cover_letter.docx $P/Cover_letter.docx
 python3 -c "
