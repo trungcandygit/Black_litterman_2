@@ -23,11 +23,11 @@ defs <- list(
   `Floor: return <= -6.5%, locked open = high = low = close` = z(R0 <= -0.065 & LK))
 C28 <- do.call(rbind, lapply(names(defs), function(g) do.call(rbind, lapply(M4, function(m) data.frame(definition = g, measure = m, t(cl2(defs[[g]], AR[[m]])), row.names = NULL)))))
 write.csv(C28, file.path(od, "tables/C28_event_definitions.csv"), row.names = FALSE)
-# C29: event-time balance by calendar quarter of the opening date
+# C29: event-time balance by calendar quarter of the opening date; counts are events with a day-d+1 open (those behind the gap means)
 rc <- defs[[1]]; rf_ <- defs[[7]]; q <- matrix(paste0(substr(open_date, 1, 4), "-Q", (as.integer(substr(open_date, 6, 7)) - 1) %/% 3 + 1), nt, ns)
 qs <- sort(unique(q[rc | rf_]))
 C29 <- do.call(rbind, lapply(qs, function(k) { a <- cl2(rc & q == k, AR$gap_mkt); b <- cl2(rf_ & q == k, AR$gap_mkt)
-  data.frame(quarter = k, ceiling_n = sum(rc & q == k), ceiling_gap_pct = a["mean_pct"], ceiling_gap_t = a["t_twoway"], floor_n = sum(rf_ & q == k), floor_gap_pct = b["mean_pct"], floor_gap_t = b["t_twoway"], row.names = NULL) }))
+  data.frame(quarter = k, ceiling_n = unname(a["n"]), ceiling_gap_pct = a["mean_pct"], ceiling_gap_t = a["t_twoway"], floor_n = unname(b["n"]), floor_gap_pct = b["mean_pct"], floor_gap_t = b["t_twoway"], row.names = NULL) }))
 write.csv(C29, file.path(od, "tables/C29_event_time_balance.csv"), row.names = FALSE)
 # C30: placebo break dates (first trading day of each month); difference post minus pre with independent-period t
 months <- unique(substr(dts[dts >= "2025-01-01" & dts <= "2026-04-30"], 1, 7)); brk <- sapply(months, function(mo) min(dts[substr(dts, 1, 7) == mo]))
