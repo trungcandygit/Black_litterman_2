@@ -78,5 +78,5 @@ Next: round 3 re-verification of items 1-3 and the whole-document consistency (l
 - Abstract 284 words (venue limit 250–300 overrides the skill's 150–250 default).
 
 ## Round 5 (2026-10-06)
-- Full texts of Kim & Rhee (1997), Huang et al. (2001), and Qi (2023) supplied by the authors as PDFs and read; text extracts kept in `paper2/review/round5/fulltext_extracts/` (copyrighted PDFs not committed). Table 6 and two sentences now report their results (Huang Table 4/5 and §6.2–6.3; Kim & Rhee §II.B, Table IV; Qi Table 2).
+- Full texts of Kim & Rhee (1997), Huang et al. (2001), and Qi (2023) supplied by the authors as PDFs and read; copyrighted full texts (Kim & Rhee; Huang et al.) are not stored in the repository; the CC BY extract of Qi (2023) is in `paper2/review/round5/fulltext_extracts/`. Table 6 and two sentences now report their results (Huang Table 4/5 and §6.2–6.3; Kim & Rhee §II.B, Table IV; Qi Table 2).
 - Le (2012) re-added (Journal of Economic Development, UEH, No. 214, pp. 116–128; earlier verified in Stage 2.5 rounds 2–3, dropped in the cut because peer-review status was unverified); Farber, Nguyen & Vuong (2006) added as a working paper cited as background on the early market. Huang et al. (2001) DOI taken from the PII printed on the article: 10.1016/S1059-0560(00)00082-4.
