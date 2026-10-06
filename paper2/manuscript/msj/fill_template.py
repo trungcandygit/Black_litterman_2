@@ -254,12 +254,52 @@ for el in sbody:
         q = empty_like(P_REF); convert_runs(el, q, REF_RPR, REF_IT); new.append(q); continue
     if not t.strip(): continue
     q = empty_like(P_BODY); convert_runs(el, q, BODY_RPR); new.append(q)
+# display equations: borderless 1x2 table, equation centered left, number right (renders the same in Word, LibreOffice, Google Docs)
+def eq_table(math_p, num):
+    tbl = etree.Element(w("tbl")); tp_ = etree.SubElement(tbl, w("tblPr"))
+    tw = etree.SubElement(tp_, w("tblW")); tw.set(w("type"), "pct"); tw.set(w("w"), "5000")
+    bd = etree.SubElement(tp_, w("tblBorders"))
+    for side in ("top", "left", "bottom", "right", "insideH", "insideV"):
+        e = etree.SubElement(bd, w(side)); e.set(w("val"), "nil")
+    lay = etree.SubElement(tp_, w("tblLayout")); lay.set(w("type"), "fixed")
+    grid = etree.SubElement(tbl, w("tblGrid"))
+    for wd in ("9100", "1100"):
+        g = etree.SubElement(grid, w("gridCol")); g.set(w("w"), wd)
+    tr = etree.SubElement(tbl, w("tr")); trpr = etree.SubElement(tr, w("trPr")); etree.SubElement(trpr, w("cantSplit"))
+    for k, wd in enumerate(("9100", "1100")):
+        tc = etree.SubElement(tr, w("tc")); tcpr = etree.SubElement(tc, w("tcPr"))
+        cw = etree.SubElement(tcpr, w("tcW")); cw.set(w("type"), "dxa"); cw.set(w("w"), wd)
+        va = etree.SubElement(tcpr, w("vAlign")); va.set(w("val"), "center")
+        if k == 0:
+            q = copy.deepcopy(math_p); ppr = q.find(w("pPr"))
+            if ppr is None: ppr = etree.Element(w("pPr")); q.insert(0, ppr)
+            for e in list(ppr):
+                if e.tag in (w("pStyle"), w("jc"), w("spacing"), w("ind")): ppr.remove(e)
+            sp = etree.SubElement(ppr, w("spacing")); sp.set(w("before"), "60"); sp.set(w("after"), "60")
+            jc = etree.SubElement(ppr, w("jc")); jc.set(w("val"), "center")
+            tc.append(q)
+        else:
+            q = etree.SubElement(tc, w("p")); ppr = etree.SubElement(q, w("pPr"))
+            jc = etree.SubElement(ppr, w("jc")); jc.set(w("val"), "right")
+            q.append(mk_run(BODY_RPR, f"({num})"))
+    return tbl
+merged = []
+k = 0
+while k < len(new):
+    e = new[k]
+    nxt = new[k + 1] if k + 1 < len(new) else None
+    if e.tag == w("p") and e.find(f".//{{{M}}}oMathPara") is not None and nxt is not None and nxt.tag == w("p") and re.match(r"^\[\[EQNUM:(\d+)\]\]$", text(nxt).strip()):
+        merged.append(eq_table(e, re.match(r"^\[\[EQNUM:(\d+)\]\]$", text(nxt).strip()).group(1))); k += 2; continue
+    merged.append(e); k += 1
+assert not any(e.tag == w("p") and "[[EQNUM" in text(e) for e in merged), "unmatched equation number"
+EQ_TABLES = [e for e in merged if e.tag == w("tbl") and e.find(f".//{{{M}}}oMathPara") is not None and len(e.findall(w("tr"))) == 1]
+new = merged
 pos = list(body).index(anchor) + 1
 for i, e in enumerate(new): body.insert(pos + i, e)
 
 # ---------- 8. tables: template look (rules above/below the header and at the end), Calibri 8 ----------
 tbl_pr_proto = TBL.find(w("tblPr"))
-new_tbls = [e for e in new if e.tag == w("tbl")]
+new_tbls = [e for e in new if e.tag == w("tbl") and e not in EQ_TABLES]
 for t in new_tbls:
     tp_ = t.find(w("tblPr"))
     for e in list(tp_):
@@ -348,7 +388,9 @@ for p in d.paragraphs:
     if mm:
         for r in list(p.runs): r._r.getparent().remove(r._r)
         p.add_run().add_picture(os.path.join(FIGDIR, mm.group(1)), width=Cm(16.5))
-for t in d.tables[1:]:   # table 0 is the template's title block
+def _is_eq(t):
+    return len(t.rows) == 1 and len(t.columns) == 2 and re.match(r"^\(\d+\)$", t.rows[0].cells[1].text.strip() or "")
+for t in [t for t in d.tables[1:] if not _is_eq(t)]:   # table 0 is the template's title block
     tblPr = t._tbl.tblPr
     lay = tblPr.find(w("tblLayout"))
     if lay is None: lay = etree.SubElement(tblPr, w("tblLayout"))
@@ -373,7 +415,7 @@ for t in d.tables[1:]:   # table 0 is the template's title block
 # keep captions with their tables and short tables on one page
 for p in d.paragraphs:
     if re.match(r"^Table \d+ ", p.text): p.paragraph_format.keep_with_next = True
-for t in d.tables[1:]:
+for t in [t for t in d.tables[1:] if not _is_eq(t)]:
     if len(t.rows) <= 24:
         for r in t.rows[:-1]:
             for c in r.cells:

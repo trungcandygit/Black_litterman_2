@@ -77,6 +77,9 @@ b = b[:ape] + ("\n\n*Software and code.* We use R 4.3.3 (packages sandwich 3.1.0
 
 import sys; sys.path.insert(0, HERE); import lang_edits
 b = lang_edits.apply(b)
+import revisions_r5
+b = revisions_r5.apply(b)
+abstract = revisions_r5.PARAS['[[ABSTRACT]]'].replace('[[ABSTRACT]] ', '')
 # ---- move figures and tables to the end (journal rule: after the References) ----
 figs, tabs = [], []
 FT = {"fig1": ("Figure 1 Fama–MacBeth *t*-statistics of the 22 characteristics",
@@ -130,6 +133,10 @@ r = r.replace("*KRX system officially goes live* [News article]. https://vietnam
               "*KRX system officially goes live*. Viet Nam News. https://vietnamnews.vn/economy/1717047/krx-system-officially-goes-live.html. Accessed on October 5, 2026.")
 assert r.count("Accessed on") == 2
 # references cited only in the supplementary material move there
+for nr in revisions_r5.NEW_REFS:
+    r = r.rstrip() + '\n\n' + nr + '\n'
+ents = sorted([e.strip() for e in r.replace('# References','').split('\n\n') if e.strip()], key=lambda e: e.lower())
+r = '# References\n\n' + '\n\n'.join(ents) + '\n'
 only_si = ["Amihud, Y. (2002)", "Bali, T. G., Cakici, N., & Whitelaw, R. F. (2011)", "Corwin, S. A., & Schultz, P. (2012)", "Parkinson, M. (1980)"]
 si_refs = []
 for k in only_si:
@@ -160,7 +167,7 @@ TT = {
  "5": ("Events and overnight gaps by calendar quarter",
        "*Note.* Market-adjusted gaps in percent; two-way-clustered *t*-statistics in parentheses. Counts are events with a day-*d*+1 open. The first and last quarters are partial; the KRX change falls in 2025-Q2."),
  "6": ("Comparison with earlier studies",
-       "*Note.* Findings as reported in each source's abstract or in the records we could access."),
+       revisions_r5.TABLE6_NOTE_NEW),
 }
 def resc(x): return x.replace('"', '\\"').replace("\u2212", "\\u2212").replace("\u2013", "\\u2013").replace("\u2014", "\\u2014")
 rdef = "TT <- list(" + ", ".join('"%s" = c("%s", "%s")' % (k, resc(v[0]), resc(v[1])) for k, v in TT.items()) + ")\n"
@@ -168,6 +175,10 @@ setup_msj = setup_msj.replace("kable <- function(x, caption = NULL, ...) { tt <-
     rdef + "kable <- function(x, caption = NULL, ...) { k <- sub(\"^Table ([0-9]+).*$\", \"\\\\1\", caption); cat(\"\\n\\n[[CAP]] Table \", k, \" \", TT[[k]][1], \"\\n\\n\", sep = \"\"); print(knitr::kable(x, ...)); cat(\"\\n\\n[[NOTE]] \", TT[[k]][2], \"\\n\\n\", sep = \"\") }\nkable_old <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n")
 assert "kable_old" in setup_msj
 
+import mathtext
+b = re.sub(r'\$\$(.*?)\s*\\qquad\s*\\text\{\((\d+)\)\}\$\$', lambda m: '$$' + m.group(1).rstrip(', ').rstrip() + '$$\n\n[[EQNUM:' + m.group(2) + ']]', b, flags=re.S)
+assert b.count('[[EQNUM:') == 8, b.count('[[EQNUM:')
+b = mathtext.inline_math(b)
 doc = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n" + setup_msj + "\n\n"
        "[[ABSTRACT]] " + abstract + "\n\n"
        "[[KEYWORDS]] Market microstructure, Multiple testing, False discovery rate, Call auction, Emerging markets, Ho Chi Minh Stock Exchange\n\n"
@@ -179,6 +190,8 @@ open(os.path.join(HERE, "manuscript_msj.Rmd"), "w", encoding="utf-8").write(doc)
 A = appA.replace("# Appendix A. Characteristic definitions", "## S1.1. Characteristic definitions")
 B = appB.replace("# Appendix B. Literature search", "## S1.2. Literature search")
 B = B.replace("on 4 and 5 October 2026", "on October 4 and 5, 2026")
+B = B.replace("Vietnamese-language journals were not searched, and the coverage of Chinese A-share studies is incomplete.", "A second search on October 6, 2026, covered studies of price limits in Vietnam, including the Vietnam Journals Online (VJOL) index, and added Le (2018) and the working paper of Farber et al. (2006); Vietnamese-language articles without an English record were not screened, and the coverage of Chinese A-share studies is incomplete.")
+assert "October 6, 2026" in B
 B = B.replace("named in the Declarations", "named in Section 6.2 of the article").replace("(Section 3)", "(Section 2.1 of the article)")
 sup = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n"
        "**Supplementary Material S1**\n\nDo price limits delay price discovery? Overnight gaps after limit closes in Vietnam\n\n"
