@@ -1,0 +1,29 @@
+"family","test","adjusted_p","below_5pct"
+"Baseline: 22 characteristics + 4 event tests (26), BH","ceiling t+1",1.19916349180708e-05,TRUE
+"Baseline: 22 characteristics + 4 event tests (26), BH","ceiling t+1..t+5",0.000398030194103944,TRUE
+"Baseline: 22 characteristics + 4 event tests (26), BH","floor t+1",2.60889953348547e-06,TRUE
+"Baseline: 22 characteristics + 4 event tests (26), BH","floor t+1..t+5",1.75441434780438e-05,TRUE
+"Event tests only (4), BH","ceiling t+1",1.84486691047242e-06,TRUE
+"Event tests only (4), BH","ceiling t+1..t+5",6.12354144775298e-05,TRUE
+"Event tests only (4), BH","floor t+1",4.01369158997764e-07,TRUE
+"Event tests only (4), BH","floor t+1..t+5",2.69909899662212e-06,TRUE
+"26 tests, Holm","ceiling t+1",2.30608363809053e-05,TRUE
+"26 tests, Holm","ceiling t+1..t+5",0.00140841453298319,TRUE
+"26 tests, Holm","floor t+1",2.60889953348547e-06,TRUE
+"26 tests, Holm","floor t+1..t+5",4.85837819391982e-05,TRUE
+"26 tests, Bonferroni","ceiling t+1",2.39832698361415e-05,TRUE
+"26 tests, Bonferroni","ceiling t+1..t+5",0.00159212077641577,TRUE
+"26 tests, Bonferroni","floor t+1",2.60889953348547e-06,TRUE
+"26 tests, Bonferroni","floor t+1..t+5",5.26324304341313e-05,TRUE
+"28 tests: adds days d+2 to d+5 for ceiling and floor, BH","ceiling t+1",1.2914068373307e-05,TRUE
+"28 tests: adds days d+2 to d+5 for ceiling and floor, BH","ceiling t+1..t+5",0.000428647901342709,TRUE
+"28 tests: adds days d+2 to d+5 for ceiling and floor, BH","floor t+1",2.80958411298435e-06,TRUE
+"28 tests: adds days d+2 to d+5 for ceiling and floor, BH","floor t+1..t+5",1.88936929763548e-05,TRUE
+"26 tests, week-clustered event p-values, BH","ceiling t+1",9.15083022682686e-05,TRUE
+"26 tests, week-clustered event p-values, BH","ceiling t+1..t+5",0.00258623687009359,TRUE
+"26 tests, week-clustered event p-values, BH","floor t+1",9.15083022682686e-05,TRUE
+"26 tests, week-clustered event p-values, BH","floor t+1..t+5",9.15083022682686e-05,TRUE
+"Two families: ceiling (2) and floor (2), BH within each","ceiling t+1",1.84486691047242e-06,TRUE
+"Two families: ceiling (2) and floor (2), BH within each","ceiling t+1..t+5",6.12354144775298e-05,TRUE
+"Two families: ceiling (2) and floor (2), BH within each","floor t+1",2.00684579498882e-07,TRUE
+"Two families: ceiling (2) and floor (2), BH within each","floor t+1..t+5",2.02432424746659e-06,TRUE

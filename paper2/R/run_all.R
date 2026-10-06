@@ -10,6 +10,7 @@ steps <- c(
   "48_revision.R",             # week/block clustering, specified split, KRX split, attention proxies, outliers (C18-C25)
   "50_sample_description.R",   # sample statistics for Section 3 (C26)
   "51_tick_grid_diagnostic.R", # vendor price adjustment diagnostic (C27)
+  "52_reviewer_round4.R",      # tick-free definitions, quarterly balance, placebo breaks, DiD, family sensitivity (C28-C32)
   "49_final_figures.R",        # Figures 1 and 2
   "46_verify_C.R")             # verification tests T1-T6
 for (s in steps) { cat("==>", s, "\n"); t0 <- Sys.time(); status <- system2("Rscript", file.path(root, "R", s), stdout = FALSE, stderr = FALSE)
