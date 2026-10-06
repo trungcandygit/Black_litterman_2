@@ -600,9 +600,9 @@ ceiling-gap differences between −0.45 and 0.72 percentage points
 (\|*t*\| at most 1.4); the split at 5 May 2025 gives the largest
 difference, 0.85 points, but it is not significant either (*t* = 1.6).
 The floor-gap difference is positive at the 4 placebo dates before the
-platform change and negative at all 11 later ones, and the split at 5
-May 2025 gives −0.95 points (*t* = −3.2), close to the differences at
-the placebo dates that follow it. Table 5 shows no trend in the floor
+platform change and negative at 11 of the 11 later ones, and the split
+at 5 May 2025 gives −0.95 points (*t* = −3.2), close to the differences
+at the placebo dates that follow it. Table 5 shows no trend in the floor
 gap; the pattern coincides with the weak floor gap in 2025-Q2 (−0.34%),
 the quarter with the most floor events (802), so the placebo dates
 cannot separate a break at the platform change from a shift specific to
