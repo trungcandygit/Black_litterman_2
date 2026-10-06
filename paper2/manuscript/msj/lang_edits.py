@@ -84,7 +84,6 @@ EDITS = [
  ("no external registry holds it and we had", "no external registry holds it, and we had"),
  ("rest on them: the decomposition,", "rest on them: decomposition,"),
  ("so effect sizes may be overstated", "so the effect sizes may be overstated"),
- ("One script reproduces every number, table, and figure; code, data,", "One script reproduces every number, table, and figure; the code, data,"),
  # --- 3. Results ---
  ("The event sample holds", "The event sample contains"),
  ("standard deviation, so the null excludes only large effects. With eight Newey–West lags the largest",

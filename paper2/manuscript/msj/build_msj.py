@@ -72,8 +72,8 @@ rep("(Section 4)", "(Section 2.2)")
 
 # software paragraph (reproducibility; journal asks that code and data be available)
 ap = b.index("*Analysis plan.*"); ape = b.index("\n\n", ap)
-b = b[:ape] + ("\n\n*Software and code.* We use R 4.3.3 (packages sandwich 3.1.0, lmtest 0.9.40, and ggplot2 3.4.4). One script "
-               "reproduces every number, table, and figure; code, data, and output tables are public (Section 6.5).") + b[ape:]
+b = b[:ape] + ("\n\n*Software and code.* One R 4.3.3 script (packages sandwich, lmtest, and ggplot2) reproduces every number, table, and figure; "
+               "code, data, and output tables are public (Section 6.5).") + b[ape:]
 
 import sys; sys.path.insert(0, HERE); import lang_edits
 b = lang_edits.apply(b)
@@ -133,6 +133,8 @@ r = r.replace("*KRX system officially goes live* [News article]. https://vietnam
               "*KRX system officially goes live*. Viet Nam News. https://vietnamnews.vn/economy/1717047/krx-system-officially-goes-live.html. Accessed on October 5, 2026.")
 assert r.count("Accessed on") == 2
 # references cited only in the supplementary material move there
+r = r.replace("International Review of Economics & Finance, 10*(3), 263–288.", "International Review of Economics & Finance, 10*(3), 263–288. https://doi.org/10.1016/S1059-0560(00)00082-4")
+assert "S1059-0560(00)00082-4" in r
 for nr in revisions_r5.NEW_REFS:
     r = r.rstrip() + '\n\n' + nr + '\n'
 ents = sorted([e.strip() for e in r.replace('# References','').split('\n\n') if e.strip()], key=lambda e: e.lower())
@@ -190,7 +192,12 @@ open(os.path.join(HERE, "manuscript_msj.Rmd"), "w", encoding="utf-8").write(doc)
 A = appA.replace("# Appendix A. Characteristic definitions", "## S1.1. Characteristic definitions")
 B = appB.replace("# Appendix B. Literature search", "## S1.2. Literature search")
 B = B.replace("on 4 and 5 October 2026", "on October 4 and 5, 2026")
-B = B.replace("Vietnamese-language journals were not searched, and the coverage of Chinese A-share studies is incomplete.", "A second search on October 6, 2026, covered studies of price limits in Vietnam, including the Vietnam Journals Online (VJOL) index, and added Le (2018) and the working paper of Farber et al. (2006); Vietnamese-language articles without an English record were not screened, and the coverage of Chinese A-share studies is incomplete.")
+B = B.replace("Vietnamese-language journals were not searched, and the coverage of Chinese A-share studies is incomplete.", "A second search on October 6, 2026, covered studies of price limits in Vietnam, including the Vietnam Journals Online (VJOL) index, and added Le (2012) and the working paper of Farber et al. (2006); Vietnamese-language articles without an English record were not screened, and the coverage of Chinese A-share studies is incomplete.")
+B = B.replace("except for press and brokerage descriptions of HOSE rules (Section 3).", "except for press and brokerage descriptions of HOSE rules (Section 3) and the working paper of Farber et al. (2006), cited as background on the early market.")
+assert "cited as background on the early market" in B, "F4"
+B = B.replace("We read the bibliographic records and the abstract text returned by the search tool, not full texts.", "We read the bibliographic records and the abstract text returned by the search tool; the full texts of the three studies closest to ours (Kim & Rhee, 1997; Huang et al., 2001; Qi, 2023) were read on October 6, 2026, and Table 6 reports their results.")
+assert "were read on October 6, 2026" in B, "full text"
+B = re.sub(r" ?Statements in this paper that no study reports a given result refer to the peer-reviewed studies this search identified\.", "", B)
 assert "October 6, 2026" in B
 B = B.replace("named in the Declarations", "named in Section 6.2 of the article").replace("(Section 3)", "(Section 2.1 of the article)")
 sup = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n"
