@@ -149,6 +149,8 @@ TABLE6_NOTE_NEW = "*Note.* Entries for Kim and Rhee (1997), Huang et al. (2001),
 
 
 LIT_EDITS += [
+ ("a pattern that Huang et al. (2001) describe qualitatively for Taiwan,", "a split that Huang et al. (2001) applied to Taiwan,"),
+ ("gained 1.18% overnight and gave back 0.77% in the next session.", "gained 1.18% overnight in abnormal terms and gave back 0.77% in the next session."),
  (" Limit closes cluster in market episodes, so our standard errors allow dependence across dates, weeks, 10-day blocks, and stocks.", ""),
  ('"Tokyo; limit hits", "Korea; limit revision", "Taiwan; limit hits"', '"Tokyo, 1989\\u20131992; limit hits", "Korea; limit revision", "Taiwan, 1990\\u20131996; 7% band"'),
  ('"ChiNext; band 10% to 20%"', '"ChiNext, 2020\\u20132021; band 10% to 20%"'),
