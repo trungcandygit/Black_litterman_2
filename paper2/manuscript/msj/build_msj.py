@@ -83,7 +83,7 @@ FT = {"fig1": ("Figure 1 Fama–MacBeth *t*-statistics of the 22 characteristics
                "*Note.* Circles are 1-point bins inside the band, triangles are ceiling and floor events, and squares are other moves of 6.5% to 10%. Bars are 95% confidence intervals clustered by date. Market weights are lagged to day *d*.")}
 def take_fig(mm):
     t, nt = FT[mm.group(1)]
-    figs.append(f"[[FIG:{mm.group(3)}]]\n\n{t}\n\n[[NOTE]] {nt}\n"); return ""
+    figs.append(f"[[FIG:{mm.group(3)}]]\n\n[[CAP]] {t}\n\n[[NOTE]] {nt}\n"); return ""
 b = re.sub(r"```\{r (fig\d), fig.cap=\"(.*?)\"\}\nknitr::include_graphics\(file.path\(od, \"(figures/[^\"]+)\"\)\)\n```\n", take_fig, b, flags=re.S)
 def take_tab(mm):
     tabs.append(mm.group(0)); return ""
@@ -160,7 +160,7 @@ TT = {
 }
 rdef = "TT <- list(" + ", ".join('"%s" = c("%s", "%s")' % (k, v[0], v[1].replace('"', '\\"')) for k, v in TT.items()) + ")\n"
 setup_msj = setup_msj.replace("kable <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n",
-    rdef + "kable <- function(x, caption = NULL, ...) { k <- sub(\"^Table ([0-9]+).*$\", \"\\\\1\", caption); cat(\"\\n\\nTable \", k, \" \", TT[[k]][1], \"\\n\\n\", sep = \"\"); print(knitr::kable(x, ...)); cat(\"\\n\\n[[NOTE]] \", TT[[k]][2], \"\\n\\n\", sep = \"\") }\nkable_old <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n")
+    rdef + "kable <- function(x, caption = NULL, ...) { k <- sub(\"^Table ([0-9]+).*$\", \"\\\\1\", caption); cat(\"\\n\\n[[CAP]] Table \", k, \" \", TT[[k]][1], \"\\n\\n\", sep = \"\"); print(knitr::kable(x, ...)); cat(\"\\n\\n[[NOTE]] \", TT[[k]][2], \"\\n\\n\", sep = \"\") }\nkable_old <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n")
 assert "kable_old" in setup_msj
 
 doc = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n" + setup_msj + "\n\n"

@@ -7,7 +7,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, results = "asis"); options(knitr.kable.NA = "—"); invisible(Sys.setlocale("LC_ALL", "C.UTF-8"))
 TT <- list("1" = c("Market-adjusted returns after ceiling and floor closes", "*Note.* Mean returns in percent. *t* (date), *t* (week), and *t* (10-day) cluster by event date, calendar week, and 10-day block, with the factor *G*/(*G* − 1) and a *t* reference with *G* − 1 degrees of freedom; *t* (halves) is week-clustered for the first and second half of event dates."), "2" = c("Decomposition of the next-day abnormal return", "*Note.* Percent; two-way-clustered *t*-statistics in parentheses. Benchmarks are the volume-weighted market (weights lagged to day *d*) or same-date controls in the same liquidity tercile. Crash days have a market return below −2%. Components compound, so they need not sum."), "3" = c("Limit closes versus near-limit moves", "*Note.* Differences in percentage points from same-direction moves of 3–5% or 5–6.5% that did not close at the limit; market-adjusted returns; date-clustered *t*-statistics in parentheses."), "4" = c("Returns before and after the KRX platform change of 5 May 2025", "*Note.* Percent; two-way-clustered *t*-statistics in parentheses. Periods are split by the date of the opening that defines the gap; the difference *t*-statistic treats the periods as independent."), "5" = c("Events and overnight gaps by calendar quarter", "*Note.* Market-adjusted gaps in percent; two-way-clustered *t*-statistics in parentheses. Counts are events with a day-*d*+1 open. The first and last quarters are partial; the KRX change falls in 2025-Q2."), "6" = c("Comparison with earlier studies", "*Note.* Findings as reported in each source's abstract or in the records we could access."))
-kable <- function(x, caption = NULL, ...) { k <- sub("^Table ([0-9]+).*$", "\\1", caption); cat("\n\nTable ", k, " ", TT[[k]][1], "\n\n", sep = ""); print(knitr::kable(x, ...)); cat("\n\n[[NOTE]] ", TT[[k]][2], "\n\n", sep = "") }
+kable <- function(x, caption = NULL, ...) { k <- sub("^Table ([0-9]+).*$", "\\1", caption); cat("\n\n[[CAP]] Table ", k, " ", TT[[k]][1], "\n\n", sep = ""); print(knitr::kable(x, ...)); cat("\n\n[[NOTE]] ", TT[[k]][2], "\n\n", sep = "") }
 kable_old <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL
   if (!is.null(caption)) { m <- regmatches(caption, regexec("^Table ([0-9]+)\\. (.*?\\.)\\s+(.*)$", caption, perl = TRUE))[[1]]
     if (length(m) == 4) { tt <- paste0("Table ", m[2], " ", m[3]); nt <- m[4] } else tt <- sub("^Table ([0-9]+)\\. ", "Table \\1 ", caption) }
@@ -306,13 +306,13 @@ Zhang, X., Wang, Z., Hao, J., & He, F. (2022). Price limit and stock market qual
 
 [[FIG:figures/F1_characteristics.png]]
 
-Figure 1 Fama–MacBeth *t*-statistics of the 22 characteristics
+[[CAP]] Figure 1 Fama–MacBeth *t*-statistics of the 22 characteristics
 
 [[NOTE]] *Note.* Full sample, discovery half (first 39 weeks), and confirmation half, ordered by absolute full-sample *t*. Dashed lines mark |*t*| = 1.96 and dotted lines |*t*| = 3. Supplementary Material S1 defines the labels.
 
 [[FIG:figures/F2_break_at_limit.png]]
 
-Figure 2 Next-day abnormal return by the size of the day-*d* move
+[[CAP]] Figure 2 Next-day abnormal return by the size of the day-*d* move
 
 [[NOTE]] *Note.* Circles are 1-point bins inside the band, triangles are ceiling and floor events, and squares are other moves of 6.5% to 10%. Bars are 95% confidence intervals clustered by date. Market weights are lagged to day *d*.
 

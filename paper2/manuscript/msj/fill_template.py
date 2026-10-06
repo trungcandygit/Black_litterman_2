@@ -219,7 +219,7 @@ for el in sbody:
         if first_fig:
             q.find(w("pPr")).insert(0, etree.Element(w("pageBreakBefore"))); first_fig = False
         new.append(q); continue
-    mm = re.match(r"^(Figure|Table) (\d+) (.*)$", t, flags=re.S)
+    mm = re.match(r"^\[\[CAP\]\] (Figure|Table) (\d+) (.*)$", t, flags=re.S)
     if mm and not in_refs:
         isfig = mm.group(1) == "Figure"
         q = empty_like(P_FCAP if isfig else P_TCAP)
@@ -230,8 +230,8 @@ for el in sbody:
         pref = f"{mm.group(1)} {mm.group(2)}"
         for r in tmp.findall(w("r")):
             tt = r.find(w("t"))
-            if tt is not None and tt.text and tt.text.startswith(pref):
-                tt.text = " " + tt.text[len(pref):].lstrip(); break
+            if tt is not None and tt.text and tt.text.startswith("[[CAP]] " + pref):
+                tt.text = " " + tt.text[len("[[CAP]] " + pref):].lstrip(); break
         for c in tmp: q.append(c)
         new.append(q)
         if isfig: new.append(blank())
