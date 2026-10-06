@@ -1,18 +1,18 @@
 **Abstract.** Daily price limits aim to cool markets but can delay price
 discovery. Few studies trace prices after limit closes in emerging
-markets, and, among the studies identified by our search (Appendix B),
+markets, and among the studies identified by our search (Appendix B),
 none tests the limit against other candidate signals. For 347 stocks on
 the Ho Chi Minh Stock Exchange from August 2024 to September 2026, we
-run 26 tests under false-discovery-rate control: four price-limit event
+run 26 tests under false discovery rate control: four price limit event
 tests and 22 price- and volume-based characteristics. All four limit
-tests survive; none of the 22 lower-powered characteristic tests does.
-After a ceiling close, the next-day abnormal return of 1.7% is an
-overnight gap of 2.2% less an intraday reversal of 0.5%, and the gap
+tests survived; none of the 22 lower-powered characteristic tests
+survived. After a ceiling close, the next-day abnormal return of 1.7% is
+an overnight gap of 2.2% less an intraday reversal of 0.5%, and the gap
 exceeds that after rises of 5% to 6.5% by 2.7 percentage points. A buyer
-at the next open loses 0.7% against the market by the fifth close. The
-pattern is consistent with delayed price discovery, but also with news,
-attention, and opening-auction overshooting; without news or order-book
-data we cannot separate them.
+at the next opening loses 0.7% against the market by the fifth closing.
+The pattern is consistent with delayed price discovery, but also with
+news, attention, and opening-auction overshooting; without news or
+order-book data, we cannot separate them.
 
 **Keywords:** price limits; overnight returns; multiple testing; market
 microstructure; Vietnam
@@ -21,51 +21,51 @@ microstructure; Vietnam
 
 # 1. Introduction
 
-A daily price limit stops a stock from moving beyond a fixed band within
-one trading day. Exchanges in Tokyo, Taipei, Seoul, Shenzhen, and Ho Chi
-Minh City have used limits to cool markets after large shocks, and
-economists ask whether a limit protects prices or postpones their
-adjustment. The question is sharpest where limit closes are common and
-call auctions set the opening and closing prices. The Ho Chi Minh Stock
+A daily price limit prevents a stock from moving beyond a fixed band
+within one trading day. Exchanges in Tokyo, Taipei, Seoul, Shenzhen, and
+Ho Chi Minh City have used limits to cool markets after large shocks,
+and economists ask whether a limit protects prices or postpones their
+adjustments. The question is sharpest where limit closes are common and
+call auctions set opening and closing prices. The Ho Chi Minh Stock
 Exchange (HOSE) has both features: one 7% band applies to all stocks,
 and about 2.0% of stock-days in our event window close at the upper
 limit (a ceiling close; Section 4) and about 1.4% at the lower limit (a
 floor close).
 
-Studies of band changes document effects on volatility, liquidity, and
-crash risk (Jia et al., 2024; Lien et al., 2019; Qi, 2023), and
+Studies on band changes document the effects on volatility, liquidity,
+and crash risk (Jia et al., 2024; Lien et al., 2019; Qi, 2023), and
 account-level data show that large investors buy on the limit day and
 sell on the next (Chen et al., 2019). Among the studies identified by
-the search described in Appendix B, only Huang et al. (2001) describe
+the search described in Appendix B, only Huang et al. (2001) described
 the overnight-then-intraday pattern after limit hits, and the records we
-could access give no magnitudes. None measures the overnight gap and the
+could access have no magnitudes. None measures the overnight gap and
 intraday return after a limit close against a benchmark, places the
 limit result in a family of tests that controls for the other
 price-based signals a researcher could have examined, or examines the
-2025 move of HOSE to a new trading platform.
+2025 move of the HOSE to a new trading platform.
 
-We estimate the abnormal return after ceiling and floor closes on HOSE,
-split it into the overnight gap and the intraday return, and test
-whether an outside buyer can capture it. We place the four limit tests
-in a family of 26 tests with 22 price- and volume-based characteristics
-and control the false discovery rate (FDR; Benjamini & Hochberg, 1995;
+We estimate the abnormal return after the ceiling and floor close on the
+HOSE, split it into overnight gap and intraday return, and test whether
+an outside buyer can capture it. We place the four limit tests in a
+family of 26 tests with 22 price- and volume-based characteristics and
+control the false discovery rate (FDR; Benjamini & Hochberg, 1995;
 Harvey et al., 2016).
 
 We make three contributions. First, we measure the overnight gap and the
 intraday return after limit closes, a pattern that Huang et al. (2001)
 describe qualitatively for Taiwan, and show that the ceiling effect is a
-gap of 2.2% of which the following session reverses 24%. Second, we show
-that the ceiling gap is 2.7 percentage points larger than after rises of
-5% to 6.5% that stop short of the limit, and that the contrast survives
-when the comparison stocks also close at their daily high. Third, we
-show that all four limit tests survive a multiplicity-controlled family
-in which no characteristic survives, and that a buyer at the next open
-loses 0.7% against the market by the fifth close. We also split the
-events at the 2025 platform change.
+gap of 2.2%, of which the following session reverses 24%. Second, we
+show that the ceiling gap is 2.7 percentage points larger than after
+rises of 5% to 6.5% that stop short of the limit, and that the contrast
+survives when the comparison stocks also close at their daily high.
+Third, we show that all four limit tests survive a
+multiplicity-controlled family in which no characteristic survives and
+that a buyer at the next open loses 0.7% against the market by the fifth
+close. We also split the events at the 2025 platform change.
 
 Section 2 reviews the literature, Sections 3 and 4 describe the data and
-design, Section 5 reports results, Section 6 discusses them, and
-Sections 7 and 8 give limitations and conclusions.
+design, Section 5 reports the results, Section 6 discusses them, and
+Sections 7 and 8 provide limitations and conclusions.
 
 # 2. Related literature and hypotheses
 
@@ -76,7 +76,7 @@ Pareto superior when fundamental news drives prices because they partly
 insure traders against implementation risk, and Greenwald and Stein
 (1991) link crashes to imperfect transactional mechanisms. Subrahmanyam
 (1994) shows that halts can advance trades in time and raise price
-variability, and in the model of Chen et al. (2024) volatility rises as
+variability, and in the model of Chen et al. (2024), volatility rises as
 the price nears a circuit breaker, a magnet effect. A limit that only
 delays adjustment leaves a predictable next-day continuation, which the
 return after a limit close can reveal.
@@ -87,14 +87,14 @@ price discovery, and interfere with trading. Bildik and Gülay (2006)
 find the same in Istanbul, with stronger evidence from price locks than
 from limit moves alone. Chen (1993) finds that serial correlation falls
 as the Taiwanese limit widens, which implies delayed adjustment under
-the narrower limit, and Berkman and Lee (2002) examine volatility and
+the narrower limit. Berkman and Lee (2002) examine volatility and
 trading activity around a revision of the Korean limit system. Huang et
 al. (2001) report for Taiwan that the overnight overreaction after limit
 hits reverses during the following day, the timing pattern we test. Cho
 et al. (2003) find a magnet effect: prices accelerate toward the upper
-limit in five-minute Taiwanese data. Kim and Limpaphayom (2000) show
-that small, volatile, high-volume stocks hit limits more often, and Deb
-et al. (2013) argue that rigid limits in Tokyo can disrupt price
+limit in five-minute Taiwanese datasets. Kim and Limpaphayom (2000) show
+that small, volatile, high-volume stocks hit limits more often, whereas
+Deb et al. (2013) argue that rigid limits in Tokyo can disrupt price
 discovery and liquidity provision.
 
 **Band changes and investor-level data.** After ChiNext widened its band
