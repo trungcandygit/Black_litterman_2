@@ -13,7 +13,7 @@ PR = "http://schemas.openxmlformats.org/package/2006/relationships"
 def w(t): return f"{{{W}}}{t}"
 NS = {"w": W, "m": M, "r": R, "a": A, "wp": WP}
 
-TITLE = "Closing at the limit: price limits, overnight gaps and next-day returns on the Ho Chi Minh Stock Exchange"
+TITLE = "Do price limits delay price discovery? Overnight gaps after limit closes in Vietnam"
 AUTHORS = [("Nguyen Thanh Binh", "a", "0009-0007-0042-2835", None),
            ("Nguyen Van Trung", "a", "0009-0008-3307-6569", "kontrungcany@gmail.com"),
            ("Ha Hong Hanh", "b", "0000-0003-3581-6571", None),

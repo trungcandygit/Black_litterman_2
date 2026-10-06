@@ -31,13 +31,16 @@ abstract = abstract.replace(
     "we run 26 tests under false discovery rate control: four price limit event tests and 22 price- and volume-based characteristics.",
     "we run 26 tests under false discovery rate control: four price limit event tests and 22 price- and volume-based characteristics. "
     "About `r f(100 * C13$value[5] / C13$value[1], 1)`% of stock-days close at the upper limit and `r f(100 * C13$value[6] / C13$value[1], 1)`% at the lower limit. "
-    "We split the next-day abnormal return into an overnight gap and an intraday return, compare limit closes with stocks that moved almost as far, and cluster standard errors by date, week, and stock.")
+    "We split the next-day abnormal return into an overnight gap and an intraday return and compare limit closes with stocks that moved almost as far.")
 abstract = abstract.replace(
     "by `r f(c17(\"ceiling vs 5-6.5% up\",\"gap_mkt\",\"diff_pct\"),1)` percentage points.",
     "by `r f(c17(\"ceiling vs 5-6.5% up\",\"gap_mkt\",\"diff_pct\"),1)` percentage points, and by `r f(c23(\"ceiling vs 5-6.5% up, close = high\",\"gap_mkt\",\"diff_pct\"),1)` points when those stocks also closed at their daily high. "
     "After a floor close the overnight gap is `r f(c16(\"Floor all\",\"gap_mkt\"),1)`%, and the size of the floor effect depends on the benchmark. "
     "The ceiling gap is positive and significant in each of the `r nrow(C29)` calendar quarters and is present before the move of the exchange to a new trading platform in May 2025.")
 
+abstract = abstract.replace("we cannot separate them.",
+    "we cannot separate them. Most of the next-day effect arises in the opening auction, linking price-limit design to auction design.")
+assert "linking price-limit design" in abstract
 # ---- headings (journal numbering) ----
 rep("# 1. Introduction", "# 1. Introduction")
 rep("# 2. Related literature and hypotheses", "## 1.1. Related literature and hypotheses")
@@ -74,9 +77,13 @@ b = b[:ape] + ("\n\n*Software and code.* We use R 4.3.3 (packages sandwich 3.1.0
 
 # ---- move figures and tables to the end (journal rule: after the References) ----
 figs, tabs = [], []
+FT = {"fig1": ("Figure 1 Fama–MacBeth *t*-statistics of the 22 characteristics",
+                "*Note.* Full sample, discovery half (first 39 weeks), and confirmation half, ordered by absolute full-sample *t*. Dashed lines mark |*t*| = 1.96 and dotted lines |*t*| = 3. Supplementary Material S1 defines the labels."),
+      "fig2": ("Figure 2 Next-day abnormal return by the size of the day-*d* move",
+               "*Note.* Circles are 1-point bins inside the band, triangles are ceiling and floor events, and squares are other moves of 6.5% to 10%. Bars are 95% confidence intervals clustered by date. Market weights are lagged to day *d*.")}
 def take_fig(mm):
-    cap = re.sub(r"^Figure (\d+)\. ", r"Figure \1 ", mm.group(2)).replace("Appendix A", "Supplementary Material S1")
-    figs.append(f"[[FIG:{mm.group(3)}]]\n\n{cap}\n"); return ""
+    t, nt = FT[mm.group(1)]
+    figs.append(f"[[FIG:{mm.group(3)}]]\n\n{t}\n\n[[NOTE]] {nt}\n"); return ""
 b = re.sub(r"```\{r (fig\d), fig.cap=\"(.*?)\"\}\nknitr::include_graphics\(file.path\(od, \"(figures/[^\"]+)\"\)\)\n```\n", take_fig, b, flags=re.S)
 def take_tab(mm):
     tabs.append(mm.group(0)); return ""
@@ -136,10 +143,29 @@ setup_msj = setup.replace(
     '    if (length(m) == 4) { tt <- paste0("Table ", m[2], " ", m[3]); nt <- m[4] } else tt <- sub("^Table ([0-9]+)\\\\. ", "Table \\\\1 ", caption) }\n'
     '  cat("\\n\\n", tt, "\\n\\n", sep = ""); print(knitr::kable(x, ...)); if (!is.null(nt)) cat("\\n\\n[[NOTE]] ", nt, "\\n\\n", sep = ""); cat("\\n\\n") }')
 assert setup_msj != setup
+# APA-style table titles and short notes (academic-paper skill: label + short title above, "Note." below)
+TT = {
+ "1": ("Market-adjusted returns after ceiling and floor closes",
+       "*Note.* Mean returns in percent. *t* (date), *t* (week), and *t* (10-day) cluster by event date, calendar week, and 10-day block, with the factor *G*/(*G* − 1) and a *t* reference with *G* − 1 degrees of freedom; *t* (halves) is week-clustered for the first and second half of event dates."),
+ "2": ("Decomposition of the next-day abnormal return",
+       "*Note.* Percent; two-way-clustered *t*-statistics in parentheses. Benchmarks are the volume-weighted market (weights lagged to day *d*) or same-date controls in the same liquidity tercile. Crash days have a market return below −2%. Components compound, so they need not sum."),
+ "3": ("Limit closes versus near-limit moves",
+       "*Note.* Differences in percentage points from same-direction moves of 3–5% or 5–6.5% that did not close at the limit; market-adjusted returns; date-clustered *t*-statistics in parentheses."),
+ "4": ("Returns before and after the KRX platform change of 5 May 2025",
+       "*Note.* Percent; two-way-clustered *t*-statistics in parentheses. Periods are split by the date of the opening that defines the gap; the difference *t*-statistic treats the periods as independent."),
+ "5": ("Events and overnight gaps by calendar quarter",
+       "*Note.* Market-adjusted gaps in percent; two-way-clustered *t*-statistics in parentheses. Counts are events with a day-*d*+1 open. The first and last quarters are partial; the KRX change falls in 2025-Q2."),
+ "6": ("Comparison with earlier studies",
+       "*Note.* Findings as reported in each source's abstract or in the records we could access."),
+}
+rdef = "TT <- list(" + ", ".join('"%s" = c("%s", "%s")' % (k, v[0], v[1].replace('"', '\\"')) for k, v in TT.items()) + ")\n"
+setup_msj = setup_msj.replace("kable <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n",
+    rdef + "kable <- function(x, caption = NULL, ...) { k <- sub(\"^Table ([0-9]+).*$\", \"\\\\1\", caption); cat(\"\\n\\nTable \", k, \" \", TT[[k]][1], \"\\n\\n\", sep = \"\"); print(knitr::kable(x, ...)); cat(\"\\n\\n[[NOTE]] \", TT[[k]][2], \"\\n\\n\", sep = \"\") }\nkable_old <- function(x, caption = NULL, ...) { tt <- caption; nt <- NULL\n")
+assert "kable_old" in setup_msj
 
 doc = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n" + setup_msj + "\n\n"
        "[[ABSTRACT]] " + abstract + "\n\n"
-       "[[KEYWORDS]] Market microstructure, Multiple testing, False discovery rate, Call auction, Emerging markets, Vietnam\n\n"
+       "[[KEYWORDS]] Market microstructure, Multiple testing, False discovery rate, Call auction, Emerging markets, Ho Chi Minh Stock Exchange\n\n"
        + b.strip() + "\n\n" + decl + r.strip() + "\n\n"
        "# Figures\n\n" + "\n".join(figs) + "\n# Tables\n\n" + "\n".join(tabs))
 open(os.path.join(HERE, "manuscript_msj.Rmd"), "w", encoding="utf-8").write(doc)
@@ -149,7 +175,7 @@ A = appA.replace("# Appendix A. Characteristic definitions", "## S1.1. Character
 B = appB.replace("# Appendix B. Literature search", "## S1.2. Literature search")
 B = B.replace("named in the Declarations", "named in Section 6.2 of the article").replace("(Section 3)", "(Section 2.1 of the article)")
 sup = ("---\noutput:\n  word_document:\n    toc: false\n---\n\n"
-       "**Supplementary Material S1**\n\nClosing at the limit: price limits, overnight gaps and next-day returns on the Ho Chi Minh Stock Exchange\n\n"
+       "**Supplementary Material S1**\n\nDo price limits delay price discovery? Overnight gaps after limit closes in Vietnam\n\n"
        + A.strip() + "\n\n" + B.strip() + "\n\n## References\n\n" + "\n\n".join(sorted(si_refs)) + "\n")
 open(os.path.join(HERE, "S1_supplementary.Rmd"), "w", encoding="utf-8").write(sup)
 print("ok", len(figs), len(tabs))

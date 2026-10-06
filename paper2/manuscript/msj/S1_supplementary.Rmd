@@ -6,7 +6,7 @@ output:
 
 **Supplementary Material S1**
 
-Closing at the limit: price limits, overnight gaps and next-day returns on the Ho Chi Minh Stock Exchange
+Do price limits delay price discovery? Overnight gaps after limit closes in Vietnam
 
 ## S1.1. Characteristic definitions
 
