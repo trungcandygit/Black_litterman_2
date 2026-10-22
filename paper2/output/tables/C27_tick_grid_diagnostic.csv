@@ -1,0 +1,12 @@
+"group","value","n"
+"Closes on the tick grid, 2024 , price below 10",100,9990
+"Closes on the tick grid, 2024 , price 10 or more",24.5294883888065,22263
+"Closes on the tick grid, 2025 , price below 10",100,21934
+"Closes on the tick grid, 2025 , price 10 or more",30.5663015614076,64365
+"Closes on the tick grid, 2026 , price below 10",100,16092
+"Closes on the tick grid, 2026 , price 10 or more",57.9689137658051,44843
+"Median day-d return, exact ceiling hits (%)",6.89779077403449,1648
+"Median day-d return, near hits (%)",6.89338235294117,1559
+"Near hits with a close off the tick grid (%)",82.7453495830661,1559
+"Near-hit share of ceiling events, reference price below 10 (%)",22.735674676525,1082
+"Near-hit share of ceiling events, reference price 10 or more (%)",61.7882352941176,2125

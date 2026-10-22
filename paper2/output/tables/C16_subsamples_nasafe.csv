@@ -1,0 +1,127 @@
+"sample","measure","mean_pct","t_twoway","n"
+"Ceiling all","gap_mkt",2.24352400405996,9.72412519774645,3199
+"Ceiling all","intraday_mkt",-0.535439976910961,-3.47828633141767,3199
+"Ceiling all","cc1_mkt",1.664295765992,4.80707692513168,3199
+"Ceiling all","gap_ctrl",2.69679418262781,20.1726852431462,3100
+"Ceiling all","intraday_ctrl",-0.49605167022954,-6.00310453379303,3100
+"Ceiling all","cc1_ctrl",2.16231932851394,18.0026930912948,3100
+"Ceiling all","f5o_mkt",-0.748601966332952,-2.74717796905845,3193
+"Ceiling first half (by event date)","gap_mkt",2.2388638036579,5.39460610868473,1615
+"Ceiling first half (by event date)","intraday_mkt",-0.772310587361333,-3.29714008544458,1615
+"Ceiling first half (by event date)","cc1_mkt",1.42003980710084,2.29536493607549,1615
+"Ceiling first half (by event date)","gap_ctrl",2.93710215839989,19.3385921343095,1601
+"Ceiling first half (by event date)","intraday_ctrl",-0.527103510319882,-5.14462807868664,1601
+"Ceiling first half (by event date)","cc1_ctrl",2.36922546707888,17.3935416640591,1601
+"Ceiling first half (by event date)","f5o_mkt",-1.13086009525582,-2.91779958881251,1615
+"Ceiling second half (by event date)","gap_mkt",2.24827540787898,12.9834823477397,1584
+"Ceiling second half (by event date)","intraday_mkt",-0.293933641129805,-2.54243292755965,1584
+"Ceiling second half (by event date)","cc1_mkt",1.9133319867049,11.3373544778004,1584
+"Ceiling second half (by event date)","gap_ctrl",2.44013436327418,13.4583905595378,1499
+"Ceiling second half (by event date)","intraday_ctrl",-0.462886896390555,-4.13824787994111,1499
+"Ceiling second half (by event date)","cc1_ctrl",1.9413341865243,11.7610953145686,1499
+"Ceiling second half (by event date)","f5o_mkt",-0.357380877479697,-1.22306411516742,1578
+"Ceiling excluding market-crash days (market < -2%)","gap_mkt",2.24211302217269,9.60118675682911,3125
+"Ceiling excluding market-crash days (market < -2%)","intraday_mkt",-0.52532634323428,-3.36506294699543,3125
+"Ceiling excluding market-crash days (market < -2%)","cc1_mkt",1.67338945280543,4.7265653582572,3125
+"Ceiling excluding market-crash days (market < -2%)","gap_ctrl",2.70231002355869,20.3195449411642,3032
+"Ceiling excluding market-crash days (market < -2%)","intraday_ctrl",-0.485787255729246,-5.94738709736834,3032
+"Ceiling excluding market-crash days (market < -2%)","cc1_ctrl",2.17865609017229,18.2174158380976,3032
+"Ceiling excluding market-crash days (market < -2%)","f5o_mkt",-0.704317629886962,-2.55100669105935,3119
+"Ceiling locked all day","gap_mkt",2.91155124214246,2.99769242524617,522
+"Ceiling locked all day","intraday_mkt",-1.29529499397812,-5.86218488357648,522
+"Ceiling locked all day","cc1_mkt",1.54381973504867,1.36968198660007,522
+"Ceiling locked all day","gap_ctrl",4.39189269324565,12.1820577786944,505
+"Ceiling locked all day","intraday_ctrl",-0.808289980181365,-3.10468192222278,505
+"Ceiling locked all day","cc1_ctrl",3.52227651082744,18.3340081754053,505
+"Ceiling locked all day","f5o_mkt",-0.760048250609417,-1.52274981231289,520
+"Ceiling not locked all day","gap_mkt",2.11326243578239,14.2499741200586,2677
+"Ceiling not locked all day","intraday_mkt",-0.387272506268803,-3.63380958168275,2677
+"Ceiling not locked all day","cc1_mkt",1.68778791696414,8.45309792807914,2677
+"Ceiling not locked all day","gap_ctrl",2.3669195206386,21.2797763171545,2595
+"Ceiling not locked all day","intraday_ctrl",-0.435288530913289,-4.71406764502753,2595
+"Ceiling not locked all day","cc1_ctrl",1.89766484794811,16.4837094665569,2595
+"Ceiling not locked all day","f5o_mkt",-0.746375229399259,-2.77719336514687,2673
+"Ceiling liquidity tercile 1","gap_mkt",2.5933323823782,6.87800082489815,832
+"Ceiling liquidity tercile 1","intraday_mkt",-0.54700950006696,-2.05971020079591,832
+"Ceiling liquidity tercile 1","cc1_mkt",1.98787268363275,3.73833028769543,832
+"Ceiling liquidity tercile 1","gap_ctrl",3.18884441769401,11.985580630278,832
+"Ceiling liquidity tercile 1","intraday_ctrl",-0.656270339019233,-4.86538297177218,832
+"Ceiling liquidity tercile 1","cc1_ctrl",2.48748780417367,11.586570326154,832
+"Ceiling liquidity tercile 1","f5o_mkt",-0.999777569232343,-2.04989977071515,831
+"Ceiling liquidity tercile 2","gap_mkt",2.77477927399675,11.0672471764516,1102
+"Ceiling liquidity tercile 2","intraday_mkt",-0.881872737411667,-3.8924545146144,1102
+"Ceiling liquidity tercile 2","cc1_mkt",1.83254296614959,4.1990228025964,1102
+"Ceiling liquidity tercile 2","gap_ctrl",3.17823723890288,21.219256563689,1102
+"Ceiling liquidity tercile 2","intraday_ctrl",-0.844949556493848,-7.00556195668402,1102
+"Ceiling liquidity tercile 2","cc1_ctrl",2.27678941776125,16.1868843081231,1102
+"Ceiling liquidity tercile 2","f5o_mkt",-1.21971096848808,-2.6145231773606,1102
+"Ceiling liquidity tercile 3","gap_mkt",1.51873042916592,7.75905218381864,1166
+"Ceiling liquidity tercile 3","intraday_mkt",-0.182270424576021,-1.49804339583921,1166
+"Ceiling liquidity tercile 3","cc1_mkt",1.31965813479961,5.79038490322611,1166
+"Ceiling liquidity tercile 3","gap_ctrl",1.89067407663279,13.3235417060216,1166
+"Ceiling liquidity tercile 3","intraday_ctrl",-0.0519801409874369,-0.303137594716936,1166
+"Ceiling liquidity tercile 3","cc1_ctrl",1.82210817062421,7.19679785682438,1166
+"Ceiling liquidity tercile 3","f5o_mkt",-0.166392280556157,-0.490386446227807,1166
+"Floor all","gap_mkt",-0.97218712225701,-4.64823397031275,2111
+"Floor all","intraday_mkt",0.303970628041851,1.38685363181829,2111
+"Floor all","cc1_mkt",-0.691673933185324,-4.78389642008165,2111
+"Floor all","gap_ctrl",-1.75421939969192,-3.99592806936774,2047
+"Floor all","intraday_ctrl",0.136016057081201,0.602214109997849,2047
+"Floor all","cc1_ctrl",-1.65076179856849,-3.3656898068392,2047
+"Floor all","f5o_mkt",-0.8161578684289,-1.73611720591045,2108
+"Floor first half (by event date)","gap_mkt",-0.545185297397135,-2.39080012360566,1059
+"Floor first half (by event date)","intraday_mkt",-0.0898609545114716,-0.283541039379112,1059
+"Floor first half (by event date)","cc1_mkt",-0.634482249000699,-2.86250213948994,1059
+"Floor first half (by event date)","gap_ctrl",-2.38978740926947,-3.92735654211282,1053
+"Floor first half (by event date)","intraday_ctrl",0.0985686529614755,0.307300336992699,1053
+"Floor first half (by event date)","cc1_ctrl",-2.31592228029273,-3.01358050516788,1053
+"Floor first half (by event date)","f5o_mkt",-1.69438770537942,-5.1160198989132,1059
+"Floor second half (by event date)","gap_mkt",-1.40203021401234,-6.53370949500766,1052
+"Floor second half (by event date)","intraday_mkt",0.700422762950567,4.89334105597614,1052
+"Floor second half (by event date)","cc1_mkt",-0.749246170401596,-4.30204293738726,1052
+"Floor second half (by event date)","gap_ctrl",-1.08092652837887,-3.92991609218803,994
+"Floor second half (by event date)","intraday_ctrl",0.175686194443446,0.551195418332289,994
+"Floor second half (by event date)","cc1_ctrl",-0.94611996028315,-4.54274552719641,994
+"Floor second half (by event date)","f5o_mkt",0.0704440356040873,0.126654587594641,1049
+"Floor excluding market-crash days (market < -2%)","gap_mkt",-1.83273931525775,-8.72206853339291,740
+"Floor excluding market-crash days (market < -2%)","intraday_mkt",0.903685329097487,5.31030100088464,740
+"Floor excluding market-crash days (market < -2%)","cc1_mkt",-0.994579818322291,-4.46631069413584,740
+"Floor excluding market-crash days (market < -2%)","gap_ctrl",-1.70365296488182,-8.16020817274105,696
+"Floor excluding market-crash days (market < -2%)","intraday_ctrl",0.781561037327145,4.55629343584265,696
+"Floor excluding market-crash days (market < -2%)","cc1_ctrl",-0.978785950771672,-4.34143311825764,696
+"Floor excluding market-crash days (market < -2%)","f5o_mkt",-0.809645305433418,-1.68832275230496,738
+"Floor locked all day","gap_mkt",-2.49696414384774,-4.76547624767779,260
+"Floor locked all day","intraday_mkt",1.10660357060692,2.36197634091058,260
+"Floor locked all day","cc1_mkt",-1.44177805369084,-3.44450867409215,260
+"Floor locked all day","gap_ctrl",-2.93095123103847,-5.45714164890714,246
+"Floor locked all day","intraday_ctrl",0.793378360780404,1.28569591857015,246
+"Floor locked all day","cc1_ctrl",-2.1791078562049,-2.69722271842401,246
+"Floor locked all day","f5o_mkt",-3.91151611332901,-3.03429118263516,260
+"Floor not locked all day","gap_mkt",-0.75800990690661,-4.12815636385654,1851
+"Floor not locked all day","intraday_mkt",0.191229101803646,0.908920668582542,1851
+"Floor not locked all day","cc1_mkt",-0.586310847647002,-3.89988673790056,1851
+"Floor not locked all day","gap_ctrl",-1.59348867758684,-3.41186755634699,1801
+"Floor not locked all day","intraday_ctrl",0.0462264253710378,0.230750177436063,1801
+"Floor not locked all day","cc1_ctrl",-1.57859459691466,-3.35912822087288,1801
+"Floor not locked all day","f5o_mkt",-0.380663743064166,-0.86483282000122,1848
+"Floor liquidity tercile 1","gap_mkt",-0.316603306201066,-0.973380598335465,469
+"Floor liquidity tercile 1","intraday_mkt",0.418339862118008,1.65193810410111,469
+"Floor liquidity tercile 1","cc1_mkt",0.0563087546210411,0.198699165264433,469
+"Floor liquidity tercile 1","gap_ctrl",-1.02356625124578,-2.40275742357265,469
+"Floor liquidity tercile 1","intraday_ctrl",0.516660261753343,2.58100111619372,469
+"Floor liquidity tercile 1","cc1_ctrl",-0.561222804831258,-1.76487422612354,469
+"Floor liquidity tercile 1","f5o_mkt",-0.0908821851954143,-0.153142511385977,469
+"Floor liquidity tercile 2","gap_mkt",-1.43910211202688,-4.35215684237727,685
+"Floor liquidity tercile 2","intraday_mkt",0.288986681496835,0.926781393913583,685
+"Floor liquidity tercile 2","cc1_mkt",-1.17353344130534,-5.04308021207697,685
+"Floor liquidity tercile 2","gap_ctrl",-2.34176424775975,-5.38699850938527,685
+"Floor liquidity tercile 2","intraday_ctrl",0.133226341071574,0.435482133449314,685
+"Floor liquidity tercile 2","cc1_ctrl",-2.24215345900628,-4.06243779894764,685
+"Floor liquidity tercile 2","f5o_mkt",-1.44006988936179,-2.17866235455997,685
+"Floor liquidity tercile 3","gap_mkt",-0.908241136915063,-5.20755822827213,893
+"Floor liquidity tercile 3","intraday_mkt",0.178798135417221,0.876804474262786,893
+"Floor liquidity tercile 3","cc1_mkt",-0.737708058646039,-5.08725990072583,893
+"Floor liquidity tercile 3","gap_ctrl",-1.68726319106345,-3.40417532025196,893
+"Floor liquidity tercile 3","intraday_ctrl",-0.061756816966548,-0.178008810838212,893
+"Floor liquidity tercile 3","cc1_ctrl",-1.7693401867688,-3.0606214766834,893
+"Floor liquidity tercile 3","f5o_mkt",-0.618146268216335,-1.35374411634747,893

@@ -1,0 +1,181 @@
+"group","measure","mean_pct","t_twoway","n"
+"Ceiling: rule-based","gap_mkt",2.24352400405996,9.72412519774645,3199
+"Ceiling: rule-based","intraday_mkt",-0.535439976910961,-3.47828633141767,3199
+"Ceiling: rule-based","cc1_mkt",1.664295765992,4.80707692513168,3199
+"Ceiling: rule-based","f5o_mkt",-0.748601966332952,-2.74717796905845,3193
+"Ceiling: rule-based","gap_ctrl",2.69679418262781,20.1726852431462,3100
+"Ceiling: rule-based","intraday_ctrl",-0.49605167022954,-6.00310453379303,3100
+"Ceiling: rule-based","cc1_ctrl",2.16231932851394,18.0026930912948,3100
+"Ceiling: rule-based","f5o_ctrl",-0.526921853244031,-1.81747502801522,3099
+"Ceiling: rule-based","gap_ew",2.37842082319093,10.9316475869462,3199
+"Ceiling: rule-based","intraday_ew",-0.478125758272226,-5.26504514802332,3199
+"Ceiling: rule-based","cc1_ew",1.86871020651366,10.8850608810301,3199
+"Ceiling: rule-based","cc1_beta",1.91324886677768,8.46909972890756,309
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","gap_mkt",2.1048510553283,9.55558227978314,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","intraday_mkt",-0.508246508264061,-3.38554580074373,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_mkt",1.55359285837633,4.64846971266712,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","f5o_mkt",-0.7683518871821,-2.94546803351412,3412
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","gap_ctrl",2.54508235828367,19.3968385016345,3315
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","intraday_ctrl",-0.482694532347927,-6.21450829397668,3315
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_ctrl",2.02486012564266,17.3036627932201,3315
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","f5o_ctrl",-0.549180762834836,-2.01372034956241,3312
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","gap_ew",2.2395461798766,10.779645380603,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","intraday_ew",-0.455923340242168,-5.41932757135027,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_ew",1.75267257459276,10.6194093933731,3421
+"Ceiling: README-style (return >= 6.5%, no close = high requirement)","cc1_beta",1.74185697486604,8.07915241430814,334
+"Ceiling: rule-based, complete returns t+1..t+5","gap_mkt",2.24931359977209,9.70528454673042,3187
+"Ceiling: rule-based, complete returns t+1..t+5","intraday_mkt",-0.538746093023119,-3.49380874010468,3187
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_mkt",1.66672937584163,4.79394987063257,3187
+"Ceiling: rule-based, complete returns t+1..t+5","f5o_mkt",-0.747264755707875,-2.73537545695638,3187
+"Ceiling: rule-based, complete returns t+1..t+5","gap_ctrl",2.69624119191122,20.1613385536202,3098
+"Ceiling: rule-based, complete returns t+1..t+5","intraday_ctrl",-0.496518240464561,-6.00391426712889,3098
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_ctrl",2.16125666999736,17.9802083848418,3098
+"Ceiling: rule-based, complete returns t+1..t+5","f5o_ctrl",-0.524629695045302,-1.81001000468039,3098
+"Ceiling: rule-based, complete returns t+1..t+5","gap_ew",2.38432586932269,10.9112201436113,3187
+"Ceiling: rule-based, complete returns t+1..t+5","intraday_ew",-0.480146987605072,-5.27372941621118,3187
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_ew",1.87252308511325,10.8551666929141,3187
+"Ceiling: rule-based, complete returns t+1..t+5","cc1_beta",1.91324886677768,8.46909972890756,309
+"Floor: rule-based, complete returns t+1..t+5","gap_mkt",-0.978270725189227,-4.65166144699601,2105
+"Floor: rule-based, complete returns t+1..t+5","intraday_mkt",0.296939529540841,1.35554125625884,2105
+"Floor: rule-based, complete returns t+1..t+5","cc1_mkt",-0.704905181041664,-4.86860199991752,2105
+"Floor: rule-based, complete returns t+1..t+5","f5o_mkt",-0.821718803110177,-1.74592084232972,2105
+"Floor: rule-based, complete returns t+1..t+5","gap_ctrl",-1.75632130689409,-3.99825575076213,2045
+"Floor: rule-based, complete returns t+1..t+5","intraday_ctrl",0.135982422096735,0.601454522248062,2045
+"Floor: rule-based, complete returns t+1..t+5","cc1_ctrl",-1.65294940595747,-3.36870999804161,2045
+"Floor: rule-based, complete returns t+1..t+5","f5o_ctrl",-0.362898727448338,-0.565313508715059,2045
+"Floor: rule-based, complete returns t+1..t+5","gap_ew",-1.08456474219774,-5.64578740240659,2105
+"Floor: rule-based, complete returns t+1..t+5","intraday_ew",0.341468762164773,2.52537616357724,2105
+"Floor: rule-based, complete returns t+1..t+5","cc1_ew",-0.769609336668362,-5.0770439462966,2105
+"Floor: rule-based, complete returns t+1..t+5","cc1_beta",-0.764530694599871,-1.34140871936947,57
+"Ceiling: exact tick-rule hit","gap_mkt",2.78555522556764,13.8097285853647,1642
+"Ceiling: exact tick-rule hit","intraday_mkt",-0.736412103046743,-5.25729310678444,1642
+"Ceiling: exact tick-rule hit","cc1_mkt",1.99687828392837,7.06964297428679,1642
+"Ceiling: exact tick-rule hit","f5o_mkt",-1.01869345875846,-2.96513295686836,1637
+"Ceiling: exact tick-rule hit","gap_ctrl",3.20170718377419,21.4061168831861,1577
+"Ceiling: exact tick-rule hit","intraday_ctrl",-0.742092052501979,-7.49464658480644,1577
+"Ceiling: exact tick-rule hit","cc1_ctrl",2.41315601298908,16.3884214018251,1577
+"Ceiling: exact tick-rule hit","f5o_ctrl",-0.892193342217245,-2.34848244007583,1576
+"Ceiling: exact tick-rule hit","gap_ew",2.9168941750255,15.1785311376912,1642
+"Ceiling: exact tick-rule hit","intraday_ew",-0.745455437592417,-7.30696226653627,1642
+"Ceiling: exact tick-rule hit","cc1_ew",2.13050240571065,12.6141576108638,1642
+"Ceiling: exact tick-rule hit","cc1_beta",2.40507419070643,6.88786042654467,155
+"Ceiling: near-hit (rule-based, not exact)","gap_mkt",1.67190212498763,6.36694590146562,1557
+"Ceiling: near-hit (rule-based, not exact)","intraday_mkt",-0.323496347421588,-1.6123611987619,1557
+"Ceiling: near-hit (rule-based, not exact)","cc1_mkt",1.31355684855366,3.12895587583398,1557
+"Ceiling: near-hit (rule-based, not exact)","f5o_mkt",-0.464450441204065,-1.26598420734355,1556
+"Ceiling: near-hit (rule-based, not exact)","gap_ctrl",2.17397881637185,13.2141333748137,1523
+"Ceiling: near-hit (rule-based, not exact)","intraday_ctrl",-0.241287597449739,-2.36691051888362,1523
+"Ceiling: near-hit (rule-based, not exact)","cc1_ctrl",1.90258889422812,13.1332125526676,1523
+"Ceiling: near-hit (rule-based, not exact)","f5o_ctrl",-0.148939012389281,-0.467720194288491,1523
+"Ceiling: near-hit (rule-based, not exact)","gap_ew",1.81055104559789,7.33965731405159,1557
+"Ceiling: near-hit (rule-based, not exact)","intraday_ew",-0.196201973144573,-1.89596591681422,1557
+"Ceiling: near-hit (rule-based, not exact)","cc1_ew",1.59262620453455,7.80978140407087,1557
+"Ceiling: near-hit (rule-based, not exact)","cc1_beta",1.41822987191434,6.71690982299109,154
+"Ceiling: locked all day","gap_mkt",2.91155124214246,2.99769242524617,522
+"Ceiling: locked all day","intraday_mkt",-1.29529499397812,-5.86218488357648,522
+"Ceiling: locked all day","cc1_mkt",1.54381973504867,1.36968198660007,522
+"Ceiling: locked all day","f5o_mkt",-0.760048250609417,-1.52274981231289,520
+"Ceiling: locked all day","gap_ctrl",4.39189269324565,12.1820577786944,505
+"Ceiling: locked all day","intraday_ctrl",-0.808289980181365,-3.10468192222278,505
+"Ceiling: locked all day","cc1_ctrl",3.52227651082744,18.3340081754053,505
+"Ceiling: locked all day","f5o_ctrl",0.571745025931219,0.792502698399349,504
+"Ceiling: locked all day","gap_ew",3.10371924577615,3.34189450905377,522
+"Ceiling: locked all day","intraday_ew",-0.571384992971945,-1.68061978874748,522
+"Ceiling: locked all day","cc1_ew",2.48680256045276,4.27879633429828,522
+"Ceiling: locked all day","cc1_beta",2.05948206796873,2.52466157221654,25
+"Ceiling: first day of streak (rule-based)","gap_mkt",1.83327811408722,8.22767228869076,2480
+"Ceiling: first day of streak (rule-based)","intraday_mkt",-0.380426166429145,-1.87986594972095,2480
+"Ceiling: first day of streak (rule-based)","cc1_mkt",1.41854270985429,3.54036441127513,2480
+"Ceiling: first day of streak (rule-based)","f5o_mkt",-0.731686298028844,-2.79090929491804,2474
+"Ceiling: first day of streak (rule-based)","gap_ctrl",2.36607760972151,15.5736808118386,2403
+"Ceiling: first day of streak (rule-based)","intraday_ctrl",-0.314426613297181,-3.81579414000896,2403
+"Ceiling: first day of streak (rule-based)","cc1_ctrl",2.02225128161682,14.3905188958149,2403
+"Ceiling: first day of streak (rule-based)","f5o_ctrl",-0.42920653869579,-1.63340991582853,2402
+"Ceiling: first day of streak (rule-based)","gap_ew",1.9755217077744,9.52395785755874,2480
+"Ceiling: first day of streak (rule-based)","intraday_ew",-0.284829989327339,-3.30913257506529,2480
+"Ceiling: first day of streak (rule-based)","cc1_ew",1.66967863912166,9.35678374361728,2480
+"Ceiling: first day of streak (rule-based)","cc1_beta",1.87943563635338,8.454600165939,244
+"Ceiling: first day of streak (exact)","gap_mkt",2.38916068661778,12.5618989204711,1281
+"Ceiling: first day of streak (exact)","intraday_mkt",-0.546406226586289,-3.03480371471909,1281
+"Ceiling: first day of streak (exact)","cc1_mkt",1.80185187425999,5.55294638802903,1281
+"Ceiling: first day of streak (exact)","f5o_mkt",-0.894498642972975,-3.13037137292582,1276
+"Ceiling: first day of streak (exact)","gap_ctrl",2.86969559561677,19.0347057164263,1226
+"Ceiling: first day of streak (exact)","intraday_ctrl",-0.534109408531375,-4.90716329895311,1226
+"Ceiling: first day of streak (exact)","cc1_ctrl",2.29982509514121,14.7465269968345,1226
+"Ceiling: first day of streak (exact)","f5o_ctrl",-0.737719619875274,-2.17033729234189,1225
+"Ceiling: first day of streak (exact)","gap_ew",2.52651866330749,14.078124295841,1281
+"Ceiling: first day of streak (exact)","intraday_ew",-0.532516810101792,-4.84240178771124,1281
+"Ceiling: first day of streak (exact)","cc1_ew",1.965151819476,11.3299229715966,1281
+"Ceiling: first day of streak (exact)","cc1_beta",2.17932534403144,5.97049792383987,117
+"Floor: rule-based","gap_mkt",-0.97218712225701,-4.64823397031275,2111
+"Floor: rule-based","intraday_mkt",0.303970628041851,1.38685363181829,2111
+"Floor: rule-based","cc1_mkt",-0.691673933185324,-4.78389642008165,2111
+"Floor: rule-based","f5o_mkt",-0.8161578684289,-1.73611720591045,2108
+"Floor: rule-based","gap_ctrl",-1.75421939969192,-3.99592806936774,2047
+"Floor: rule-based","intraday_ctrl",0.136016057081201,0.602214109997849,2047
+"Floor: rule-based","cc1_ctrl",-1.65076179856849,-3.3656898068392,2047
+"Floor: rule-based","f5o_ctrl",-0.357876243377856,-0.558110042719445,2047
+"Floor: rule-based","gap_ew",-1.07787367763867,-5.63029154003805,2111
+"Floor: rule-based","intraday_ew",0.348816420143693,2.5739303107431,2111
+"Floor: rule-based","cc1_ew",-0.755400571297155,-4.97031140081009,2111
+"Floor: rule-based","cc1_beta",-0.764530694599871,-1.34140871936947,57
+"Floor: exact tick-rule hit","gap_mkt",-1.30199898201292,-5.05441117213368,1025
+"Floor: exact tick-rule hit","intraday_mkt",0.41041467891522,1.7373380881478,1025
+"Floor: exact tick-rule hit","cc1_mkt",-0.92811921753407,-5.68386170014722,1025
+"Floor: exact tick-rule hit","f5o_mkt",-0.978722951045181,-1.8618414724485,1024
+"Floor: exact tick-rule hit","gap_ctrl",-1.94329778106395,-4.88272021386003,981
+"Floor: exact tick-rule hit","intraday_ctrl",0.23692916136063,0.955730892914594,981
+"Floor: exact tick-rule hit","cc1_ctrl",-1.75059682273698,-4.12922718243319,981
+"Floor: exact tick-rule hit","f5o_ctrl",-0.511278159464844,-0.840148758087454,981
+"Floor: exact tick-rule hit","gap_ew",-1.34792878082235,-6.30027254843901,1025
+"Floor: exact tick-rule hit","intraday_ew",0.430944606230594,2.36866123002703,1025
+"Floor: exact tick-rule hit","cc1_ew",-0.954031586535638,-5.41959902496883,1025
+"Floor: exact tick-rule hit","cc1_beta",-0.907184235747282,-0.942216699655742,29
+"Floor: near-hit (rule-based, not exact)","gap_mkt",-0.660900606373206,-3.68985774487223,1086
+"Floor: near-hit (rule-based, not exact)","intraday_mkt",0.203505478736876,0.882160933739842,1086
+"Floor: near-hit (rule-based, not exact)","cc1_mkt",-0.468509645471267,-2.85806793137072,1086
+"Floor: near-hit (rule-based, not exact)","f5o_mkt",-0.662590853116104,-1.3855372284106,1084
+"Floor: near-hit (rule-based, not exact)","gap_ctrl",-1.58021762471447,-3.16817790860682,1066
+"Floor: near-hit (rule-based, not exact)","intraday_ctrl",0.0431494948878426,0.181737864122991,1066
+"Floor: near-hit (rule-based, not exact)","cc1_ctrl",-1.55888735325021,-2.73646438254475,1066
+"Floor: near-hit (rule-based, not exact)","f5o_ctrl",-0.216706187391613,-0.305095311989155,1066
+"Floor: near-hit (rule-based, not exact)","gap_ew",-0.822987415425702,-3.76054438086725,1086
+"Floor: near-hit (rule-based, not exact)","intraday_ew",0.271301327382116,1.950916784671,1086
+"Floor: near-hit (rule-based, not exact)","cc1_ew",-0.567926546785696,-3.27815020050875,1086
+"Floor: near-hit (rule-based, not exact)","cc1_beta",-0.616782384125768,-1.14213403862171,28
+"Floor: locked all day","gap_mkt",-2.49696414384774,-4.76547624767779,260
+"Floor: locked all day","intraday_mkt",1.10660357060692,2.36197634091058,260
+"Floor: locked all day","cc1_mkt",-1.44177805369084,-3.44450867409215,260
+"Floor: locked all day","f5o_mkt",-3.91151611332901,-3.03429118263516,260
+"Floor: locked all day","gap_ctrl",-2.93095123103847,-5.45714164890714,246
+"Floor: locked all day","intraday_ctrl",0.793378360780404,1.28569591857015,246
+"Floor: locked all day","cc1_ctrl",-2.1791078562049,-2.69722271842401,246
+"Floor: locked all day","f5o_ctrl",-2.51558972906273,-2.76507795214318,246
+"Floor: locked all day","gap_ew",-2.65826795587517,-5.1101539036498,260
+"Floor: locked all day","intraday_ew",0.975947601667705,2.33207296354826,260
+"Floor: locked all day","cc1_ew",-1.72562762162154,-3.80273931956986,260
+"Floor: locked all day","cc1_beta",NA,NA,11
+"Floor: first day of streak (rule-based)","gap_mkt",-0.728481387173972,-3.82873476770447,1629
+"Floor: first day of streak (rule-based)","intraday_mkt",0.146677385391009,0.590789191274655,1629
+"Floor: first day of streak (rule-based)","cc1_mkt",-0.598716434250308,-3.15224185339905,1629
+"Floor: first day of streak (rule-based)","f5o_mkt",-0.345570709316549,-0.686089797092829,1626
+"Floor: first day of streak (rule-based)","gap_ctrl",-1.54056630588114,-3.20774222645197,1585
+"Floor: first day of streak (rule-based)","intraday_ctrl",0.0166239453435404,0.0880013401227919,1585
+"Floor: first day of streak (rule-based)","cc1_ctrl",-1.55460678397422,-3.65991747802819,1585
+"Floor: first day of streak (rule-based)","f5o_ctrl",-0.276129152568104,-0.364428496713789,1585
+"Floor: first day of streak (rule-based)","gap_ew",-0.806347779658287,-5.03427260694512,1629
+"Floor: first day of streak (rule-based)","intraday_ew",0.23946032788329,1.71020021504966,1629
+"Floor: first day of streak (rule-based)","cc1_ew",-0.590115400250445,-4.14195795499687,1629
+"Floor: first day of streak (rule-based)","cc1_beta",-0.297351782217427,-0.684375853356546,47
+"Floor: first day of streak (exact)","gap_mkt",-1.05253131121919,-4.7203734713615,829
+"Floor: first day of streak (exact)","intraday_mkt",0.221466304979079,0.892346668224623,829
+"Floor: first day of streak (exact)","cc1_mkt",-0.856858726205356,-5.02890545531929,829
+"Floor: first day of streak (exact)","f5o_mkt",-0.675244165841965,-1.17822893111089,828
+"Floor: first day of streak (exact)","gap_ctrl",-1.73500446884769,-4.20025729191859,799
+"Floor: first day of streak (exact)","intraday_ctrl",0.0794210946508582,0.343107705965349,799
+"Floor: first day of streak (exact)","cc1_ctrl",-1.69328691749768,-4.43060432081897,799
+"Floor: first day of streak (exact)","f5o_ctrl",-0.63270384993687,-0.967062227369453,799
+"Floor: first day of streak (exact)","gap_ew",-1.0736924250321,-6.6430446688735,829
+"Floor: first day of streak (exact)","intraday_ew",0.275533158940892,1.59102487958201,829
+"Floor: first day of streak (exact)","cc1_ew",-0.826763640705638,-4.82733218138324,829
+"Floor: first day of streak (exact)","cc1_beta",-0.471987407639156,-0.542669853827233,25

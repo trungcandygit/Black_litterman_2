@@ -1,0 +1,49 @@
+"definition","measure","mean_pct","t_twoway","n"
+"Ceiling: return >= 6.5%, close = high (baseline)","gap_mkt",2.24352400405996,9.72412519774645,3199
+"Ceiling: return >= 6.5%, close = high (baseline)","intraday_mkt",-0.535439976910961,-3.47828633141767,3199
+"Ceiling: return >= 6.5%, close = high (baseline)","cc1_mkt",1.664295765992,4.80707692513168,3199
+"Ceiling: return >= 6.5%, close = high (baseline)","f5o_mkt",-0.748601966332952,-2.74717796905845,3193
+"Ceiling: return >= 6.0%, close = high","gap_mkt",2.07426847668664,9.8123249213407,3390
+"Ceiling: return >= 6.0%, close = high","intraday_mkt",-0.505070060038754,-3.36114023443311,3390
+"Ceiling: return >= 6.0%, close = high","cc1_mkt",1.52610369351685,4.76871531201436,3390
+"Ceiling: return >= 6.0%, close = high","f5o_mkt",-0.716503414703743,-2.70766292079935,3384
+"Ceiling: return >= 6.8%, close = high","gap_mkt",2.32980379471392,9.53980537805134,2468
+"Ceiling: return >= 6.8%, close = high","intraday_mkt",-0.558880565246942,-3.49960940868274,2468
+"Ceiling: return >= 6.8%, close = high","cc1_mkt",1.72636359773532,4.7222846070303,2468
+"Ceiling: return >= 6.8%, close = high","f5o_mkt",-0.839129191120204,-2.64388957888947,2465
+"Ceiling: return in [6.7%, 7.3%], close = high","gap_mkt",2.34934155663011,9.79313191335342,2851
+"Ceiling: return in [6.7%, 7.3%], close = high","intraday_mkt",-0.546906723934072,-3.90714488405198,2851
+"Ceiling: return in [6.7%, 7.3%], close = high","cc1_mkt",1.75868625411987,5.16714698561177,2851
+"Ceiling: return in [6.7%, 7.3%], close = high","f5o_mkt",-0.780689726489503,-2.64847820129686,2846
+"Ceiling: return >= 6.5%, no close condition","gap_mkt",2.1048510553283,9.55558227978314,3421
+"Ceiling: return >= 6.5%, no close condition","intraday_mkt",-0.508246508264061,-3.38554580074373,3421
+"Ceiling: return >= 6.5%, no close condition","cc1_mkt",1.55359285837633,4.64846971266712,3421
+"Ceiling: return >= 6.5%, no close condition","f5o_mkt",-0.7683518871821,-2.94546803351412,3412
+"Ceiling: return >= 6.5%, locked open = high = low = close","gap_mkt",2.91155124214246,2.99769242524617,522
+"Ceiling: return >= 6.5%, locked open = high = low = close","intraday_mkt",-1.29529499397812,-5.86218488357648,522
+"Ceiling: return >= 6.5%, locked open = high = low = close","cc1_mkt",1.54381973504867,1.36968198660007,522
+"Ceiling: return >= 6.5%, locked open = high = low = close","f5o_mkt",-0.760048250609417,-1.52274981231289,520
+"Floor: return <= -6.5%, close = low (baseline)","gap_mkt",-0.97218712225701,-4.64823397031275,2111
+"Floor: return <= -6.5%, close = low (baseline)","intraday_mkt",0.303970628041851,1.38685363181829,2111
+"Floor: return <= -6.5%, close = low (baseline)","cc1_mkt",-0.691673933185324,-4.78389642008165,2111
+"Floor: return <= -6.5%, close = low (baseline)","f5o_mkt",-0.8161578684289,-1.73611720591045,2108
+"Floor: return <= -6.0%, close = low","gap_mkt",-0.793164050327608,-4.63337425235799,2346
+"Floor: return <= -6.0%, close = low","intraday_mkt",0.336134772681738,1.64802190189748,2346
+"Floor: return <= -6.0%, close = low","cc1_mkt",-0.479778732848325,-3.43230583329434,2346
+"Floor: return <= -6.0%, close = low","f5o_mkt",-0.648514949593051,-1.48269053130286,2340
+"Floor: return <= -6.8%, close = low","gap_mkt",-1.08770625413853,-4.67375021244256,1715
+"Floor: return <= -6.8%, close = low","intraday_mkt",0.331757968859524,1.42998036772477,1715
+"Floor: return <= -6.8%, close = low","cc1_mkt",-0.777839724103123,-4.94739525767154,1715
+"Floor: return <= -6.8%, close = low","f5o_mkt",-0.900456462070291,-1.93714064875602,1714
+"Floor: return in [-7.3%, -6.7%], close = low","gap_mkt",-1.07026273281009,-4.73139443690617,1928
+"Floor: return in [-7.3%, -6.7%], close = low","intraday_mkt",0.331385971522949,1.46230442488427,1928
+"Floor: return in [-7.3%, -6.7%], close = low","cc1_mkt",-0.761885490333584,-5.18501908885297,1928
+"Floor: return in [-7.3%, -6.7%], close = low","f5o_mkt",-0.865588390702557,-1.82312673823866,1926
+"Floor: return <= -6.5%, no close condition","gap_mkt",-0.821776432196761,-3.93055581845291,2288
+"Floor: return <= -6.5%, no close condition","intraday_mkt",0.310317322352359,1.52603192345653,2288
+"Floor: return <= -6.5%, no close condition","cc1_mkt",-0.534842916033098,-4.02639639975825,2288
+"Floor: return <= -6.5%, no close condition","f5o_mkt",-0.691802864092877,-1.55672862130614,2285
+"Floor: return <= -6.5%, locked open = high = low = close","gap_mkt",-2.49696414384774,-4.76547624767779,260
+"Floor: return <= -6.5%, locked open = high = low = close","intraday_mkt",1.10660357060692,2.36197634091058,260
+"Floor: return <= -6.5%, locked open = high = low = close","cc1_mkt",-1.44177805369084,-3.44450867409215,260
+"Floor: return <= -6.5%, locked open = high = low = close","f5o_mkt",-3.91151611332901,-3.03429118263516,260

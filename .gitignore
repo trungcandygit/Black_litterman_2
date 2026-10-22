@@ -1,9 +1,3 @@
-project_context.md
-notes/
+.DS_Store
 *.aux
 *.log
-*.out
-*.bbl
-*.blg
-ars/build/work/
-.DS_Store
