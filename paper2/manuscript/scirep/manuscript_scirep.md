@@ -188,7 +188,7 @@ The authors received no assistance beyond that described in Methods.
 
 ## Author contributions
 
-H.H.H. contributed to the methodology and validation and reviewed and edited the manuscript. N.V.T. conceived the study, curated the data, performed the formal analysis, developed the methodology and software, produced the visualizations, administered the project and wrote the original draft. N.T.B. conceived the study, supervised the work, validated the results, and reviewed and edited the manuscript.
+H.H.H. contributed to the conceptualization and reviewed and edited the manuscript, including its language. N.V.T. curated the data, performed the formal analysis, developed the methodology and software, produced the visualizations, administered the project and wrote the original draft. N.T.B. conceived the study, supervised the work, and reviewed and edited the manuscript.
 
 ## Funding
 

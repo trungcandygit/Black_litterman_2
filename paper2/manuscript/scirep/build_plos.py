@@ -264,9 +264,9 @@ Authors (order): Ha Hong Hanh; Nguyen Van Trung (corresponding, kontrungcany@gma
 
 | Author | Roles |
 |---|---|
-| Ha Hong Hanh | Methodology; Validation; Writing – review & editing |
-| Nguyen Van Trung | Conceptualization; Data curation; Formal analysis; Methodology; Software; Visualization; Project administration; Writing – original draft |
-| Nguyen Thanh Binh | Conceptualization; Supervision; Validation; Writing – review & editing |
+| Ha Hong Hanh | Conceptualization; Writing – review & editing |
+| Nguyen Van Trung | Data curation; Formal analysis; Methodology; Software; Visualization; Project administration; Writing – original draft |
+| Nguyen Thanh Binh | Conceptualization; Supervision; Writing – review & editing |
 
 **Generative AI:** Gemini (Google) was used only to edit the language; stated in Materials and methods.
 
