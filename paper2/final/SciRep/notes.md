@@ -7,5 +7,5 @@ Checked against the guide: title 13 words; abstract 196 words, unstructured, no 
 
 Authors: Ha Hong Hanh (1), Nguyen Van Trung (2, corresponding), Nguyen Thanh Binh (3); Nguyen Bach Diep removed at the authors' request (his CRediT roles, investigation and resources, are removed with him).
 
-To do before submission: suggested/excluded reviewers and prior-discussion line in the cover letter are placeholders; confirm funding, competing interests and author contributions with all authors; the title is a question (Sci Rep prefers a single declarative sentence naming the main message; a declarative alternative: "Overnight gaps after daily limit closes suggest delayed price discovery on the Ho Chi Minh Stock Exchange").
+Cover letter placeholders filled (no suggested or excluded reviewers, no prior discussion). Remaining: confirm funding, competing interests and contributions with all authors; the title is a question (Sci Rep prefers a declarative sentence).
 LibreOffice does not draw Word equations; open in Microsoft Word to check them.
