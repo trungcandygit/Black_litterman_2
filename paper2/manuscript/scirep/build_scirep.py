@@ -27,7 +27,7 @@ MINUS = "−"
 # ------------------------------------------------------------------ helpers
 def pstr(t):
     p = 2 * norm.sf(abs(t))
-    return "*P* < 0.001" if p < 0.001 else f"*P* = {p:.3f}" if p < 0.01 else f"*P* = {p:.2f}"
+    return "*P* < 0.001" if p < 0.001 else f"*P* = {p:.3f}"
 
 
 def tok_t(m):
@@ -121,10 +121,10 @@ def set_cell_border(cell, **kw):
         b.append(e)
 
 
-def style_docx(path, line_numbers=True, title_first=True, base_pt=12, spacing=1.5):
+def style_docx(path, line_numbers=True, title_first=True, base_pt=12, spacing=1.5, justify=False, landscape=False):
     d = Document(path)
     sec = d.sections[0]
-    sec.page_width, sec.page_height = Cm(21.0), Cm(29.7)
+    sec.page_width, sec.page_height = (Cm(29.7), Cm(21.0)) if landscape else (Cm(21.0), Cm(29.7))
     sec.left_margin = sec.right_margin = sec.top_margin = sec.bottom_margin = Cm(2.54)
     for st in d.styles:
         if st.type == 1 and st.font is not None:
@@ -151,7 +151,7 @@ def style_docx(path, line_numbers=True, title_first=True, base_pt=12, spacing=1.
     # body paragraphs: left aligned, 1.5 spacing
     for p in d.paragraphs:
         pf = p.paragraph_format
-        pf.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY if (justify and p.style.name in ("Body Text", "First Paragraph")) else WD_ALIGN_PARAGRAPH.LEFT
         if not p.style.name.startswith("Heading") and p.style.name != "Title":
             pf.line_spacing = spacing
             pf.space_after = Pt(6)
@@ -177,7 +177,7 @@ def style_docx(path, line_numbers=True, title_first=True, base_pt=12, spacing=1.
         wts = [max(len(re.sub(r"\s+", " ", r.cells[ci].text)) for r in t.rows) for ci in range(cols)]
         hdr = [max(len(w) for w in t.rows[0].cells[ci].text.split() or [""]) for ci in range(cols)]
         wts = [min(max(w, 16, h + 3), 26) for w, h in zip(wts, hdr)]
-        total = 16.0
+        total = 24.5 if landscape else 16.0
         t.autofit = False
         for ci in range(cols):
             for r in t.rows:
