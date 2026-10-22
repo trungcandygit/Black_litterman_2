@@ -167,7 +167,7 @@ We fixed the family, estimators, multiplicity control and survival rule in a wri
 
 ### Use of generative AI
 
-The authors used the generative AI assistant Claude (Anthropic) to run the literature searches (Supplementary Note 2), write R code, draft and edit text, check reported numbers against the output files and reformat the manuscript to the journal's guidelines. Every number comes from the authors' R code. The authors reviewed all AI-assisted output and take full responsibility for the content; the assistant is not an author. References and the institutional facts above were checked by web search, not against exchange circulars.
+The authors used the generative AI tool Gemini (Google) only to edit the language of the manuscript. It was not used for the analysis, the code, the literature search or the interpretation of results, and it is not an author. The authors reviewed all edited text and take full responsibility for the content. References and the institutional facts above were checked by web search, not against exchange circulars.
 
 ### Software and ethics
 

@@ -297,7 +297,7 @@ def build_si():
     n1 = n1.replace("Parkinson (1980)", "Parkinson⟦parkinson⟧").replace("(Amihud, 2002)", "⟦amihud⟧")
     n1 = n1.replace("(Bali et al., 2011)", "⟦bali⟧").replace("Corwin and Schultz (2012)", "Corwin and Schultz⟦corwin⟧")
     n1 = n1.replace("Section 2.2 of the article", "Methods").replace("(Amihud, 2002)", "")
-    n2 = n2.replace("Section 6.2 of the article", "Methods, Use of generative AI").replace("(Section 2.1 of the article)", "(Methods)")
+    n2 = n2.replace("with the web search tool of the AI assistant named in Section 6.2 of the article", "with a web search engine").replace("(Section 2.1 of the article)", "(Methods)")
     n2 = n2.replace("(Kim & Rhee, 1997; Huang et al., 2001; Qi, 2023)", "⟦kimrhee,huangy,qi⟧").replace("Farber et al. (2006)", "Farber et al.⟦farber⟧")
     n2 = n2.replace("Le (2012)", "Le⟦le⟧").replace("Table 6 reports their results", "Supplementary Table S1 reports their results")
     n2 = n2.replace("the working paper of Farber et al.⟦farber⟧", "the working paper of Farber et al.⟦farber⟧")
